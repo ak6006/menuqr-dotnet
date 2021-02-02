@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace EgyptMenu.Models
+{
+    public class ResMgmtViewModel
+    {
+        public string RestaurantName { get; set; }
+        public string RestaurantDescription { get; set; }
+        public string RestaurantAddress { get; set; }
+        public string RestaurantImage { get; set; }
+        public string RestaurantCoverImage { get; set; }
+        public string OwnerName { get; set; }
+        public string OwnerEmail { get; set; }
+        public string OwnerPhone { get; set; }
+        public string lat { get; set; }
+        public string lng { get; set; }
+    }
+}

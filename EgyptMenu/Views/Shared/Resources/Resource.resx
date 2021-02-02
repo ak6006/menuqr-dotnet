@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="20 items in the menu" xml:space="preserve">
+    <value>20 items in the menu</value>
+  </data>
+  <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
+    <value>8 different designs. Unlimited color options. Choose QR and Flayer style</value>
+  </data>
+  <data name="All rights reserved" xml:space="preserve">
+    <value>All rights reserved</value>
+  </data>
+  <data name="Beautiful QR Styles" xml:space="preserve">
+    <value>Beautiful QR Styles</value>
+  </data>
+  <data name="but no menu" xml:space="preserve">
+    <value>but no menu</value>
+  </data>
+  <data name="Clients are happy. They can see that we are a responsible bar and their health is a priority. No more old dirty menus :D. All they need is their phone" xml:space="preserve">
+    <value>Clients are happy. They can see that we are a responsible Coffe and their health is a priority. No more old dirty menus :D. All they need is their phone</value>
+  </data>
+  <data name="Community support" xml:space="preserve">
+    <value>Community support</value>
+  </data>
+  <data name="Contactless QR digital menu" xml:space="preserve">
+    <value>Contactless QR digital menu</value>
+  </data>
+  <data name="Create a Digital Menu" xml:space="preserve">
+    <value>Create a Digital Menu</value>
+  </data>
+  <data name="Create a digital menu for your Restaurant or Bar" xml:space="preserve">
+    <value>Create a digital menu for your Restaurant or coffe</value>
+  </data>
+  <data name="Create a menu for you, now!" xml:space="preserve">
+    <value>Create a menu for you, now</value>
+  </data>
+  <data name="Create QR" xml:space="preserve">
+    <value>Create QR</value>
+  </data>
+  <data name="Create your menu directly on our platform. Update anytime. Easy And Simple" xml:space="preserve">
+    <value>Create your menu directly on our platform. Update anytime. Easy And Simple</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Dedicated Support" xml:space="preserve">
+    <value>Dedicated Support</value>
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value>Demo</value>
+  </data>
+  <data name="Design it" xml:space="preserve">
+    <value>Design it</value>
+  </data>
+  <data name="direction" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="Engage more with your customers" xml:space="preserve">
+    <value>Engage more with your customers</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="eur" xml:space="preserve">
+    <value>eur</value>
+  </data>
+  <data name="Experience it" xml:space="preserve">
+    <value>Experience it</value>
+  </data>
+  <data name="Extras and items variants" xml:space="preserve">
+    <value>Extras and items variants</value>
+  </data>
+  <data name="For bigger restaurants and bars. Offer a full menu. Limitless plan" xml:space="preserve">
+    <value>For bigger restaurants and bars. Offer a full menu. Limitless plan</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Free</value>
+  </data>
+  <data name="Full access to QR tool" xml:space="preserve">
+    <value>Full access to QR tool</value>
+  </data>
+  <data name="Full access to the menu creation tool" xml:space="preserve">
+    <value>Full access to the menu creation tool</value>
+  </data>
+  <data name="Go Digital" xml:space="preserve">
+    <value>Go Digital</value>
+  </data>
+  <data name="Go Mobile" xml:space="preserve">
+    <value>Go Mobile</value>
+  </data>
+  <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
+    <value>If you run a small restaurant or bar, or just need the basics, this plan is great.</value>
+  </data>
+  <data name="James Curran Brooklyn Taco" xml:space="preserve">
+    <value>James Curran Brooklyn Taco</value>
+  </data>
+  <data name="Jason Edwards Malibu Diner" xml:space="preserve">
+    <value>Jason Edwards Malibu Diner</value>
+  </data>
+  <data name="Jessica Evans Awang Italian Restaurant" xml:space="preserve">
+    <value>Jessica Evans Awang Italian Restaurant</value>
+  </data>
+  <data name="Join now" xml:space="preserve">
+    <value>Join now</value>
+  </data>
+  <data name="Just open the camera on your phone and scan the QR code below!" xml:space="preserve">
+    <value>Just open the camera on your phone and scan the QR code below!</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>ar</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>عربي</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="month" xml:space="preserve">
+    <value>month</value>
+  </data>
+  <data name="No mobile app required" xml:space="preserve">
+    <value>No mobile app required</value>
+  </data>
+  <data name="No more printing and reprinting for some small mistake in our menu or price change. We love what QR Menu Maker have provided" xml:space="preserve">
+    <value>No more printing and reprinting for some small mistake in our menu or price change. We love what QR Menu Maker have provided</value>
+  </data>
+  <data name="Now your visitors will use their mobile phone camera to access your menu" xml:space="preserve">
+    <value>Now your visitors will use their mobile phone camera to access your menu</value>
+  </data>
+  <data name="Organize into categories" xml:space="preserve">
+    <value>Organize into categories</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Pick QR color" xml:space="preserve">
+    <value>Pick QR color</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="Print templates for download" xml:space="preserve">
+    <value>Print templates for download</value>
+  </data>
+  <data name="Pro" xml:space="preserve">
+    <value>Pro</value>
+  </data>
+  <data name="Pro yearly" xml:space="preserve">
+    <value>Pro yearly</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
+    <value>QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu</value>
+  </data>
+  <data name="Real-time changes" xml:space="preserve">
+    <value>Real-time changes</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Restaurant or bar name" xml:space="preserve">
+    <value>Restaurant or Coffe name</value>
+  </data>
+  <data name="Restaurants and Bars that love our QRs" xml:space="preserve">
+    <value>Restaurants and Coffe that love our QRs</value>
+  </data>
+  <data name="Richard Thomas Burger 2Go" xml:space="preserve">
+    <value>Richard Thomas Burger 2Go</value>
+  </data>
+  <data name="Same as PRO  with a 20% discount. Enjoy your QR menu full year" xml:space="preserve">
+    <value>Same as PRO, with a 20% discount. Enjoy your QR menu full year</value>
+  </data>
+  <data name="See a demo online menu" xml:space="preserve">
+    <value>See a demo online menu</value>
+  </data>
+  <data name="Start free and fell in love in our pro features" xml:space="preserve">
+    <value>Start free and fell in love in our pro features</value>
+  </data>
+  <data name="Start with  Free" xml:space="preserve">
+    <value>Start with  Free</value>
+  </data>
+  <data name="Start with  Pro" xml:space="preserve">
+    <value>Start with  Pro</value>
+  </data>
+  <data name="Start with  Pro yearly" xml:space="preserve">
+    <value>Start with  Pro yearly</value>
+  </data>
+  <data name="Superfast online menu - PWA" xml:space="preserve">
+    <value>Superfast online menu - PWA</value>
+  </data>
+  <data name="Testimonials" xml:space="preserve">
+    <value>Testimonials</value>
+  </data>
+  <data name="text align" xml:space="preserve">
+    <value>text-align:left</value>
+  </data>
+  <data name="The most comprehensive platform for QR digital menu" xml:space="preserve">
+    <value>The most comprehensive platform for QR digital menu</value>
+  </data>
+  <data name="Their mobile is your menu now" xml:space="preserve">
+    <value>Their mobile is your menu now</value>
+  </data>
+  <data name="There are" xml:space="preserve">
+    <value>There are platforms where you can create a menu but not design your QR</value>
+  </data>
+  <data name="There are platforms where you can make QR code" xml:space="preserve">
+    <value>There are platforms where you can make QR code</value>
+  </data>
+  <data name="Unlimited items in the menu" xml:space="preserve">
+    <value>Unlimited items in the menu</value>
+  </data>
+  <data name="Unlimited views" xml:space="preserve">
+    <value>Unlimited views</value>
+  </data>
+  <data name="Used by top restaurants worldwide" xml:space="preserve">
+    <value>Used by top restaurants worldwide</value>
+  </data>
+  <data name="View analytics" xml:space="preserve">
+    <value>View analytics</value>
+  </data>
+  <data name="We do both" xml:space="preserve">
+    <value>We do both</value>
+  </data>
+  <data name="We use QR Menu Maker to protect our visitors. Dirty old menus are a thing from the past. So far clients report no issues. And they love our new online menu" xml:space="preserve">
+    <value>We use QR Menu Maker to protect our visitors. Dirty old menus are a thing from the past. So far clients report no issues. And they love our new online menu</value>
+  </data>
+  <data name="Your email" xml:space="preserve">
+    <value>Your email</value>
+  </data>
+</root>

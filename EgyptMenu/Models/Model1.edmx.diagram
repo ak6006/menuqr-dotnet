@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ecccf01c569940acaaddcf2e64be0dd8" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.address" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.category" Width="1.5" PointX="5.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.city" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.extra" Width="1.5" PointX="9.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.hour" Width="1.5" PointX="5.25" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.item" Width="1.5" PointX="7.5" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.language" Width="1.5" PointX="12.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.migration" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.model_has_permissions" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.model_has_roles" Width="1.5" PointX="10.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.notification" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.option" Width="1.5" PointX="9.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.order_has_items" Width="1.5" PointX="12.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.order_has_status" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.order" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.page" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.payment" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.permission" Width="1.5" PointX="5.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.plan" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.rating" Width="1.5" PointX="10.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.restorant" Width="1.5" PointX="3" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.role" Width="1.5" PointX="8" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.setting" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.sms_verifications" Width="1.5" PointX="3" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.status" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.translation" Width="1.5" PointX="15" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.user" Width="1.5" PointX="0.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.variant" Width="1.5" PointX="9.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.variants_has_extras" Width="1.5" PointX="12" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.password_resets" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.address_address_user_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.orders_orders_address_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.items_items_category_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.extras_extras_item_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.variants_has_extras_variants_has_extras_extra_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.options_options_item_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.order_has_items_order_has_items_item_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.variants_variants_item_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.translations_translations_language_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.model_has_permissions_model_has_permissions_permission_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.model_has_roles_model_has_roles_role_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.order_has_items_order_has_items_order_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.order_has_status_order_has_status_order_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.order_has_status_order_has_status_status_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.order_has_status_order_has_status_user_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.orders_orders_client_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.orders_orders_driver_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.ratings_ratings_order_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.payments_payments_user_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.ratings_ratings_user_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.sms_verifications_sms_verifications_user_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.variants_has_extras_variants_has_extras_variant_id_foreign" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.role_has_permissions" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

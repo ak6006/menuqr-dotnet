@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A6A5AC_menuModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="addresses">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.address">
+        <MappingFragment StoreEntitySet="address">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address1" ColumnName="address" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="apartment" ColumnName="apartment" />
+          <ScalarProperty Name="intercom" ColumnName="intercom" />
+          <ScalarProperty Name="floor" ColumnName="floor" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="order_index" ColumnName="order_index" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cities">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.city">
+        <MappingFragment StoreEntitySet="cities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="header_title" ColumnName="header_title" />
+          <ScalarProperty Name="header_subtitle" ColumnName="header_subtitle" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="extras">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.extra">
+        <MappingFragment StoreEntitySet="extras">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="extra_for_all_variants" ColumnName="extra_for_all_variants" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hours">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.hour">
+        <MappingFragment StoreEntitySet="hours">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="C0_from" ColumnName="0_from" />
+          <ScalarProperty Name="C0_to" ColumnName="0_to" />
+          <ScalarProperty Name="C1_from" ColumnName="1_from" />
+          <ScalarProperty Name="C1_to" ColumnName="1_to" />
+          <ScalarProperty Name="C2_from" ColumnName="2_from" />
+          <ScalarProperty Name="C2_to" ColumnName="2_to" />
+          <ScalarProperty Name="C3_from" ColumnName="3_from" />
+          <ScalarProperty Name="C3_to" ColumnName="3_to" />
+          <ScalarProperty Name="C4_from" ColumnName="4_from" />
+          <ScalarProperty Name="C4_to" ColumnName="4_to" />
+          <ScalarProperty Name="C5_from" ColumnName="5_from" />
+          <ScalarProperty Name="C5_to" ColumnName="5_to" />
+          <ScalarProperty Name="C6_from" ColumnName="6_from" />
+          <ScalarProperty Name="C6_to" ColumnName="6_to" />
+          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.item">
+        <MappingFragment StoreEntitySet="items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="available" ColumnName="available" />
+          <ScalarProperty Name="has_variants" ColumnName="has_variants" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="languages">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.language">
+        <MappingFragment StoreEntitySet="languages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="language1" ColumnName="language" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migrations">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.migration">
+        <MappingFragment StoreEntitySet="migrations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migration1" ColumnName="migration" />
+          <ScalarProperty Name="batch" ColumnName="batch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="model_has_permissions">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.model_has_permissions">
+        <MappingFragment StoreEntitySet="model_has_permissions">
+          <ScalarProperty Name="permission_id" ColumnName="permission_id" />
+          <ScalarProperty Name="model_type" ColumnName="model_type" />
+          <ScalarProperty Name="model_id" ColumnName="model_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="model_has_roles">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.model_has_roles">
+        <MappingFragment StoreEntitySet="model_has_roles">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="model_type" ColumnName="model_type" />
+          <ScalarProperty Name="model_id" ColumnName="model_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="notifications">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.notification">
+        <MappingFragment StoreEntitySet="notifications">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="notifiable_type" ColumnName="notifiable_type" />
+          <ScalarProperty Name="notifiable_id" ColumnName="notifiable_id" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="read_at" ColumnName="read_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="options">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.option">
+        <MappingFragment StoreEntitySet="options">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="options" ColumnName="options" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_has_items">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.order_has_items">
+        <MappingFragment StoreEntitySet="order_has_items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="extras" ColumnName="extras" />
+          <ScalarProperty Name="vat" ColumnName="vat" />
+          <ScalarProperty Name="vatvalue" ColumnName="vatvalue" />
+          <ScalarProperty Name="variant_price" ColumnName="variant_price" />
+          <ScalarProperty Name="variant_name" ColumnName="variant_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order_has_status">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.order_has_status">
+        <MappingFragment StoreEntitySet="order_has_status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+          <ScalarProperty Name="delivery_price" ColumnName="delivery_price" />
+          <ScalarProperty Name="order_price" ColumnName="order_price" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+          <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="srtipe_payment_id" ColumnName="srtipe_payment_id" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="fee_value" ColumnName="fee_value" />
+          <ScalarProperty Name="static_fee" ColumnName="static_fee" />
+          <ScalarProperty Name="delivery_method" ColumnName="delivery_method" />
+          <ScalarProperty Name="delivery_pickup_interval" ColumnName="delivery_pickup_interval" />
+          <ScalarProperty Name="vatvalue" ColumnName="vatvalue" />
+          <ScalarProperty Name="payment_processor_fee" ColumnName="payment_processor_fee" />
+          <ScalarProperty Name="time_to_prepare" ColumnName="time_to_prepare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pages">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.page">
+        <MappingFragment StoreEntitySet="pages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="showAsLink" ColumnName="showAsLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payments">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.payment">
+        <MappingFragment StoreEntitySet="payments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="stripe_id" ColumnName="stripe_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="provider" ColumnName="provider" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permissions">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.permission">
+        <MappingFragment StoreEntitySet="permissions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="guard_name" ColumnName="guard_name" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plans">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.plan">
+        <MappingFragment StoreEntitySet="plan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="limit_items" ColumnName="limit_items" />
+          <ScalarProperty Name="limit_orders" ColumnName="limit_orders" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="period" ColumnName="period" />
+          <ScalarProperty Name="paddle_id" ColumnName="paddle_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="features" ColumnName="features" />
+          <ScalarProperty Name="limit_views" ColumnName="limit_views" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ratings">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.rating">
+        <MappingFragment StoreEntitySet="ratings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="rating1" ColumnName="rating" />
+          <ScalarProperty Name="rateable_type" ColumnName="rateable_type" />
+          <ScalarProperty Name="rateable_id" ColumnName="rateable_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restorants">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
+        <MappingFragment StoreEntitySet="restorants">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="subdomain" ColumnName="subdomain" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="cover" ColumnName="cover" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="minimum" ColumnName="minimum" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="static_fee" ColumnName="static_fee" />
+          <ScalarProperty Name="radius" ColumnName="radius" />
+          <ScalarProperty Name="is_featured" ColumnName="is_featured" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="guard_name" ColumnName="guard_name" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="settings">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.setting">
+        <MappingFragment StoreEntitySet="settings">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="site_name" ColumnName="site_name" />
+          <ScalarProperty Name="site_logo" ColumnName="site_logo" />
+          <ScalarProperty Name="search" ColumnName="search" />
+          <ScalarProperty Name="restorant_details_image" ColumnName="restorant_details_image" />
+          <ScalarProperty Name="restorant_details_cover_image" ColumnName="restorant_details_cover_image" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="header_title" ColumnName="header_title" />
+          <ScalarProperty Name="header_subtitle" ColumnName="header_subtitle" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="instagram" ColumnName="instagram" />
+          <ScalarProperty Name="playstore" ColumnName="playstore" />
+          <ScalarProperty Name="appstore" ColumnName="appstore" />
+          <ScalarProperty Name="maps_api_key" ColumnName="maps_api_key" />
+          <ScalarProperty Name="delivery" ColumnName="delivery" />
+          <ScalarProperty Name="typeform" ColumnName="typeform" />
+          <ScalarProperty Name="mobile_info_title" ColumnName="mobile_info_title" />
+          <ScalarProperty Name="mobile_info_subtitle" ColumnName="mobile_info_subtitle" />
+          <ScalarProperty Name="order_options" ColumnName="order_options" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sms_verifications">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.sms_verifications">
+        <MappingFragment StoreEntitySet="sms_verifications">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="status">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.status">
+        <MappingFragment StoreEntitySet="status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="translations">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.translation">
+        <MappingFragment StoreEntitySet="translations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="key" ColumnName="key" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="google_id" ColumnName="google_id" />
+          <ScalarProperty Name="fb_id" ColumnName="fb_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="api_token" ColumnName="api_token" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="verification_code" ColumnName="verification_code" />
+          <ScalarProperty Name="phone_verified_at" ColumnName="phone_verified_at" />
+          <ScalarProperty Name="plan_id" ColumnName="plan_id" />
+          <ScalarProperty Name="plan_status" ColumnName="plan_status" />
+          <ScalarProperty Name="cancel_url" ColumnName="cancel_url" />
+          <ScalarProperty Name="update_url" ColumnName="update_url" />
+          <ScalarProperty Name="checkout_id" ColumnName="checkout_id" />
+          <ScalarProperty Name="subscription_plan_id" ColumnName="subscription_plan_id" />
+          <ScalarProperty Name="stripe_account" ColumnName="stripe_account" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="variants">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.variant">
+        <MappingFragment StoreEntitySet="variants">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="options" ColumnName="options" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="enable_qty" ColumnName="enable_qty" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="variants_has_extras">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.variants_has_extras">
+        <MappingFragment StoreEntitySet="variants_has_extras">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="variant_id" ColumnName="variant_id" />
+          <ScalarProperty Name="extra_id" ColumnName="extra_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="password_resets">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.password_resets">
+        <MappingFragment StoreEntitySet="password_resets">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="role_has_permissions" TypeName="DB_A6A5AC_menuModel.role_has_permissions" StoreEntitySet="role_has_permissions">
+      <EndProperty Name="permissions">
+        <ScalarProperty Name="id" ColumnName="permission_id" />
+      </EndProperty>
+      <EndProperty Name="roles">
+        <ScalarProperty Name="id" ColumnName="role_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

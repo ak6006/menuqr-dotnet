@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNet.Identity
+@using EgyptMenu.Views.Shared.Resources
+<link href="~/Content/new-style.css" rel="stylesheet" />
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+            <div @*class=" cta_button_classes"*@>
+
+                <a data-scroll href="@Url.Action("Dashboard","Owner")" class="btn btn-md btn-docs btn-outline-white animate-up-2 mr-3 dashboardMargin">
+                    <i class="fas fa-th-large mr-2"></i><strong style="font-weight:bolder">D</strong><span class="spanHide1">ashboard</span>
+                </a>
+
+            </div>
+            @*<li>
+                    @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
+        
+    }
+}
+else
+{
+    <a data-scroll href="@Url.Action("login", "Account")" class="btn btn-md btn-docs btn-white animate-up-2 mr-3">
+        <i class="fas fa-th-large mr-2"></i><span class="spanHide"> @Resource.Login</span>
+    </a>
+    <a href="@Url.Action("register", "Account")" target="_blank" class="btn btn-md btn-secondary animate-up-2">
+        <i class="fas fa-paper-plane mr-2"></i>
+        <span class="spanHide"> @Resource.Registration</span>
+    </a>
+    @*<ul class="nav navbar-nav navbar-right">
+            <li class="btn btn-md btn-docs btn-white animate-up-2 mr-3"><i class="fas fa-th-large mr-2"></i> @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            <li class="btn btn-md btn-secondary animate-up-2"><i class="fas fa-paper-plane mr-2"></i>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { style = "color:white", id = "registerLink" })</li>
+        </ul>*@
+}

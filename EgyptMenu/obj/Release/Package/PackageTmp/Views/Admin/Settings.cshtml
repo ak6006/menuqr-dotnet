@@ -1,0 +1,629 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="csrf-token" content="PQSjwAHiUMfgM0JUUMrA4iwVdXQoe7zBbjVtaWaa">
+
+    <title>QR Menu Maker</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="~/Content/nucleo.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
+    <!-- Argon CSS -->
+    <link href="~/Content/argon.css" rel="stylesheet" />
+    <!-- Argon CSS -->
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="~/Content/jasny-bootstrap.min.css" rel="stylesheet" />
+    <!-- Flatpickr datepicker -->
+    <link href="~/Content/flatpickr.min.css" rel="stylesheet" />
+
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#000000">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="QR Menu Maker">
+    <link rel="icon" sizes="256x256" href="android-chrome-256x256.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="QR Menu Maker">
+    <link rel="apple-touch-icon" href="android-chrome-256x256.png">
+
+
+    <link href="/images/icons/splash-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1242x2208.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1536x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+    <!-- Tile for Win8 -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
+
+    <!-- Custom CSS defined by admin -->
+    <link href="~/Content/back.css" rel="stylesheet" />
+
+</head>
+<body class="">
+    <form id="logout-form" action="http://localhost/logout" method="POST" style="display: none;">
+        <input type="hidden" name="_token" value="PQSjwAHiUMfgM0JUUMrA4iwVdXQoe7zBbjVtaWaa">
+    </form>
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand pt-0" href="#">
+                <img src="~/Content/images/logo_qrzebra.png" class="navbar-brand-img" alt="..." />
+            </a>
+            <!-- User -->
+            <ul class="nav align-items-center d-md-none">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center">
+                            <span class="avatar avatar-sm rounded-circle">
+
+
+                                <img alt="..." src="https://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61">
+                            </span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">Welcome!</h6>
+                        </div>
+                        <a href="http://localhost/profile" class="dropdown-item">
+                            <i class="ni ni-single-02"></i>
+                            <span>My profile</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                            <i class="ni ni-user-run"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Collapse header -->
+                <div class="navbar-collapse-header d-md-none">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="http://localhost/home">
+                                <img src="/default/logo_qrzebra.png">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <ul class="navbar-nav">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Restaurants", "Admin")">
+                            <i class="fas fa-store-alt text-primary "></i> Restaurants
+                        </a>
+                    </li>
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Plans", "Admin")">
+                            <i class="fas fa-credit-card text-orange"></i> Pricing plans
+                        </a>
+                    </li>
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="@Url.Action("LangTranslations", "Admin")">
+                            <i class="fas fa-globe-americas text-orange"></i> Translations
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="@Url.Action("EnV", "Admin")">
+                            <i class="fas fa-hand-point-up text-yellow"></i> ENV Editor
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Settings", "Admin")">
+                            <i class="fas fa-tools text-black"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+
+                <!-- Divider -->
+                <hr class="my-3">
+                <!-- Heading -->
+                <h6 class="navbar-heading text-muted">Version 1.5.5   <span id="uptodate" class="badge badge-success" style="display:none;">latest</span></h6>
+                <h6>2020-12-19 10:54:56 </h6>
+
+                <hr class="my-3">
+                <div id="update_notification" style="display:none;" class="alert alert-info">
+                    <button type="button" style="margin-left: 20px" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="uptodate_notification" style="display:none;" class="alert alert-success">
+                    <button type="button" style="margin-left: 20px" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top navbar-expand-md  navbar-dark" id="navbar-main">
+            <div class="container-fluid">
+
+
+
+                <!-- Form -->
+                <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                </form>
+
+                <!-- User -->
+                <ul class="navbar-nav align-items-center d-none d-md-flex">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="media align-items-center">
+                                <span class="avatar avatar-sm rounded-circle">
+
+                                    <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61">
+                                </span>
+                                <div class="media-body ml-2 d-none d-lg-block">
+                                    <span class="mb-0 text-sm  font-weight-bold">Admin Admin</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome!</h6>
+                            </div>
+                            <a href="http://localhost/profile" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>My profile</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                                <i class="fas fa-running"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="modal fade" id="productModal" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="modalTitle" class="modal-title" id="modal-title-new-item"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="card bg-secondary shadow border-0">
+                            <div class="card-body px-lg-5 py-lg-5">
+                                <div class="row">
+                                    <div class="col-sm col-md col-lg col-lg text-center">
+                                        <img id="modalImg" src="" width="295px" height="200px">
+                                    </div>
+                                    <div class="col-sm col-md col-lg col-lg">
+                                        <input id="modalID" type="hidden"></input>
+                                        <span id="modalPrice" class="new-price"></span>
+                                        <p id="modalDescription"></p>
+                                        <div id="variants-area">
+                                            <label class="form-control-label">Select your options</label>
+                                            <div id="variants-area-inside">
+                                            </div>
+                                        </div>
+
+
+
+                                        <div id="exrtas-area">
+                                            <br />
+                                            <label class="form-control-label" for="quantity">Extras</label>
+                                            <div id="exrtas-area-inside">
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="modal-import-restaurants" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+            <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="modal-title-new-item">Import restaurants from CSV</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="card bg-secondary shadow border-0">
+                            <div class="card-body px-lg-5 py-lg-5">
+                                <div class="col-md-10 offset-md-1">
+                                    <form role="form" method="post" action="http://localhost/import/restaurants" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="PQSjwAHiUMfgM0JUUMrA4iwVdXQoe7zBbjVtaWaa">                            <div class="form-group text-center">
+                                            <label class="form-control-label" for="resto_excel">Import your file</label>
+                                            <div class="text-center">
+                                                <input type="file" class="form-control form-control-file" name="resto_excel" accept=".csv, .ods, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" required>
+                                            </div>
+                                        </div>
+                                        <input name="category_id" id="category_id" type="hidden" required>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary my-4">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+        </div>
+
+
+        <div class="container-fluid mt--7">
+            <div class="row">
+                <div class="col-xl-12 order-xl-1">
+                    <div class="card bg-secondary shadow">
+                        <div class="card-header bg-white border-0">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">Settings Management</h3>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <a href="@Url.Action("Systemstatus", "Admin")" class="btn btn-sm btn-danger">System status</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <form id="settings" method="post" action="http://localhost/settings/1" autocomplete="off" enctype="multipart/form-data">
+                                <input type="hidden" name="_token" value="CFZ4GIQXOGTFMGCNsVWA02cBzKaFYxo7Hq8WQvb5">                            <input type="hidden" name="_method" value="put">
+                                <div class="nav-wrapper">
+                                    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="fas fa-list-ul mr-2"></i>Site Info</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="far fa-image mr-2"></i>Images</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#cssjs" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="fas fa-palette mr-2"></i>CSS &amp; JS</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                                <br />
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="site_name">Site Name</label>
+                                            <input step=".01" type="text" name="site_name" id="site_name" class="form-control form-control-alternative" placeholder="Site Name here ..." value="QR Menu Maker" required autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="site_description">Site Description</label>
+                                            <input step=".01" type="text" name="site_description" id="site_description" class="form-control form-control-alternative" placeholder="Site Description here ..." value="Food Delivery from best restaurants" required autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group text-center">
+                                                    <label class="form-control-label" for="input-name">Site Logo</label>
+                                                    <div class="text-center">
+                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                            <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px;">
+
+                                                                <img src="~/Content/images/logo_qrzebra.png"  alt="..." />
+                                                                
+                                                            </div>
+                                                            <div>
+                                                                <span class="btn btn-outline-secondary btn-file">
+                                                                    <span class="fileinput-new">Select image</span>
+                                                                    <span class="fileinput-exists">Change</span>
+                                                                    <input type="file" name="site_logo" accept="image/x-png,image/gif,image/jpeg">
+                                                                </span>
+                                                                <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group text-center">
+                                                    <label class="form-control-label" for="input-name">Search Cover</label>
+                                                    <div class="text-center">
+                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                            <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px;">
+
+                                                                <img src="~/Content/images/cover.jpg" alt="..."/>
+                                                            </div>
+                                                            <div>
+                                                                <span class="btn btn-outline-secondary btn-file">
+                                                                    <span class="fileinput-new">Select image</span>
+                                                                    <span class="fileinput-exists">Change</span>
+                                                                    <input type="file" name="search" accept="image/x-png,image/gif,image/jpeg">
+                                                                </span>
+                                                                <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group text-center">
+                                                    <label class="form-control-label" for="input-name">Restaurant Default Image</label>
+                                                    <div class="text-center">
+                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                            <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px;">
+                                                                <img src="~/Content/images/restaurant_large.jpg" alt="..."/>                                                           </div>
+                                                            <div>
+                                                                <span class="btn btn-outline-secondary btn-file">
+                                                                    <span class="fileinput-new">Select image</span>
+                                                                    <span class="fileinput-exists">Change</span>
+                                                                    <input type="file" name="restorant_details_image" accept="image/x-png,image/gif,image/jpeg">
+                                                                </span>
+                                                                <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group text-center">
+                                                    <label class="form-control-label" for="input-name">Restaurant Details Cover Image</label>
+                                                    <div class="text-center">
+                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                            <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px;">
+                                                                <img src="~/Content/images/cover.jpg" alt="..."/>
+                                                            </div>
+                                                            <div>
+                                                                <span class="btn btn-outline-secondary btn-file">
+                                                                    <span class="fileinput-new">Select image</span>
+                                                                    <span class="fileinput-exists">Change</span>
+                                                                    <input type="file" name="restorant_details_cover_image" accept="image/x-png,image/gif,image/jpeg">
+                                                                </span>
+                                                                <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group text-center">
+                                                    <label class="form-control-label" for="input-name">Favicon (120x120)</label>
+                                                    <div class="text-center">
+                                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                            <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 120px; height: 120px;">
+                                                                <img src="~/Content/images/apple-touch-icon.png" alt="..."/>
+                                                            </div>
+                                                            <div>
+                                                                <span class="btn btn-outline-secondary btn-file">
+                                                                    <span class="fileinput-new">Select image</span>
+                                                                    <span class="fileinput-exists">Change</span>
+                                                                    <input type="file" name="favicons" accept="image/x-png,image/gif,image/jpeg">
+                                                                </span>
+                                                                <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                                        <h6 class="heading-small text-muted mb-4">Social Links</h6>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="facebook">Facebook</label>
+                                            <input step=".01" type="text" name="facebook" id="facebook" class="form-control form-control-alternative" placeholder="Facebook link here..." value="" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="instagram">Instagram</label>
+                                            <input step=".01" type="text" name="instagram" id="instagram" class="form-control form-control-alternative" placeholder="Instagram link here..." value="" autofocus>
+                                        </div>
+                                        <br />
+                                        <h6 class="heading-small text-muted mb-4">Mobile App</h6>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="mobile_info_title">Info Title</label>
+                                            <input step=".01" type="text" name="mobile_info_title" id="mobile_info_title" class="form-control form-control-alternative" placeholder="Info Title text here ..." value="Download the food you love" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="mobile_info_subtitle">Info Subtitle</label>
+                                            <input step=".01" type="text" name="mobile_info_subtitle" id="mobile_info_subtitle" class="form-control form-control-alternative" placeholder="Info Subtitle text here ..." value="It`s all at your fingertips - the restaurants you love. Find the right food to suit your mood, and make the first bite last. Go ahead, download us." autofocus>
+                                        </div>
+                                        <br />
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="playstore">Play Store</label>
+                                            <input step=".01" type="text" name="playstore" id="playstore" class="form-control form-control-alternative" placeholder="Play Store link here ..." value="" autofocus>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="appstore">App Store</label>
+                                            <input step=".01" type="text" name="appstore" id="appstore" class="form-control form-control-alternative" placeholder="App Store link here ..." value="" autofocus>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="cssjs" role="tabpanel" aria-labelledby="cssjs">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="jsfront">JavaScript - Frontend</label>
+                                            <textarea class="form-control form-control-alternative" name="jsfront" id="jsfront" rows="4" cols="50"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="cssfront">CSS - Frontend</label>
+                                            <textarea class="form-control form-control-alternative" name="cssfront" id="cssfront" rows="4" cols="50"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="jsback">JavaScript - Backend</label>
+                                            <textarea class="form-control form-control-alternative" name="jsback" id="jsback" rows="4" cols="50"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="cssback">CSS - Backend</label>
+                                            <textarea class="form-control form-control-alternative" name="cssback" id="cssback" rows="4" cols="50"></textarea>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success mt-4">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+    </div>
+    </div>
+
+
+    <!-- Commented because navtabs includes same script -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+    <script src="~/Content/JS/popper.min.js"></script>
+    <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
+
+    <!-- Navtabs -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+
+    <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
+
+    <!-- Nouslider -->
+    <script src="~/Content/JS/nouislider.min.js"></script>
+
+    <!-- Argon JS -->
+    <script src="~/Content/JS/argon.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="~/Content/JS/jasny-bootstrap.min.js"></script>
+    <!-- Custom js -->
+    <script src="~/Content/JS/orders.js"></script>
+    <!-- Custom js -->
+    <script src="~/Content/JS/mresto.js"></script>
+    <!-- AJAX -->
+    <!-- SELECT2 -->
+    <script src="~/Content/JS/select2.js"></script>
+    <script src="~/Content/JS/select2.min.js"></script>
+
+    <!-- Google Map -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
+    </script>
+    <script src="~/Content/JS/rmap.js"></script>
+
+    <!-- Import Vue -->
+    <script src="~/Content/JS/vue.js"></script>
+
+    <!-- Import AXIOS --->
+    <script src="~/Content/JS/axios.min.js"></script>
+
+    <!-- Flatpickr datepicker -->
+    <script src="~/Content/JS/flatpickr.js"></script>
+
+    <!-- OneSignal -->
+    <script src="~/Content/JS/OneSignalSDK.js"></script>
+    <script>
+        var ONESIGNAL_APP_ID = "";
+        var USER_ID = '1';
+    </script>
+    <script src="~/Content/JS/onesignal.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: 'updater.check',
+                    async: false,
+                    success: function (response) {
+                        if (response != '') {
+                            $('#update_notification').append('<strong>New Update<br /><br /><span class="badge badge-pill badge-info">v. ' + response + '</span></strong><br /><br /><a role="button" href="updater.update" class="btn btn-sm btn-info pull-right">Update Now</a>');
+                            $('#update_notification').show();
+                        } else {
+                            $('#uptodate').show();
+                        }
+                    }
+                });
+            }, 3000);
+
+        });
+    </script>
+
+    <!-- Custom JS defined by admin -->
+</body>
+</html>

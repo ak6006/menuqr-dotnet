@@ -1,0 +1,24 @@
+﻿ 
+@media only screen and (max-width: 600px) {
+    .spanHide1, .spanHide {
+        display: none;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+    .spanHide {
+        display: none;
+    }
+}
+.backgroundIMG {
+        background-image: url(~/Content/images/profile-cover.jpg);
+        background-size: cover;
+        background-position: center top;
+ }
+.LogoIMG {
+    height: 65px !important;
+}
+@media only screen and (max-width: 1000px) {
+    .LogoIMG {
+        height: 8vw !important;
+    }
+}

@@ -1,0 +1,667 @@
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EgyptMenu.dll.config
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EgyptMenu.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EgyptMenu.pdb
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csc.exe
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csc.exe.config
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csc.rsp
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csi.exe
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csi.exe.config
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csi.rsp
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Buffers.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Memory.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\vbc.exe
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\vbc.exe.config
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\vbc.rsp
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\VBCSCompiler.exe
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Antlr3.Runtime.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.SqlServer.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Owin.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Net.Http.Formatting.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Helpers.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.WebHost.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Mvc.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Optimization.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Razor.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Razor.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\WebGrease.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.SqlServer.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Helpers.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Mvc.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Optimization.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Razor.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Razor.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Antlr3.Runtime.pdb
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Net.Http.Formatting.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.WebHost.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csprojAssemblyReference.cache
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Migrations.amr.resources
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.GenerateResource.cache
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.CoreCompileInputs.cache
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.CopyComplete
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.pdb
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\SendGrid.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\StarkbankEcdsa.dll
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\SendGrid.pdb
+C:\Users\Tegoo II\Desktop\EgyptMenu\EgyptMenu\bin\SendGrid.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EgyptMenu.dll.config
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EgyptMenu.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EgyptMenu.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ar\EgyptMenu.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csc.exe
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csc.exe.config
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csc.rsp
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csi.exe
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csi.exe.config
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\csi.rsp
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Buffers.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Memory.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\vbc.exe
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\vbc.exe.config
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\vbc.rsp
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\VBCSCompiler.exe
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Antlr3.Runtime.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.SqlServer.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Localization.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Metadata.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Localization.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Composite.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Options.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.WebEncoders.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Win32.Registry.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.Bson.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Owin.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\SendGrid.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\StarkbankEcdsa.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Buffers.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Collections.Immutable.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.ComponentModel.Annotations.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.IO.Pipelines.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Memory.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Net.Http.Formatting.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Numerics.Vectors.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Reflection.Metadata.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.AccessControl.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.Cryptography.Xml.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.Permissions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.Principal.Windows.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Text.Encoding.CodePages.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Text.Encodings.Web.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Text.Json.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.ValueTuple.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Helpers.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.WebHost.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Mvc.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Optimization.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Razor.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Razor.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\WebGrease.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\EntityFramework.SqlServer.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Antiforgery.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.JsonPatch.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Localization.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Metadata.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Localization.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.CSharp.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.CSharp.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.DotNet.PlatformAbstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Memory.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyModel.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Composite.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Options.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.WebEncoders.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.Win32.Registry.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.Bson.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.Bson.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\SendGrid.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\SendGrid.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Buffers.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Collections.Immutable.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.IO.Pipelines.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Memory.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Numerics.Vectors.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Reflection.Metadata.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.AccessControl.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.Cryptography.Xml.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.Permissions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Security.Principal.Windows.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Text.Encoding.CodePages.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Text.Encodings.Web.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Text.Json.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.ValueTuple.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Helpers.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Mvc.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Optimization.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Razor.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Razor.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Antlr3.Runtime.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Net.Http.Formatting.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\System.Web.Http.WebHost.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csprojAssemblyReference.cache
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Views.Shared.Resources.Resource.resources
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Migrations.amr.resources
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Views.Shared.Resources.Resource.ar.resources
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.GenerateResource.cache
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\ar\EgyptMenu.resources.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.CopyComplete
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.pdb
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ImageResizer.dll
+C:\Users\ahmed\Desktop\EgyptMenu\EgyptMenu\bin\ImageResizer.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.DiaSymReader.Native.x86.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.DiaSymReader.Native.amd64.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EgyptMenu.dll.config
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EgyptMenu.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EgyptMenu.pdb
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ar\EgyptMenu.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\csc.exe
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\csc.exe.config
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\csc.rsp
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\csi.exe
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\csi.exe.config
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\csi.rsp
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.Managed.Core.targets
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Buffers.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Collections.Immutable.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Memory.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Numerics.Vectors.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Reflection.Metadata.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\vbc.exe
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\vbc.exe.config
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\vbc.rsp
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\VBCSCompiler.exe
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\roslyn\VBCSCompiler.exe.config
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Antlr3.Runtime.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EntityFramework.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EntityFramework.SqlServer.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ImageResizer.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Antiforgery.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Core.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Extensions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Features.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.JsonPatch.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Localization.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Metadata.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Core.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Localization.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Razor.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.Language.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.Runtime.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.WebUtilities.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.CSharp.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.Razor.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.DotNet.PlatformAbstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Memory.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyModel.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Composite.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Logging.Abstractions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.ObjectPool.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Options.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Primitives.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.WebEncoders.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Net.Http.Headers.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Google.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Web.Infrastructure.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Win32.Registry.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.Bson.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Owin.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\SendGrid.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\StarkbankEcdsa.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Buffers.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Collections.Immutable.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.ComponentModel.Annotations.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Diagnostics.DiagnosticSource.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.IO.Pipelines.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Memory.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Net.Http.Formatting.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Numerics.Vectors.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Reflection.Metadata.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Runtime.CompilerServices.Unsafe.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.AccessControl.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.Cryptography.Xml.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.Permissions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.Principal.Windows.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Text.Encoding.CodePages.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Text.Encodings.Web.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Text.Json.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Threading.Tasks.Extensions.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.ValueTuple.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Helpers.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Http.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Http.WebHost.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Mvc.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Optimization.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Razor.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Deployment.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Razor.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\WebGrease.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EntityFramework.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\EntityFramework.SqlServer.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ImageResizer.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Antiforgery.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authentication.Core.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Extensions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Http.Features.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.JsonPatch.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Localization.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Metadata.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Core.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Localization.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.Razor.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Razor.Runtime.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNetCore.WebUtilities.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Bcl.AsyncInterfaces.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.pdb
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.CSharp.pdb
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeAnalysis.CSharp.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.DotNet.PlatformAbstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Caching.Memory.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.DependencyModel.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.FileProviders.Composite.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Localization.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Logging.Abstractions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.ObjectPool.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Options.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.Primitives.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Extensions.WebEncoders.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Net.Http.Headers.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Google.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.Win32.Registry.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.Bson.pdb
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Newtonsoft.Json.Bson.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\SendGrid.pdb
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\SendGrid.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Buffers.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Collections.Immutable.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Diagnostics.DiagnosticSource.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.IO.Pipelines.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Memory.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Numerics.Vectors.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Reflection.Metadata.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Runtime.CompilerServices.Unsafe.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.AccessControl.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.Cryptography.Xml.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.Permissions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Security.Principal.Windows.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Text.Encoding.CodePages.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Text.Encodings.Web.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Text.Json.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Threading.Tasks.Extensions.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.ValueTuple.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Helpers.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Mvc.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Optimization.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Razor.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Deployment.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.WebPages.Razor.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Antlr3.Runtime.pdb
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Net.Http.Formatting.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Http.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\System.Web.Http.WebHost.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\cs\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\de\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\es\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\fr\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\it\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ja\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ko\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\pl\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\pt-BR\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ru\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\tr\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csprojAssemblyReference.cache
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Views.Shared.Resources.Resource.resources
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Migrations.amr.resources
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.Views.Shared.Resources.Resource.ar.resources
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.GenerateResource.cache
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.CoreCompileInputs.cache
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\ar\EgyptMenu.resources.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.csproj.CopyComplete
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.dll
+G:\Team I\Mahmoud\EgyptMenu\EgyptMenu\obj\Release\EgyptMenu.pdb

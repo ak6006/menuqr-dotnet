@@ -1,0 +1,2414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_A6A5AC_menuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="lat" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="lng" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="active" Type="smallint" Nullable="false" />
+          <Property Name="user_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="apartment" Type="nvarchar" MaxLength="191" />
+          <Property Name="intercom" Type="nvarchar" MaxLength="191" />
+          <Property Name="floor" Type="nvarchar" MaxLength="191" />
+          <Property Name="entry" Type="nvarchar" MaxLength="191" />
+        </EntityType>
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="restorant_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="order_index" Type="int" Nullable="false" />
+          <Property Name="active" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cities">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="alias" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="image" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="header_title" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="header_subtitle" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="deleted_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="extras">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="item_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="deleted_at" Type="datetime" />
+          <Property Name="extra_for_all_variants" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="hours">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="0_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="0_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="1_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="1_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="2_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="2_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="3_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="3_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="4_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="4_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="5_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="5_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="6_from" Type="nvarchar" MaxLength="191" />
+          <Property Name="6_to" Type="nvarchar" MaxLength="191" />
+          <Property Name="restorant_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="455" Nullable="false" />
+          <Property Name="image" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="category_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="available" Type="int" Nullable="false" />
+          <Property Name="has_variants" Type="int" Nullable="false" />
+          <Property Name="vat" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="deleted_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="languages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" />
+          <Property Name="language" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="migrations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="migration" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="batch" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="model_has_permissions">
+          <Key>
+            <PropertyRef Name="permission_id" />
+            <PropertyRef Name="model_type" />
+            <PropertyRef Name="model_id" />
+          </Key>
+          <Property Name="permission_id" Type="bigint" Nullable="false" />
+          <Property Name="model_type" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="model_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="model_has_roles">
+          <Key>
+            <PropertyRef Name="role_id" />
+            <PropertyRef Name="model_type" />
+            <PropertyRef Name="model_id" />
+          </Key>
+          <Property Name="role_id" Type="bigint" Nullable="false" />
+          <Property Name="model_type" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="model_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="notifications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nchar" MaxLength="36" Nullable="false" />
+          <Property Name="type" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="notifiable_type" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="notifiable_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="data" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="read_at" Type="datetime" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="options">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="item_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="options" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="deleted_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="order_has_items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="order_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="item_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="qty" Type="int" Nullable="false" />
+          <Property Name="extras" Type="nvarchar" MaxLength="800" />
+          <Property Name="vat" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="vatvalue" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="variant_price" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="variant_name" Type="nvarchar" MaxLength="191" Nullable="false" />
+        </EntityType>
+        <EntityType Name="order_has_status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="order_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="status_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="user_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="comment" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="address_id" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="client_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="restorant_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="driver_id" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="delivery_price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="order_price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="payment_method" Type="nvarchar" MaxLength="191" />
+          <Property Name="payment_status" Type="nvarchar" MaxLength="191" />
+          <Property Name="comment" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="lat" Type="nvarchar" MaxLength="191" />
+          <Property Name="lng" Type="nvarchar" MaxLength="191" />
+          <Property Name="srtipe_payment_id" Type="nvarchar" MaxLength="191" />
+          <Property Name="fee" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="fee_value" Type="decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="static_fee" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="delivery_method" Type="int" Nullable="false" />
+          <Property Name="delivery_pickup_interval" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="vatvalue" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="payment_processor_fee" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="time_to_prepare" Type="int" />
+        </EntityType>
+        <EntityType Name="pages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="title" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="showAsLink" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="password_resets">
+          <Key>
+            <PropertyRef Name="email" />
+            <PropertyRef Name="token" />
+          </Key>
+          <Property Name="email" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="token" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="payments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="stripe_id" Type="nvarchar" MaxLength="191" />
+          <Property Name="user_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="amount" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="currency" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="country" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="provider" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="permissions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="guard_name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="plan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="limit_items" Type="int" Nullable="false" />
+          <Property Name="limit_orders" Type="int" Nullable="false" />
+          <Property Name="price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="period" Type="int" Nullable="false" />
+          <Property Name="paddle_id" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="deleted_at" Type="datetime" />
+          <Property Name="description" Type="nvarchar" MaxLength="555" Nullable="false" />
+          <Property Name="features" Type="nvarchar" MaxLength="555" Nullable="false" />
+          <Property Name="limit_views" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ratings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="rating" Type="int" Nullable="false" />
+          <Property Name="rateable_type" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="rateable_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="user_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="order_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="comment" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="restorants">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="subdomain" Type="nvarchar" MaxLength="191" />
+          <Property Name="logo" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="cover" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="active" Type="smallint" Nullable="false" />
+          <Property Name="user_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="lat" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="lng" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="minimum" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="fee" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="static_fee" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="radius" Type="nvarchar" MaxLength="800" Nullable="false" />
+          <Property Name="is_featured" Type="smallint" Nullable="false" />
+          <Property Name="city_id" Type="int" />
+        </EntityType>
+        <EntityType Name="role_has_permissions">
+          <Key>
+            <PropertyRef Name="permission_id" />
+            <PropertyRef Name="role_id" />
+          </Key>
+          <Property Name="permission_id" Type="bigint" Nullable="false" />
+          <Property Name="role_id" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="roles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="guard_name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="site_name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="site_logo" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="search" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="restorant_details_image" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="restorant_details_cover_image" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="header_title" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="header_subtitle" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="currency" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="facebook" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="instagram" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="playstore" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="appstore" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="maps_api_key" Type="nvarchar" MaxLength="191" />
+          <Property Name="delivery" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="typeform" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="mobile_info_title" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="mobile_info_subtitle" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="order_options" Type="nvarchar" MaxLength="191" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sms_verifications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="contact_number" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="code" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="user_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="status" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="alias" Type="nvarchar" MaxLength="191" Nullable="false" />
+        </EntityType>
+        <EntityType Name="translations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="language_id" Type="bigint" Nullable="false" />
+          <Property Name="group" Type="nvarchar" MaxLength="191" />
+          <Property Name="key" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="value" Type="nvarchar(max)" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="google_id" Type="nchar" MaxLength="191" />
+          <Property Name="fb_id" Type="nchar" MaxLength="191" />
+          <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="email_verified_at" Type="datetime" />
+          <Property Name="password" Type="nvarchar" MaxLength="191" />
+          <Property Name="api_token" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="phone" Type="nvarchar" MaxLength="191" />
+          <Property Name="remember_token" Type="nvarchar" MaxLength="100" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="active" Type="smallint" Nullable="false" />
+          <Property Name="verification_code" Type="nvarchar" MaxLength="191" />
+          <Property Name="phone_verified_at" Type="datetime" />
+          <Property Name="plan_id" Type="numeric" Precision="20" Scale="0" />
+          <Property Name="plan_status" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="cancel_url" Type="nvarchar" MaxLength="555" Nullable="false" />
+          <Property Name="update_url" Type="nvarchar" MaxLength="555" Nullable="false" />
+          <Property Name="checkout_id" Type="nvarchar" MaxLength="555" Nullable="false" />
+          <Property Name="subscription_plan_id" Type="nvarchar" MaxLength="555" Nullable="false" />
+          <Property Name="stripe_account" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="birth_date" Type="nvarchar" MaxLength="191" Nullable="false" />
+        </EntityType>
+        <EntityType Name="variants">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="price" Type="numeric" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="options" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="image" Type="nvarchar" MaxLength="191" Nullable="false" />
+          <Property Name="qty" Type="int" Nullable="false" />
+          <Property Name="enable_qty" Type="int" Nullable="false" />
+          <Property Name="order" Type="int" Nullable="false" />
+          <Property Name="item_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="deleted_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="variants_has_extras">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="updated_at" Type="datetime" />
+          <Property Name="variant_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="extra_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+        </EntityType>
+        <Association Name="address$address_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="categories$categories_restorant_id_foreign">
+          <End Role="restorants" Type="Self.restorants" Multiplicity="1" />
+          <End Role="categories" Type="Self.categories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="restorants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="categories">
+              <PropertyRef Name="restorant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="extras$extras_item_id_foreign">
+          <End Role="items" Type="Self.items" Multiplicity="1" />
+          <End Role="extras" Type="Self.extras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="extras">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="hours$hours_restorant_id_foreign">
+          <End Role="restorants" Type="Self.restorants" Multiplicity="1" />
+          <End Role="hours" Type="Self.hours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="restorants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hours">
+              <PropertyRef Name="restorant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="items$items_category_id_foreign">
+          <End Role="categories" Type="Self.categories" Multiplicity="1" />
+          <End Role="items" Type="Self.items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categories">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="items">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="model_has_permissions$model_has_permissions_permission_id_foreign">
+          <End Role="permissions" Type="Self.permissions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="model_has_permissions" Type="Self.model_has_permissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="permissions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="model_has_permissions">
+              <PropertyRef Name="permission_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="model_has_roles$model_has_roles_role_id_foreign">
+          <End Role="roles" Type="Self.roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="model_has_roles" Type="Self.model_has_roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="model_has_roles">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="options$options_item_id_foreign">
+          <End Role="items" Type="Self.items" Multiplicity="1" />
+          <End Role="options" Type="Self.options" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="options">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_items$order_has_items_item_id_foreign">
+          <End Role="items" Type="Self.items" Multiplicity="1" />
+          <End Role="order_has_items" Type="Self.order_has_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_items">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_items$order_has_items_order_id_foreign">
+          <End Role="orders" Type="Self.orders" Multiplicity="1" />
+          <End Role="order_has_items" Type="Self.order_has_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_items">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_status$order_has_status_order_id_foreign">
+          <End Role="orders" Type="Self.orders" Multiplicity="1" />
+          <End Role="order_has_status" Type="Self.order_has_status" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_status">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_status$order_has_status_status_id_foreign">
+          <End Role="status" Type="Self.status" Multiplicity="1" />
+          <End Role="order_has_status" Type="Self.order_has_status" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_status">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_status$order_has_status_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="order_has_status" Type="Self.order_has_status" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_status">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders$orders_address_id_foreign">
+          <End Role="address" Type="Self.address" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders$orders_client_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="client_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders$orders_driver_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="driver_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders$orders_restorant_id_foreign">
+          <End Role="restorants" Type="Self.restorants" Multiplicity="1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="restorants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="restorant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="payments$payments_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="payments" Type="Self.payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="payments">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ratings$ratings_order_id_foreign">
+          <End Role="orders" Type="Self.orders" Multiplicity="1" />
+          <End Role="ratings" Type="Self.ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ratings">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ratings$ratings_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="ratings" Type="Self.ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ratings">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="restorants$restorants_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="restorants" Type="Self.restorants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="restorants">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="role_has_permissions$role_has_permissions_permission_id_foreign">
+          <End Role="permissions" Type="Self.permissions" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="role_has_permissions" Type="Self.role_has_permissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="permissions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="role_has_permissions">
+              <PropertyRef Name="permission_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="role_has_permissions$role_has_permissions_role_id_foreign">
+          <End Role="roles" Type="Self.roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="role_has_permissions" Type="Self.role_has_permissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="role_has_permissions">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sms_verifications$sms_verifications_user_id_foreign">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="sms_verifications" Type="Self.sms_verifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="sms_verifications">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="translations$translations_language_id_foreign">
+          <End Role="languages" Type="Self.languages" Multiplicity="1" />
+          <End Role="translations" Type="Self.translations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="languages">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="translations">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="variants$variants_item_id_foreign">
+          <End Role="items" Type="Self.items" Multiplicity="1" />
+          <End Role="variants" Type="Self.variants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="variants">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="variants_has_extras$variants_has_extras_extra_id_foreign">
+          <End Role="extras" Type="Self.extras" Multiplicity="1" />
+          <End Role="variants_has_extras" Type="Self.variants_has_extras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="extras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="variants_has_extras">
+              <PropertyRef Name="extra_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="variants_has_extras$variants_has_extras_variant_id_foreign">
+          <End Role="variants" Type="Self.variants" Multiplicity="1" />
+          <End Role="variants_has_extras" Type="Self.variants_has_extras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="variants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="variants_has_extras">
+              <PropertyRef Name="variant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DB_A6A5AC_menuModelStoreContainer">
+          <EntitySet Name="address" EntityType="Self.address" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="categories" EntityType="Self.categories" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="cities" EntityType="Self.cities" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="extras" EntityType="Self.extras" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="hours" EntityType="Self.hours" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="items" EntityType="Self.items" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="languages" EntityType="Self.languages" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="migrations" EntityType="Self.migrations" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="model_has_permissions" EntityType="Self.model_has_permissions" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="model_has_roles" EntityType="Self.model_has_roles" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="notifications" EntityType="Self.notifications" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="options" EntityType="Self.options" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="order_has_items" EntityType="Self.order_has_items" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="order_has_status" EntityType="Self.order_has_status" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="orders" EntityType="Self.orders" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="pages" EntityType="Self.pages" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="payments" EntityType="Self.payments" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="permissions" EntityType="Self.permissions" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="plan" EntityType="Self.plan" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="ratings" EntityType="Self.ratings" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="restorants" EntityType="Self.restorants" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="role_has_permissions" EntityType="Self.role_has_permissions" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="roles" EntityType="Self.roles" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="settings" EntityType="Self.settings" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="sms_verifications" EntityType="Self.sms_verifications" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="status" EntityType="Self.status" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="translations" EntityType="Self.translations" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="variants" EntityType="Self.variants" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="variants_has_extras" EntityType="Self.variants_has_extras" Schema="foodtiger" store:Type="Tables" />
+          <EntitySet Name="password_resets" EntityType="Self.password_resets" store:Type="Tables" store:Schema="foodtiger">
+            <DefiningQuery>SELECT 
+    [password_resets].[email] AS [email], 
+    [password_resets].[token] AS [token], 
+    [password_resets].[created_at] AS [created_at]
+    FROM [foodtiger].[password_resets] AS [password_resets]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="address$address_user_id_foreign" Association="Self.address$address_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="address" EntitySet="address" />
+          </AssociationSet>
+          <AssociationSet Name="categories$categories_restorant_id_foreign" Association="Self.categories$categories_restorant_id_foreign">
+            <End Role="restorants" EntitySet="restorants" />
+            <End Role="categories" EntitySet="categories" />
+          </AssociationSet>
+          <AssociationSet Name="extras$extras_item_id_foreign" Association="Self.extras$extras_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="extras" EntitySet="extras" />
+          </AssociationSet>
+          <AssociationSet Name="hours$hours_restorant_id_foreign" Association="Self.hours$hours_restorant_id_foreign">
+            <End Role="restorants" EntitySet="restorants" />
+            <End Role="hours" EntitySet="hours" />
+          </AssociationSet>
+          <AssociationSet Name="items$items_category_id_foreign" Association="Self.items$items_category_id_foreign">
+            <End Role="categories" EntitySet="categories" />
+            <End Role="items" EntitySet="items" />
+          </AssociationSet>
+          <AssociationSet Name="model_has_permissions$model_has_permissions_permission_id_foreign" Association="Self.model_has_permissions$model_has_permissions_permission_id_foreign">
+            <End Role="permissions" EntitySet="permissions" />
+            <End Role="model_has_permissions" EntitySet="model_has_permissions" />
+          </AssociationSet>
+          <AssociationSet Name="model_has_roles$model_has_roles_role_id_foreign" Association="Self.model_has_roles$model_has_roles_role_id_foreign">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="model_has_roles" EntitySet="model_has_roles" />
+          </AssociationSet>
+          <AssociationSet Name="options$options_item_id_foreign" Association="Self.options$options_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="options" EntitySet="options" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_items$order_has_items_item_id_foreign" Association="Self.order_has_items$order_has_items_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="order_has_items" EntitySet="order_has_items" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_items$order_has_items_order_id_foreign" Association="Self.order_has_items$order_has_items_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="order_has_items" EntitySet="order_has_items" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_status$order_has_status_order_id_foreign" Association="Self.order_has_status$order_has_status_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="order_has_status" EntitySet="order_has_status" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_status$order_has_status_status_id_foreign" Association="Self.order_has_status$order_has_status_status_id_foreign">
+            <End Role="status" EntitySet="status" />
+            <End Role="order_has_status" EntitySet="order_has_status" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_status$order_has_status_user_id_foreign" Association="Self.order_has_status$order_has_status_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="order_has_status" EntitySet="order_has_status" />
+          </AssociationSet>
+          <AssociationSet Name="orders$orders_address_id_foreign" Association="Self.orders$orders_address_id_foreign">
+            <End Role="address" EntitySet="address" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="orders$orders_client_id_foreign" Association="Self.orders$orders_client_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="orders$orders_driver_id_foreign" Association="Self.orders$orders_driver_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="orders$orders_restorant_id_foreign" Association="Self.orders$orders_restorant_id_foreign">
+            <End Role="restorants" EntitySet="restorants" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="payments$payments_user_id_foreign" Association="Self.payments$payments_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="payments" EntitySet="payments" />
+          </AssociationSet>
+          <AssociationSet Name="ratings$ratings_order_id_foreign" Association="Self.ratings$ratings_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="ratings" EntitySet="ratings" />
+          </AssociationSet>
+          <AssociationSet Name="ratings$ratings_user_id_foreign" Association="Self.ratings$ratings_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="ratings" EntitySet="ratings" />
+          </AssociationSet>
+          <AssociationSet Name="restorants$restorants_user_id_foreign" Association="Self.restorants$restorants_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="restorants" EntitySet="restorants" />
+          </AssociationSet>
+          <AssociationSet Name="role_has_permissions$role_has_permissions_permission_id_foreign" Association="Self.role_has_permissions$role_has_permissions_permission_id_foreign">
+            <End Role="permissions" EntitySet="permissions" />
+            <End Role="role_has_permissions" EntitySet="role_has_permissions" />
+          </AssociationSet>
+          <AssociationSet Name="role_has_permissions$role_has_permissions_role_id_foreign" Association="Self.role_has_permissions$role_has_permissions_role_id_foreign">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="role_has_permissions" EntitySet="role_has_permissions" />
+          </AssociationSet>
+          <AssociationSet Name="sms_verifications$sms_verifications_user_id_foreign" Association="Self.sms_verifications$sms_verifications_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="sms_verifications" EntitySet="sms_verifications" />
+          </AssociationSet>
+          <AssociationSet Name="translations$translations_language_id_foreign" Association="Self.translations$translations_language_id_foreign">
+            <End Role="languages" EntitySet="languages" />
+            <End Role="translations" EntitySet="translations" />
+          </AssociationSet>
+          <AssociationSet Name="variants$variants_item_id_foreign" Association="Self.variants$variants_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="variants" EntitySet="variants" />
+          </AssociationSet>
+          <AssociationSet Name="variants_has_extras$variants_has_extras_extra_id_foreign" Association="Self.variants_has_extras$variants_has_extras_extra_id_foreign">
+            <End Role="extras" EntitySet="extras" />
+            <End Role="variants_has_extras" EntitySet="variants_has_extras" />
+          </AssociationSet>
+          <AssociationSet Name="variants_has_extras$variants_has_extras_variant_id_foreign" Association="Self.variants_has_extras$variants_has_extras_variant_id_foreign">
+            <End Role="variants" EntitySet="variants" />
+            <End Role="variants_has_extras" EntitySet="variants_has_extras" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A6A5AC_menuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="address">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="address1" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="lat" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lng" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="active" Type="Int16" Nullable="false" />
+          <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="apartment" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="intercom" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="floor" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="entry" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="user" Relationship="Self.address_address_user_id_foreign" FromRole="address" ToRole="users" />
+          <NavigationProperty Name="orders" Relationship="Self.orders_orders_address_id_foreign" FromRole="address" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="category">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="restorant_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="order_index" Type="Int32" Nullable="false" />
+          <Property Name="active" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="restorant" Relationship="Self.categories_categories_restorant_id_foreign" FromRole="categories" ToRole="restorants" />
+          <NavigationProperty Name="items" Relationship="Self.items_items_category_id_foreign" FromRole="categories" ToRole="items" />
+        </EntityType>
+        <EntityType Name="city">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="alias" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="header_title" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="header_subtitle" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="deleted_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="extra">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="item_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="deleted_at" Type="DateTime" Precision="3" />
+          <Property Name="extra_for_all_variants" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="item" Relationship="Self.extras_extras_item_id_foreign" FromRole="extras" ToRole="items" />
+          <NavigationProperty Name="variants_has_extras" Relationship="Self.variants_has_extras_variants_has_extras_extra_id_foreign" FromRole="extras" ToRole="variants_has_extras" />
+        </EntityType>
+        <EntityType Name="hour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="C0_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C0_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C1_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C1_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C2_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C2_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C3_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C3_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C4_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C4_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C5_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C5_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C6_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="C6_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="restorant_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <NavigationProperty Name="restorant" Relationship="Self.hours_hours_restorant_id_foreign" FromRole="hours" ToRole="restorants" />
+        </EntityType>
+        <EntityType Name="item">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="455" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="category_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="available" Type="Int32" Nullable="false" />
+          <Property Name="has_variants" Type="Int32" Nullable="false" />
+          <Property Name="vat" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="deleted_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="category" Relationship="Self.items_items_category_id_foreign" FromRole="items" ToRole="categories" />
+          <NavigationProperty Name="extras" Relationship="Self.extras_extras_item_id_foreign" FromRole="items" ToRole="extras" />
+          <NavigationProperty Name="options" Relationship="Self.options_options_item_id_foreign" FromRole="items" ToRole="options" />
+          <NavigationProperty Name="order_has_items" Relationship="Self.order_has_items_order_has_items_item_id_foreign" FromRole="items" ToRole="order_has_items" />
+          <NavigationProperty Name="variants" Relationship="Self.variants_variants_item_id_foreign" FromRole="items" ToRole="variants" />
+        </EntityType>
+        <EntityType Name="language">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="language1" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="translations" Relationship="Self.translations_translations_language_id_foreign" FromRole="languages" ToRole="translations" />
+        </EntityType>
+        <EntityType Name="migration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="migration1" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="batch" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="model_has_permissions">
+          <Key>
+            <PropertyRef Name="permission_id" />
+            <PropertyRef Name="model_type" />
+            <PropertyRef Name="model_id" />
+          </Key>
+          <Property Name="permission_id" Type="Int64" Nullable="false" />
+          <Property Name="model_type" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="model_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <NavigationProperty Name="permission" Relationship="Self.model_has_permissions_model_has_permissions_permission_id_foreign" FromRole="model_has_permissions" ToRole="permissions" />
+        </EntityType>
+        <EntityType Name="model_has_roles">
+          <Key>
+            <PropertyRef Name="role_id" />
+            <PropertyRef Name="model_type" />
+            <PropertyRef Name="model_id" />
+          </Key>
+          <Property Name="role_id" Type="Int64" Nullable="false" />
+          <Property Name="model_type" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="model_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <NavigationProperty Name="role" Relationship="Self.model_has_roles_model_has_roles_role_id_foreign" FromRole="model_has_roles" ToRole="roles" />
+        </EntityType>
+        <EntityType Name="notification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="36" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="notifiable_type" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="notifiable_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="read_at" Type="DateTime" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="option">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="item_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="options" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="deleted_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="item" Relationship="Self.options_options_item_id_foreign" FromRole="options" ToRole="items" />
+        </EntityType>
+        <EntityType Name="order_has_items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="order_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="item_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="qty" Type="Int32" Nullable="false" />
+          <Property Name="extras" Type="String" MaxLength="800" FixedLength="false" Unicode="true" />
+          <Property Name="vat" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="vatvalue" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="variant_price" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="variant_name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="item" Relationship="Self.order_has_items_order_has_items_item_id_foreign" FromRole="order_has_items" ToRole="items" />
+          <NavigationProperty Name="order" Relationship="Self.order_has_items_order_has_items_order_id_foreign" FromRole="order_has_items" ToRole="orders" />
+        </EntityType>
+        <EntityType Name="order_has_status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="order_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="status_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="order" Relationship="Self.order_has_status_order_has_status_order_id_foreign" FromRole="order_has_status" ToRole="orders" />
+          <NavigationProperty Name="status" Relationship="Self.order_has_status_order_has_status_status_id_foreign" FromRole="order_has_status" ToRole="status" />
+          <NavigationProperty Name="user" Relationship="Self.order_has_status_order_has_status_user_id_foreign" FromRole="order_has_status" ToRole="users" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="address_id" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="client_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="restorant_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="driver_id" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="delivery_price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="order_price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="payment_method" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="payment_status" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lat" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="lng" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="srtipe_payment_id" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="fee_value" Type="Decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="static_fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="delivery_method" Type="Int32" Nullable="false" />
+          <Property Name="delivery_pickup_interval" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="vatvalue" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="payment_processor_fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="time_to_prepare" Type="Int32" />
+          <NavigationProperty Name="address" Relationship="Self.orders_orders_address_id_foreign" FromRole="orders" ToRole="address" />
+          <NavigationProperty Name="order_has_items" Relationship="Self.order_has_items_order_has_items_order_id_foreign" FromRole="orders" ToRole="order_has_items" />
+          <NavigationProperty Name="order_has_status" Relationship="Self.order_has_status_order_has_status_order_id_foreign" FromRole="orders" ToRole="order_has_status" />
+          <NavigationProperty Name="user" Relationship="Self.orders_orders_client_id_foreign" FromRole="orders" ToRole="users" />
+          <NavigationProperty Name="user1" Relationship="Self.orders_orders_driver_id_foreign" FromRole="orders" ToRole="users" />
+          <NavigationProperty Name="restorant" Relationship="Self.orders_orders_restorant_id_foreign" FromRole="orders" ToRole="restorants" />
+          <NavigationProperty Name="ratings" Relationship="Self.ratings_ratings_order_id_foreign" FromRole="orders" ToRole="ratings" />
+        </EntityType>
+        <EntityType Name="page">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="title" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="showAsLink" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="payment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="stripe_id" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="currency" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="provider" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="user" Relationship="Self.payments_payments_user_id_foreign" FromRole="payments" ToRole="users" />
+        </EntityType>
+        <EntityType Name="permission">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="guard_name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="model_has_permissions" Relationship="Self.model_has_permissions_model_has_permissions_permission_id_foreign" FromRole="permissions" ToRole="model_has_permissions" />
+          <NavigationProperty Name="roles" Relationship="Self.role_has_permissions" FromRole="permissions" ToRole="roles" />
+        </EntityType>
+        <EntityType Name="plan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="limit_items" Type="Int32" Nullable="false" />
+          <Property Name="limit_orders" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="period" Type="Int32" Nullable="false" />
+          <Property Name="paddle_id" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="deleted_at" Type="DateTime" Precision="3" />
+          <Property Name="description" Type="String" MaxLength="555" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="features" Type="String" MaxLength="555" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="limit_views" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rating">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="rating1" Type="Int32" Nullable="false" />
+          <Property Name="rateable_type" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="rateable_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="order_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="order" Relationship="Self.ratings_ratings_order_id_foreign" FromRole="ratings" ToRole="orders" />
+          <NavigationProperty Name="user" Relationship="Self.ratings_ratings_user_id_foreign" FromRole="ratings" ToRole="users" />
+        </EntityType>
+        <EntityType Name="restorant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subdomain" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="logo" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cover" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="active" Type="Int16" Nullable="false" />
+          <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="lat" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lng" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="minimum" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="static_fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="radius" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="is_featured" Type="Int16" Nullable="false" />
+          <Property Name="city_id" Type="Int32" />
+          <NavigationProperty Name="categories" Relationship="Self.categories_categories_restorant_id_foreign" FromRole="restorants" ToRole="categories" />
+          <NavigationProperty Name="hours" Relationship="Self.hours_hours_restorant_id_foreign" FromRole="restorants" ToRole="hours" />
+          <NavigationProperty Name="orders" Relationship="Self.orders_orders_restorant_id_foreign" FromRole="restorants" ToRole="orders" />
+          <NavigationProperty Name="user" Relationship="Self.restorants_restorants_user_id_foreign" FromRole="restorants" ToRole="users" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="guard_name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="model_has_roles" Relationship="Self.model_has_roles_model_has_roles_role_id_foreign" FromRole="roles" ToRole="model_has_roles" />
+          <NavigationProperty Name="permissions" Relationship="Self.role_has_permissions" FromRole="roles" ToRole="permissions" />
+        </EntityType>
+        <EntityType Name="setting">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="site_name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="site_logo" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="search" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="restorant_details_image" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="restorant_details_cover_image" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="header_title" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="header_subtitle" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="currency" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="facebook" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="instagram" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="playstore" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="appstore" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="maps_api_key" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="delivery" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="typeform" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile_info_title" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile_info_subtitle" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="order_options" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sms_verifications">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="contact_number" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="code" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="user" Relationship="Self.sms_verifications_sms_verifications_user_id_foreign" FromRole="sms_verifications" ToRole="users" />
+        </EntityType>
+        <EntityType Name="status">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="alias" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="order_has_status" Relationship="Self.order_has_status_order_has_status_status_id_foreign" FromRole="status" ToRole="order_has_status" />
+        </EntityType>
+        <EntityType Name="translation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="language_id" Type="Int64" Nullable="false" />
+          <Property Name="group" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="key" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="language" Relationship="Self.translations_translations_language_id_foreign" FromRole="translations" ToRole="languages" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="google_id" Type="String" MaxLength="191" FixedLength="true" Unicode="true" />
+          <Property Name="fb_id" Type="String" MaxLength="191" FixedLength="true" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email_verified_at" Type="DateTime" Precision="3" />
+          <Property Name="password" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="api_token" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="remember_token" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="active" Type="Int16" Nullable="false" />
+          <Property Name="verification_code" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+          <Property Name="phone_verified_at" Type="DateTime" Precision="3" />
+          <Property Name="plan_id" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="plan_status" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cancel_url" Type="String" MaxLength="555" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="update_url" Type="String" MaxLength="555" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="checkout_id" Type="String" MaxLength="555" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subscription_plan_id" Type="String" MaxLength="555" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="stripe_account" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="birth_date" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="addresses" Relationship="Self.address_address_user_id_foreign" FromRole="users" ToRole="address" />
+          <NavigationProperty Name="order_has_status" Relationship="Self.order_has_status_order_has_status_user_id_foreign" FromRole="users" ToRole="order_has_status" />
+          <NavigationProperty Name="orders" Relationship="Self.orders_orders_client_id_foreign" FromRole="users" ToRole="orders" />
+          <NavigationProperty Name="orders1" Relationship="Self.orders_orders_driver_id_foreign" FromRole="users" ToRole="orders" />
+          <NavigationProperty Name="payments" Relationship="Self.payments_payments_user_id_foreign" FromRole="users" ToRole="payments" />
+          <NavigationProperty Name="ratings" Relationship="Self.ratings_ratings_user_id_foreign" FromRole="users" ToRole="ratings" />
+          <NavigationProperty Name="restorants" Relationship="Self.restorants_restorants_user_id_foreign" FromRole="users" ToRole="restorants" />
+          <NavigationProperty Name="sms_verifications" Relationship="Self.sms_verifications_sms_verifications_user_id_foreign" FromRole="users" ToRole="sms_verifications" />
+        </EntityType>
+        <EntityType Name="variant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="price" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+          <Property Name="options" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="image" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="qty" Type="Int32" Nullable="false" />
+          <Property Name="enable_qty" Type="Int32" Nullable="false" />
+          <Property Name="order" Type="Int32" Nullable="false" />
+          <Property Name="item_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="deleted_at" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="item" Relationship="Self.variants_variants_item_id_foreign" FromRole="variants" ToRole="items" />
+          <NavigationProperty Name="variants_has_extras" Relationship="Self.variants_has_extras_variants_has_extras_variant_id_foreign" FromRole="variants" ToRole="variants_has_extras" />
+        </EntityType>
+        <EntityType Name="variants_has_extras">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="variant_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <Property Name="extra_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+          <NavigationProperty Name="extra" Relationship="Self.variants_has_extras_variants_has_extras_extra_id_foreign" FromRole="variants_has_extras" ToRole="extras" />
+          <NavigationProperty Name="variant" Relationship="Self.variants_has_extras_variants_has_extras_variant_id_foreign" FromRole="variants_has_extras" ToRole="variants" />
+        </EntityType>
+        <EntityType Name="password_resets">
+          <Key>
+            <PropertyRef Name="email" />
+            <PropertyRef Name="token" />
+          </Key>
+          <Property Name="email" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="token" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="address_address_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="address" Type="Self.address" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="address">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_orders_address_id_foreign">
+          <End Role="address" Type="Self.address" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="address">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="address_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="categories_categories_restorant_id_foreign">
+          <End Role="restorants" Type="Self.restorant" Multiplicity="1" />
+          <End Role="categories" Type="Self.category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="restorants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="categories">
+              <PropertyRef Name="restorant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="items_items_category_id_foreign">
+          <End Role="categories" Type="Self.category" Multiplicity="1" />
+          <End Role="items" Type="Self.item" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categories">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="items">
+              <PropertyRef Name="category_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="extras_extras_item_id_foreign">
+          <End Role="items" Type="Self.item" Multiplicity="1" />
+          <End Role="extras" Type="Self.extra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="extras">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="variants_has_extras_variants_has_extras_extra_id_foreign">
+          <End Role="extras" Type="Self.extra" Multiplicity="1" />
+          <End Role="variants_has_extras" Type="Self.variants_has_extras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="extras">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="variants_has_extras">
+              <PropertyRef Name="extra_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="hours_hours_restorant_id_foreign">
+          <End Role="restorants" Type="Self.restorant" Multiplicity="1" />
+          <End Role="hours" Type="Self.hour" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="restorants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="hours">
+              <PropertyRef Name="restorant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="options_options_item_id_foreign">
+          <End Role="items" Type="Self.item" Multiplicity="1" />
+          <End Role="options" Type="Self.option" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="options">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_items_order_has_items_item_id_foreign">
+          <End Role="items" Type="Self.item" Multiplicity="1" />
+          <End Role="order_has_items" Type="Self.order_has_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_items">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="variants_variants_item_id_foreign">
+          <End Role="items" Type="Self.item" Multiplicity="1" />
+          <End Role="variants" Type="Self.variant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="variants">
+              <PropertyRef Name="item_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="translations_translations_language_id_foreign">
+          <End Role="languages" Type="Self.language" Multiplicity="1" />
+          <End Role="translations" Type="Self.translation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="languages">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="translations">
+              <PropertyRef Name="language_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="model_has_permissions_model_has_permissions_permission_id_foreign">
+          <End Role="permissions" Type="Self.permission" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="model_has_permissions" Type="Self.model_has_permissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="permissions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="model_has_permissions">
+              <PropertyRef Name="permission_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="model_has_roles_model_has_roles_role_id_foreign">
+          <End Role="roles" Type="Self.role" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="model_has_roles" Type="Self.model_has_roles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="roles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="model_has_roles">
+              <PropertyRef Name="role_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_items_order_has_items_order_id_foreign">
+          <End Role="orders" Type="Self.order" Multiplicity="1" />
+          <End Role="order_has_items" Type="Self.order_has_items" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_items">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_status_order_has_status_order_id_foreign">
+          <End Role="orders" Type="Self.order" Multiplicity="1" />
+          <End Role="order_has_status" Type="Self.order_has_status" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_status">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_status_order_has_status_status_id_foreign">
+          <End Role="status" Type="Self.status" Multiplicity="1" />
+          <End Role="order_has_status" Type="Self.order_has_status" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_status">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="order_has_status_order_has_status_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="order_has_status" Type="Self.order_has_status" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order_has_status">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_orders_client_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="client_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_orders_driver_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="driver_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="orders_orders_restorant_id_foreign">
+          <End Role="restorants" Type="Self.restorant" Multiplicity="1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="restorants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="restorant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ratings_ratings_order_id_foreign">
+          <End Role="orders" Type="Self.order" Multiplicity="1" />
+          <End Role="ratings" Type="Self.rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ratings">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="payments_payments_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="payments" Type="Self.payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="payments">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ratings_ratings_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="ratings" Type="Self.rating" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ratings">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="restorants_restorants_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="restorants" Type="Self.restorant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="restorants">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="sms_verifications_sms_verifications_user_id_foreign">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="sms_verifications" Type="Self.sms_verifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="sms_verifications">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="variants_has_extras_variants_has_extras_variant_id_foreign">
+          <End Role="variants" Type="Self.variant" Multiplicity="1" />
+          <End Role="variants_has_extras" Type="Self.variants_has_extras" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="variants">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="variants_has_extras">
+              <PropertyRef Name="variant_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="role_has_permissions">
+          <End Role="permissions" Type="Self.permission" Multiplicity="*" />
+          <End Role="roles" Type="Self.role" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="addresses" EntityType="Self.address" />
+          <EntitySet Name="categories" EntityType="Self.category" />
+          <EntitySet Name="cities" EntityType="Self.city" />
+          <EntitySet Name="extras" EntityType="Self.extra" />
+          <EntitySet Name="hours" EntityType="Self.hour" />
+          <EntitySet Name="items" EntityType="Self.item" />
+          <EntitySet Name="languages" EntityType="Self.language" />
+          <EntitySet Name="migrations" EntityType="Self.migration" />
+          <EntitySet Name="model_has_permissions" EntityType="Self.model_has_permissions" />
+          <EntitySet Name="model_has_roles" EntityType="Self.model_has_roles" />
+          <EntitySet Name="notifications" EntityType="Self.notification" />
+          <EntitySet Name="options" EntityType="Self.option" />
+          <EntitySet Name="order_has_items" EntityType="Self.order_has_items" />
+          <EntitySet Name="order_has_status" EntityType="Self.order_has_status" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="pages" EntityType="Self.page" />
+          <EntitySet Name="payments" EntityType="Self.payment" />
+          <EntitySet Name="permissions" EntityType="Self.permission" />
+          <EntitySet Name="plans" EntityType="Self.plan" />
+          <EntitySet Name="ratings" EntityType="Self.rating" />
+          <EntitySet Name="restorants" EntityType="Self.restorant" />
+          <EntitySet Name="roles" EntityType="Self.role" />
+          <EntitySet Name="settings" EntityType="Self.setting" />
+          <EntitySet Name="sms_verifications" EntityType="Self.sms_verifications" />
+          <EntitySet Name="status" EntityType="Self.status" />
+          <EntitySet Name="translations" EntityType="Self.translation" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="variants" EntityType="Self.variant" />
+          <EntitySet Name="variants_has_extras" EntityType="Self.variants_has_extras" />
+          <EntitySet Name="password_resets" EntityType="Self.password_resets" />
+          <AssociationSet Name="address_address_user_id_foreign" Association="Self.address_address_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="address" EntitySet="addresses" />
+          </AssociationSet>
+          <AssociationSet Name="orders_orders_address_id_foreign" Association="Self.orders_orders_address_id_foreign">
+            <End Role="address" EntitySet="addresses" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="categories_categories_restorant_id_foreign" Association="Self.categories_categories_restorant_id_foreign">
+            <End Role="restorants" EntitySet="restorants" />
+            <End Role="categories" EntitySet="categories" />
+          </AssociationSet>
+          <AssociationSet Name="items_items_category_id_foreign" Association="Self.items_items_category_id_foreign">
+            <End Role="categories" EntitySet="categories" />
+            <End Role="items" EntitySet="items" />
+          </AssociationSet>
+          <AssociationSet Name="extras_extras_item_id_foreign" Association="Self.extras_extras_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="extras" EntitySet="extras" />
+          </AssociationSet>
+          <AssociationSet Name="variants_has_extras_variants_has_extras_extra_id_foreign" Association="Self.variants_has_extras_variants_has_extras_extra_id_foreign">
+            <End Role="extras" EntitySet="extras" />
+            <End Role="variants_has_extras" EntitySet="variants_has_extras" />
+          </AssociationSet>
+          <AssociationSet Name="hours_hours_restorant_id_foreign" Association="Self.hours_hours_restorant_id_foreign">
+            <End Role="restorants" EntitySet="restorants" />
+            <End Role="hours" EntitySet="hours" />
+          </AssociationSet>
+          <AssociationSet Name="options_options_item_id_foreign" Association="Self.options_options_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="options" EntitySet="options" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_items_order_has_items_item_id_foreign" Association="Self.order_has_items_order_has_items_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="order_has_items" EntitySet="order_has_items" />
+          </AssociationSet>
+          <AssociationSet Name="variants_variants_item_id_foreign" Association="Self.variants_variants_item_id_foreign">
+            <End Role="items" EntitySet="items" />
+            <End Role="variants" EntitySet="variants" />
+          </AssociationSet>
+          <AssociationSet Name="translations_translations_language_id_foreign" Association="Self.translations_translations_language_id_foreign">
+            <End Role="languages" EntitySet="languages" />
+            <End Role="translations" EntitySet="translations" />
+          </AssociationSet>
+          <AssociationSet Name="model_has_permissions_model_has_permissions_permission_id_foreign" Association="Self.model_has_permissions_model_has_permissions_permission_id_foreign">
+            <End Role="permissions" EntitySet="permissions" />
+            <End Role="model_has_permissions" EntitySet="model_has_permissions" />
+          </AssociationSet>
+          <AssociationSet Name="model_has_roles_model_has_roles_role_id_foreign" Association="Self.model_has_roles_model_has_roles_role_id_foreign">
+            <End Role="roles" EntitySet="roles" />
+            <End Role="model_has_roles" EntitySet="model_has_roles" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_items_order_has_items_order_id_foreign" Association="Self.order_has_items_order_has_items_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="order_has_items" EntitySet="order_has_items" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_status_order_has_status_order_id_foreign" Association="Self.order_has_status_order_has_status_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="order_has_status" EntitySet="order_has_status" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_status_order_has_status_status_id_foreign" Association="Self.order_has_status_order_has_status_status_id_foreign">
+            <End Role="status" EntitySet="status" />
+            <End Role="order_has_status" EntitySet="order_has_status" />
+          </AssociationSet>
+          <AssociationSet Name="order_has_status_order_has_status_user_id_foreign" Association="Self.order_has_status_order_has_status_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="order_has_status" EntitySet="order_has_status" />
+          </AssociationSet>
+          <AssociationSet Name="orders_orders_client_id_foreign" Association="Self.orders_orders_client_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="orders_orders_driver_id_foreign" Association="Self.orders_orders_driver_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="orders_orders_restorant_id_foreign" Association="Self.orders_orders_restorant_id_foreign">
+            <End Role="restorants" EntitySet="restorants" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="ratings_ratings_order_id_foreign" Association="Self.ratings_ratings_order_id_foreign">
+            <End Role="orders" EntitySet="orders" />
+            <End Role="ratings" EntitySet="ratings" />
+          </AssociationSet>
+          <AssociationSet Name="payments_payments_user_id_foreign" Association="Self.payments_payments_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="payments" EntitySet="payments" />
+          </AssociationSet>
+          <AssociationSet Name="ratings_ratings_user_id_foreign" Association="Self.ratings_ratings_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="ratings" EntitySet="ratings" />
+          </AssociationSet>
+          <AssociationSet Name="restorants_restorants_user_id_foreign" Association="Self.restorants_restorants_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="restorants" EntitySet="restorants" />
+          </AssociationSet>
+          <AssociationSet Name="sms_verifications_sms_verifications_user_id_foreign" Association="Self.sms_verifications_sms_verifications_user_id_foreign">
+            <End Role="users" EntitySet="users" />
+            <End Role="sms_verifications" EntitySet="sms_verifications" />
+          </AssociationSet>
+          <AssociationSet Name="variants_has_extras_variants_has_extras_variant_id_foreign" Association="Self.variants_has_extras_variants_has_extras_variant_id_foreign">
+            <End Role="variants" EntitySet="variants" />
+            <End Role="variants_has_extras" EntitySet="variants_has_extras" />
+          </AssociationSet>
+          <AssociationSet Name="role_has_permissions" Association="Self.role_has_permissions">
+            <End Role="permissions" EntitySet="permissions" />
+            <End Role="roles" EntitySet="roles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A6A5AC_menuModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="addresses">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.address">
+              <MappingFragment StoreEntitySet="address">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="address1" ColumnName="address" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lng" ColumnName="lng" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="apartment" ColumnName="apartment" />
+                <ScalarProperty Name="intercom" ColumnName="intercom" />
+                <ScalarProperty Name="floor" ColumnName="floor" />
+                <ScalarProperty Name="entry" ColumnName="entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.category">
+              <MappingFragment StoreEntitySet="categories">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="order_index" ColumnName="order_index" />
+                <ScalarProperty Name="active" ColumnName="active" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cities">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.city">
+              <MappingFragment StoreEntitySet="cities">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="header_title" ColumnName="header_title" />
+                <ScalarProperty Name="header_subtitle" ColumnName="header_subtitle" />
+                <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="extras">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.extra">
+              <MappingFragment StoreEntitySet="extras">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+                <ScalarProperty Name="extra_for_all_variants" ColumnName="extra_for_all_variants" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hours">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.hour">
+              <MappingFragment StoreEntitySet="hours">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="C0_from" ColumnName="0_from" />
+                <ScalarProperty Name="C0_to" ColumnName="0_to" />
+                <ScalarProperty Name="C1_from" ColumnName="1_from" />
+                <ScalarProperty Name="C1_to" ColumnName="1_to" />
+                <ScalarProperty Name="C2_from" ColumnName="2_from" />
+                <ScalarProperty Name="C2_to" ColumnName="2_to" />
+                <ScalarProperty Name="C3_from" ColumnName="3_from" />
+                <ScalarProperty Name="C3_to" ColumnName="3_to" />
+                <ScalarProperty Name="C4_from" ColumnName="4_from" />
+                <ScalarProperty Name="C4_to" ColumnName="4_to" />
+                <ScalarProperty Name="C5_from" ColumnName="5_from" />
+                <ScalarProperty Name="C5_to" ColumnName="5_to" />
+                <ScalarProperty Name="C6_from" ColumnName="6_from" />
+                <ScalarProperty Name="C6_to" ColumnName="6_to" />
+                <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="items">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.item">
+              <MappingFragment StoreEntitySet="items">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="category_id" ColumnName="category_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="available" ColumnName="available" />
+                <ScalarProperty Name="has_variants" ColumnName="has_variants" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="languages">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.language">
+              <MappingFragment StoreEntitySet="languages">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="language1" ColumnName="language" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="migrations">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.migration">
+              <MappingFragment StoreEntitySet="migrations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="migration1" ColumnName="migration" />
+                <ScalarProperty Name="batch" ColumnName="batch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="model_has_permissions">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.model_has_permissions">
+              <MappingFragment StoreEntitySet="model_has_permissions">
+                <ScalarProperty Name="permission_id" ColumnName="permission_id" />
+                <ScalarProperty Name="model_type" ColumnName="model_type" />
+                <ScalarProperty Name="model_id" ColumnName="model_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="model_has_roles">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.model_has_roles">
+              <MappingFragment StoreEntitySet="model_has_roles">
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+                <ScalarProperty Name="model_type" ColumnName="model_type" />
+                <ScalarProperty Name="model_id" ColumnName="model_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="notifications">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.notification">
+              <MappingFragment StoreEntitySet="notifications">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="notifiable_type" ColumnName="notifiable_type" />
+                <ScalarProperty Name="notifiable_id" ColumnName="notifiable_id" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="read_at" ColumnName="read_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="options">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.option">
+              <MappingFragment StoreEntitySet="options">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="options" ColumnName="options" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_has_items">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.order_has_items">
+              <MappingFragment StoreEntitySet="order_has_items">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="extras" ColumnName="extras" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="vatvalue" ColumnName="vatvalue" />
+                <ScalarProperty Name="variant_price" ColumnName="variant_price" />
+                <ScalarProperty Name="variant_name" ColumnName="variant_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="order_has_status">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.order_has_status">
+              <MappingFragment StoreEntitySet="order_has_status">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.order">
+              <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="address_id" ColumnName="address_id" />
+                <ScalarProperty Name="client_id" ColumnName="client_id" />
+                <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+                <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+                <ScalarProperty Name="delivery_price" ColumnName="delivery_price" />
+                <ScalarProperty Name="order_price" ColumnName="order_price" />
+                <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+                <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lng" ColumnName="lng" />
+                <ScalarProperty Name="srtipe_payment_id" ColumnName="srtipe_payment_id" />
+                <ScalarProperty Name="fee" ColumnName="fee" />
+                <ScalarProperty Name="fee_value" ColumnName="fee_value" />
+                <ScalarProperty Name="static_fee" ColumnName="static_fee" />
+                <ScalarProperty Name="delivery_method" ColumnName="delivery_method" />
+                <ScalarProperty Name="delivery_pickup_interval" ColumnName="delivery_pickup_interval" />
+                <ScalarProperty Name="vatvalue" ColumnName="vatvalue" />
+                <ScalarProperty Name="payment_processor_fee" ColumnName="payment_processor_fee" />
+                <ScalarProperty Name="time_to_prepare" ColumnName="time_to_prepare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pages">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.page">
+              <MappingFragment StoreEntitySet="pages">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="showAsLink" ColumnName="showAsLink" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="payments">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.payment">
+              <MappingFragment StoreEntitySet="payments">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="stripe_id" ColumnName="stripe_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="provider" ColumnName="provider" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="permissions">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.permission">
+              <MappingFragment StoreEntitySet="permissions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="guard_name" ColumnName="guard_name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="plans">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.plan">
+              <MappingFragment StoreEntitySet="plan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="limit_items" ColumnName="limit_items" />
+                <ScalarProperty Name="limit_orders" ColumnName="limit_orders" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="period" ColumnName="period" />
+                <ScalarProperty Name="paddle_id" ColumnName="paddle_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="features" ColumnName="features" />
+                <ScalarProperty Name="limit_views" ColumnName="limit_views" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ratings">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.rating">
+              <MappingFragment StoreEntitySet="ratings">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="rating1" ColumnName="rating" />
+                <ScalarProperty Name="rateable_type" ColumnName="rateable_type" />
+                <ScalarProperty Name="rateable_id" ColumnName="rateable_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="restorants">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
+              <MappingFragment StoreEntitySet="restorants">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="subdomain" ColumnName="subdomain" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="cover" ColumnName="cover" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="lng" ColumnName="lng" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="minimum" ColumnName="minimum" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="fee" ColumnName="fee" />
+                <ScalarProperty Name="static_fee" ColumnName="static_fee" />
+                <ScalarProperty Name="radius" ColumnName="radius" />
+                <ScalarProperty Name="is_featured" ColumnName="is_featured" />
+                <ScalarProperty Name="city_id" ColumnName="city_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="roles">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.role">
+              <MappingFragment StoreEntitySet="roles">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="guard_name" ColumnName="guard_name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="settings">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.setting">
+              <MappingFragment StoreEntitySet="settings">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="site_name" ColumnName="site_name" />
+                <ScalarProperty Name="site_logo" ColumnName="site_logo" />
+                <ScalarProperty Name="search" ColumnName="search" />
+                <ScalarProperty Name="restorant_details_image" ColumnName="restorant_details_image" />
+                <ScalarProperty Name="restorant_details_cover_image" ColumnName="restorant_details_cover_image" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="header_title" ColumnName="header_title" />
+                <ScalarProperty Name="header_subtitle" ColumnName="header_subtitle" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="facebook" ColumnName="facebook" />
+                <ScalarProperty Name="instagram" ColumnName="instagram" />
+                <ScalarProperty Name="playstore" ColumnName="playstore" />
+                <ScalarProperty Name="appstore" ColumnName="appstore" />
+                <ScalarProperty Name="maps_api_key" ColumnName="maps_api_key" />
+                <ScalarProperty Name="delivery" ColumnName="delivery" />
+                <ScalarProperty Name="typeform" ColumnName="typeform" />
+                <ScalarProperty Name="mobile_info_title" ColumnName="mobile_info_title" />
+                <ScalarProperty Name="mobile_info_subtitle" ColumnName="mobile_info_subtitle" />
+                <ScalarProperty Name="order_options" ColumnName="order_options" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sms_verifications">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.sms_verifications">
+              <MappingFragment StoreEntitySet="sms_verifications">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="status">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.status">
+              <MappingFragment StoreEntitySet="status">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="translations">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.translation">
+              <MappingFragment StoreEntitySet="translations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="language_id" ColumnName="language_id" />
+                <ScalarProperty Name="group" ColumnName="group" />
+                <ScalarProperty Name="key" ColumnName="key" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="google_id" ColumnName="google_id" />
+                <ScalarProperty Name="fb_id" ColumnName="fb_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="api_token" ColumnName="api_token" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="verification_code" ColumnName="verification_code" />
+                <ScalarProperty Name="phone_verified_at" ColumnName="phone_verified_at" />
+                <ScalarProperty Name="plan_id" ColumnName="plan_id" />
+                <ScalarProperty Name="plan_status" ColumnName="plan_status" />
+                <ScalarProperty Name="cancel_url" ColumnName="cancel_url" />
+                <ScalarProperty Name="update_url" ColumnName="update_url" />
+                <ScalarProperty Name="checkout_id" ColumnName="checkout_id" />
+                <ScalarProperty Name="subscription_plan_id" ColumnName="subscription_plan_id" />
+                <ScalarProperty Name="stripe_account" ColumnName="stripe_account" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="variants">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.variant">
+              <MappingFragment StoreEntitySet="variants">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="options" ColumnName="options" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="qty" ColumnName="qty" />
+                <ScalarProperty Name="enable_qty" ColumnName="enable_qty" />
+                <ScalarProperty Name="order" ColumnName="order" />
+                <ScalarProperty Name="item_id" ColumnName="item_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="deleted_at" ColumnName="deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="variants_has_extras">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.variants_has_extras">
+              <MappingFragment StoreEntitySet="variants_has_extras">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="variant_id" ColumnName="variant_id" />
+                <ScalarProperty Name="extra_id" ColumnName="extra_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="password_resets">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.password_resets">
+              <MappingFragment StoreEntitySet="password_resets">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="role_has_permissions" TypeName="DB_A6A5AC_menuModel.role_has_permissions" StoreEntitySet="role_has_permissions">
+            <EndProperty Name="permissions">
+              <ScalarProperty Name="id" ColumnName="permission_id" />
+            </EndProperty>
+            <EndProperty Name="roles">
+              <ScalarProperty Name="id" ColumnName="role_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
