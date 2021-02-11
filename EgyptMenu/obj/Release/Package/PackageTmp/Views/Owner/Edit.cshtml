@@ -435,6 +435,75 @@
                 </div>
                 <div class="col-xl-6 mb-6 mb-xl-0">
                     <br />
+                    @if (Model.has_variants == 1)
+                    {
+                        <div class="card card-profile shadow">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h5 class="h3 mb-0">Variants</h5>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <a class="btn btn-secondary btn-sm" href="@Url.Action("EditOptions","Owner",new {id = Model.id })">Edit Options</a>
+                                        <a class="btn btn-success btn-sm" href="@Url.Action("AddVariants","Owner",new {ItemId = Model.id  })">Add Variant</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+
+
+                                <div class="table-responsive">
+                                    <table class="table align-items-center table-flush">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Price</th>
+                                                <th>Options</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.variants)
+                                            {
+                                                <tr>
+                                                    <td>@item.price</td>
+                                                    <td>
+                                                        @item.options
+                                                    </td>
+                                                    <td>
+                                                        @using (Html.BeginForm("DeleteVariant", "Owner", new { ItemId = item.item_id, @id = item.id, ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+                                                        {
+                                                            <a href="@Url.Action("EditVariants","Owner",new {ItemId = Model.id,id=item.id })" class="btn btn-primary btn-sm">
+                                                                Edit
+                                                            </a>
+                                                            @*<a href="@Url.Action("DeleteVariant","Owner",new {ItemId = item.item_id ,id = item.id })" class="btn btn-danger btn-sm">
+                                                    Delete
+                                                </a>*@
+
+                                                            <button type="button" class="btn btn-danger btn-sm" onclick="confirm('Are you sure you want to delete this item?') ? this.parentElement.submit() : ''">Delete</button>
+                                                        }
+
+                                                    </td>
+                                                </tr>
+                                            }
+
+
+
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <br />
+                    }
+
 
                     <div class="card card-profile shadow">
                         <div class="card-header">

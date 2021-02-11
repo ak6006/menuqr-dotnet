@@ -3,17 +3,37 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security;
 using Owin;
 using EgyptMenu.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Web;
+using System.Threading.Tasks;
+using Microsoft.Owin.Cors;
 
 namespace EgyptMenu
 {
     public partial class Startup
     {
-        private ApplicationDbContext AuthDB = new ApplicationDbContext();
+        public ApplicationDbContext AuthDB = new ApplicationDbContext();
+  
+        public void CreateAdmin()
+        {
+            UserManager<ApplicationUser> userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(AuthDB));
 
+
+            ApplicationUser user = new ApplicationUser()
+            {
+                UserName = "Admin",
+                Email = "admin@gmail.com",
+                EmailConfirmed = true
+            };
+            var check = userManager.Create(user, "Admin@123");
+            if (check.Succeeded)
+            {
+                userManager.AddToRole(user.Id, "Admin");
+            }
+        }
         public void CreateRoles()
         {
             RoleManager<IdentityRole> roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(AuthDB));
@@ -44,7 +64,9 @@ namespace EgyptMenu
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
+            app.UseCors(CorsOptions.AllowAll);
             CreateRoles();
+            CreateAdmin();
             // Enable the application to use a cookie to store information for the signed in user
             // and to use a cookie to temporarily store information about a user logging in with a third party login provider
             // Configure the sign in cookie
@@ -60,7 +82,7 @@ namespace EgyptMenu
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -90,5 +112,7 @@ namespace EgyptMenu
             //    ClientSecret = ""
             //});
         }
+
+       
     }
 }

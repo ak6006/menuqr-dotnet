@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Microsoft.AspNet.Identity
+@model EgyptMenu.Models.user
+@{
     Layout = null;
 }
 
@@ -33,7 +35,7 @@
     <link href="~/Content/jasny-bootstrap.min.css" rel="stylesheet" />
     <!-- Flatpickr datepicker -->
     <link href="~/Content/flatpickr.min.css" rel="stylesheet" />
-    
+
     <!-- Chrome for Android theme color -->
     <meta name="theme-color" content="#000000">
 
@@ -256,27 +258,60 @@
                             <div class="row align-items-center">
                                 <h3 class="col-12 mb-0">Edit Profile</h3>
                             </div>
+                            @if (TempData["Msg"] != null)
+                            {
+                                if (TempData["Msg"].ToString() == "Your Password changed successfully")
+                                {
+                                    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                                        @TempData["Msg"]
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                }
+                                else if (TempData["Msg"].ToString() == "Your password is not correct")
+                                {
+                                    <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                        @TempData["Msg"]
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                }
+                                else if (TempData["Msg"].ToString() == "New password and confirmation not match")
+                                {
+                                    <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                                        @TempData["Msg"]
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                }
+                            }
+
+
+                            
                         </div>
                         <div class="card-body">
-                            <form method="post" action="http://localhost/profile" autocomplete="off">
-                                <input type="hidden" name="_token" value="OS540NdonAvGTmP1Mz7QrBMdWhcVVlemwDzy2Mjz">                            <input type="hidden" name="_method" value="put">
+                            <form method="post" action="@Url.Action("UpdateProfile","Owner")" autocomplete="off">
+                                <input type="hidden" name="id" value="@Model.id">
                                 <h6 class="heading-small text-muted mb-4">User information</h6>
 
 
                                 <div class="pl-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label" for="input-name">Name</label>
-                                        <input type="text" name="name" id="input-name" class="form-control form-control-alternative" placeholder="Name" value="Demo Owner" required autofocus>
+                                        <input type="text" name="name" id="input-name" class="form-control form-control-alternative" placeholder="Name" value="@Model.name" required autofocus>
 
                                     </div>
                                     <div class="form-group">
                                         <label class="form-control-label" for="input-email">Email</label>
-                                        <input type="email" name="email" id="input-email" class="form-control form-control-alternative" placeholder="Email" value="owner@example.com" required>
+                                        <input type="email" name="email" id="input-email" class="form-control form-control-alternative" placeholder="Email" value="@Model.email" required>
 
                                     </div>
                                     <div class="form-group">
                                         <label class="form-control-label" for="input-phone">Phone</label>
-                                        <input type="text" name="phone" id="input-phone" class="form-control form-control-alternative" placeholder="Phone" value="" required>
+                                        <input type="text" name="phone" id="input-phone" class="form-control form-control-alternative" placeholder="Phone" value="@Model.phone" required>
 
                                     </div>
 
@@ -286,15 +321,15 @@
                                 </div>
                             </form>
                             <hr class="my-4" />
-                            <form method="post" action="http://localhost/profile/password" autocomplete="off">
-                                <input type="hidden" name="_token" value="OS540NdonAvGTmP1Mz7QrBMdWhcVVlemwDzy2Mjz">                            <input type="hidden" name="_method" value="put">
+                            <form method="post" action="@Url.Action("UpdatePassword","Owner")" autocomplete="off">
+                                <input type="hidden" name="id" value="@Model.id">
                                 <h6 class="heading-small text-muted mb-4">Password</h6>
 
 
                                 <div class="pl-lg-4">
                                     <div class="form-group">
                                         <label class="form-control-label" for="input-current-password">Current Password</label>
-                                        <input type="password" name="old_password" id="input-current-password" class="form-control form-control-alternative" placeholder="Current Password" value="" required>
+                                        <input type="password" name="oldPassword" id="input-current-password" class="form-control form-control-alternative" placeholder="Current Password" value="" required>
 
                                     </div>
                                     <div class="form-group">
@@ -304,11 +339,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="form-control-label" for="input-password-confirmation">Confirm New Password</label>
-                                        <input type="password" name="password_confirmation" id="input-password-confirmation" class="form-control form-control-alternative" placeholder="Confirm New Password" value="" required>
+                                        <input type="password" name="confirmation" id="input-password-confirmation" class="form-control form-control-alternative" placeholder="Confirm New Password" value="" required>
                                     </div>
 
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-success mt-4">Change password</button>
+                                        <button type="submit" class="btn btn-success mt-4" onclick="confirmchanged">Change password</button>
                                     </div>
                                 </div>
                             </form>
@@ -375,7 +410,21 @@
         var USER_ID = '2';
     </script>
     <script src="~/Content/JS/onesignal.js"></script>
-
+    <script>
+        function confirmchanged() {
+            var pass = document.getElementById("input-password").value;
+            var copass = document.getElementById("input-password-confirmation").value;
+            alert(pass, copass);
+            //if (pass == copass) {
+            //    document.getElementById("correct").style.display = "inline-block";
+            //    document.getElementById("notcorrect").style.display = "None";
+            //}
+            //else {
+            //    document.getElementById("notcorrect").style.display = "inline-block";
+            //    document.getElementById("correct").style.display = "none";
+            //}
+        }
+    </script>
 
     <!-- Custom JS defined by admin -->
 </body>

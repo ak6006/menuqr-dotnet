@@ -18,6 +18,7 @@ namespace EgyptMenu.Models
         public variant()
         {
             this.variants_has_extras = new HashSet<variants_has_extras>();
+            this.variant_has_option = new HashSet<variant_has_option>();
         }
     
         public decimal id { get; set; }
@@ -35,5 +36,7 @@ namespace EgyptMenu.Models
         public virtual item item { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<variants_has_extras> variants_has_extras { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<variant_has_option> variant_has_option { get; set; }
     }
 }

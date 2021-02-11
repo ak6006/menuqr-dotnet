@@ -62,6 +62,11 @@
         <AssociationConnector Association="DB_A6A5AC_menuModel.sms_verifications_sms_verifications_user_id_foreign" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.variants_has_extras_variants_has_extras_variant_id_foreign" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.role_has_permissions" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.options_details" Width="1.5" PointX="12" PointY="22.625" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.variant_has_option" Width="1.5" PointX="14.25" PointY="22.5" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.FK_options_details_options_id" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.FK_variant_has_option_options_details_id" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.FK_variant_has_option_variants_id" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

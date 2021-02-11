@@ -6,9 +6,14 @@ using System.Web.Mvc;
 
 namespace EgyptMenu.Controllers
 {
+    [Authorize(Roles ="Admin")]
     public class AdminController : Controller
     {
         // GET: Admin
+        public ActionResult Dashboard()
+        {
+            return View();
+        }
         public ActionResult Restaurants()
         {
             return View();

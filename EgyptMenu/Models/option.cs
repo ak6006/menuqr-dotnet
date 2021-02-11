@@ -14,6 +14,12 @@ namespace EgyptMenu.Models
     
     public partial class option
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public option()
+        {
+            this.options_details = new HashSet<options_details>();
+        }
+    
         public decimal id { get; set; }
         public decimal item_id { get; set; }
         public string name { get; set; }
@@ -23,5 +29,7 @@ namespace EgyptMenu.Models
         public Nullable<System.DateTime> deleted_at { get; set; }
     
         public virtual item item { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<options_details> options_details { get; set; }
     }
 }

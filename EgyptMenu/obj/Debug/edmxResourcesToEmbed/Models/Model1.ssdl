@@ -159,6 +159,14 @@
     <Property Name="updated_at" Type="datetime" />
     <Property Name="deleted_at" Type="datetime" />
   </EntityType>
+  <EntityType Name="options_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="option_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="option_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="order_has_items">
     <Key>
       <PropertyRef Name="id" />
@@ -424,6 +432,14 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <Property Name="stripe_account" Type="nvarchar" MaxLength="191" Nullable="false" />
     <Property Name="birth_date" Type="nvarchar" MaxLength="191" Nullable="false" />
   </EntityType>
+  <EntityType Name="variant_has_option">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="variant_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="option_detail_id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+  </EntityType>
   <EntityType Name="variants">
     <Key>
       <PropertyRef Name="id" />
@@ -483,6 +499,42 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
       </Principal>
       <Dependent Role="extras">
         <PropertyRef Name="item_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_options_details_options_id">
+    <End Role="options" Type="Self.options" Multiplicity="1" />
+    <End Role="options_details" Type="Self.options_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="options">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="options_details">
+        <PropertyRef Name="option_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_variant_has_option_options_details_id">
+    <End Role="options_details" Type="Self.options_details" Multiplicity="1" />
+    <End Role="variant_has_option" Type="Self.variant_has_option" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="options_details">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="variant_has_option">
+        <PropertyRef Name="option_detail_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_variant_has_option_variants_id">
+    <End Role="variants" Type="Self.variants" Multiplicity="1" />
+    <End Role="variant_has_option" Type="Self.variant_has_option" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="variants">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="variant_has_option">
+        <PropertyRef Name="variant_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -807,6 +859,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <EntitySet Name="model_has_roles" EntityType="Self.model_has_roles" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="notifications" EntityType="Self.notifications" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="options" EntityType="Self.options" Schema="foodtiger" store:Type="Tables" />
+    <EntitySet Name="options_details" EntityType="Self.options_details" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="order_has_items" EntityType="Self.order_has_items" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="order_has_status" EntityType="Self.order_has_status" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="orders" EntityType="Self.orders" Schema="foodtiger" store:Type="Tables" />
@@ -823,6 +876,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <EntitySet Name="status" EntityType="Self.status" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="translations" EntityType="Self.translations" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="users" EntityType="Self.users" Schema="foodtiger" store:Type="Tables" />
+    <EntitySet Name="variant_has_option" EntityType="Self.variant_has_option" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="variants" EntityType="Self.variants" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="variants_has_extras" EntityType="Self.variants_has_extras" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="password_resets" EntityType="Self.password_resets" store:Type="Tables" store:Schema="foodtiger">
@@ -843,6 +897,18 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <AssociationSet Name="extras$extras_item_id_foreign" Association="Self.extras$extras_item_id_foreign">
       <End Role="items" EntitySet="items" />
       <End Role="extras" EntitySet="extras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_options_details_options_id" Association="Self.FK_options_details_options_id">
+      <End Role="options" EntitySet="options" />
+      <End Role="options_details" EntitySet="options_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_variant_has_option_options_details_id" Association="Self.FK_variant_has_option_options_details_id">
+      <End Role="options_details" EntitySet="options_details" />
+      <End Role="variant_has_option" EntitySet="variant_has_option" />
+    </AssociationSet>
+    <AssociationSet Name="FK_variant_has_option_variants_id" Association="Self.FK_variant_has_option_variants_id">
+      <End Role="variants" EntitySet="variants" />
+      <End Role="variant_has_option" EntitySet="variant_has_option" />
     </AssociationSet>
     <AssociationSet Name="hours$hours_restorant_id_foreign" Association="Self.hours$hours_restorant_id_foreign">
       <End Role="restorants" EntitySet="restorants" />

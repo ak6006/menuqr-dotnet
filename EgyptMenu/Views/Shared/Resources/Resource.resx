@@ -189,6 +189,9 @@
   <data name="For bigger restaurants and bars. Offer a full menu. Limitless plan" xml:space="preserve">
     <value>For bigger restaurants and bars. Offer a full menu. Limitless plan</value>
   </data>
+  <data name="Forgot password" xml:space="preserve">
+    <value>Forgot password ?</value>
+  </data>
   <data name="Free" xml:space="preserve">
     <value>Free</value>
   </data>
@@ -246,6 +249,9 @@
   <data name="Organize into categories" xml:space="preserve">
     <value>Organize into categories</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
@@ -275,6 +281,9 @@
   </data>
   <data name="Registration" xml:space="preserve">
     <value>Register</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>Remember me</value>
   </data>
   <data name="Restaurant or bar name" xml:space="preserve">
     <value>Restaurant or Coffe name</value>
@@ -332,6 +341,9 @@
   </data>
   <data name="Used by top restaurants worldwide" xml:space="preserve">
     <value>Used by top restaurants worldwide</value>
+  </data>
+  <data name="User Name" xml:space="preserve">
+    <value>User Name</value>
   </data>
   <data name="View analytics" xml:space="preserve">
     <value>View analytics</value>

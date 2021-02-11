@@ -1,11 +1,21 @@
 ﻿@using EgyptMenu.Models
+@using EgyptMenu.Views.Shared.Resources
 @model LoginViewModel
 @{
     ViewBag.Title = "Log in";
     Layout = null;
+    if (HttpContext.Current.Session["lang"] != null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+
+    }
 }
 
-
+<html lang=@Resource.language dir=@Resource.direction>
 
 <head>
     <meta charset="UTF-8">
@@ -119,7 +129,7 @@
                                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                         </div>
                                         @*<input class="form-control" placeholder="Email" type="email" name="email" value="" value="admin@argon.com" required autofocus>*@
-                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "User Name", required = "required", autofocus = "autofocus" })
+                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder=@Resource.User_Name, required = "required", autofocus = "autofocus" })
                                         @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
@@ -129,28 +139,30 @@
                                             <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                         </div>
                                         @*<input class="form-control" name="password" placeholder="Password" type="password" value="secret" required>*@
-                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password", type = "password", required = "required" })
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = @Resource.Password, type = "password", required = "required" })
                                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-                                <div class="custom-control custom-control-alternative custom-checkbox">
+                                <div class="custom-control custom-checkbox" dir="rtl">
                                     <input class="custom-control-input" name="RememberMe" id="customCheckLogin" type="checkbox">
                                     <label class="custom-control-label" for="customCheckLogin">
-                                        <span class="text-muted">Remember me</span>
+                                        <span class="text-muted">@Resource.Remember_me</span>
                                     </label>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-danger my-4">Sign in</button>
+                                    <button type="submit" class="btn btn-danger my-4">@Resource.Login</button>
                                 </div>
                             }
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-6">
+                        <div class="col-3"></div>
+                        <div class="col-6 text-light text-center">
                             <a href="@Url.Action("ForgotPassword", "Account")" class="text-light">
-                                <small>Forgot password?</small>
+                                <small>@Resource.Forgot_password</small>
                             </a>
                         </div>
+                        <div class="col-3"></div>
                     </div>
                 </div>
             </div>
@@ -287,3 +299,4 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+</html>

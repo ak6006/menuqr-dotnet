@@ -60,7 +60,7 @@ namespace EgyptMenu.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login(string returnUrl , string lang = "en")
         {
             ViewBag.ReturnUrl = returnUrl;
             return View();
@@ -84,7 +84,7 @@ namespace EgyptMenu.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("Dashboard", "Owner");
+                    return RedirectToAction("Index", "Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -215,12 +215,12 @@ namespace EgyptMenu.Controllers
                         logo = "cover.jpg",
                         cover = "cover.jpg",
                         active = 1,
-                        lat = "",
-                        lng = "",
-                        address = "",
+                        lat = "29.9751576",
+                        lng = "31.141099",
+                        address = "Arkan plaza, El-Bostan, Al Sheikh Zayed, Giza Governorate, Egypt",
                         phone = model.OwnerPhone,
                         minimum = "",
-                        description = "",
+                        description = "So tasty and delicious",
                         fee = 1,
                         static_fee = 1,
                         radius = "",
@@ -517,10 +517,19 @@ namespace EgyptMenu.Controllers
                 // are choosing port 587 because we will use STARTTLS to encrypt
                 // the connection.
                 int PORT = 587;
+                String Pass = "";
+                string Name = "";
 
                 // The subject line of the email
-                String Pass = db.users.Where(u => u.email == model.Email).FirstOrDefault().password.ToString();
-                string Name = db.users.Where(u => u.email == model.Email).FirstOrDefault().name.ToString();
+                try
+                {
+                     Pass = db.users.Where(u => u.email == model.Email).FirstOrDefault().password.ToString();
+                     Name = db.users.Where(u => u.email == model.Email).FirstOrDefault().name.ToString();
+                }
+                catch (Exception)
+                {
+                    return View(model);
+                }
 
 
                 // The body of the email

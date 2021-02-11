@@ -4,12 +4,17 @@
     if (!Request.QueryString["lang"].IsEmpty())
     {
         Culture = UICulture = Request.QueryString["lang"];
+        HttpContext.Current.Session.Add("lang", Request.QueryString["lang"]);
+
     }
     else
     {
         Culture = UICulture = "en";
+        HttpContext.Current.Session.Add("lang","en");
     }
 }
+
+
 <html lang=@Resource.language dir=@Resource.direction>
 
 <head>
@@ -113,6 +118,9 @@
                     <ul class="navbar-nav navbar-nav-hover justify-content-center">
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <a data-scroll href="#product" class="nav-link">@Resource.Product</a>
+                            @*<h1>
+                                @HttpContext.Current.Session["lang"];
+                            </h1>*@
                         </li>
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <a data-scroll href="#pricing" class="nav-link">@Resource.Pricing</a>

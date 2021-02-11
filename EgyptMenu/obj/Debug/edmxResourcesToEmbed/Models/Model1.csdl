@@ -174,6 +174,7 @@
     <Property Name="updated_at" Type="DateTime" Precision="3" />
     <Property Name="deleted_at" Type="DateTime" Precision="3" />
     <NavigationProperty Name="item" Relationship="Self.options_options_item_id_foreign" FromRole="options" ToRole="items" />
+    <NavigationProperty Name="options_details" Relationship="DB_A6A5AC_menuModel.FK_options_details_options_id" FromRole="option" ToRole="options_details" />
   </EntityType>
   <EntityType Name="order_has_items">
     <Key>
@@ -472,6 +473,7 @@
     <Property Name="deleted_at" Type="DateTime" Precision="3" />
     <NavigationProperty Name="item" Relationship="Self.variants_variants_item_id_foreign" FromRole="variants" ToRole="items" />
     <NavigationProperty Name="variants_has_extras" Relationship="Self.variants_has_extras_variants_has_extras_variant_id_foreign" FromRole="variants" ToRole="variants_has_extras" />
+    <NavigationProperty Name="variant_has_option" Relationship="DB_A6A5AC_menuModel.FK_variant_has_option_variants_id" FromRole="variant" ToRole="variant_has_option" />
   </EntityType>
   <EntityType Name="variants_has_extras">
     <Key>
@@ -953,5 +955,75 @@
       <End Role="permissions" EntitySet="permissions" />
       <End Role="roles" EntitySet="roles" />
     </AssociationSet>
+    <EntitySet Name="options_details" EntityType="DB_A6A5AC_menuModel.options_details" />
+    <EntitySet Name="variant_has_option" EntityType="DB_A6A5AC_menuModel.variant_has_option" />
+    <AssociationSet Name="FK_options_details_options_id" Association="DB_A6A5AC_menuModel.FK_options_details_options_id">
+      <End Role="option" EntitySet="options" />
+      <End Role="options_details" EntitySet="options_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_variant_has_option_options_details_id" Association="DB_A6A5AC_menuModel.FK_variant_has_option_options_details_id">
+      <End Role="options_details" EntitySet="options_details" />
+      <End Role="variant_has_option" EntitySet="variant_has_option" />
+    </AssociationSet>
+    <AssociationSet Name="FK_variant_has_option_variants_id" Association="DB_A6A5AC_menuModel.FK_variant_has_option_variants_id">
+      <End Role="variant" EntitySet="variants" />
+      <End Role="variant_has_option" EntitySet="variant_has_option" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="options_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="option_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="option_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="option" Relationship="DB_A6A5AC_menuModel.FK_options_details_options_id" FromRole="options_details" ToRole="option" />
+    <NavigationProperty Name="variant_has_option" Relationship="DB_A6A5AC_menuModel.FK_variant_has_option_options_details_id" FromRole="options_details" ToRole="variant_has_option" />
+  </EntityType>
+  <EntityType Name="variant_has_option">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="variant_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="option_detail_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <NavigationProperty Name="options_details" Relationship="DB_A6A5AC_menuModel.FK_variant_has_option_options_details_id" FromRole="variant_has_option" ToRole="options_details" />
+    <NavigationProperty Name="variant" Relationship="DB_A6A5AC_menuModel.FK_variant_has_option_variants_id" FromRole="variant_has_option" ToRole="variant" />
+  </EntityType>
+  <Association Name="FK_options_details_options_id">
+    <End Type="DB_A6A5AC_menuModel.option" Role="option" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.options_details" Role="options_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="option">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="options_details">
+        <PropertyRef Name="option_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_variant_has_option_options_details_id">
+    <End Type="DB_A6A5AC_menuModel.options_details" Role="options_details" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.variant_has_option" Role="variant_has_option" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="options_details">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="variant_has_option">
+        <PropertyRef Name="option_detail_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_variant_has_option_variants_id">
+    <End Type="DB_A6A5AC_menuModel.variant" Role="variant" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.variant_has_option" Role="variant_has_option" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="variant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="variant_has_option">
+        <PropertyRef Name="variant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

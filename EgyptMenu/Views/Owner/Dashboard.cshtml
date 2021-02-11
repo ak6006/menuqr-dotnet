@@ -2,6 +2,15 @@
 @model EgyptMenu.Models.ResMgmtViewModel
 @{
     Layout = null;
+    if (HttpContext.Current.Session["lang"]!=null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+        
+    }
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +78,93 @@
 
     <!-- Custom CSS defined by admin -->
     <link href="~/Content/back.css" rel="stylesheet" />
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+
+        #map {
+            height: 80%;
+            top: 600;
+            width: 80%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            /* margin:200;
+         padding: 400;
+         top: 300; */
+        }
+
+        #description {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        #infowindow-content .title {
+            font-weight: bold;
+        }
+
+        #infowindow-content {
+            display: none;
+        }
+
+        #map #infowindow-content {
+            display: inline;
+            /* height: 800px; */
+        }
+
+        .pac-card {
+            margin: 10px 10px 0 0;
+            border-radius: 2px 0 0 2px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+            font-family: Roboto;
+        }
+
+        #pac-container {
+            padding-bottom: 12px;
+            margin-right: 12px;
+        }
+
+        .pac-controls {
+            display: inline-block;
+            padding: 5px 11px;
+        }
+
+            .pac-controls label {
+                font-family: Roboto;
+                font-size: 13px;
+                font-weight: 300;
+            }
+
+        #pac-input {
+            background-color: #fff;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 300;
+            padding: 0 11px 0 13px;
+            text-overflow: ellipsis;
+            width: 400px;
+        }
+
+            #pac-input:focus {
+                border-color: #4d90fe;
+            }
+
+        #title {
+            color: #fff;
+            background-color: #4d90fe;
+            font-size: 25px;
+            font-weight: 500;
+            padding: 6px 12px;
+        }
+    </style>
 
 </head>
 <body class="">
@@ -105,7 +201,7 @@
                             <span>My profile</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                      
+
                         @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                         {
                             @Html.AntiForgeryToken()
@@ -248,7 +344,7 @@
                                 </div>
                                 <div class="col-4 text-right">
 
-                                    <a target="_blank" href="@Url.Action("Restaurant", "Owner")" class="btn btn-sm btn-success">View it</a>
+                                    <a target="_blank" href="@Url.Action("Restaurant","Owner",new { name = Model.RestaurantName })" class="btn btn-sm btn-success">View it</a>
 
                                 </div>
 
@@ -259,7 +355,24 @@
                             <div class="pl-lg-4">
                                 @using (Html.BeginForm("EditRestaurant", "Owner", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data" }))
                                 {
+                                    <div  style="display:none">
+
+                                       
+                                                    <input class="field" id="nameval"  value="" />
+                                             
+                                                    <input class="field" name="RestaurantAddress" id="streetval"  value="@Model.RestaurantAddress" />
+                                                
+                                            
+                                                    <input class="field" type="text" id="latval" name="lat" value="@Model.lat" />
+                                                
+                                                    <input class="field" id="longval" name="lng" value="@Model.lng" />
+                                                
+                                                    <input class="field" id="countryval"  />
+                                               
+                                    </div>
+
                                     @*<input type="hidden" name="_token" value="veRVSDylh3ujsrmhvS70l9SO2i6OXqcwVJrLkInH"> <input type="hidden" name="_method" value="put"> <input type="hidden" id="rid" value="1" />*@
+                                    @*<input class="form-group" type="text" id="latval0" name="lat" value="" />*@
                                     <div class="form-group">
                                         <label class="form-control-label" for="RestaurantName">Restaurant Name</label>
                                         <input step=".01" type="text" name="RestaurantName" value="@Model.RestaurantName" id="RestaurantName" class="form-control form-control-alternative" placeholder="Restaurant Name" required autofocus>
@@ -268,10 +381,10 @@
                                         <label class="form-control-label" for="RestaurantDescription">Restaurant Description</label>
                                         <input step=".01" type="text" name="RestaurantDescription" value="@Model.RestaurantDescription" id="RestaurantDescription" class="form-control form-control-alternative" placeholder="Restaurant description" required autofocus>
                                     </div>
-                                    <div class="form-group">
+                                    @*<div class="form-group">
                                         <label class="form-control-label" for="RestaurantAddress">Restaurant Address</label>
                                         <input step=".01" type="text" name="RestaurantAddress" value="@Model.RestaurantAddress" id="RestaurantAddress" class="form-control form-control-alternative" placeholder="Restaurant Address" required autofocus>
-                                    </div>
+                                    </div>*@
 
 
 
@@ -282,7 +395,7 @@
                                                 <div class="text-center">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 295px; height: 200px;">
-                                                            <img src="~/Content/images/@Model.RestaurantImage" alt="..." />
+                                                            <img src="~/Content/images/M_@Model.RestaurantImage" alt="..." />
                                                             @*<img src="~/Content/images/flayer.png" />*@
                                                         </div>
 
@@ -304,7 +417,7 @@
                                                 <div class="text-center">
                                                     <div class="fileinput fileinput-new" data-provides="fileinput">
                                                         <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px; height: 100px;">
-                                                            <img src="~/Content/images/@Model.RestaurantCoverImage" alt="..." />
+                                                            <img src="~/Content/images/L_@Model.RestaurantCoverImage" alt="..." />
                                                         </div>
                                                         <div>
                                                             <span class="btn btn-outline-secondary btn-file">
@@ -366,13 +479,38 @@
                                 <div class="card-body">
                                     <div class="tab-content" id="myTabContent">
                                         <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
-                                            <div id="map_location" class="form-control form-control-alternative"></div>
+                                            <div id="map_location" class="form-control form-control-alternative">
+                                                @* ///////////////////////////////////////// *@
+                                                <div id="pac-container" class="form" style="width:100%">
+                                                    @if (Model.RestaurantAddress != null)
+                                                    {
+                                                        <input id="pac-input" class="form-control" style="width:100%" type="text" placeholder="Enter a location" value="@Model.RestaurantAddress" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <input id="pac-input" class="form-control" style="width:100%" type="text" placeholder="Enter a location"  />
+                                                    }
+                                                </div>
+
+                                                <div id="map" style="width:100%; height:100%;"></div>
+                                                <div id="infowindow-content">
+                                                    <span id="place-name" class="title"></span><br />
+                                                    <span id="place-address"></span>
+                                                </div>
+
+
+
+
+
+
+                                                @* ///////////////////////////////////////// *@
+                                            </div>
                                         </div>
-                                        <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
-                                            <div id="map_area" class="form-control form-control-alternative"></div>
-                                            <br />
-                                            <button type="button" id="clear_area" class="btn btn-danger btn-sm btn-block">Clear Delivery Area</button>
-                                        </div>
+                                        @*<div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                                                <div id="map_area" class="form-control form-control-alternative"></div>
+                                                <br />
+                                                <button type="button" id="clear_area" class="btn btn-danger btn-sm btn-block">Clear Delivery Area</button>
+                                            </div>*@
                                     </div>
                                 </div>
                             </div>
@@ -803,7 +941,155 @@
             infoWindow.open(map);
         }
     </script>
+    <script>
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        function initMap() {
+            var map;
+            @*if (@Model.lat!= null) {
+                 map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: @Model.lat, lng: @Model.lng },
+                    zoom: 13,
+                });
 
+            }
+            else {
+                 map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: 29.9751576, lng: 31.141099 },
+                    zoom: 13,
+                });
+                
+            }*@
+            map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: @Model.lat, lng: @Model.lng },
+                    zoom: 13,
+                });
+            const card = document.getElementById("pac-card");
+            const input = document.getElementById("pac-input");
+            const biasInputElement = document.getElementById("use-location-bias");
+            const strictBoundsInputElement = document.getElementById(
+                "use-strict-bounds"
+            );
+            const options = {
+                componentRestrictions: { country: "eg" },
+                language: 'ar',
+                fields: ["formatted_address", "geometry", "name"],
+                origin: map.getCenter(),
+                strictBounds: false,
+                types: ["establishment"],
+            };
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+            const autocomplete = new google.maps.places.Autocomplete(
+                input,
+                options
+            );
+
+            // Bind the map's bounds (viewport) property to the autocomplete object,
+            // so that the autocomplete requests use the current map bounds for the
+            // bounds option in the request.
+
+            autocomplete.bindTo("bounds", map);
+
+            const infowindow = new google.maps.InfoWindow();
+            const infowindowContent = document.getElementById("infowindow-content");
+            infowindow.setContent(infowindowContent);
+            const marker = new google.maps.Marker({
+                map,
+                anchorPoint: new google.maps.Point(0, -29),
+            });
+            autocomplete.addListener("place_changed", () => {
+                infowindow.close();
+                marker.setVisible(false);
+                const place = autocomplete.getPlace();
+
+                if (!place.geometry) {
+                    // User entered the name of a Place that was not suggested and
+                    // pressed the Enter key, or the Place Details request failed.
+                    window.alert(
+                        "No details available for input: '" + place.name + "'"
+                    );
+                    return;
+                }
+
+
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    console.log(place.formatted_address);//location.lat()
+                    console.log(place.name);
+                    console.log(place.geometry.location.lat());
+                    console.log(place.geometry.location.lng());
+                    console.log(place.geometry.location);
+                    //===========================================================
+                    document.getElementById("nameval").value = place.name;
+                    document.getElementById("streetval").value = place.formatted_address;
+                    document.getElementById("latval").value = place.geometry.location.lat();
+                    document.getElementById("longval").value = place.geometry.location.lng();
+
+                    // document.getElementById("countryval").value =place.formatted_address.country;
+
+                    //======================================================
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(17);
+                }
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+                infowindowContent.children["place-name"].textContent = place.name;
+                infowindowContent.children["place-address"].textContent =
+                    place.formatted_address;
+                infowindow.open(map, marker);
+            });
+
+            // Sets a listener on a radio button to change the filter type on Places
+            // Autocomplete.
+            function setupClickListener(id, types) {
+                const radioButton = document.getElementById(id);
+                radioButton.addEventListener("click", () => {
+                    autocomplete.setTypes(types);
+                    input.value = "";
+                });
+            }
+            setupClickListener("changetype-all", []);
+            setupClickListener("changetype-address", ["address"]);
+            setupClickListener("changetype-establishment", ["establishment"]);
+            setupClickListener("changetype-geocode", ["geocode"]);
+            biasInputElement.addEventListener("change", () => {
+                if (biasInputElement.checked) {
+                    autocomplete.bindTo("bounds", map);
+                } else {
+                    // User wants to turn off location bias, so three things need to happen:
+                    // 1. Unbind from map
+                    // 2. Reset the bounds to whole world
+                    // 3. Uncheck the strict bounds checkbox UI (which also disables strict bounds)
+                    autocomplete.unbind("bounds");
+                    autocomplete.setBounds({
+                        east: 180,
+                        west: -180,
+                        north: 90,
+                        south: -90,
+                    });
+                    strictBoundsInputElement.checked = biasInputElement.checked;
+                }
+                input.value = "";
+            });
+            strictBoundsInputElement.addEventListener("change", () => {
+                autocomplete.setOptions({
+                    strictBounds: strictBoundsInputElement.checked,
+                });
+
+                if (strictBoundsInputElement.checked) {
+                    biasInputElement.checked = strictBoundsInputElement.checked;
+                    autocomplete.bindTo("bounds", map);
+                }
+                input.value = "";
+            });
+        }
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjCCuQL1P3qR6qti1Hh-eb5WwigF9F_84&callback=initMap&libraries=places&v=weekly"
+            async></script>
     <!-- Custom JS defined by admin -->
 </body>
 </html>

@@ -12,8 +12,7 @@ namespace EgyptMenu.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    using System.Data.Entity.ModelConfiguration.Conventions;
-
+    
     public partial class Entities : DbContext
     {
         public Entities()
@@ -23,8 +22,7 @@ namespace EgyptMenu.Models
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-            //throw new UnintentionalCodeFirstException();
+            throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<address> addresses { get; set; }
@@ -57,5 +55,7 @@ namespace EgyptMenu.Models
         public virtual DbSet<variant> variants { get; set; }
         public virtual DbSet<variants_has_extras> variants_has_extras { get; set; }
         public virtual DbSet<password_resets> password_resets { get; set; }
+        public virtual DbSet<options_details> options_details { get; set; }
+        public virtual DbSet<variant_has_option> variant_has_option { get; set; }
     }
 }

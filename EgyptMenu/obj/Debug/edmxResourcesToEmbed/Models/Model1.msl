@@ -474,5 +474,23 @@
         <ScalarProperty Name="id" ColumnName="role_id" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="options_details">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.options_details">
+        <MappingFragment StoreEntitySet="options_details">
+          <ScalarProperty Name="option_name" ColumnName="option_name" />
+          <ScalarProperty Name="option_id" ColumnName="option_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="variant_has_option">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.variant_has_option">
+        <MappingFragment StoreEntitySet="variant_has_option">
+          <ScalarProperty Name="option_detail_id" ColumnName="option_detail_id" />
+          <ScalarProperty Name="variant_id" ColumnName="variant_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
