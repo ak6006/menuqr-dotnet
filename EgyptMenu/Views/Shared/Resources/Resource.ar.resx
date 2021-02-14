@@ -132,6 +132,9 @@
   <data name="but no menu" xml:space="preserve">
     <value>لكن لا توجد قائمة</value>
   </data>
+  <data name="Change" xml:space="preserve">
+    <value>تغير</value>
+  </data>
   <data name="Clients are happy. They can see that we are a responsible bar and their health is a priority. No more old dirty menus :D. All they need is their phone" xml:space="preserve">
     <value>العملاء سعداء. يمكنهم أن يروا أننا شريط مسؤول وأن صحتهم هي أولوية. لا مزيد من القوائم المتسخة القديمة: د. كل ما يحتاجونه هو هواتفهم</value>
   </data>
@@ -171,11 +174,17 @@
   <data name="direction" xml:space="preserve">
     <value>rtl</value>
   </data>
+  <data name="dropdown-menu-right" xml:space="preserve">
+    <value>dropdown-menu-left</value>
+  </data>
   <data name="Engage more with your customers" xml:space="preserve">
     <value>تفاعل أكثر مع عملائك</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>عربي</value>
+  </data>
+  <data name="Enter location" xml:space="preserve">
+    <value>ادخل عنوان</value>
   </data>
   <data name="eur" xml:space="preserve">
     <value>يورو</value>
@@ -185,6 +194,9 @@
   </data>
   <data name="Extras and items variants" xml:space="preserve">
     <value>متغيرات الإضافات والأصناف</value>
+  </data>
+  <data name="fixed dir" xml:space="preserve">
+    <value>fixed-right</value>
   </data>
   <data name="For bigger restaurants and bars. Offer a full menu. Limitless plan" xml:space="preserve">
     <value>اكبر المطاعم والكافيهات. تقديم قائمة كاملة. خطط بلا حدود</value>
@@ -231,11 +243,23 @@
   <data name="language" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="Location" xml:space="preserve">
+    <value>العنوان </value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>دخول</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>القائمة</value>
+  </data>
   <data name="month" xml:space="preserve">
     <value>شهريا</value>
+  </data>
+  <data name="My profile" xml:space="preserve">
+    <value>الصفحة الشخصية</value>
   </data>
   <data name="No mobile app required" xml:space="preserve">
     <value>لا يوجد تطبيق جوال مطلوب</value>
@@ -249,6 +273,33 @@
   <data name="Organize into categories" xml:space="preserve">
     <value>تنظيم في فئات</value>
   </data>
+  <data name="Owner Email" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+  </data>
+  <data name="Owner Email here" xml:space="preserve">
+    <value>ادخل البريد الالكتروني هنا</value>
+  </data>
+  <data name="Owner information" xml:space="preserve">
+    <value>معلومات صاحب المطعم</value>
+  </data>
+  <data name="Owner Name" xml:space="preserve">
+    <value>اسم صاحب المطعم </value>
+  </data>
+  <data name="Owner Name here" xml:space="preserve">
+    <value>ادخل الاسم هنا</value>
+  </data>
+  <data name="Owner Password" xml:space="preserve">
+    <value>كلمة السر </value>
+  </data>
+  <data name="Owner Password here" xml:space="preserve">
+    <value>ادخل كلمة السر هنا</value>
+  </data>
+  <data name="Owner Phone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="Owner Phone here" xml:space="preserve">
+    <value>ادخل اسم الهاتف هنا</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمة السر </value>
   </data>
@@ -257,6 +308,9 @@
   </data>
   <data name="Pick QR color" xml:space="preserve">
     <value>اختر لون رمز الاستجابه السريعه</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>الخطة</value>
   </data>
   <data name="Pricing" xml:space="preserve">
     <value>الاسعار</value>
@@ -273,17 +327,56 @@
   <data name="Product" xml:space="preserve">
     <value>المنتجات</value>
   </data>
+  <data name="QR builder" xml:space="preserve">
+    <value>انشاء رمز الاستجابة السريع</value>
+  </data>
   <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
     <value>كان صانع القائمة بواسطة رمز الاستجابة السريعة الأداة المثالية لموقف مرض كورونا المستجد. يجب أن نذهب في وقت سابق إلى هذا النوع من القائمة</value>
   </data>
   <data name="Real-time changes" xml:space="preserve">
     <value>تغييرات في الوقت الفعلي</value>
   </data>
+  <data name="Register your restaurant" xml:space="preserve">
+    <value>تسجيل مطعمك الخاص</value>
+  </data>
   <data name="Registration" xml:space="preserve">
     <value>تسجيل</value>
   </data>
   <data name="Remember me" xml:space="preserve">
     <value>تذكرني</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>المطعم</value>
+  </data>
+  <data name="Restaurant Cover Image" xml:space="preserve">
+    <value>صورة غلاف المطعم</value>
+  </data>
+  <data name="Restaurant Description" xml:space="preserve">
+    <value>وصف المطعم</value>
+  </data>
+  <data name="Restaurant Image" xml:space="preserve">
+    <value>صورة المطعم</value>
+  </data>
+  <data name="Restaurant information" xml:space="preserve">
+    <value>معلومات مطعمك</value>
+  </data>
+  <data name="Restaurant Location" xml:space="preserve">
+    <value>عنوان المطعم</value>
+  </data>
+  <data name="RESTAURANT MANAGEMENT" xml:space="preserve">
+    <value>إدرة المطعم</value>
+  </data>
+  <data name="Restaurant Management sm" xml:space="preserve">
+    <value>إدرة المطعم</value>
+  </data>
+  <data name="Restaurant Name" xml:space="preserve">
+    <value>اسم المطعم</value>
+  </data>
+  <data name="Restaurant Name here" xml:space="preserve">
+    <value>ادخل اسم المطعم هنا</value>
   </data>
   <data name="Restaurant or bar name" xml:space="preserve">
     <value>اسم المطعم او الكافية</value>
@@ -297,8 +390,14 @@
   <data name="Same as PRO  with a 20% discount. Enjoy your QR menu full year" xml:space="preserve">
     <value>مثل PRO بخصم 20٪. استمتع القائمة رمز الاستجابة السريعة الخاصة بك سنة كاملة</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
   <data name="See a demo online menu" xml:space="preserve">
     <value>شاهد قائمة على الإنترنت تجريبية</value>
+  </data>
+  <data name="Select image" xml:space="preserve">
+    <value>اختار صوره</value>
   </data>
   <data name="Simple Pricing" xml:space="preserve">
     <value>التسعير البسيط</value>
@@ -351,11 +450,17 @@
   <data name="View analytics" xml:space="preserve">
     <value>عرض التحليلات</value>
   </data>
+  <data name="View it" xml:space="preserve">
+    <value>شاهد مطعمك</value>
+  </data>
   <data name="We do both" xml:space="preserve">
     <value>نحن نفعل الاثنين</value>
   </data>
   <data name="We use QR Menu Maker to protect our visitors. Dirty old menus are a thing from the past. So far clients report no issues. And they love our new online menu" xml:space="preserve">
     <value>نحن نستخدم صانع رمز الاستجابة السريعة  لحماية زوارنا. القوائم القديمة المتسخة أصبحت شيئًا من الماضي. حتى الآن ، لم يبلغ العملاء عن أي مشاكل. وهم يحبون قائمتنا الجديدة على الإنترنت</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>مرحبا ! </value>
   </data>
   <data name="Your email" xml:space="preserve">
     <value>الميل</value>

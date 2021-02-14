@@ -106,6 +106,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change.
+        /// </summary>
+        public static string Change {
+            get {
+                return ResourceManager.GetString("Change", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clients are happy. They can see that we are a responsible Coffe and their health is a priority. No more old dirty menus :D. All they need is their phone.
         /// </summary>
         public static string Clients_are_happy__They_can_see_that_we_are_a_responsible_bar_and_their_health_is_a_priority__No_more_old_dirty_menus__D__All_they_need_is_their_phone {
@@ -224,6 +233,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to dropdown-menu-right.
+        /// </summary>
+        public static string dropdown_menu_right {
+            get {
+                return ResourceManager.GetString("dropdown-menu-right", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Engage more with your customers.
         /// </summary>
         public static string Engage_more_with_your_customers {
@@ -238,6 +256,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string English {
             get {
                 return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a location.
+        /// </summary>
+        public static string Enter_location {
+            get {
+                return ResourceManager.GetString("Enter location", resourceCulture);
             }
         }
         
@@ -265,6 +292,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Extras_and_items_variants {
             get {
                 return ResourceManager.GetString("Extras and items variants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to fixed-left.
+        /// </summary>
+        public static string fixed_dir {
+            get {
+                return ResourceManager.GetString("fixed dir", resourceCulture);
             }
         }
         
@@ -405,6 +441,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log out.
+        /// </summary>
+        public static string Log_out {
+            get {
+                return ResourceManager.GetString("Log out", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login {
@@ -414,11 +468,29 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Menu.
+        /// </summary>
+        public static string Menu {
+            get {
+                return ResourceManager.GetString("Menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to month.
         /// </summary>
         public static string month {
             get {
                 return ResourceManager.GetString("month", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My profile.
+        /// </summary>
+        public static string My_profile {
+            get {
+                return ResourceManager.GetString("My profile", resourceCulture);
             }
         }
         
@@ -460,6 +532,87 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Owner Email.
+        /// </summary>
+        public static string Owner_Email {
+            get {
+                return ResourceManager.GetString("Owner Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Email here.
+        /// </summary>
+        public static string Owner_Email_here {
+            get {
+                return ResourceManager.GetString("Owner Email here", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner information.
+        /// </summary>
+        public static string Owner_information {
+            get {
+                return ResourceManager.GetString("Owner information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Name.
+        /// </summary>
+        public static string Owner_Name {
+            get {
+                return ResourceManager.GetString("Owner Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Name here.
+        /// </summary>
+        public static string Owner_Name_here {
+            get {
+                return ResourceManager.GetString("Owner Name here", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Password .
+        /// </summary>
+        public static string Owner_Password {
+            get {
+                return ResourceManager.GetString("Owner Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Password here.
+        /// </summary>
+        public static string Owner_Password_here {
+            get {
+                return ResourceManager.GetString("Owner Password here", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Phone.
+        /// </summary>
+        public static string Owner_Phone {
+            get {
+                return ResourceManager.GetString("Owner Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Phone here.
+        /// </summary>
+        public static string Owner_Phone_here {
+            get {
+                return ResourceManager.GetString("Owner Phone here", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -483,6 +636,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Pick_QR_color {
             get {
                 return ResourceManager.GetString("Pick QR color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Plan.
+        /// </summary>
+        public static string Plan {
+            get {
+                return ResourceManager.GetString("Plan", resourceCulture);
             }
         }
         
@@ -532,6 +694,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to QR builder.
+        /// </summary>
+        public static string QR_builder {
+            get {
+                return ResourceManager.GetString("QR builder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu.
         /// </summary>
         public static string QR_Menu_Maker_was_the_perfect_tool_for_the_COVID_situation__We_should_go_earlier_to_this_type_of_menu {
@@ -551,6 +722,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Register your restaurant.
+        /// </summary>
+        public static string Register_your_restaurant {
+            get {
+                return ResourceManager.GetString("Register your restaurant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         public static string Registration {
@@ -565,6 +745,105 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Remember_me {
             get {
                 return ResourceManager.GetString("Remember me", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string Remove {
+            get {
+                return ResourceManager.GetString("Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant.
+        /// </summary>
+        public static string Restaurant {
+            get {
+                return ResourceManager.GetString("Restaurant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Cover Image.
+        /// </summary>
+        public static string Restaurant_Cover_Image {
+            get {
+                return ResourceManager.GetString("Restaurant Cover Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Description.
+        /// </summary>
+        public static string Restaurant_Description {
+            get {
+                return ResourceManager.GetString("Restaurant Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Image.
+        /// </summary>
+        public static string Restaurant_Image {
+            get {
+                return ResourceManager.GetString("Restaurant Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant information.
+        /// </summary>
+        public static string Restaurant_information {
+            get {
+                return ResourceManager.GetString("Restaurant information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Location.
+        /// </summary>
+        public static string Restaurant_Location {
+            get {
+                return ResourceManager.GetString("Restaurant Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RESTAURANT MANAGEMENT.
+        /// </summary>
+        public static string RESTAURANT_MANAGEMENT {
+            get {
+                return ResourceManager.GetString("RESTAURANT MANAGEMENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Management.
+        /// </summary>
+        public static string Restaurant_Management_sm {
+            get {
+                return ResourceManager.GetString("Restaurant Management sm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Name.
+        /// </summary>
+        public static string Restaurant_Name {
+            get {
+                return ResourceManager.GetString("Restaurant Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restaurant Name here .
+        /// </summary>
+        public static string Restaurant_Name_here {
+            get {
+                return ResourceManager.GetString("Restaurant Name here", resourceCulture);
             }
         }
         
@@ -605,11 +884,29 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to See a demo online menu.
         /// </summary>
         public static string See_a_demo_online_menu {
             get {
                 return ResourceManager.GetString("See a demo online menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select image.
+        /// </summary>
+        public static string Select_image {
+            get {
+                return ResourceManager.GetString("Select image", resourceCulture);
             }
         }
         
@@ -758,6 +1055,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to View it.
+        /// </summary>
+        public static string View_it {
+            get {
+                return ResourceManager.GetString("View it", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to We do both.
         /// </summary>
         public static string We_do_both {
@@ -773,6 +1079,15 @@ namespace EgyptMenu.Views.Shared.Resources {
             get {
                 return ResourceManager.GetString("We use QR Menu Maker to protect our visitors. Dirty old menus are a thing from th" +
                         "e past. So far clients report no issues. And they love our new online menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome ! .
+        /// </summary>
+        public static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
         

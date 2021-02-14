@@ -132,6 +132,9 @@
   <data name="but no menu" xml:space="preserve">
     <value>but no menu</value>
   </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
   <data name="Clients are happy. They can see that we are a responsible bar and their health is a priority. No more old dirty menus :D. All they need is their phone" xml:space="preserve">
     <value>Clients are happy. They can see that we are a responsible Coffe and their health is a priority. No more old dirty menus :D. All they need is their phone</value>
   </data>
@@ -171,11 +174,17 @@
   <data name="direction" xml:space="preserve">
     <value>ltr</value>
   </data>
+  <data name="dropdown-menu-right" xml:space="preserve">
+    <value>dropdown-menu-right</value>
+  </data>
   <data name="Engage more with your customers" xml:space="preserve">
     <value>Engage more with your customers</value>
   </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
+  </data>
+  <data name="Enter location" xml:space="preserve">
+    <value>Enter a location</value>
   </data>
   <data name="eur" xml:space="preserve">
     <value>eur</value>
@@ -185,6 +194,9 @@
   </data>
   <data name="Extras and items variants" xml:space="preserve">
     <value>Extras and items variants</value>
+  </data>
+  <data name="fixed dir" xml:space="preserve">
+    <value>fixed-left</value>
   </data>
   <data name="For bigger restaurants and bars. Offer a full menu. Limitless plan" xml:space="preserve">
     <value>For bigger restaurants and bars. Offer a full menu. Limitless plan</value>
@@ -231,11 +243,23 @@
   <data name="language" xml:space="preserve">
     <value>عربي</value>
   </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>Log out</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
   <data name="month" xml:space="preserve">
     <value>month</value>
+  </data>
+  <data name="My profile" xml:space="preserve">
+    <value>My profile</value>
   </data>
   <data name="No mobile app required" xml:space="preserve">
     <value>No mobile app required</value>
@@ -249,6 +273,33 @@
   <data name="Organize into categories" xml:space="preserve">
     <value>Organize into categories</value>
   </data>
+  <data name="Owner Email" xml:space="preserve">
+    <value>Owner Email</value>
+  </data>
+  <data name="Owner Email here" xml:space="preserve">
+    <value>Owner Email here</value>
+  </data>
+  <data name="Owner information" xml:space="preserve">
+    <value>Owner information</value>
+  </data>
+  <data name="Owner Name" xml:space="preserve">
+    <value>Owner Name</value>
+  </data>
+  <data name="Owner Name here" xml:space="preserve">
+    <value>Owner Name here</value>
+  </data>
+  <data name="Owner Password" xml:space="preserve">
+    <value>Owner Password </value>
+  </data>
+  <data name="Owner Password here" xml:space="preserve">
+    <value>Owner Password here</value>
+  </data>
+  <data name="Owner Phone" xml:space="preserve">
+    <value>Owner Phone</value>
+  </data>
+  <data name="Owner Phone here" xml:space="preserve">
+    <value>Owner Phone here</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
@@ -257,6 +308,9 @@
   </data>
   <data name="Pick QR color" xml:space="preserve">
     <value>Pick QR color</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>Plan</value>
   </data>
   <data name="Pricing" xml:space="preserve">
     <value>Pricing</value>
@@ -273,17 +327,56 @@
   <data name="Product" xml:space="preserve">
     <value>Product</value>
   </data>
+  <data name="QR builder" xml:space="preserve">
+    <value>QR builder</value>
+  </data>
   <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
     <value>QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu</value>
   </data>
   <data name="Real-time changes" xml:space="preserve">
     <value>Real-time changes</value>
   </data>
+  <data name="Register your restaurant" xml:space="preserve">
+    <value>Register your restaurant</value>
+  </data>
   <data name="Registration" xml:space="preserve">
     <value>Register</value>
   </data>
   <data name="Remember me" xml:space="preserve">
     <value>Remember me</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Restaurant Cover Image" xml:space="preserve">
+    <value>Restaurant Cover Image</value>
+  </data>
+  <data name="Restaurant Description" xml:space="preserve">
+    <value>Restaurant Description</value>
+  </data>
+  <data name="Restaurant Image" xml:space="preserve">
+    <value>Restaurant Image</value>
+  </data>
+  <data name="Restaurant information" xml:space="preserve">
+    <value>Restaurant information</value>
+  </data>
+  <data name="Restaurant Location" xml:space="preserve">
+    <value>Restaurant Location</value>
+  </data>
+  <data name="RESTAURANT MANAGEMENT" xml:space="preserve">
+    <value>RESTAURANT MANAGEMENT</value>
+  </data>
+  <data name="Restaurant Management sm" xml:space="preserve">
+    <value>Restaurant Management</value>
+  </data>
+  <data name="Restaurant Name" xml:space="preserve">
+    <value>Restaurant Name</value>
+  </data>
+  <data name="Restaurant Name here" xml:space="preserve">
+    <value>Restaurant Name here </value>
   </data>
   <data name="Restaurant or bar name" xml:space="preserve">
     <value>Restaurant or Coffe name</value>
@@ -297,8 +390,14 @@
   <data name="Same as PRO  with a 20% discount. Enjoy your QR menu full year" xml:space="preserve">
     <value>Same as PRO, with a 20% discount. Enjoy your QR menu full year</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="See a demo online menu" xml:space="preserve">
     <value>See a demo online menu</value>
+  </data>
+  <data name="Select image" xml:space="preserve">
+    <value>Select image</value>
   </data>
   <data name="Start free and fell in love in our pro features" xml:space="preserve">
     <value>Start free and fell in love in our pro features</value>
@@ -348,11 +447,17 @@
   <data name="View analytics" xml:space="preserve">
     <value>View analytics</value>
   </data>
+  <data name="View it" xml:space="preserve">
+    <value>View it</value>
+  </data>
   <data name="We do both" xml:space="preserve">
     <value>We do both</value>
   </data>
   <data name="We use QR Menu Maker to protect our visitors. Dirty old menus are a thing from the past. So far clients report no issues. And they love our new online menu" xml:space="preserve">
     <value>We use QR Menu Maker to protect our visitors. Dirty old menus are a thing from the past. So far clients report no issues. And they love our new online menu</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome ! </value>
   </data>
   <data name="Your email" xml:space="preserve">
     <value>Your email</value>
