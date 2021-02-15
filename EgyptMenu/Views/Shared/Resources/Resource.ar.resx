@@ -123,6 +123,12 @@
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value> تصاميم مختلفة. خيارات ألوان غير محدودة. اختر نمط رمز الاستجابة السريعة</value>
   </data>
+  <data name="Add new category" xml:space="preserve">
+    <value>إضافة فئة جديدة</value>
+  </data>
+  <data name="Add new item" xml:space="preserve">
+    <value>إضافة صنف جديد</value>
+  </data>
   <data name="All rights reserved" xml:space="preserve">
     <value> جميع الحقوق محفوظة</value>
   </data>
@@ -131,6 +137,9 @@
   </data>
   <data name="but no menu" xml:space="preserve">
     <value>لكن لا توجد قائمة</value>
+  </data>
+  <data name="Category name" xml:space="preserve">
+    <value>اسم الفئة</value>
   </data>
   <data name="Change" xml:space="preserve">
     <value>تغير</value>
@@ -159,6 +168,9 @@
   <data name="Create your menu directly on our platform. Update anytime. Easy And Simple" xml:space="preserve">
     <value>أنشئ قائمتك مباشرة على منصتنا. قم بالتحديث في أي وقت. سهل وبسيط</value>
   </data>
+  <data name="Current Password" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
   <data name="Dashboard" xml:space="preserve">
     <value>لوحة التحكم</value>
   </data>
@@ -174,8 +186,23 @@
   <data name="direction" xml:space="preserve">
     <value>rtl</value>
   </data>
+  <data name="Download JPG" xml:space="preserve">
+    <value>تحميل الصورة</value>
+  </data>
+  <data name="Download Print Templates" xml:space="preserve">
+    <value>تحميل النماذج </value>
+  </data>
   <data name="dropdown-menu-right" xml:space="preserve">
     <value>dropdown-menu-left</value>
+  </data>
+  <data name="Edit Profile" xml:space="preserve">
+    <value>Edit Profile</value>
+  </data>
+  <data name="Edit Restaurant Menu" xml:space="preserve">
+    <value>تحرير قائمة المطعم</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="Engage more with your customers" xml:space="preserve">
     <value>تفاعل أكثر مع عملائك</value>
@@ -222,6 +249,18 @@
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
     <value>إذا كنت تدير مطعمًا صغيرًا أو بارًا ، أو كنت بحاجة فقط إلى الأساسيات ، فهذه الخطة رائعة.</value>
   </data>
+  <data name="Item description" xml:space="preserve">
+    <value>وصف الصنف</value>
+  </data>
+  <data name="Item Image" xml:space="preserve">
+    <value>صورة الصنف</value>
+  </data>
+  <data name="Item name" xml:space="preserve">
+    <value>اسم الصنف</value>
+  </data>
+  <data name="Item Price" xml:space="preserve">
+    <value>سعر الصنف</value>
+  </data>
   <data name="James Curran Brooklyn Taco" xml:space="preserve">
     <value>جيمس كوران بروكلين تاكو</value>
   </data>
@@ -255,11 +294,20 @@
   <data name="Menu" xml:space="preserve">
     <value>القائمة</value>
   </data>
+  <data name="MENU cp" xml:space="preserve">
+    <value>القائمة</value>
+  </data>
+  <data name="Menu Print template" xml:space="preserve">
+    <value>نماذج طباعة القائمة</value>
+  </data>
   <data name="month" xml:space="preserve">
     <value>شهريا</value>
   </data>
   <data name="My profile" xml:space="preserve">
     <value>الصفحة الشخصية</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="No mobile app required" xml:space="preserve">
     <value>لا يوجد تطبيق جوال مطلوب</value>
@@ -330,6 +378,9 @@
   <data name="QR builder" xml:space="preserve">
     <value>انشاء رمز الاستجابة السريع</value>
   </data>
+  <data name="QR Downloader" xml:space="preserve">
+    <value>تحميل رمز الاستجابة السريع</value>
+  </data>
   <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
     <value>كان صانع القائمة بواسطة رمز الاستجابة السريعة الأداة المثالية لموقف مرض كورونا المستجد. يجب أن نذهب في وقت سابق إلى هذا النوع من القائمة</value>
   </data>
@@ -371,6 +422,9 @@
   </data>
   <data name="Restaurant Management sm" xml:space="preserve">
     <value>إدرة المطعم</value>
+  </data>
+  <data name="Restaurant Menu Management" xml:space="preserve">
+    <value>إدارة قائمة المطعم</value>
   </data>
   <data name="Restaurant Name" xml:space="preserve">
     <value>اسم المطعم</value>
@@ -443,6 +497,9 @@
   </data>
   <data name="Used by top restaurants worldwide" xml:space="preserve">
     <value>تستخدم من قبل أفضل المطاعم في جميع أنحاء العالم</value>
+  </data>
+  <data name="User information" xml:space="preserve">
+    <value>User information</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>اسم المستخدم</value>

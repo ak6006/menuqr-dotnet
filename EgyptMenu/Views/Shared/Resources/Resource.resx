@@ -123,6 +123,12 @@
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value>8 different designs. Unlimited color options. Choose QR and Flayer style</value>
   </data>
+  <data name="Add new category" xml:space="preserve">
+    <value>Add new category</value>
+  </data>
+  <data name="Add new item" xml:space="preserve">
+    <value>Add new item</value>
+  </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>All rights reserved</value>
   </data>
@@ -131,6 +137,9 @@
   </data>
   <data name="but no menu" xml:space="preserve">
     <value>but no menu</value>
+  </data>
+  <data name="Category name" xml:space="preserve">
+    <value>Category name </value>
   </data>
   <data name="Change" xml:space="preserve">
     <value>Change</value>
@@ -159,6 +168,9 @@
   <data name="Create your menu directly on our platform. Update anytime. Easy And Simple" xml:space="preserve">
     <value>Create your menu directly on our platform. Update anytime. Easy And Simple</value>
   </data>
+  <data name="Current Password" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
   <data name="Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
@@ -174,8 +186,23 @@
   <data name="direction" xml:space="preserve">
     <value>ltr</value>
   </data>
+  <data name="Download JPG" xml:space="preserve">
+    <value>Download JPG</value>
+  </data>
+  <data name="Download Print Templates" xml:space="preserve">
+    <value>Download Print Templates</value>
+  </data>
   <data name="dropdown-menu-right" xml:space="preserve">
     <value>dropdown-menu-right</value>
+  </data>
+  <data name="Edit Profile" xml:space="preserve">
+    <value>Edit Profile</value>
+  </data>
+  <data name="Edit Restaurant Menu" xml:space="preserve">
+    <value>Edit Restaurant Menu</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="Engage more with your customers" xml:space="preserve">
     <value>Engage more with your customers</value>
@@ -222,6 +249,18 @@
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
     <value>If you run a small restaurant or bar, or just need the basics, this plan is great.</value>
   </data>
+  <data name="Item description" xml:space="preserve">
+    <value>Item_description</value>
+  </data>
+  <data name="Item Image" xml:space="preserve">
+    <value>Item Image</value>
+  </data>
+  <data name="Item name" xml:space="preserve">
+    <value>Item name</value>
+  </data>
+  <data name="Item Price" xml:space="preserve">
+    <value>Item Price</value>
+  </data>
   <data name="James Curran Brooklyn Taco" xml:space="preserve">
     <value>James Curran Brooklyn Taco</value>
   </data>
@@ -255,11 +294,20 @@
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
+  <data name="MENU cp" xml:space="preserve">
+    <value>MENU</value>
+  </data>
+  <data name="Menu Print template" xml:space="preserve">
+    <value>Menu Print template</value>
+  </data>
   <data name="month" xml:space="preserve">
     <value>month</value>
   </data>
   <data name="My profile" xml:space="preserve">
     <value>My profile</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="No mobile app required" xml:space="preserve">
     <value>No mobile app required</value>
@@ -330,6 +378,9 @@
   <data name="QR builder" xml:space="preserve">
     <value>QR builder</value>
   </data>
+  <data name="QR Downloader" xml:space="preserve">
+    <value>QR Downloader</value>
+  </data>
   <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
     <value>QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu</value>
   </data>
@@ -371,6 +422,9 @@
   </data>
   <data name="Restaurant Management sm" xml:space="preserve">
     <value>Restaurant Management</value>
+  </data>
+  <data name="Restaurant Menu Management" xml:space="preserve">
+    <value>Restaurant Menu Management</value>
   </data>
   <data name="Restaurant Name" xml:space="preserve">
     <value>Restaurant Name</value>
@@ -440,6 +494,9 @@
   </data>
   <data name="Used by top restaurants worldwide" xml:space="preserve">
     <value>Used by top restaurants worldwide</value>
+  </data>
+  <data name="User information" xml:space="preserve">
+    <value>User information</value>
   </data>
   <data name="User Name" xml:space="preserve">
     <value>User Name</value>
