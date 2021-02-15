@@ -14,7 +14,7 @@ using System.Web.Helpers;
 
 namespace EgyptMenu.Controllers
 {
-    [Authorize(Roles = "Owner")]
+    [Authorize]
     public class OwnerController : Controller
     {
         ApplicationDbContext AuthDB = new ApplicationDbContext();
@@ -94,7 +94,6 @@ namespace EgyptMenu.Controllers
         }
 
         [HttpPost]
-        [Obsolete]
         public ActionResult EditRestaurant(HttpPostedFileBase ImgFile
             , HttpPostedFileBase CoverFile, ResMgmtViewModel model)
         {
@@ -107,19 +106,19 @@ namespace EgyptMenu.Controllers
             if (ImgFile != null)
             {
                 WebImage img = new WebImage(ImgFile.InputStream);
-                img.FileName = "L_" + UserId + ImgFile.FileName;
+                img.FileName = "L_" + CurrentRestaurant.id + ImgFile.FileName;
 
                 img.Resize(590, 590);
                 string physicalPath = Path.Combine("~/Content/images/" +  img.FileName);
                 img.Save(physicalPath);
                 WebImage img1 = img;
-                img1.FileName = "M_" + UserId + ImgFile.FileName;
+                img1.FileName = "M_" + CurrentRestaurant.id + ImgFile.FileName;
 
                 img1.Resize(300, 300);
                 string physicalPath1 = Path.Combine("~/Content/images/" +  img1.FileName);
                 img1.Save(physicalPath1);
                 WebImage img2 = img;
-                img2.FileName = "S_" + UserId + ImgFile.FileName;
+                img2.FileName = "S_" + CurrentRestaurant.id + ImgFile.FileName;
                 img2.Resize(200, 200, false);
                 string physicalPath2 = Path.Combine("~/Content/images/" +  img2.FileName);
                 img2.Save(physicalPath2);
@@ -130,17 +129,17 @@ namespace EgyptMenu.Controllers
             {
                 WebImage img = new WebImage(CoverFile.InputStream);
                 img.Resize(590,590);
-                img.FileName = "L_C_" + UserId + CoverFile.FileName;
+                img.FileName = "L_C_" + CurrentRestaurant.id + CoverFile.FileName;
                 string physicalPath = Path.Combine("~/Content/images/"+ img.FileName);
                 img.Save(physicalPath);
                 WebImage img1 = img;
                 img1.Resize(300, 300);
-                img1.FileName = "M_C_" + UserId + CoverFile.FileName;
+                img1.FileName = "M_C_" + CurrentRestaurant.id + CoverFile.FileName;
                 string physicalPath1 = Path.Combine("~/Content/images/"+ img1.FileName);
                 img1.Save(physicalPath1);
                 WebImage img2 = img;
                 img2.Resize(200, 200,false);
-                img2.FileName = "S_C_" + UserId + CoverFile.FileName;
+                img2.FileName = "S_C_" + CurrentRestaurant.id + CoverFile.FileName;
                 string physicalPath2 = Path.Combine("~/Content/images/"+ img2.FileName);
                 img2.Save(physicalPath2);
                 CurrentRestaurant.cover = CoverFile.FileName;
