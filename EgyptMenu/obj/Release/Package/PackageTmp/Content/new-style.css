@@ -22,3 +22,18 @@
         height: 8vw !important;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .navbar-brand {
+        width: 100%;
+        text-align:center;
+    }
+    .LogoIMG {
+        height: 15vw !important;
+        margin: auto;
+    }
+    .LoginLogo{
+        margin: 50px 0 !important;
+
+    }
+}
