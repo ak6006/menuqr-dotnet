@@ -1,12 +1,18 @@
-﻿@model EgyptMenu.Models.RegisterViewModel
+﻿@using EgyptMenu.Views.Shared.Resources
+@model EgyptMenu.Models.RegisterViewModel
 @{
     ViewBag.Title = "Register";
     Layout = null;
+    if (HttpContext.Current.Session["lang"] != null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+
+    }
 }
-
-
-
-
 
 @*@Html.ValidationSummary("", new { @class = "text-danger" })*@
 @*<div class="form-group">*@
@@ -32,21 +38,7 @@
             <input type="submit" class="btn btn-default" value="Register" />
         </div>
     </div>*@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<html lang=@Resource.language dir=@Resource.direction>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -132,241 +124,241 @@
     <link href="~/Content/front.css" rel="stylesheet" />
 
 </head>
+<body>
 
 
 
 
+    <!-- Navbar -->
+    <nav id="navbar-main" class="navbar navbar-light navbar-expand-lg fixed-top">
 
-<!-- Navbar -->
-<nav id="navbar-main" class="navbar navbar-light navbar-expand-lg fixed-top">
 
+        <div class="container-fluid">
+            <a class="navbar-brand mr-lg-5" href="/">
+                <img src="~/Content/images/logo_qrzebra.png">
+            </a>
 
-    <div class="container-fluid">
-        <a class="navbar-brand mr-lg-5" href="/">
-            <img src="~/Content/images/logo_qrzebra.png">
-        </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="#">
+                                <img src="~/Content/images/logo_qrzebra.png">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbar_global">
-            <div class="navbar-collapse-header">
+    </nav>
+
+    <!-- End Navbar -->
+    <div class="wrapper pt-0">
+        <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-image: url(/Content/images/cover.jpg); background-size: cover; background-position: center top;">
+            <!-- Mask -->
+            <span class="mask bg-gradient-default opacity-8"></span>
+            <!-- Header container -->
+            <div class="container-fluid d-flex align-items-center">
                 <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="#">
-                            <img src="~/Content/images/logo_qrzebra.png">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                        </button>
+                    <div class="col-md-12 ">
+                        <h1 class="display-2 text-white"></h1>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</nav>
 
-<!-- End Navbar -->
-<div class="wrapper pt-0">
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-image: url(/Content/images/cover.jpg); background-size: cover; background-position: center top;">
-        <!-- Mask -->
-        <span class="mask bg-gradient-default opacity-8"></span>
-        <!-- Header container -->
-        <div class="container-fluid d-flex align-items-center">
+        <div class="container-fluid mt--7">
             <div class="row">
-                <div class="col-md-12 ">
-                    <h1 class="display-2 text-white"></h1>
-                </div>
+
             </div>
-        </div>
-    </div>
-
-
-    <div class="container-fluid mt--7">
-        <div class="row">
-
-        </div>
-        <div class="col-xl-8 offset-xl-2">
-            <div class="card bg-secondary shadow">
-                <div class="card-header bg-white border-0">
-                    <div class="row align-items-center">
-                        <h3 class="col-12 mb-0">Register your restaurant</h3>
+            <div style="width:70%;  margin:auto; @Resource.text_align">
+                <div class="card bg-secondary shadow">
+                    <div class="card-header bg-white border-0">
+                        <div class="row align-items-center">
+                            <h3 class="col-12 mb-0">@Resource.Register_your_restaurant</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="card-body">
-                    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <input type="hidden" name="_token" value="PAS0AFs1bXdGZJleDqStDf2sYpGZhfhSRhJQTGzt"> <h6 class="heading-small text-muted mb-4">Restaurant information</h6>
+                    <div class="card-body">
+                        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="_token" value="PAS0AFs1bXdGZJleDqStDf2sYpGZhfhSRhJQTGzt"> <h6 class="heading-small text-muted mb-4">@Resource.Restaurant_information</h6>
 
-                        <div class="pl-lg-4">
-                            <div class="form-group">
-                                <label class="form-control-label" for="RestaurantName">Restaurant Name</label>
-                                @Html.TextBoxFor(m => m.RestaurantName, new { @class = "form-control form-control-alternative ", placeholder = "Restaurant Name here ...", required = "required", autofocus = "autofocus" })
+                            <div class="pl-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="RestaurantName">@Resource.Restaurant_Name</label>
+                                    @Html.TextBoxFor(m => m.RestaurantName, new { @class = "form-control form-control-alternative ", placeholder = Resource.Restaurant_Name_here, required = "required", autofocus = "autofocus" })
 
-                            </div>
-                        </div>
-                        <hr class="my-4" />
-                        <h6 class="heading-small text-muted mb-4">Owner information</h6>
-                        <div class="pl-lg-4">
-                            <div class="form-group">
-                                <label class="form-control-label" for="OwnerName">Owner Name</label>
-                                @Html.TextBoxFor(m => m.OwnerName, new { @class = "form-control form-control-alternative ", placeholder = "Owner Name here ...", required = "required", autofocus = "autofocus" })
-
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label" for="Email">Owner Email</label>
-                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-alternative ", placeholder = "Owner Email here ...", required = "required", autofocus = "autofocus" })
-
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label" for="Password">Owner Password</label>
-                                @*<input type="text" name="phone_owner" id="phone_owner" class="form-control form-control-alternative" placeholder="Owner Phone here ..." value="" required autofocus>*@
-                                @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-alternative ", placeholder = "Owner Password here ...", required = "required", autofocus = "autofocus", type = "password" })
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label" for="OwnerPhone">Owner Phone</label>
-                                @*<input type="text" name="phone_owner" id="phone_owner" class="form-control form-control-alternative" placeholder="Owner Phone here ..." value="" required autofocus>*@
-                                @Html.TextBoxFor(m => m.OwnerPhone, new { @class = "form-control form-control-alternative ", placeholder = "Owner Phone here ...", required = "required", autofocus = "autofocus", type = "number" })
-                            </div>
-
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-success mt-4">Save</button>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
-    <br />
-</div>
-@*<div id="cartSideNav" class="sidenav-cart sidenav-cart-close">
-        <div class="offcanvas-menu-inner">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="minicart-content">
-                <div class="minicart-heading">
-                    <h4>Shopping Cart</h4>
-                </div>
-                <div class="searchable-container">
-                    <div id="cartList">
-                        <div v-for="item in items" class="items col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
-                            <div class="info-block block-info clearfix" v-cloak>
-                                <div class="square-box pull-left">
-                                    <img :src="item.attributes.image" class="productImage" width="100" height="105" alt="">
                                 </div>
-                                <h6 class="product-item_title">{{ item.name }}</h6>
-                                <p class="product-item_quantity">{{ item.quantity }} x {{ item.attributes.friendly_price }}</p>
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <button v-on:click="decQuantity(item.id)" :value="item.id" class="page-link" tabindex="-1">
-                                            <i class="fa fa-minus"></i>
-                                        </button>
-                                    </li>
-                                    <li class="page-item">
-                                        <button v-on:click="incQuantity(item.id)" :value="item.id" class="page-link">
-                                            <i class="fa fa-plus"></i>
-                                        </button>
-                                    </li>
-                                    <li class="page-item">
-                                        <button v-on:click="remove(item.id)" :value="item.id" class="page-link">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </li>
-                                </ul>
+                            </div>
+                            <hr class="my-4" />
+                            <h6 class="heading-small text-muted mb-4">@Resource.Owner_information</h6>
+                            <div class="pl-lg-4">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="OwnerName">@Resource.Owner_Name</label>
+                                    @Html.TextBoxFor(m => m.OwnerName, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Name_here, required = "required", autofocus = "autofocus" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="Email">@Resource.Owner_Email</label>
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Email_here, required = "required", autofocus = "autofocus" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="Password">@Resource.Owner_Password</label>
+                                    @*<input type="text" name="phone_owner" id="phone_owner" class="form-control form-control-alternative" placeholder="Owner Phone here ..." value="" required autofocus>*@
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Password_here, required = "required", autofocus = "autofocus", type = "password" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label" for="OwnerPhone">@Resource.Owner_Phone</label>
+                                    @*<input type="text" name="phone_owner" id="phone_owner" class="form-control form-control-alternative" placeholder="Owner Phone here ..." value="" required autofocus>*@
+                                    @Html.TextBoxFor(m => m.OwnerPhone, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Phone_here, required = "required", autofocus = "autofocus", type = "number" })
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success mt-4">@Resource.Save</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    @*<div id="cartSideNav" class="sidenav-cart sidenav-cart-close">
+            <div class="offcanvas-menu-inner">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="minicart-content">
+                    <div class="minicart-heading">
+                        <h4>Shopping Cart</h4>
+                    </div>
+                    <div class="searchable-container">
+                        <div id="cartList">
+                            <div v-for="item in items" class="items col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
+                                <div class="info-block block-info clearfix" v-cloak>
+                                    <div class="square-box pull-left">
+                                        <img :src="item.attributes.image" class="productImage" width="100" height="105" alt="">
+                                    </div>
+                                    <h6 class="product-item_title">{{ item.name }}</h6>
+                                    <p class="product-item_quantity">{{ item.quantity }} x {{ item.attributes.friendly_price }}</p>
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <button v-on:click="decQuantity(item.id)" :value="item.id" class="page-link" tabindex="-1">
+                                                <i class="fa fa-minus"></i>
+                                            </button>
+                                        </li>
+                                        <li class="page-item">
+                                            <button v-on:click="incQuantity(item.id)" :value="item.id" class="page-link">
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+                                        </li>
+                                        <li class="page-item">
+                                            <button v-on:click="remove(item.id)" :value="item.id" class="page-link">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="totalPrices" v-cloak>
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <span v-if="totalPrice==0">Cart is empty!</span>
-                                        <span v-if="totalPrice"><strong>Subtotal:</strong></span>
-                                        <span v-if="totalPrice" class="ammount"><strong>{{ totalPriceFormat }}</strong></span>
+                        <div id="totalPrices" v-cloak>
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <span v-if="totalPrice==0">Cart is empty!</span>
+                                            <span v-if="totalPrice"><strong>Subtotal:</strong></span>
+                                            <span v-if="totalPrice" class="ammount"><strong>{{ totalPriceFormat }}</strong></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <br />
-                        <div v-if="totalPrice" v-cloak>
-                            <a href="/cart-checkout" class="btn btn-primary text-white">Checkout</a>
+                            <br />
+                            <div v-if="totalPrice" v-cloak>
+                                <a href="/cart-checkout" class="btn btn-primary text-white">Checkout</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>*@
-<footer class="footer">
-    <div class="container">
-        <div class="row align-items-center justify-content-md-between">
-            <div class="col-md-6">
-                <div class="copyright">
-                    &copy; 2020 <a href="" target="_blank">QR Menu Maker</a>.
+        </div>*@
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center justify-content-md-between">
+                <div class="col-md-6">
+                    <div class="copyright">
+                        &copy; 2020 <a href="" target="_blank">QR Menu Maker</a>.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul id="footer-pages" class="nav nav-footer justify-content-end">
+                        <li v-for="page in pages" class="nav-item" v-cloak>
+                            <a :href="'/pages/' + page.id" class="nav-link">{{ page.title }}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-6">
-                <ul id="footer-pages" class="nav nav-footer justify-content-end">
-                    <li v-for="page in pages" class="nav-item" v-cloak>
-                        <a :href="'/pages/' + page.id" class="nav-link">{{ page.title }}</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
-<!--   Core JS Files   -->
-<script src="~/Content/JS/jquery.min.js"></script>
-<script src="~/Content/JS/bootstrap.min.js"></script>
-<script src="~/Content/JS/popper.min.js"></script>
-<script src="~/Content/JS/perfect-scrollbar.jquery.min.js"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="~/Content/JS/bootstrap-switch.js"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="~/Content/JS/moment.min.js"></script>
-<script src="~/Content/JS/nouislider.min.js"></script>
-<script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
-<script src="~/Content/JS/datetimepicker.js"></script>
-<!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
-<script src="~/Content/JS/argon-design-system.js"></script>
+    <!--   Core JS Files   -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+    <script src="~/Content/JS/bootstrap.min.js"></script>
+    <script src="~/Content/JS/popper.min.js"></script>
+    <script src="~/Content/JS/perfect-scrollbar.jquery.min.js"></script>
+    <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+    <script src="~/Content/JS/bootstrap-switch.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="~/Content/JS/moment.min.js"></script>
+    <script src="~/Content/JS/nouislider.min.js"></script>
+    <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
+    <script src="~/Content/JS/datetimepicker.js"></script>
+    <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+    <script src="~/Content/JS/argon-design-system.js"></script>
 
-<!-- Import Vue -->
-<script src="~/Content/JS/vue.js"></script>
-<!-- Import AXIOS --->
-<script src="~/Content/JS/axios.min.js"></script>
+    <!-- Import Vue -->
+    <script src="~/Content/JS/vue.js"></script>
+    <!-- Import AXIOS --->
+    <script src="~/Content/JS/axios.min.js"></script>
 
-<!-- Add to Cart   -->
-<script>
-    var LOCALE = "en";
-    var CASHIER_CURRENCY = "eur";
-</script>
-
-
-<!-- Cart custom sidemenu -->
-<script src="~/Content/JS/cartSideMenu.js"></script>
-<!-- Notify JS -->
-<script src="~/Content/JS/notify.min.js"></script>
-
-<!-- SELECT2 -->
-<script src="~/Content/JS/select2.js"></script>
-<script src="~/Content/JS/select2.min.js"></script>
-
-<!-- Google Map -->
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
-</script>
+    <!-- Add to Cart   -->
+    <script>
+        var LOCALE = "en";
+        var CASHIER_CURRENCY = "eur";
+    </script>
 
 
-<!-- Custom JS defined by admin -->
-}
+    <!-- Cart custom sidemenu -->
+    <script src="~/Content/JS/cartSideMenu.js"></script>
+    <!-- Notify JS -->
+    <script src="~/Content/JS/notify.min.js"></script>
 
+    <!-- SELECT2 -->
+    <script src="~/Content/JS/select2.js"></script>
+    <script src="~/Content/JS/select2.min.js"></script>
+
+    <!-- Google Map -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
+    </script>
+
+
+    <!-- Custom JS defined by admin -->
+</body>
+</html>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
