@@ -79,6 +79,7 @@ namespace EgyptMenu.Controllers
             var CurrentRestaurant = db.restorants.Where(r => r.user_id == CurrentUserId).FirstOrDefault();
             ResMgmtViewModel resMgmtViewModel = new ResMgmtViewModel()
             {
+                id = CurrentRestaurant.id,
                 OwnerEmail = UserEmail,
                 OwnerName = CurrentUser.name,
                 OwnerPhone = CurrentUser.phone,
