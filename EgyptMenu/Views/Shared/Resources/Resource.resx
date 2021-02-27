@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="20 items in the menu" xml:space="preserve">
-    <value>20 items in the menu</value>
+    <value>items in the menu</value>
   </data>
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value>8 different designs. Unlimited color options. Choose QR and Flayer style</value>
@@ -145,7 +145,7 @@
     <value>Change</value>
   </data>
   <data name="Clients are happy. They can see that we are a responsible bar and their health is a priority. No more old dirty menus :D. All they need is their phone" xml:space="preserve">
-    <value>Clients are happy. They can see that we are a responsible Coffe and their health is a priority. No more old dirty menus :D. All they need is their phone</value>
+    <value>Clients are happy. They can see that we are a responsible place and their health is a priority. No more old dirty menus :D. All they need is their phone</value>
   </data>
   <data name="Community support" xml:space="preserve">
     <value>Community support</value>
@@ -157,7 +157,7 @@
     <value>Create a Digital Menu</value>
   </data>
   <data name="Create a digital menu for your Restaurant or Bar" xml:space="preserve">
-    <value>Create a digital menu for your Restaurant or coffe</value>
+    <value>Create a digital menu for your Restaurant or coffee</value>
   </data>
   <data name="Create a menu for you, now!" xml:space="preserve">
     <value>Create a menu for you, now</value>
@@ -247,7 +247,7 @@
     <value>Go Mobile</value>
   </data>
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
-    <value>If you run a small restaurant or bar, or just need the basics, this plan is great.</value>
+    <value>If you run a small restaurant or coffee , or just need the basics, this plan is great.</value>
   </data>
   <data name="Item description" xml:space="preserve">
     <value>Item_description</value>
@@ -259,7 +259,7 @@
     <value>Item name</value>
   </data>
   <data name="Item Price" xml:space="preserve">
-    <value>Item-Price</value>
+    <value>Item Price</value>
   </data>
   <data name="James Curran Brooklyn Taco" xml:space="preserve">
     <value>James Curran Brooklyn Taco</value>
