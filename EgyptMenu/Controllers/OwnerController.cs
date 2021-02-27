@@ -233,7 +233,8 @@ namespace EgyptMenu.Controllers
                 price = item_price,
                 category_id = id,
                 description = item_description,
-                image = item_image.FileName
+                image = item_image.FileName,
+                available=1
             };
             db.items.Add(Item);
             db.SaveChanges();

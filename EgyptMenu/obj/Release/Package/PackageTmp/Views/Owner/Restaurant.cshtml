@@ -70,7 +70,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color"  content="#ffffff">
 
     <!-- Custom CSS defined by admin -->
     <link href="~/Content/front.css" rel="stylesheet" />
@@ -122,7 +122,7 @@
        
         <section class="section-profile-cover section-shaped grayscale-05 d-none d-md-none d-lg-block d-lx-block">
             <!-- Circles background -->
-            <img class="bg-image" loading="lazy" src="~/Content/images/@Model.cover" style="width: 100%;">
+            <img class="bg-image" loading="lazy" src="~/Content/images/L_C_@Model.id@Model.cover" style="width: 100%;">
             <!-- SVG separator -->
             <div class="separator separator-bottom separator-skew">
                 <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +204,7 @@
                                         </span>
                                         <br />
                                         <span class="res_description">@item1.description</span><br />
-                                        <span class="res_mimimum">€@item1.price</span>
+                                        <span class="res_mimimum">@item1.price EGP</span>
                                     </div>
                                 </div>
 
@@ -231,7 +231,7 @@
                                                             </div>
                                                             <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
                                                                 <input id="modalID" type="hidden">
-                                                                <span id="modalPrice" class="new-price">$@item1.price</span>
+                                                                <span id="modalPrice" class="new-price">@item1.price EGP</span>
                                                                 <p id="modalDescription">@item1.description</p>
         
                                                                 <div id="exrtas-area" style="">
@@ -242,7 +242,7 @@
                                                                         <div class=" mb-3">
                                                                             @foreach (var item2 in item1.extras)
                                                                             {
-                                                                                <label>@item2.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+$@item2.price</label><br />
+                                                                                <label>@item2.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+@item2.price EGP</label><br />
                                                                             }
                                                                         </div>
                                                                     </div>

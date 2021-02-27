@@ -467,7 +467,7 @@
                                             @foreach (var item in Model.variants)
                                             {
                                                 <tr>
-                                                    <td>@item.price</td>
+                                                    <td>@item.price EGP</td>
                                                     <td>
                                                         @item.options
                                                     </td>
@@ -529,7 +529,7 @@
                                 {
                                     <tr>
                                         <th scope="row">@item.name</th>
-                                        <td class="budget">$@item.price</td>
+                                        <td class="budget">@item.price EGP</td>
                                         <td class="text-right">
                                             <div class="dropdown">
                                                 <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

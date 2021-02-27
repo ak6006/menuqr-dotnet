@@ -486,7 +486,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Item Price.
+        ///   Looks up a localized string similar to Item-Price.
         /// </summary>
         public static string Item_Price {
             get {
