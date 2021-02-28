@@ -1,6 +1,15 @@
-﻿
+﻿@using EgyptMenu.Views.Shared.Resources
 @{
     Layout = null;
+    if (HttpContext.Current.Session["lang"] != null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+
+    }
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -133,13 +142,13 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Dashboard", "Admin")">
-                            <i class="fas fa-desktop text-primary "></i> Dashboard
+                            <i class="fas fa-desktop text-primary "></i> @Resource.Dashboard
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Restaurants", "Admin")">
-                            <i class="fas fa-store-alt text-primary "></i> Restaurants
+                            <i class="fas fa-store-alt text-primary "></i> @Resource.Restaurants
                         </a>
                     </li>
 
@@ -148,28 +157,28 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Plans", "Admin")">
-                            <i class="fas fa-credit-card text-orange"></i> Pricing plans
+                            <i class="fas fa-credit-card text-orange"></i> @Resource.Pricing_plans
                         </a>
                     </li>
 
 
 
 
-                    <li class="nav-item">
+                 <!--   <li class="nav-item">
                         <a class="nav-link" target="_blank" href="@Url.Action("LangTranslations", "Admin")">
-                            <i class="fas fa-globe-americas text-orange"></i> Translations
+                            <i class="fas fa-globe-americas text-orange"></i> @Resource.Translations
                         </a>
-                    </li>
+                    </li> -->
 
-                    <li class="nav-item">
+                  <!--  <li class="nav-item">
                         <a class="nav-link" target="_blank" href="@Url.Action("EnV", "Admin")">
                             <i class="fas fa-hand-point-up text-yellow"></i> ENV Editor
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Settings", "Admin")">
-                            <i class="fas fa-tools text-black"></i> Settings
+                            <i class="fas fa-tools text-black"></i> @Resource.Settings
                         </a>
                     </li>
                 </ul>
@@ -184,7 +193,7 @@
                 <!-- Divider -->
                 <hr class="my-3">
                 <!-- Heading -->
-                <h6 class="navbar-heading text-muted">Version 1.5.5   <span id="uptodate" class="badge badge-success" style="display:none;">latest</span></h6>
+                <h6 class="navbar-heading text-muted">@Resource.Version 1.5.5   <span id="uptodate" class="badge badge-success" style="display:none;">latest</span></h6>
                 <h6>2020-12-19 10:54:56 </h6>
 
                 <hr class="my-3">
@@ -209,7 +218,7 @@
         <nav class="navbar navbar-top navbar-expand-md  navbar-dark" id="navbar-main">
             <div class="container-fluid">
 
-                
+
 
                 <!-- Form -->
                 <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -341,10 +350,10 @@
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">Plans</h3>
+                                    <h3 class="mb-0">@Resource.Plans</h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <a href="@Url.Action("CreatePlan", "Admin")" class="btn btn-sm btn-primary">Add plan</a>
+                                    <a href="@Url.Action("CreatePlan", "Admin")" class="btn btn-sm btn-primary">@Resource.Add_plan</a>
                                 </div>
                             </div>
                         </div>
@@ -352,7 +361,7 @@
                         <div class="col-12">
                         </div>
                         <div class="card-footer py-4">
-                            <h4>You don`t have any plans ...</h4>
+                            <h4>@Resource.You_dont_have_any_plans ...</h4>
                         </div>
                     </div>
                 </div>
@@ -360,77 +369,77 @@
         </div>
 
 
-    <!-- Commented because navtabs includes same script -->
-    <script src="~/Content/JS/jquery.min.js"></script>
-    <script src="~/Content/JS/popper.min.js"></script>
-    <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
+        <!-- Commented because navtabs includes same script -->
+        <script src="~/Content/JS/jquery.min.js"></script>
+        <script src="~/Content/JS/popper.min.js"></script>
+        <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
 
-    <!-- Navtabs -->
-    <script src="~/Content/JS/jquery.min.js"></script>
+        <!-- Navtabs -->
+        <script src="~/Content/JS/jquery.min.js"></script>
 
-    <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
+        <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
 
-    <!-- Nouslider -->
-    <script src="~/Content/JS/nouislider.min.js"></script>
+        <!-- Nouslider -->
+        <script src="~/Content/JS/nouislider.min.js"></script>
 
-    <!-- Argon JS -->
-    <script src="~/Content/JS/argon.js"></script>
+        <!-- Argon JS -->
+        <script src="~/Content/JS/argon.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="~/Content/JS/jasny-bootstrap.min.js"></script>
-    <!-- Custom js -->
-    <script src="~/Content/JS/orders.js"></script>
-    <!-- Custom js -->
-    <script src="~/Content/JS/mresto.js"></script>
-    <!-- AJAX -->
-    <!-- SELECT2 -->
-    <script src="~/Content/JS/select2.js"></script>
-    <script src="~/Content/JS/select2.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="~/Content/JS/jasny-bootstrap.min.js"></script>
+        <!-- Custom js -->
+        <script src="~/Content/JS/orders.js"></script>
+        <!-- Custom js -->
+        <script src="~/Content/JS/mresto.js"></script>
+        <!-- AJAX -->
+        <!-- SELECT2 -->
+        <script src="~/Content/JS/select2.js"></script>
+        <script src="~/Content/JS/select2.min.js"></script>
 
-    <!-- Google Map -->
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
-    </script>
-    <script src="~/Content/JS/rmap.js"></script>
+        <!-- Google Map -->
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
+        </script>
+        <script src="~/Content/JS/rmap.js"></script>
 
-    <!-- Import Vue -->
-    <script src="~/Content/JS/vue.js"></script>
+        <!-- Import Vue -->
+        <script src="~/Content/JS/vue.js"></script>
 
-    <!-- Import AXIOS --->
-    <script src="~/Content/JS/axios.min.js"></script>
+        <!-- Import AXIOS --->
+        <script src="~/Content/JS/axios.min.js"></script>
 
-    <!-- Flatpickr datepicker -->
-    <script src="~/Content/JS/flatpickr.js"></script>
+        <!-- Flatpickr datepicker -->
+        <script src="~/Content/JS/flatpickr.js"></script>
 
-    <!-- OneSignal -->
-    <script src="~/Content/JS/OneSignalSDK.js"></script>
-    <script>
-        var ONESIGNAL_APP_ID = "";
-        var USER_ID = '1';
-    </script>
-    <script src="~/Content/JS/onesignal.js"></script>
+        <!-- OneSignal -->
+        <script src="~/Content/JS/OneSignalSDK.js"></script>
+        <script>
+            var ONESIGNAL_APP_ID = "";
+            var USER_ID = '1';
+        </script>
+        <script src="~/Content/JS/onesignal.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $.ajax({
-                    type: 'GET',
-                    url: 'updater.check',
-                    async: false,
-                    success: function (response) {
-                        if (response != '') {
-                            $('#update_notification').append('<strong>New Update<br /><br /><span class="badge badge-pill badge-info">v. ' + response + '</span></strong><br /><br /><a role="button" href="updater.update" class="btn btn-sm btn-info pull-right">Update Now</a>');
-                            $('#update_notification').show();
-                        } else {
-                            $('#uptodate').show();
+        <script>
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'updater.check',
+                        async: false,
+                        success: function (response) {
+                            if (response != '') {
+                                $('#update_notification').append('<strong>New Update<br /><br /><span class="badge badge-pill badge-info">v. ' + response + '</span></strong><br /><br /><a role="button" href="updater.update" class="btn btn-sm btn-info pull-right">Update Now</a>');
+                                $('#update_notification').show();
+                            } else {
+                                $('#uptodate').show();
+                            }
                         }
-                    }
-                });
-            }, 3000);
+                    });
+                }, 3000);
 
-        });
-    </script>
+            });
+        </script>
 
-    <!-- Custom JS defined by admin -->
+        <!-- Custom JS defined by admin -->
 </body>
 </html>
