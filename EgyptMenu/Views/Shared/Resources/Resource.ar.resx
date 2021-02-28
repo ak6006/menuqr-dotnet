@@ -123,11 +123,23 @@
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value> تصاميم مختلفة. خيارات ألوان غير محدودة. اختر نمط رمز الكيو ار</value>
   </data>
+  <data name="Activate" xml:space="preserve">
+    <value>تفعيل</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>نشط</value>
+  </data>
   <data name="Add new category" xml:space="preserve">
     <value>إضافة فئة جديدة</value>
   </data>
   <data name="Add new item" xml:space="preserve">
     <value>إضافة صنف جديد</value>
+  </data>
+  <data name="Add plan" xml:space="preserve">
+    <value>اضف خطة</value>
+  </data>
+  <data name="Add Restaurant" xml:space="preserve">
+    <value>اضف المطعم</value>
   </data>
   <data name="All rights reserved" xml:space="preserve">
     <value> جميع الحقوق محفوظة</value>
@@ -168,11 +180,17 @@
   <data name="Create your menu directly on our platform. Update anytime. Easy And Simple" xml:space="preserve">
     <value>أنشئ قائمتك مباشرة على منصتنا. قم بالتحديث في أي وقت. بطريقة سهلة و بسيطة</value>
   </data>
+  <data name="Creation Date" xml:space="preserve">
+    <value>تاريخ الانشاء</value>
+  </data>
   <data name="Current Password" xml:space="preserve">
     <value>كلمة السر الحالية</value>
   </data>
   <data name="Dashboard" xml:space="preserve">
     <value>لوحة التحكم</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>تعطيل</value>
   </data>
   <data name="Dedicated Support" xml:space="preserve">
     <value>دعم مخصص</value>
@@ -194,6 +212,9 @@
   </data>
   <data name="dropdown-menu-right" xml:space="preserve">
     <value>dropdown-menu-left</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
   </data>
   <data name="Edit Profile" xml:space="preserve">
     <value>تعديل الملف الشخصي</value>
@@ -225,6 +246,9 @@
   <data name="fixed dir" xml:space="preserve">
     <value>fixed-right</value>
   </data>
+  <data name="Food Delivery from best restaurants" xml:space="preserve">
+    <value>توصيل الطعام من أفضل المطاعم</value>
+  </data>
   <data name="For bigger restaurants and bars. Offer a full menu. Limitless plan" xml:space="preserve">
     <value>لاكبر المطاعم والكافيهات. تقديم قائمة كاملة. خطط بلا حدود</value>
   </data>
@@ -248,6 +272,9 @@
   </data>
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
     <value>إذا كنت تدير مطعمًا صغيرًا أو كافية ، أو كنت بحاجة فقط إلى الأساسيات ، فهذه الخطة رائعة.</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>الصور</value>
   </data>
   <data name="Item description" xml:space="preserve">
     <value>وصف الصنف</value>
@@ -291,6 +318,9 @@
   <data name="Login" xml:space="preserve">
     <value>دخول</value>
   </data>
+  <data name="Logo" xml:space="preserve">
+    <value>شعار</value>
+  </data>
   <data name="Menu" xml:space="preserve">
     <value>القائمة</value>
   </data>
@@ -315,11 +345,26 @@
   <data name="No more printing and reprinting for some small mistake in our menu or price change. We love what QR Menu Maker have provided" xml:space="preserve">
     <value>لا مزيد من الطباعة وإعادة الطباعة لبعض الأخطاء الصغيرة في قائمتنا أو تغيير السعر. نحن نحب ما قدمه صانع القائمة بواسطة الكيو ار</value>
   </data>
+  <data name="Not Active" xml:space="preserve">
+    <value>غير نشط</value>
+  </data>
   <data name="Now your visitors will use their mobile phone camera to access your menu" xml:space="preserve">
     <value>الآن سيستخدم زوار موقعك كاميرا هواتفهم المحمولة للوصول إلى قائمتك</value>
   </data>
+  <data name="Number of restaurants" xml:space="preserve">
+    <value>عدد المطاعم</value>
+  </data>
+  <data name="Orders ( 30 days )" xml:space="preserve">
+    <value>الطلبات (30 يوم)</value>
+  </data>
   <data name="Organize into categories" xml:space="preserve">
     <value>التنظيم في فئات</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>المالك</value>
   </data>
   <data name="Owner Email" xml:space="preserve">
     <value>البريد الالكتروني للمالك</value>
@@ -351,6 +396,9 @@
   <data name="Password" xml:space="preserve">
     <value>كلمة السر </value>
   </data>
+  <data name="Performance" xml:space="preserve">
+    <value>الاداء</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>المحمول</value>
   </data>
@@ -360,8 +408,14 @@
   <data name="Plan" xml:space="preserve">
     <value>الخطة</value>
   </data>
+  <data name="Plans" xml:space="preserve">
+    <value>الخطط</value>
+  </data>
   <data name="Pricing" xml:space="preserve">
     <value>الاسعار</value>
+  </data>
+  <data name="Pricing plans" xml:space="preserve">
+    <value>خطط الاسعار</value>
   </data>
   <data name="Print templates for download" xml:space="preserve">
     <value>طباعة القوالب للتحميل</value>
@@ -380,6 +434,9 @@
   </data>
   <data name="QR Downloader" xml:space="preserve">
     <value>تحميل رمز الكيو ار</value>
+  </data>
+  <data name="QR Menu Maker" xml:space="preserve">
+    <value>صانع قائمة الكيو ار</value>
   </data>
   <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
     <value>كان صانع القائمة بواسطة رمز الكيو ار هو الأداة المثالية لحالة مرض كورونا المستجد.  كان يجب أن نذهب في وقت سابق إلى هذا النوع من القوائم</value>
@@ -435,11 +492,20 @@
   <data name="Restaurant or bar name" xml:space="preserve">
     <value>اسم المطعم او الكافية</value>
   </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>المطاعم</value>
+  </data>
   <data name="Restaurants and Bars that love our QRs" xml:space="preserve">
     <value>المطاعم والكافيهات التي تعشق رموز الكيو ار </value>
   </data>
   <data name="Richard Thomas Burger 2Go" xml:space="preserve">
     <value>ريتشارد توماس برجر 2Go</value>
+  </data>
+  <data name="Sales value" xml:space="preserve">
+    <value>قيمة المبيعات</value>
+  </data>
+  <data name="Sales Volume ( 30 days )" xml:space="preserve">
+    <value>حجم المبيعات (30 يوم)</value>
   </data>
   <data name="Same as PRO  with a 20% discount. Enjoy your QR menu full year" xml:space="preserve">
     <value>مثل PRO بخصم 20٪. استمتع القائمة رمز الكيو ار الخاصة بك سنة كاملة</value>
@@ -453,8 +519,23 @@
   <data name="Select image" xml:space="preserve">
     <value>اختار صوره</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>الاعدادات</value>
+  </data>
+  <data name="Settings Management" xml:space="preserve">
+    <value>ادارة الاعدادات</value>
+  </data>
   <data name="Simple Pricing" xml:space="preserve">
     <value>التسعير البسيط</value>
+  </data>
+  <data name="Site Description" xml:space="preserve">
+    <value>وصف الموقع</value>
+  </data>
+  <data name="Site Info" xml:space="preserve">
+    <value>معلومات الموقع</value>
+  </data>
+  <data name="Site name" xml:space="preserve">
+    <value>اسم الموقع</value>
   </data>
   <data name="Start free and fell in love in our pro features" xml:space="preserve">
     <value>ابدأ مجانًا ووقع في الحب في ميزاتنا الاحترافية</value>
@@ -468,8 +549,14 @@
   <data name="Start with  Pro yearly" xml:space="preserve">
     <value>ابدأ بـ سنويًا</value>
   </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
   <data name="Superfast online menu - PWA" xml:space="preserve">
     <value>قائمة طعام سوبر فاست - PWA</value>
+  </data>
+  <data name="System status" xml:space="preserve">
+    <value>حالة النظام</value>
   </data>
   <data name="Testimonials" xml:space="preserve">
     <value>التوصيات</value>
@@ -489,6 +576,12 @@
   <data name="There are platforms where you can make QR code" xml:space="preserve">
     <value>هناك منصات حيث يمكنك إنشاء رمز الكيو ار</value>
   </data>
+  <data name="Total orders" xml:space="preserve">
+    <value>اجمالي الطلبات</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>الترجمات</value>
+  </data>
   <data name="Unlimited items in the menu" xml:space="preserve">
     <value>عناصر غير محدودة في القائمة</value>
   </data>
@@ -504,11 +597,17 @@
   <data name="User Name" xml:space="preserve">
     <value>اسم المستخدم</value>
   </data>
+  <data name="Version" xml:space="preserve">
+    <value>الاصدار</value>
+  </data>
   <data name="View analytics" xml:space="preserve">
     <value>عرض التحليلات</value>
   </data>
   <data name="View it" xml:space="preserve">
     <value>شاهد مطعمك</value>
+  </data>
+  <data name="Views" xml:space="preserve">
+    <value>المشاهدات</value>
   </data>
   <data name="We do both" xml:space="preserve">
     <value>نحن نفعل الاثنين</value>
@@ -518,6 +617,9 @@
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>مرحبا ! </value>
+  </data>
+  <data name="You dont have any plans" xml:space="preserve">
+    <value>ليس لديك اي خطط</value>
   </data>
   <data name="Your email" xml:space="preserve">
     <value>بريدك الاليكتروني</value>

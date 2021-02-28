@@ -123,11 +123,23 @@
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value>8 different designs. Unlimited color options. Choose QR and Flayer style</value>
   </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
   <data name="Add new category" xml:space="preserve">
     <value>Add new category</value>
   </data>
   <data name="Add new item" xml:space="preserve">
     <value>Add new item</value>
+  </data>
+  <data name="Add plan" xml:space="preserve">
+    <value>Add plan</value>
+  </data>
+  <data name="Add Restaurant" xml:space="preserve">
+    <value>Add Restaurant</value>
   </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>All rights reserved</value>
@@ -168,11 +180,17 @@
   <data name="Create your menu directly on our platform. Update anytime. Easy And Simple" xml:space="preserve">
     <value>Create your menu directly on our platform. Update anytime. Easy And Simple</value>
   </data>
+  <data name="Creation Date" xml:space="preserve">
+    <value>Creation Date</value>
+  </data>
   <data name="Current Password" xml:space="preserve">
     <value>Current Password</value>
   </data>
   <data name="Dashboard" xml:space="preserve">
     <value>Dashboard</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Deactivate</value>
   </data>
   <data name="Dedicated Support" xml:space="preserve">
     <value>Dedicated Support</value>
@@ -194,6 +212,9 @@
   </data>
   <data name="dropdown-menu-right" xml:space="preserve">
     <value>dropdown-menu-right</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="Edit Profile" xml:space="preserve">
     <value>Edit Profile</value>
@@ -225,6 +246,9 @@
   <data name="fixed dir" xml:space="preserve">
     <value>fixed-left</value>
   </data>
+  <data name="Food Delivery from best restaurants" xml:space="preserve">
+    <value>Food Delivery from best restaurants</value>
+  </data>
   <data name="For bigger restaurants and bars. Offer a full menu. Limitless plan" xml:space="preserve">
     <value>For bigger restaurants and bars. Offer a full menu. Limitless plan</value>
   </data>
@@ -248,6 +272,9 @@
   </data>
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
     <value>If you run a small restaurant or coffee , or just need the basics, this plan is great.</value>
+  </data>
+  <data name="Images" xml:space="preserve">
+    <value>Images</value>
   </data>
   <data name="Item description" xml:space="preserve">
     <value>Item_description</value>
@@ -291,6 +318,9 @@
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
   <data name="Menu" xml:space="preserve">
     <value>Menu</value>
   </data>
@@ -315,11 +345,26 @@
   <data name="No more printing and reprinting for some small mistake in our menu or price change. We love what QR Menu Maker have provided" xml:space="preserve">
     <value>No more printing and reprinting for some small mistake in our menu or price change. We love what QR Menu Maker have provided</value>
   </data>
+  <data name="Not Active" xml:space="preserve">
+    <value>Not Active</value>
+  </data>
   <data name="Now your visitors will use their mobile phone camera to access your menu" xml:space="preserve">
     <value>Now your visitors will use their mobile phone camera to access your menu</value>
   </data>
+  <data name="Number of restaurants" xml:space="preserve">
+    <value>Number of restaurants</value>
+  </data>
+  <data name="Orders ( 30 days )" xml:space="preserve">
+    <value>Orders ( 30 days )</value>
+  </data>
   <data name="Organize into categories" xml:space="preserve">
     <value>Organize into categories</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Owner</value>
   </data>
   <data name="Owner Email" xml:space="preserve">
     <value>Owner Email</value>
@@ -351,6 +396,9 @@
   <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="Performance" xml:space="preserve">
+    <value>Performance</value>
+  </data>
   <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
@@ -360,8 +408,14 @@
   <data name="Plan" xml:space="preserve">
     <value>Plan</value>
   </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Plans</value>
+  </data>
   <data name="Pricing" xml:space="preserve">
     <value>Pricing</value>
+  </data>
+  <data name="Pricing plans" xml:space="preserve">
+    <value>Pricing plans</value>
   </data>
   <data name="Print templates for download" xml:space="preserve">
     <value>Print templates for download</value>
@@ -380,6 +434,9 @@
   </data>
   <data name="QR Downloader" xml:space="preserve">
     <value>QR Downloader</value>
+  </data>
+  <data name="QR Menu Maker" xml:space="preserve">
+    <value>QR Menu Maker</value>
   </data>
   <data name="QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu" xml:space="preserve">
     <value>QR Menu Maker was the perfect tool for the COVID situation. We should go earlier to this type of menu</value>
@@ -435,11 +492,20 @@
   <data name="Restaurant or bar name" xml:space="preserve">
     <value>Restaurant or Coffe name</value>
   </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
   <data name="Restaurants and Bars that love our QRs" xml:space="preserve">
     <value>Restaurants and Coffe that love our QRs</value>
   </data>
   <data name="Richard Thomas Burger 2Go" xml:space="preserve">
     <value>Richard Thomas Burger 2Go</value>
+  </data>
+  <data name="Sales value" xml:space="preserve">
+    <value>Sales value</value>
+  </data>
+  <data name="Sales Volume ( 30 days )" xml:space="preserve">
+    <value>Sales Volume ( 30 days )</value>
   </data>
   <data name="Same as PRO  with a 20% discount. Enjoy your QR menu full year" xml:space="preserve">
     <value>Same as PRO, with a 20% discount. Enjoy your QR menu full year</value>
@@ -453,6 +519,21 @@
   <data name="Select image" xml:space="preserve">
     <value>Select image</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Settings Management" xml:space="preserve">
+    <value>Settings Management</value>
+  </data>
+  <data name="Site Description" xml:space="preserve">
+    <value>Site Description</value>
+  </data>
+  <data name="Site Info" xml:space="preserve">
+    <value>Site Info</value>
+  </data>
+  <data name="Site name" xml:space="preserve">
+    <value>Site name</value>
+  </data>
   <data name="Start free and fell in love in our pro features" xml:space="preserve">
     <value>Start free and fell in love in our pro features</value>
   </data>
@@ -465,8 +546,14 @@
   <data name="Start with  Pro yearly" xml:space="preserve">
     <value>Start with  Pro yearly</value>
   </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
   <data name="Superfast online menu - PWA" xml:space="preserve">
     <value>Superfast online menu - PWA</value>
+  </data>
+  <data name="System status" xml:space="preserve">
+    <value>System status</value>
   </data>
   <data name="Testimonials" xml:space="preserve">
     <value>Testimonials</value>
@@ -486,6 +573,12 @@
   <data name="There are platforms where you can make QR code" xml:space="preserve">
     <value>There are platforms where you can make QR code</value>
   </data>
+  <data name="Total orders" xml:space="preserve">
+    <value>Total orders</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>Translations</value>
+  </data>
   <data name="Unlimited items in the menu" xml:space="preserve">
     <value>Unlimited items in the menu</value>
   </data>
@@ -501,11 +594,17 @@
   <data name="User Name" xml:space="preserve">
     <value>User Name</value>
   </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
   <data name="View analytics" xml:space="preserve">
     <value>View analytics</value>
   </data>
   <data name="View it" xml:space="preserve">
     <value>View it</value>
+  </data>
+  <data name="Views" xml:space="preserve">
+    <value>Views</value>
   </data>
   <data name="We do both" xml:space="preserve">
     <value>We do both</value>
@@ -515,6 +614,9 @@
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome ! </value>
+  </data>
+  <data name="You dont have any plans" xml:space="preserve">
+    <value>You dont have any plans</value>
   </data>
   <data name="Your email" xml:space="preserve">
     <value>Your email</value>
