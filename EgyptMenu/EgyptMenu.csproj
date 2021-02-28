@@ -570,12 +570,14 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MeetApiController.cs" />
     <Compile Include="Controllers\OwnerController.cs" />
     <Compile Include="Controllers\restorantsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ImageResizer.cs" />
+    <Compile Include="Models\MeetApiModel.cs" />
     <Compile Include="Models\MenuVM.cs" />
     <Compile Include="Models\options_details.cs">
       <DependentUpon>Model1.tt</DependentUpon>
