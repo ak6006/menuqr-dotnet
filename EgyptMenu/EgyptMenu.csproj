@@ -721,8 +721,10 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\7up.jpg" />
     <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
     <Content Include="Content\images\ChickenBarbicue.jpg" />
     <Content Include="Content\images\GreenSalad.jpg" />
@@ -819,6 +821,7 @@
     <Content Include="Content\JS\cartSideMenu.js" />
     <Content Include="Content\JS\chartjs.min.js" />
     <Content Include="Content\JS\core.js" />
+    <Content Include="Content\JS\custom.js" />
     <Content Include="Content\JS\datetimepicker.js" />
     <Content Include="Content\JS\flatpickr.js" />
     <Content Include="Content\JS\front.js" />
@@ -827,6 +830,7 @@
     <Content Include="Content\JS\jarallax-video.min.js" />
     <Content Include="Content\JS\jarallax.min.js" />
     <Content Include="Content\JS\jasny-bootstrap.min.js" />
+    <Content Include="Content\JS\jquery.easing.min.js" />
     <Content Include="Content\JS\jQuery.headroom.min.js" />
     <Content Include="Content\JS\jquery.min.js" />
     <Content Include="Content\JS\jquery.sharrre.min.js" />
@@ -863,6 +867,8 @@
     <Content Include="Content\nucleo.css" />
     <Content Include="Content\rating.css" />
     <Content Include="Content\select2.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\style1.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -903,6 +909,11 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
