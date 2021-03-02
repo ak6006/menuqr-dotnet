@@ -728,6 +728,8 @@
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\7up.jpg" />
     <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="Content\images\background_pattern.png" />
+    <Content Include="Content\images\Head_2.png" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
     <Content Include="Content\images\ChickenBarbicue.jpg" />
@@ -924,6 +926,7 @@
     <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\Fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Fonts\AmericanTypewriter.ttc" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
