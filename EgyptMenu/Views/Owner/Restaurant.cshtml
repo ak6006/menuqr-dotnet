@@ -131,7 +131,7 @@
             <!-- SVG separator -->
             <div class="separator separator-bottom separator-skew">
                 <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                    <polygon class="fill-white" style="background-color:black" points="2560 0 2560 100 0 100"></polygon>
                 </svg>
             </div>
         </section>
@@ -483,9 +483,9 @@
         else if (Model.themes_id == 3)
         {
             @*<script>
-                document.body.style.backgroundImage = "url('/Content/images/background_pattern.png')";
-                document.getElementById("footer").style.backgroundcolor = "black !important";
-            </script>*@
+                    document.body.style.backgroundImage = "url('/Content/images/background_pattern.png')";
+                    document.getElementById("footer").style.backgroundcolor = "black !important";
+                </script>*@
             <div style="width:70%; margin:auto; margin-top:100px;">
                 <div class="row mt-3" style=" background-image: url('/Content/images/background_pattern.png');">
                     @foreach (var item in Model.categories)
@@ -587,6 +587,37 @@
                 </div>
             </div>
 
+        }
+        else if (Model.themes_id == 4)
+        {
+    <div style="width:70%; margin:auto; margin-top:100px;">
+        <div class="row mt-3" style="text-align:center;" >
+            @foreach (var item in Model.categories)
+            {
+            <div class="col-lg-6" style="margin-top:50px;">
+                
+                <div><img src="~/Content/images/background_pattern.png" style="width: 70%; border-radius: 50%;"></div>
+                
+                <div style=" margin: auto; margin-top: 0px; padding: 7px;  width: 100%; border: 3px #262628 solid;border-radius: 50px; border-top: none; display: inline-block; text-align: center;">
+                    <div style="color: #f6ede2; margin: auto; width: 100%; margin-top: -40px; font-size: xx-large;background-color: #262628;  font-family: helvetica-neue; padding: 5px; border-radius: 50px; border: 7px #f6ede2 solid;">@item.name</div>
+                    <span class="p-2"></span>
+                    @foreach (var item1 in item.items)
+                    {
+                        <div style="padding: 3px 15px; margin: auto;text-align: left; color: #262628; font-family:Arial_Black ;">
+                            <span class="float-left" style="font-size: large;">@item1.name</span>
+                            <span class="float-right" style="font-size: large;">@item1.price EGP</span>
+                            <div style="clear: both;"></div>
+                            <span style="font-family:helvetica-neue ;">@item1.description</span>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            }
+
+
+        </div>
+    </div>
         }
         else
         {
