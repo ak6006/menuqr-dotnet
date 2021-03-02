@@ -30,8 +30,8 @@
     <Property Name="updated_at" Type="DateTime" Precision="3" />
     <Property Name="order_index" Type="Int32" Nullable="false" />
     <Property Name="active" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="restorant" Relationship="Self.categories_categories_restorant_id_foreign" FromRole="categories" ToRole="restorants" />
     <NavigationProperty Name="items" Relationship="Self.items_items_category_id_foreign" FromRole="categories" ToRole="items" />
+    <NavigationProperty Name="restorant" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="category" ToRole="restorant" />
   </EntityType>
   <EntityType Name="city">
     <Key>
@@ -84,7 +84,7 @@
     <Property Name="C6_from" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
     <Property Name="C6_to" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
     <Property Name="restorant_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
-    <NavigationProperty Name="restorant" Relationship="Self.hours_hours_restorant_id_foreign" FromRole="hours" ToRole="restorants" />
+    <NavigationProperty Name="restorant" Relationship="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" FromRole="hour" ToRole="restorant" />
   </EntityType>
   <EntityType Name="item">
     <Key>
@@ -241,8 +241,8 @@
     <NavigationProperty Name="order_has_status" Relationship="Self.order_has_status_order_has_status_order_id_foreign" FromRole="orders" ToRole="order_has_status" />
     <NavigationProperty Name="user" Relationship="Self.orders_orders_client_id_foreign" FromRole="orders" ToRole="users" />
     <NavigationProperty Name="user1" Relationship="Self.orders_orders_driver_id_foreign" FromRole="orders" ToRole="users" />
-    <NavigationProperty Name="restorant" Relationship="Self.orders_orders_restorant_id_foreign" FromRole="orders" ToRole="restorants" />
     <NavigationProperty Name="ratings" Relationship="Self.ratings_ratings_order_id_foreign" FromRole="orders" ToRole="ratings" />
+    <NavigationProperty Name="restorant" Relationship="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" FromRole="order" ToRole="restorant" />
   </EntityType>
   <EntityType Name="page">
     <Key>
@@ -316,35 +316,6 @@
     <Property Name="comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="order" Relationship="Self.ratings_ratings_order_id_foreign" FromRole="ratings" ToRole="orders" />
     <NavigationProperty Name="user" Relationship="Self.ratings_ratings_user_id_foreign" FromRole="ratings" ToRole="users" />
-  </EntityType>
-  <EntityType Name="restorant">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="created_at" Type="DateTime" Precision="3" />
-    <Property Name="updated_at" Type="DateTime" Precision="3" />
-    <Property Name="name" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="subdomain" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
-    <Property Name="logo" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="cover" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="active" Type="Int16" Nullable="false" />
-    <Property Name="user_id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
-    <Property Name="lat" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="lng" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="address" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="phone" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="minimum" Type="String" MaxLength="191" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="static_fee" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
-    <Property Name="radius" Type="String" MaxLength="800" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="is_featured" Type="Int16" Nullable="false" />
-    <Property Name="city_id" Type="Int32" />
-    <NavigationProperty Name="categories" Relationship="Self.categories_categories_restorant_id_foreign" FromRole="restorants" ToRole="categories" />
-    <NavigationProperty Name="hours" Relationship="Self.hours_hours_restorant_id_foreign" FromRole="restorants" ToRole="hours" />
-    <NavigationProperty Name="orders" Relationship="Self.orders_orders_restorant_id_foreign" FromRole="restorants" ToRole="orders" />
-    <NavigationProperty Name="user" Relationship="Self.restorants_restorants_user_id_foreign" FromRole="restorants" ToRole="users" />
   </EntityType>
   <EntityType Name="role">
     <Key>
@@ -453,8 +424,8 @@
     <NavigationProperty Name="orders1" Relationship="Self.orders_orders_driver_id_foreign" FromRole="users" ToRole="orders" />
     <NavigationProperty Name="payments" Relationship="Self.payments_payments_user_id_foreign" FromRole="users" ToRole="payments" />
     <NavigationProperty Name="ratings" Relationship="Self.ratings_ratings_user_id_foreign" FromRole="users" ToRole="ratings" />
-    <NavigationProperty Name="restorants" Relationship="Self.restorants_restorants_user_id_foreign" FromRole="users" ToRole="restorants" />
     <NavigationProperty Name="sms_verifications" Relationship="Self.sms_verifications_sms_verifications_user_id_foreign" FromRole="users" ToRole="sms_verifications" />
+    <NavigationProperty Name="restorants" Relationship="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" FromRole="user" ToRole="restorant" />
   </EntityType>
   <EntityType Name="variant">
     <Key>
@@ -520,18 +491,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="categories_categories_restorant_id_foreign">
-    <End Role="restorants" Type="Self.restorant" Multiplicity="1" />
-    <End Role="categories" Type="Self.category" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="restorants">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="categories">
-        <PropertyRef Name="restorant_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="items_items_category_id_foreign">
     <End Role="categories" Type="Self.category" Multiplicity="1" />
     <End Role="items" Type="Self.item" Multiplicity="*" />
@@ -565,18 +524,6 @@
       </Principal>
       <Dependent Role="variants_has_extras">
         <PropertyRef Name="extra_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="hours_hours_restorant_id_foreign">
-    <End Role="restorants" Type="Self.restorant" Multiplicity="1" />
-    <End Role="hours" Type="Self.hour" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="restorants">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="hours">
-        <PropertyRef Name="restorant_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -728,18 +675,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="orders_orders_restorant_id_foreign">
-    <End Role="restorants" Type="Self.restorant" Multiplicity="1" />
-    <End Role="orders" Type="Self.order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="restorants">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="orders">
-        <PropertyRef Name="restorant_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="ratings_ratings_order_id_foreign">
     <End Role="orders" Type="Self.order" Multiplicity="1" />
     <End Role="ratings" Type="Self.rating" Multiplicity="*" />
@@ -772,18 +707,6 @@
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="ratings">
-        <PropertyRef Name="user_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="restorants_restorants_user_id_foreign">
-    <End Role="users" Type="Self.user" Multiplicity="1" />
-    <End Role="restorants" Type="Self.restorant" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="users">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="restorants">
         <PropertyRef Name="user_id" />
       </Dependent>
     </ReferentialConstraint>
@@ -837,7 +760,6 @@
     <EntitySet Name="permissions" EntityType="Self.permission" />
     <EntitySet Name="plans" EntityType="Self.plan" />
     <EntitySet Name="ratings" EntityType="Self.rating" />
-    <EntitySet Name="restorants" EntityType="Self.restorant" />
     <EntitySet Name="roles" EntityType="Self.role" />
     <EntitySet Name="settings" EntityType="Self.setting" />
     <EntitySet Name="sms_verifications" EntityType="Self.sms_verifications" />
@@ -855,10 +777,6 @@
       <End Role="address" EntitySet="addresses" />
       <End Role="orders" EntitySet="orders" />
     </AssociationSet>
-    <AssociationSet Name="categories_categories_restorant_id_foreign" Association="Self.categories_categories_restorant_id_foreign">
-      <End Role="restorants" EntitySet="restorants" />
-      <End Role="categories" EntitySet="categories" />
-    </AssociationSet>
     <AssociationSet Name="items_items_category_id_foreign" Association="Self.items_items_category_id_foreign">
       <End Role="categories" EntitySet="categories" />
       <End Role="items" EntitySet="items" />
@@ -870,10 +788,6 @@
     <AssociationSet Name="variants_has_extras_variants_has_extras_extra_id_foreign" Association="Self.variants_has_extras_variants_has_extras_extra_id_foreign">
       <End Role="extras" EntitySet="extras" />
       <End Role="variants_has_extras" EntitySet="variants_has_extras" />
-    </AssociationSet>
-    <AssociationSet Name="hours_hours_restorant_id_foreign" Association="Self.hours_hours_restorant_id_foreign">
-      <End Role="restorants" EntitySet="restorants" />
-      <End Role="hours" EntitySet="hours" />
     </AssociationSet>
     <AssociationSet Name="options_options_item_id_foreign" Association="Self.options_options_item_id_foreign">
       <End Role="items" EntitySet="items" />
@@ -923,10 +837,6 @@
       <End Role="users" EntitySet="users" />
       <End Role="orders" EntitySet="orders" />
     </AssociationSet>
-    <AssociationSet Name="orders_orders_restorant_id_foreign" Association="Self.orders_orders_restorant_id_foreign">
-      <End Role="restorants" EntitySet="restorants" />
-      <End Role="orders" EntitySet="orders" />
-    </AssociationSet>
     <AssociationSet Name="ratings_ratings_order_id_foreign" Association="Self.ratings_ratings_order_id_foreign">
       <End Role="orders" EntitySet="orders" />
       <End Role="ratings" EntitySet="ratings" />
@@ -938,10 +848,6 @@
     <AssociationSet Name="ratings_ratings_user_id_foreign" Association="Self.ratings_ratings_user_id_foreign">
       <End Role="users" EntitySet="users" />
       <End Role="ratings" EntitySet="ratings" />
-    </AssociationSet>
-    <AssociationSet Name="restorants_restorants_user_id_foreign" Association="Self.restorants_restorants_user_id_foreign">
-      <End Role="users" EntitySet="users" />
-      <End Role="restorants" EntitySet="restorants" />
     </AssociationSet>
     <AssociationSet Name="sms_verifications_sms_verifications_user_id_foreign" Association="Self.sms_verifications_sms_verifications_user_id_foreign">
       <End Role="users" EntitySet="users" />
@@ -968,6 +874,24 @@
     <AssociationSet Name="FK_variant_has_option_variants_id" Association="DB_A6A5AC_menuModel.FK_variant_has_option_variants_id">
       <End Role="variant" EntitySet="variants" />
       <End Role="variant_has_option" EntitySet="variant_has_option" />
+    </AssociationSet>
+    <EntitySet Name="restorants" EntityType="DB_A6A5AC_menuModel.restorant" />
+    <EntitySet Name="themes" EntityType="DB_A6A5AC_menuModel.theme" />
+    <AssociationSet Name="categories_categories_restorant_id_foreign" Association="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign">
+      <End Role="restorant" EntitySet="restorants" />
+      <End Role="category" EntitySet="categories" />
+    </AssociationSet>
+    <AssociationSet Name="hours_hours_restorant_id_foreign" Association="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign">
+      <End Role="restorant" EntitySet="restorants" />
+      <End Role="hour" EntitySet="hours" />
+    </AssociationSet>
+    <AssociationSet Name="orders_orders_restorant_id_foreign" Association="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign">
+      <End Role="restorant" EntitySet="restorants" />
+      <End Role="order" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="restorants_restorants_user_id_foreign" Association="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign">
+      <End Role="user" EntitySet="users" />
+      <End Role="restorant" EntitySet="restorants" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="options_details">
@@ -1023,6 +947,92 @@
       </Principal>
       <Dependent Role="variant_has_option">
         <PropertyRef Name="variant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="restorant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="subdomain" Type="String" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="logo" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="cover" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="active" Type="Int16" Nullable="false" />
+    <Property Name="user_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="lat" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="lng" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="minimum" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="fee" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+    <Property Name="static_fee" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+    <Property Name="radius" Type="String" Nullable="false" MaxLength="800" FixedLength="false" Unicode="true" />
+    <Property Name="is_featured" Type="Int16" Nullable="false" />
+    <Property Name="city_id" Type="Int32" />
+    <Property Name="themes_id" Type="Int32" />
+    <NavigationProperty Name="categories" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="restorant" ToRole="category" />
+    <NavigationProperty Name="hours" Relationship="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" FromRole="restorant" ToRole="hour" />
+    <NavigationProperty Name="orders" Relationship="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" FromRole="restorant" ToRole="order" />
+    <NavigationProperty Name="user" Relationship="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" FromRole="restorant" ToRole="user" />
+  </EntityType>
+  <EntityType Name="theme">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="theme_name" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="theme_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="categories_categories_restorant_id_foreign">
+    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.category" Role="category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restorant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="restorant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="hours_hours_restorant_id_foreign">
+    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.hour" Role="hour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restorant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="hour">
+        <PropertyRef Name="restorant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orders_orders_restorant_id_foreign">
+    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.order" Role="order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restorant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="restorant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="restorants_restorants_user_id_foreign">
+    <End Type="DB_A6A5AC_menuModel.user" Role="user" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="restorant">
+        <PropertyRef Name="user_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

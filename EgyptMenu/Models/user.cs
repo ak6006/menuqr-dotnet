@@ -23,8 +23,8 @@ namespace EgyptMenu.Models
             this.orders1 = new HashSet<order>();
             this.payments = new HashSet<payment>();
             this.ratings = new HashSet<rating>();
-            this.restorants = new HashSet<restorant>();
             this.sms_verifications = new HashSet<sms_verifications>();
+            this.restorants = new HashSet<restorant>();
         }
     
         public decimal id { get; set; }
@@ -64,8 +64,8 @@ namespace EgyptMenu.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<rating> ratings { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<restorant> restorants { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<sms_verifications> sms_verifications { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<restorant> restorants { get; set; }
     }
 }

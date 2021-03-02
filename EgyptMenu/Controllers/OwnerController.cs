@@ -72,6 +72,9 @@ namespace EgyptMenu.Controllers
         // GET: Owner
         public ActionResult Dashboard()
         {
+            var Themes = db.themes.ToList();
+            ViewBag.Themes = new SelectList(Themes, "id", "theme_name");
+
             var UserId = User.Identity.GetUserId();
             var UserEmail = AuthDB.Users.Where(u => u.Id == UserId).FirstOrDefault().Email;
             var CurrentUser = db.users.Where(r => r.email == UserEmail).FirstOrDefault();
@@ -89,7 +92,8 @@ namespace EgyptMenu.Controllers
                 RestaurantImage = CurrentRestaurant.logo,
                 RestaurantCoverImage = CurrentRestaurant.cover,
                 lat = CurrentRestaurant.lat,
-                lng = CurrentRestaurant.lng
+                lng = CurrentRestaurant.lng,
+                ThemeId = CurrentRestaurant.themes_id
             };
             return View(resMgmtViewModel);
         }
@@ -148,7 +152,7 @@ namespace EgyptMenu.Controllers
 
             }
 
-
+            CurrentRestaurant.themes_id = model.ThemeId;
             CurrentRestaurant.name = model.RestaurantName;
             CurrentRestaurant.description = model.RestaurantDescription;
             CurrentRestaurant.address = model.RestaurantAddress;

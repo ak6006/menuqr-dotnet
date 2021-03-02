@@ -584,6 +584,9 @@
     </Compile>
     <Compile Include="Models\ResMgmtViewModel.cs" />
     <Compile Include="Models\RestaurantDto.cs" />
+    <Compile Include="Models\theme.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\variant_has_option.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -721,6 +724,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\carousel.css" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\7up.jpg" />
     <Content Include="Content\images\apple-touch-icon.png" />
@@ -741,6 +745,7 @@
     <Content Include="Content\images\SeezarSalad.jpg" />
     <Content Include="Content\images\TahiniSalad.jpg" />
     <Content Include="Content\images\VegSoup.jpg" />
+    <Content Include="Content\JS\all2.js" />
     <Content Include="Content\JS\app.js" />
     <Content Include="Content\argon-design-system.css" />
     <Content Include="Content\argon-design-system.min.css" />
@@ -822,10 +827,12 @@
     <Content Include="Content\JS\chartjs.min.js" />
     <Content Include="Content\JS\core.js" />
     <Content Include="Content\JS\custom.js" />
+    <Content Include="Content\JS\custom2.js" />
     <Content Include="Content\JS\datetimepicker.js" />
     <Content Include="Content\JS\flatpickr.js" />
     <Content Include="Content\JS\front.js" />
     <Content Include="Content\JS\headroom.min.js" />
+    <Content Include="Content\JS\holder.js" />
     <Content Include="Content\JS\jarallax-element.min.js" />
     <Content Include="Content\JS\jarallax-video.min.js" />
     <Content Include="Content\JS\jarallax.min.js" />
@@ -865,10 +872,13 @@
     <Content Include="Content\nucleo-icons.css" />
     <Content Include="Content\nucleo-svg.css" />
     <Content Include="Content\nucleo.css" />
+    <Content Include="Content\orange2.css" />
     <Content Include="Content\rating.css" />
+    <Content Include="Content\responsive2.css" />
     <Content Include="Content\select2.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style1.css" />
+    <Content Include="Content\style2.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

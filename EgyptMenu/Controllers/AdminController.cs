@@ -26,6 +26,9 @@ namespace EgyptMenu.Controllers
 
         public ActionResult EditRestaurant(int id)
         {
+            var Themes = db.themes.ToList();
+            ViewBag.Themes = new SelectList(Themes, "id", "theme_name");
+
             restorant CurrentRestaurant = db.restorants.Find(id);
             ResMgmtViewModel resMgmtViewModel = new ResMgmtViewModel()
             {
@@ -39,7 +42,8 @@ namespace EgyptMenu.Controllers
                 RestaurantImage = CurrentRestaurant.logo,
                 RestaurantCoverImage = CurrentRestaurant.cover,
                 lat = CurrentRestaurant.lat,
-                lng = CurrentRestaurant.lng
+                lng = CurrentRestaurant.lng,
+                ThemeId = CurrentRestaurant.themes_id
             };
             return View(resMgmtViewModel);
         }
@@ -96,7 +100,7 @@ namespace EgyptMenu.Controllers
 
             }
 
-
+            CurrentRestaurant.themes_id = model.ThemeId;
             CurrentRestaurant.name = model.RestaurantName;
             CurrentRestaurant.description = model.RestaurantDescription;
             CurrentRestaurant.address = model.RestaurantAddress;

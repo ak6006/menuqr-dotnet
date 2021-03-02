@@ -7,6 +7,7 @@ namespace EgyptMenu.Models
 {
     public class ResMgmtViewModel
     {
+
         public decimal id { get; set; }
         public string RestaurantName { get; set; }
         public string RestaurantDescription { get; set; }
@@ -18,5 +19,6 @@ namespace EgyptMenu.Models
         public string OwnerPhone { get; set; }
         public string lat { get; set; }
         public string lng { get; set; }
+        public int? ThemeId { get; set; }
     }
 }

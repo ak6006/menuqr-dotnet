@@ -21,6 +21,7 @@
     <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
 
     <!-- Font Awesome Icons -->
+    <link href="~/Content/carousel.css" rel="stylesheet" />
     <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/nucleo-svg.css" rel="stylesheet" />
     <link href="~/Content/nucleo-icons.css" rel="stylesheet" />
@@ -29,6 +30,9 @@
     <link href="~/Content/argon-design-system.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
+    <link href="~/Content/style2.css" rel="stylesheet" />
+    <link href="~/Content/responsive2.css" rel="stylesheet" />
+    <link href="~/Content/orange2.css" rel="stylesheet" />
     <link href="~/Content/custom.css" rel="stylesheet" />
 
     <!-- Select2 -->
@@ -145,7 +149,7 @@
                 </div>
             </div>
         </section>
-        @if (true)
+        @if (Model.themes_id == 1)
         {
             <div id="background" style="background: url('/Content/images/menu.gif');">
                 <div class="page">
@@ -255,7 +259,7 @@
                                         else
                                         {
                                             counter++;
-                                            <li  >
+                                            <li>
                                                 <h2>@item.name</h2>
                                                 <ul>
                                                     @foreach (var item1 in item.items)
@@ -355,9 +359,9 @@
 
                 </div>
             </div>
-            }
-            else if (true)
-            {
+        }
+        else if (Model.themes_id == 2)
+        {
             <section style="background-color:rgb(999,999,200)" id="menu-list" class="section-padding">
                 <div class="container">
                     <div class="row">
@@ -475,9 +479,218 @@
                     </div>
                 </div>
             </section>
-            }
-            else if (true)
-            {
+        }
+        else if (Model.themes_id == 3)
+        {
+
+            <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                                <h2 class="block-title text-center">
+                                    Our Menu
+                                </h2>
+                                <p style="color:white" class="title-caption  text-center">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                            </div>
+                            <div class="tab-menu">
+                                <div class="slider slider-nav">
+                                    <div class="tab-title-menu">
+                                        <h2>STARTERS</h2>
+                                        <p> <i class="flaticon-canape"></i> </p>
+                                    </div>
+                                    <div class="tab-title-menu">
+                                        <h2>MAIN DISHES</h2>
+                                        <p> <i class="flaticon-dinner"></i> </p>
+                                    </div>
+                                    <div class="tab-title-menu">
+                                        <h2>DESERTS</h2>
+                                        <p> <i class="flaticon-desert"></i> </p>
+                                    </div>
+                                    <div class="tab-title-menu">
+                                        <h2>DRINKS</h2>
+                                        <p> <i class="flaticon-coffee"></i> </p>
+                                    </div>
+                                </div>
+                                <div class="slider slider-single">
+                                    <div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-01.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>GARLIC BREAD</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$8.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-02.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>MIXED SALAD</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$25</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-03.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>BBQ CHICKEN WINGS</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$10</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                    <div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-04.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>MEAT FEAST PIZZA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-05.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>CHICKEN TIKKA MASALA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$15</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-06.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>SPICY MEATBALLS</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$6.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                    <div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-07.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>CHOCOLATE FUDGECAKE</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$4.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>CHICKEN TIKKA MASALA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$9.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>CHICKEN TIKKA MASALA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$10</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                    <div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-10.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>MEAT FEAST PIZZA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$12.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-09.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>CHICKEN TIKKA MASALA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$9.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                                            <div class="offer-item">
+                                                <img src="images/menu-item-thumbnail-08.jpg" alt="" class="img-responsive">
+                                                <div>
+                                                    <h3>CHICKEN TIKKA MASALA</h3>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mollis eleifend dapibus.
+                                                    </p>
+                                                </div>
+                                                <span class="offer-price">$5.5</span>
+                                            </div>
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end tab-menu -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end container -->
+            </div>
+
+        }
+        else
+        {
             <section class="section section-lg d-md-block d-lg-none d-lx-none" style="padding-bottom: 0px">
                 <div class="container">
                     <div class="row">
@@ -622,32 +835,32 @@
                     }
                 </div>
             </section>
-            }
+        }
 
-            <i id="scrollTopBtn" onclick="topFunction()" class="fa fa-arrow-up btn-danger"></i>
+        <i id="scrollTopBtn" onclick="topFunction()" class="fa fa-arrow-up btn-danger"></i>
 
-            <div class="wrapper">
+        <div class="wrapper">
 
-                <footer class="footer">
-                    <div class="container">
-                        <div class="row align-items-center justify-content-md-between">
-                            <div class="col-md-6">
-                                <div class="copyright">
-                                    &copy; 2020 <a href="" target="_blank">QR Menu Maker</a>.
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <ul id="footer-pages" class="nav nav-footer justify-content-end">
-                                    <li v-for="page in pages" class="nav-item" v-cloak>
-                                        <a :href="'/pages/' + page.id" class="nav-link">{{ page.title }}</a>
-                                    </li>
-                                </ul>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row align-items-center justify-content-md-between">
+                        <div class="col-md-6">
+                            <div class="copyright">
+                                &copy; 2020 <a href="" target="_blank">QR Menu Maker</a>.
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <ul id="footer-pages" class="nav nav-footer justify-content-end">
+                                <li v-for="page in pages" class="nav-item" v-cloak>
+                                    <a :href="'/pages/' + page.id" class="nav-link">{{ page.title }}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </footer>
-            </div>
-            <script>
+                </div>
+            </footer>
+        </div>
+        <script>
         function getId() {
             return document.getElementById("HiddenItemId").value;
         }
@@ -661,375 +874,377 @@
                     }
                 });
         }
-            </script>
-            <!--   Core JS Files   -->
-            <script src="~/Content/JS/jquery.min.js" type="text/javascript"></script>
-            <script src="~/Content/JS/popper.min.js"></script>
-            <script src="~/Content/JS/perfect-scrollbar.jquery.min.js"></script>
-            <script src="~/Content/JS/bootstrap.min.js"></script>
-            <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-            <script src="~/Content/JS/bootstrap-switch.js"></script>
-
-            <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-            <script src="~/Content/JS/moment.min.js"></script>
-            <script src="~/Content/JS/nouislider.min.js"></script>
-            <script src="~/Content/JS/datetimepicker.js"></script>
-            <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
-
-            <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
-            <script src="~/Content/JS/argon-design-system.js"></script>
-
-            <!-- Import Vue -->
-            <script src="~/Content/JS/vue.js"></script>
-            <!-- Import AXIOS --->
-            <script src="~/Content/JS/axios.min.js"></script>
-
-            <!-- Add to Cart   -->
-            <script>
-                var LOCALE = "en";
-                var CASHIER_CURRENCY = "eur";
-            </script>
-
-
-            <!-- Cart custom sidemenu -->
-            <script src="~/Content/JS/cartSideMenu.js"></script>
-            <!-- Notify JS -->
-            <script src="~/Content/JS/notify.min.js"></script>
-
-            <!-- SELECT2 -->
-            <script src="~/Content/JS/select2.js"></script>
-            <script src="~/Content/JS/select2.min.js"></script>
-
-            <!-- Google Map -->
-            <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
-            </script>
-
-            <script>
-                "use strict";
-                var items = [];
-                var currentItem = null;
-                var currentItemSelectedPrice = null;
-                var lastAdded = null;
-                var previouslySelected = [];
-                var extrasSelected = [];
-                var variantID = null;
-                var CASHIER_CURRENCY = "eur";
-                var LOCALE = "en";
-
-                /*
-                * Price formater
-                * param  {Nummber} price
-                */
-                function formatPrice(price) {
-                    var formatter = new Intl.NumberFormat(LOCALE, {
-                        style: 'currency',
-                        currency: CASHIER_CURRENCY,
-                    });
-
-                    var formated = formatter.format(price);
-
-                    return formated;
-                }
-
-                /**
-                 * Load extras for variant
-                 * param  {Number} variant_id the variant id
-                 * */
-                function loadExtras(variant_id) {
-                    //alert("Load extras for "+variant_id);
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
-
-                    $.ajax({
-                        type: 'GET',
-                        url: '/items/variants/' + variant_id + '/extras',
-                        success: function (response) {
-                            if (response.status) {
-                                response.data.forEach(element => {
-                                    $('#exrtas-area-inside').append('<div class="custom-control custom-checkbox mb-3"><input onclick="recalculatePrice(' + element.item_id + ');" class="custom-control-input" id="' + element.id + '" name="extra"  value="' + element.price + '" type="checkbox"><label class="custom-control-label" for="' + element.id + '">' + element.name + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+' + formatPrice(element.price) + '</label></div>');
-                                });
-                                $('#exrtas-area').show();
-
-                            }
-                        }, error: function (response) {
-                            //return callback(false, response.responseJSON.errMsg);
-                        }
-                    })
-                }
-
-
-
-
-                /**
-                 *
-                 * Set the selected variant, set price and shows qty area and calls load extras
-                 * */
-                function setSelectedVariant(element) {
-
-                    //console.log(formated);
-                    $('#modalPrice').html(formatPrice(element.price));
-
-                    //Set current item price
-                    currentItemSelectedPrice = element.price;
-
-                    //Show QTY
-                    $('.quantity-area').show();
-
-                    //Set variantID
-                    variantID = element.id;
-
-                    //Empty the extras, and call it
-                    $('#exrtas-area-inside').empty();
-                    loadExtras(variantID);
-
-                }
-
-                function getTheDataForTheFoundVariable() {
-                    console.log(previouslySelected);
-                    var comparableObject = {};
-                    previouslySelected.forEach(element => {
-                        comparableObject[element.option_id] = element.name.trim().toLowerCase().replace(/\s/g, "-");
-                    });
-                    comparableObject = JSON.stringify(comparableObject)
-                    currentItem['variants'].forEach(element => {
-                        if (comparableObject == element.options) {
-                            console.log(element.options);
-                            setSelectedVariant(element);
-                        }
-                    });
-
-                }
-
-
-                function checkIfVariableExists(forOption, optionValue) {
-
-                    var newElement = { "option_id": forOption, "name": optionValue };
-                    console.log('NEW ELEMNGT');
-                    console.log(newElement);
-
-                    var possibleSelection = JSON.parse(JSON.stringify(previouslySelected));
-                    possibleSelection.push(newElement);
-                    console.log(possibleSelection);
-
-                    var filteredObjects = [];
-                    //possibleSelection.forEach(element => {
-                    currentItem.variants.forEach(theVariant => {
-                        var theOptions = JSON.parse(theVariant.options);
-                        var ok = true;
-                        Object.keys(theOptions).map((key) => {
-
-                            console.log(key + " : " + theOptions[key])
-                            possibleSelection.forEach(element => {
-                                if (key == element.option_id) {
-                                    if (theOptions[key] + "" != element.name.trim().toLowerCase().replace(/\s/g, "-") + "") {
-                                        ok = false;
-                                    }
-                                }
-                            });
-
-                        })
-
-                        if (ok) {
-                            idfilteredObjects.push(theVariant);
-                            console.log("ok")
-                        } else {
-                            console.log("not ok")
-                        }
-
-                        //comparableObject[element.option_id]=element.name.trim().toLowerCase().replace(/\s/g , "-");
-                    });
-
-                    //});
-
-
-                    return filteredObjects.length > 0;
-
-                }
-
-                function appendOption(name, id) {
-                    lastAdded = id;
-                    $('#variants-area-inside').append('<div id="variants-area-' + id + '"><br /><label class="form-control-label"><b>' + name + '<b></label><div><div id="variants-area-inside-' + id + '" class="btn-group btn-group-toggle" data-toggle="buttons"> </div></div>');
-                }
-
-                function optionChanged(option_id, name) {
-
-                    var newElement = { "option_id": option_id, "name": name };
-
-                    //If this option is already in the select, then it means it is old
-                    var tempObj = [];
-                    var wasOld = false;
-                    if (previouslySelected.length > 0) {
-                        previouslySelected.forEach(element => {
-                            if (!wasOld) {
-                                extras   variants         if (element.option_id == option_id) {
-                                    //This is old select, remove any new
-                                    tempObj.push(newElement);
-                                    wasOld = true;
-                                } else {
-                                    tempObj.push(element);
-                                }
-                            } else {
-                                //When rest, from the old one, remove the object
-                                $("#variants-area-" + element.option_id).remove();
-                            }
-
-                        });
-                    }
-
-                    if (wasOld) {
-                        previouslySelected = tempObj;
-                        //remove also last inserted, and readded it
-                        $("#variants-area-" + lastAdded).remove();
-                    } else {
-                        previouslySelected.push(newElement);
-                    }
-                    setVariants();
-
-
-                }
-
-                function appendOptionValue(name, enabled, option_id) {
-                    $('#variants-area-inside-' + option_id).append('<label style="opacity: ' + (enabled ? 1 : 0.5) + '" class="btn btn-outline-primary"><input  onchange="optionChanged(' + option_id + ',\'' + name + '\')"  ' + (enabled ? "" : "disabled") + ' type="radio" name="option_' + option_id + '" value="option_' + option_id + "_" + name + '" autocomplete="off" />' + name + '</label>')
-                }
-
-                function setVariants() {
-                    //1. Determine previously selected variants
-                    // var previouslySelected=[];
-
-                    //HIDE QTY
-                    $('.quantity-area').hide();
-                    $('#exrtas-area-inside').empty();
-                    $('#exrtas-area').hide();
-
-                    //2. Get the new option to show
-                    var newOptionToShow = null;
-                    console.log(currentItem.options[previouslySelected.length]);
-                    newOptionToShow = currentItem.options[previouslySelected.length];
-
-                    if (newOptionToShow != undefined) {
-                        //2.1 Add the options in the table
-                        appendOption(newOptionToShow.name, newOptionToShow.id);
-
-                        newOptionToShow.options.split(",").forEach(element => {
-                            if (checkIfVariableExists(newOptionToShow.id, element)) {
-                                //Next variable exists
-                                console.log("Exists: " + element);
-                                appendOptionValue(element, true, newOptionToShow.id);
-                            } else {
-                                //Vsaraiable with the next option value doens't exists
-                                console.log("Does not exists: " + element);
-                                appendOptionValue(element, false, newOptionToShow.id);
-                            }
-
-
-                        });
-                    } else {
-                        console.log("No more options");
-                        getTheDataForTheFoundVariable();
-                    }
-
-
-
-
-                    //3. Add the new option options
-                    //3.1 If new option is null, show the variant price
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </script>
-            <script type="text/javascript">
-
-
-
-                //function initializeMarker(lat, lng) {
-                //    var markerData = new google.maps.LatLng(lat, lng);
-                //    marker = new google.maps.Marker({
-                //        position: markerData,
-                //        map: map_location,
-                //        icon: start
-                //    });
-                //}
-
-
-
-
-                var mybutton = document.getElementById("scrollTopBtn");
-
-                window.onscroll = function () { scrollFunction() };
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        mybutton.style.display = "block";
-                    } else {
-                        mybutton.style.display = "none";
-                    }
-                }
-
-                // When the user clicks on the button, scroll to the top of the document
-                function topFunction() {
-                    //document.body.scrollTop = 0;
-                    $("html, body").animate({ scrollTop: 0 }, 600);
-                    document.documentElement.scrollTop = 0;
-                }
-
-
-
-                $(".nav-item-category").on('click', function () {
-                    $.each(categories, function (index, value) {
-                        $("." + value).show();
-
-                        //$("#nav_"+value).removeClass("active");
-                    });
-
-                    var id = $(this).attr("id");
-                    var category_id = id.substr(id.indexOf("_") + 1, id.length);
-                    //$("#nav_"+category_id).addClass("active");
-
-                    //$("."+category_id).hide();
-
-                    $.each(categories, function (index, value) {
-                        if (value != category_id) {
-                            $("." + value).hide();
-                        }
-                    });
+        </script>
+        <!--   Core JS Files   -->
+        <script src="~/Content/JS/jquery.min.js" type="text/javascript"></script>
+        <script src="~/Content/JS/popper.min.js"></script>
+        <script src="~/Content/JS/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/Content/JS/bootstrap.min.js"></script>
+        <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+        <script src="~/Content/JS/bootstrap-switch.js"></script>
+
+        <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+        <script src="~/Content/JS/moment.min.js"></script>
+        <script src="~/Content/JS/nouislider.min.js"></script>
+        <script src="~/Content/JS/datetimepicker.js"></script>
+        <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
+
+        <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
+        <script src="~/Content/JS/argon-design-system.js"></script>
+
+        <!-- Import Vue -->
+        <script src="~/Content/JS/vue.js"></script>
+        <!-- Import AXIOS --->
+        <script src="~/Content/JS/axios.min.js"></script>
+
+        <!-- Add to Cart   -->
+        <script>
+            var LOCALE = "en";
+            var CASHIER_CURRENCY = "eur";
+        </script>
+
+
+        <!-- Cart custom sidemenu -->
+        <script src="~/Content/JS/cartSideMenu.js"></script>
+        <!-- Notify JS -->
+        <script src="~/Content/JS/notify.min.js"></script>
+
+        <!-- SELECT2 -->
+        <script src="~/Content/JS/select2.js"></script>
+        <script src="~/Content/JS/select2.min.js"></script>
+
+        <!-- Google Map -->
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=">
+        </script>
+
+        <script>
+            "use strict";
+            var items = [];
+            var currentItem = null;
+            var currentItemSelectedPrice = null;
+            var lastAdded = null;
+            var previouslySelected = [];
+            var extrasSelected = [];
+            var variantID = null;
+            var CASHIER_CURRENCY = "eur";
+            var LOCALE = "en";
+
+            /*
+            * Price formater
+            * param  {Nummber} price
+            */
+            function formatPrice(price) {
+                var formatter = new Intl.NumberFormat(LOCALE, {
+                    style: 'currency',
+                    currency: CASHIER_CURRENCY,
                 });
-            </script>
-            <script>
 
-                function showonly(divId) {
+                var formated = formatter.format(price);
 
-                    if (divId == "all") {
-                        var catigoryDivs = document.getElementsByClassName("catigoryDiv");
-                        for (var i = 0; i < catigoryDivs.length; i++) {
-                            catigoryDivs[i].style.display = "block";
-                        }
+                return formated;
+            }
+
+            /**
+             * Load extras for variant
+             * param  {Number} variant_id the variant id
+             * */
+            function loadExtras(variant_id) {
+                //alert("Load extras for "+variant_id);
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
-                    else {
-                        var catigoryDivs = document.getElementsByClassName("catigoryDiv");
-                        for (var i = 0; i < catigoryDivs.length; i++) {
-                            catigoryDivs[i].style.display = "none";
+                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/items/variants/' + variant_id + '/extras',
+                    success: function (response) {
+                        if (response.status) {
+                            response.data.forEach(element => {
+                                $('#exrtas-area-inside').append('<div class="custom-control custom-checkbox mb-3"><input onclick="recalculatePrice(' + element.item_id + ');" class="custom-control-input" id="' + element.id + '" name="extra"  value="' + element.price + '" type="checkbox"><label class="custom-control-label" for="' + element.id + '">' + element.name + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+' + formatPrice(element.price) + '</label></div>');
+                            });
+                            $('#exrtas-area').show();
+
                         }
-                        document.getElementById(divId).style.display = "block";
+                    }, error: function (response) {
+                        //return callback(false, response.responseJSON.errMsg);
+                    }
+                })
+            }
+
+
+
+
+            /**
+             *
+             * Set the selected variant, set price and shows qty area and calls load extras
+             * */
+            function setSelectedVariant(element) {
+
+                //console.log(formated);
+                $('#modalPrice').html(formatPrice(element.price));
+
+                //Set current item price
+                currentItemSelectedPrice = element.price;
+
+                //Show QTY
+                $('.quantity-area').show();
+
+                //Set variantID
+                variantID = element.id;
+
+                //Empty the extras, and call it
+                $('#exrtas-area-inside').empty();
+                loadExtras(variantID);
+
+            }
+
+            function getTheDataForTheFoundVariable() {
+                console.log(previouslySelected);
+                var comparableObject = {};
+                previouslySelected.forEach(element => {
+                    comparableObject[element.option_id] = element.name.trim().toLowerCase().replace(/\s/g, "-");
+                });
+                comparableObject = JSON.stringify(comparableObject)
+                currentItem['variants'].forEach(element => {
+                    if (comparableObject == element.options) {
+                        console.log(element.options);
+                        setSelectedVariant(element);
+                    }
+                });
+
+            }
+
+
+            function checkIfVariableExists(forOption, optionValue) {
+
+                var newElement = { "option_id": forOption, "name": optionValue };
+                console.log('NEW ELEMNGT');
+                console.log(newElement);
+
+                var possibleSelection = JSON.parse(JSON.stringify(previouslySelected));
+                possibleSelection.push(newElement);
+                console.log(possibleSelection);
+
+                var filteredObjects = [];
+                //possibleSelection.forEach(element => {
+                currentItem.variants.forEach(theVariant => {
+                    var theOptions = JSON.parse(theVariant.options);
+                    var ok = true;
+                    Object.keys(theOptions).map((key) => {
+
+                        console.log(key + " : " + theOptions[key])
+                        possibleSelection.forEach(element => {
+                            if (key == element.option_id) {
+                                if (theOptions[key] + "" != element.name.trim().toLowerCase().replace(/\s/g, "-") + "") {
+                                    ok = false;
+                                }
+                            }
+                        });
+
+                    })
+
+                    if (ok) {
+                        idfilteredObjects.push(theVariant);
+                        console.log("ok")
+                    } else {
+                        console.log("not ok")
+                    }
+
+                    //comparableObject[element.option_id]=element.name.trim().toLowerCase().replace(/\s/g , "-");
+                });
+
+                //});
+
+
+                return filteredObjects.length > 0;
+
+            }
+
+            function appendOption(name, id) {
+                lastAdded = id;
+                $('#variants-area-inside').append('<div id="variants-area-' + id + '"><br /><label class="form-control-label"><b>' + name + '<b></label><div><div id="variants-area-inside-' + id + '" class="btn-group btn-group-toggle" data-toggle="buttons"> </div></div>');
+            }
+
+            function optionChanged(option_id, name) {
+
+                var newElement = { "option_id": option_id, "name": name };
+
+                //If this option is already in the select, then it means it is old
+                var tempObj = [];
+                var wasOld = false;
+                if (previouslySelected.length > 0) {
+                    previouslySelected.forEach(element => {
+                        if (!wasOld) {
+                            extras   variants         if (element.option_id == option_id) {
+                                //This is old select, remove any new
+                                tempObj.push(newElement);
+                                wasOld = true;
+                            } else {
+                                tempObj.push(element);
+                            }
+                        } else {
+                            //When rest, from the old one, remove the object
+                            $("#variants-area-" + element.option_id).remove();
+                        }
+
+                    });
+                }
+
+                if (wasOld) {
+                    previouslySelected = tempObj;
+                    //remove also last inserted, and readded it
+                    $("#variants-area-" + lastAdded).remove();
+                } else {
+                    previouslySelected.push(newElement);
+                }
+                setVariants();
+
+
+            }
+
+            function appendOptionValue(name, enabled, option_id) {
+                $('#variants-area-inside-' + option_id).append('<label style="opacity: ' + (enabled ? 1 : 0.5) + '" class="btn btn-outline-primary"><input  onchange="optionChanged(' + option_id + ',\'' + name + '\')"  ' + (enabled ? "" : "disabled") + ' type="radio" name="option_' + option_id + '" value="option_' + option_id + "_" + name + '" autocomplete="off" />' + name + '</label>')
+            }
+
+            function setVariants() {
+                //1. Determine previously selected variants
+                // var previouslySelected=[];
+
+                //HIDE QTY
+                $('.quantity-area').hide();
+                $('#exrtas-area-inside').empty();
+                $('#exrtas-area').hide();
+
+                //2. Get the new option to show
+                var newOptionToShow = null;
+                console.log(currentItem.options[previouslySelected.length]);
+                newOptionToShow = currentItem.options[previouslySelected.length];
+
+                if (newOptionToShow != undefined) {
+                    //2.1 Add the options in the table
+                    appendOption(newOptionToShow.name, newOptionToShow.id);
+
+                    newOptionToShow.options.split(",").forEach(element => {
+                        if (checkIfVariableExists(newOptionToShow.id, element)) {
+                            //Next variable exists
+                            console.log("Exists: " + element);
+                            appendOptionValue(element, true, newOptionToShow.id);
+                        } else {
+                            //Vsaraiable with the next option value doens't exists
+                            console.log("Does not exists: " + element);
+                            appendOptionValue(element, false, newOptionToShow.id);
+                        }
+
+
+                    });
+                } else {
+                    console.log("No more options");
+                    getTheDataForTheFoundVariable();
+                }
+
+
+
+
+                //3. Add the new option options
+                //3.1 If new option is null, show the variant price
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+        <script type="text/javascript">
+
+
+
+            //function initializeMarker(lat, lng) {
+            //    var markerData = new google.maps.LatLng(lat, lng);
+            //    marker = new google.maps.Marker({
+            //        position: markerData,
+            //        map: map_location,
+            //        icon: start
+            //    });
+            //}
+
+
+
+
+            var mybutton = document.getElementById("scrollTopBtn");
+
+            window.onscroll = function () { scrollFunction() };
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                //document.body.scrollTop = 0;
+                $("html, body").animate({ scrollTop: 0 }, 600);
+                document.documentElement.scrollTop = 0;
+            }
+
+
+
+            $(".nav-item-category").on('click', function () {
+                $.each(categories, function (index, value) {
+                    $("." + value).show();
+
+                    //$("#nav_"+value).removeClass("active");
+                });
+
+                var id = $(this).attr("id");
+                var category_id = id.substr(id.indexOf("_") + 1, id.length);
+                //$("#nav_"+category_id).addClass("active");
+
+                //$("."+category_id).hide();
+
+                $.each(categories, function (index, value) {
+                    if (value != category_id) {
+                        $("." + value).hide();
+                    }
+                });
+            });
+        </script>
+        <script>
+
+            function showonly(divId) {
+
+                if (divId == "all") {
+                    var catigoryDivs = document.getElementsByClassName("catigoryDiv");
+                    for (var i = 0; i < catigoryDivs.length; i++) {
+                        catigoryDivs[i].style.display = "block";
                     }
                 }
-            </script>
+                else {
+                    var catigoryDivs = document.getElementsByClassName("catigoryDiv");
+                    for (var i = 0; i < catigoryDivs.length; i++) {
+                        catigoryDivs[i].style.display = "none";
+                    }
+                    document.getElementById(divId).style.display = "block";
+                }
+            }
+        </script>
 
-            <script src="~/Content/JS/jquery.easing.min.js"></script>
-            <script src="~/Content/JS/custom.js"></script>
-    </body>
+        <script src="~/Content/JS/jquery.easing.min.js"></script>
+        <script src="~/Content/JS/custom.js"></script>
+        <script src="~/Content/JS/holder.js"></script>
+        
+</body>
 
 </html>
