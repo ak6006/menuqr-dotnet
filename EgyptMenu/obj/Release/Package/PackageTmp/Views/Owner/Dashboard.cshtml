@@ -370,21 +370,21 @@
 
                                     </div>
 
-                                    @*<input type="hidden" name="_token" value="veRVSDylh3ujsrmhvS70l9SO2i6OXqcwVJrLkInH"> <input type="hidden" name="_method" value="put"> <input type="hidden" id="rid" value="1" />*@
-                                    @*<input class="form-group" type="text" id="latval0" name="lat" value="" />*@
                                     <div class="form-group">
                                         <label class="form-control-label" for="RestaurantName">@Resource.Restaurant_Name</label>
                                         <input step=".01" type="text" name="RestaurantName" value="@Model.RestaurantName" id="RestaurantName" class="form-control form-control-alternative" placeholder=@Resource.Restaurant_Name required autofocus>
                                     </div>
+
                                     <div class="form-group">
                                         <label class="form-control-label" for="RestaurantDescription">@Resource.Restaurant_Description</label>
                                         <input step=".01" type="text" name="RestaurantDescription" value="@Model.RestaurantDescription" id="RestaurantDescription" class="form-control form-control-alternative" placeholder=@Resource.Restaurant_Description required autofocus>
                                     </div>
-                                    @*<div class="form-group">
-                                            <label class="form-control-label" for="RestaurantAddress">Restaurant Address</label>
-                                            <input step=".01" type="text" name="RestaurantAddress" value="@Model.RestaurantAddress" id="RestaurantAddress" class="form-control form-control-alternative" placeholder="Restaurant Address" required autofocus>
-                                        </div>*@
-
+                                    
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="ThemeId">Menu Theme</label>
+                                        @Html.DropDownListFor(m => m.ThemeId, ViewBag.Themes as IEnumerable<SelectListItem>, htmlAttributes: new { @class = "form-control" })
+                                    </div>
+                                    
 
 
                                     <div class="row">

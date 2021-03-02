@@ -326,6 +326,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <Property Name="radius" Type="nvarchar" MaxLength="800" Nullable="false" />
     <Property Name="is_featured" Type="smallint" Nullable="false" />
     <Property Name="city_id" Type="int" />
+    <Property Name="themes_id" Type="int" />
   </EntityType>
   <EntityType Name="role_has_permissions">
     <Key>
@@ -391,6 +392,16 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <Property Name="id" Type="numeric" Precision="20" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="191" Nullable="false" />
     <Property Name="alias" Type="nvarchar" MaxLength="191" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="themes">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="theme_name" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="theme_name" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="translations">
     <Key>
@@ -885,6 +896,12 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     [password_resets].[token] AS [token], 
     [password_resets].[created_at] AS [created_at]
     FROM [foodtiger].[password_resets] AS [password_resets]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="themes" EntityType="Self.themes" store:Type="Tables" store:Schema="foodtiger">
+      <DefiningQuery>SELECT 
+    [themes].[id] AS [id], 
+    [themes].[theme_name] AS [theme_name]
+    FROM [foodtiger].[themes] AS [themes]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="address$address_user_id_foreign" Association="Self.address$address_user_id_foreign">
       <End Role="users" EntitySet="users" />

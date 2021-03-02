@@ -300,32 +300,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="restorants">
-      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
-        <MappingFragment StoreEntitySet="restorants">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="subdomain" ColumnName="subdomain" />
-          <ScalarProperty Name="logo" ColumnName="logo" />
-          <ScalarProperty Name="cover" ColumnName="cover" />
-          <ScalarProperty Name="active" ColumnName="active" />
-          <ScalarProperty Name="user_id" ColumnName="user_id" />
-          <ScalarProperty Name="lat" ColumnName="lat" />
-          <ScalarProperty Name="lng" ColumnName="lng" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="minimum" ColumnName="minimum" />
-          <ScalarProperty Name="description" ColumnName="description" />
-          <ScalarProperty Name="fee" ColumnName="fee" />
-          <ScalarProperty Name="static_fee" ColumnName="static_fee" />
-          <ScalarProperty Name="radius" ColumnName="radius" />
-          <ScalarProperty Name="is_featured" ColumnName="is_featured" />
-          <ScalarProperty Name="city_id" ColumnName="city_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="roles">
       <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.role">
         <MappingFragment StoreEntitySet="roles">
@@ -488,6 +462,41 @@
         <MappingFragment StoreEntitySet="variant_has_option">
           <ScalarProperty Name="option_detail_id" ColumnName="option_detail_id" />
           <ScalarProperty Name="variant_id" ColumnName="variant_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restorants">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
+        <MappingFragment StoreEntitySet="restorants">
+          <ScalarProperty Name="themes_id" ColumnName="themes_id" />
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="is_featured" ColumnName="is_featured" />
+          <ScalarProperty Name="radius" ColumnName="radius" />
+          <ScalarProperty Name="static_fee" ColumnName="static_fee" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="minimum" ColumnName="minimum" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="cover" ColumnName="cover" />
+          <ScalarProperty Name="logo" ColumnName="logo" />
+          <ScalarProperty Name="subdomain" ColumnName="subdomain" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="themes">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
+        <MappingFragment StoreEntitySet="themes">
+          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
