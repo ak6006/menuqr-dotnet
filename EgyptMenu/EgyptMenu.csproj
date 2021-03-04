@@ -729,6 +729,9 @@
     <Content Include="Content\images\7up.jpg" />
     <Content Include="Content\images\apple-touch-icon.png" />
     <Content Include="Content\images\background_pattern.png" />
+    <Content Include="Content\images\background_pattern5.png" />
+    <Content Include="Content\images\bottom_left.png" />
+    <Content Include="Content\images\bottom_right.png" />
     <Content Include="Content\images\Head_2.png" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
@@ -746,6 +749,9 @@
     <Content Include="Content\images\SausagePizza.png" />
     <Content Include="Content\images\SeezarSalad.jpg" />
     <Content Include="Content\images\TahiniSalad.jpg" />
+    <Content Include="Content\images\top.png" />
+    <Content Include="Content\images\top_left.png" />
+    <Content Include="Content\images\top_right.png" />
     <Content Include="Content\images\VegSoup.jpg" />
     <Content Include="Content\JS\all2.js" />
     <Content Include="Content\JS\app.js" />
