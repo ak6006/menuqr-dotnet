@@ -9,7 +9,7 @@ namespace EgyptMenu.Controllers
     public class HomeController : Controller
     {
 
-        public ActionResult Index(string lang= "en")
+        public ActionResult Index(string lang)
         {
             return View();
         }

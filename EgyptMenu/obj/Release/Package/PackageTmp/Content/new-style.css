@@ -1,4 +1,9 @@
-﻿ 
+﻿
+@font-face {
+    font-family: AmericanTypewriter;
+    src: url('/Content/Fonts/AmericanTypewriter.ttc');
+} 
+
 @media only screen and (max-width: 600px) {
     .spanHide1, .spanHide {
         display: none;
@@ -37,3 +42,4 @@
 
     }
 }
+

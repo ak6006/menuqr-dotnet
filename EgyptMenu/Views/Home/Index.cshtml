@@ -5,12 +5,11 @@
     {
         Culture = UICulture = Request.QueryString["lang"];
         HttpContext.Current.Session.Add("lang", Request.QueryString["lang"]);
-
     }
     else
     {
-        Culture = UICulture = "en";
-        HttpContext.Current.Session.Add("lang","en");
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+        HttpContext.Current.Session.Add("lang", HttpContext.Current.Session["lang"].ToString());
     }
 }
 

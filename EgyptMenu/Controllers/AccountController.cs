@@ -548,6 +548,7 @@ namespace EgyptMenu.Controllers
                 message.Body = BODY;
                 // Comment or delete the next line if you are not using a configuration set
                 //message.Headers.Add("X-SES-CONFIGURATION-SET", CONFIGSET);
+                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
                 using (var client = new System.Net.Mail.SmtpClient(HOST, PORT))
                 {
