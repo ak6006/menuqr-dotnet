@@ -8,8 +8,18 @@
     }
     else
     {
-        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
-        HttpContext.Current.Session.Add("lang", HttpContext.Current.Session["lang"].ToString());
+        if (HttpContext.Current.Session["lang"]!=null)
+        {
+            Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+            HttpContext.Current.Session.Add("lang", HttpContext.Current.Session["lang"].ToString());
+        }
+        else
+        {
+            Culture = UICulture = "en";
+            HttpContext.Current.Session.Add("lang","en" );
+        }
+
+
     }
 }
 
