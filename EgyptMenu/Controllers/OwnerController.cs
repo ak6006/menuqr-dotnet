@@ -187,12 +187,12 @@ namespace EgyptMenu.Controllers
                 db.categories.Add(category);
                 db.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                return RedirectToAction("Menu", e.Message);
             }
 
-            return View("Menu", CurrentRestaurant);
+            return RedirectToAction("Menu");
         }
 
         public ActionResult DeleteCategory(int CatId)
@@ -225,24 +225,32 @@ namespace EgyptMenu.Controllers
         public ActionResult AddItemToCat(int id, string item_name, string item_description, decimal item_price
             , HttpPostedFileBase item_image)
         {
-            if (item_image != null)
+            try
             {
-                string physicalPath = HttpContext.Server.MapPath("~/Content/images/" + item_image.FileName);
-                item_image.SaveAs(physicalPath);
+
+                if (item_image != null)
+                {
+                    string physicalPath = HttpContext.Server.MapPath("~/Content/images/" + item_image.FileName);
+                    item_image.SaveAs(physicalPath);
+                }
+                var CurrentRestaurant = GetRestorant();
+                var Item = new item()
+                {
+                    name = item_name,
+                    price = item_price,
+                    category_id = id,
+                    description = item_description,
+                    image = item_image.FileName,
+                    available = 1
+                };
+                db.items.Add(Item);
+                db.SaveChanges();
+                return RedirectToAction("Menu");
             }
-            var CurrentRestaurant = GetRestorant();
-            var Item = new item()
+            catch (Exception e)
             {
-                name = item_name,
-                price = item_price,
-                category_id = id,
-                description = item_description,
-                image = item_image.FileName,
-                available=1
-            };
-            db.items.Add(Item);
-            db.SaveChanges();
-            return RedirectToAction("Menu", CurrentRestaurant);
+                return View (e.Message);
+            }
         }
         public ActionResult QRBuilder()
         {
