@@ -881,12 +881,15 @@
     <Content Include="Content\nucleo-svg.css" />
     <Content Include="Content\nucleo.css" />
     <Content Include="Content\orange2.css" />
+    <Content Include="Content\owl.carousel.min.css" />
     <Content Include="Content\rating.css" />
     <Content Include="Content\responsive2.css" />
+    <Content Include="Content\responsive7.css" />
     <Content Include="Content\select2.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style1.css" />
     <Content Include="Content\style2.css" />
+    <Content Include="Content\style7.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -950,6 +953,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\owl.carousel.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
