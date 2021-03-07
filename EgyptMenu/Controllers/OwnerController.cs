@@ -162,7 +162,7 @@ namespace EgyptMenu.Controllers
             model.RestaurantImage = CurrentRestaurant.logo;
             db.SaveChanges();
 
-            return RedirectToAction("Dashboard", model);
+            return RedirectToAction("Dashboard");
         }
         public ActionResult Menu()
         {

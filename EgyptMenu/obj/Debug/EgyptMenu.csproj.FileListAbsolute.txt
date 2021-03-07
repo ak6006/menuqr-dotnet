@@ -2120,3 +2120,4 @@ D:\menuqrWeb\menuqr\EgyptMenu\bin\roslyn\vbc.rsp
 D:\menuqrWeb\menuqr\EgyptMenu\bin\roslyn\VBCSCompiler.exe
 D:\menuqrWeb\menuqr\EgyptMenu\bin\roslyn\VBCSCompiler.exe.config
 D:\menuqrWeb\menuqr\EgyptMenu\obj\Debug\EgyptMenu.csprojAssemblyReference.cache
+C:\Users\Team-I Group\Desktop\menuqr\EgyptMenu\obj\Debug\EgyptMenu.GeneratedMSBuildEditorConfig.editorconfig

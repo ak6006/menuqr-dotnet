@@ -402,7 +402,7 @@ namespace EgyptMenu.Controllers
 
                     var Item12 = new item()
                     {
-                        name = "7UP Can",
+                        name = "Seven UP Can",
                         price = 29,
                         category_id = category3.id,
                         description = "Cold 7UP",
