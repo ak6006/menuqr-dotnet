@@ -163,19 +163,19 @@
     <value>دعم المجتمع</value>
   </data>
   <data name="Contactless QR digital menu" xml:space="preserve">
-    <value>القائمة الرقمية للكيو ار بدون تلامس</value>
+    <value>قلل التلامس المنيو الرقمي</value>
   </data>
   <data name="Create a Digital Menu" xml:space="preserve">
-    <value>قم بإنشاء قائمة رقمية</value>
+    <value>قم بإنشاء منيو رقمي</value>
   </data>
   <data name="Create a digital menu for your Restaurant or Bar" xml:space="preserve">
-    <value>قم بإنشاء قائمة رقمية لمطعمك أو الكافية الخاص بك</value>
+    <value>قم بإنشاء المنيو الالكتروني للمطعم أو الكافية الخاص بك</value>
   </data>
   <data name="Create a menu for you, now!" xml:space="preserve">
-    <value>أنشئ قائمة لك الآن</value>
+    <value>قم بإنشاء المنيو الرقمي الخاص بك الان </value>
   </data>
   <data name="Create QR" xml:space="preserve">
-    <value>أنشئ كيو ار</value>
+    <value>قم بإنشاء كيو ار</value>
   </data>
   <data name="Create your menu directly on our platform. Update anytime. Easy And Simple" xml:space="preserve">
     <value>أنشئ قائمتك مباشرة على منصتنا. قم بالتحديث في أي وقت. بطريقة سهلة و بسيطة</value>
@@ -199,7 +199,7 @@
     <value>تجريبي</value>
   </data>
   <data name="Design it" xml:space="preserve">
-    <value>صممها</value>
+    <value>قم بالتصميم الان</value>
   </data>
   <data name="direction" xml:space="preserve">
     <value>rtl</value>
@@ -265,10 +265,10 @@
     <value>الوصول الكامل إلى أداة إنشاء القائمة</value>
   </data>
   <data name="Go Digital" xml:space="preserve">
-    <value>اذهب الي القائمة الرقمية</value>
+    <value>اذهب الي المنيو</value>
   </data>
   <data name="Go Mobile" xml:space="preserve">
-    <value>اذهب للجوال</value>
+    <value>اذهب للهاتف</value>
   </data>
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
     <value>إذا كنت تدير مطعمًا صغيرًا أو كافية ، أو كنت بحاجة فقط إلى الأساسيات ، فهذه الخطة رائعة.</value>
@@ -400,7 +400,7 @@
     <value>الاداء</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>المحمول</value>
+    <value>رقم الهاتف</value>
   </data>
   <data name="Pick QR color" xml:space="preserve">
     <value>اختر لون رمز الكيو ار</value>
@@ -427,7 +427,7 @@
     <value>Pro سنوي</value>
   </data>
   <data name="Product" xml:space="preserve">
-    <value>المنتج</value>
+    <value>الخدمات</value>
   </data>
   <data name="QR builder" xml:space="preserve">
     <value>انشاء رمز الكيو ار</value>
@@ -496,7 +496,7 @@
     <value>المطاعم</value>
   </data>
   <data name="Restaurants and Bars that love our QRs" xml:space="preserve">
-    <value>المطاعم والكافيهات التي تعشق رموز الكيو ار </value>
+    <value>آراء محبي المنيو الرقمي</value>
   </data>
   <data name="Richard Thomas Burger 2Go" xml:space="preserve">
     <value>ريتشارد توماس برجر 2Go</value>
@@ -565,7 +565,7 @@
     <value>text-align:right</value>
   </data>
   <data name="The most comprehensive platform for QR digital menu" xml:space="preserve">
-    <value>النظام الأساسي الأكثر شمولاً لقائمة رمز الكيو ار الرقمي</value>
+    <value>النظام الشامل للمنيو الرقمي بإستخدام رمز الكيو ار عبر كاميرا هاتفك</value>
   </data>
   <data name="Their mobile is your menu now" xml:space="preserve">
     <value>هاتفهم المحمول هو قائمتك الآن</value>
@@ -589,7 +589,7 @@
     <value>مناظر غير محدودة</value>
   </data>
   <data name="Used by top restaurants worldwide" xml:space="preserve">
-    <value>تستخدم من قبل أفضل المطاعم في جميع أنحاء العالم</value>
+    <value>تم استخدامه من قبل اكبر الكافيهات والمطاعم علي مستوي العالم</value>
   </data>
   <data name="User information" xml:space="preserve">
     <value>معلومات المستخدم</value>
@@ -622,6 +622,6 @@
     <value>ليس لديك اي خطط</value>
   </data>
   <data name="Your email" xml:space="preserve">
-    <value>بريدك الاليكتروني</value>
+    <value>البريد الاليكتروني</value>
   </data>
 </root>

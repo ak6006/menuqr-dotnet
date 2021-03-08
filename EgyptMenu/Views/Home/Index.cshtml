@@ -109,7 +109,7 @@
                     <img class="navbar-brand-dark LogoIMG" src="~/Content/images/logo_qrzebra.png" alt="Logo">
                     <img class="navbar-brand-light LogoIMG" src="~/Content/images/logo_qrzebra.png"  alt="Logo">
                 </a>
-                <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse collapse" id="navbar_global" style="@Resource.text_align">
                     <div class="navbar-collapse-header">
                         <div class="row">
                             <div class="col-6 collapse-brand">
@@ -124,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="navbar-nav navbar-nav-hover justify-content-center">
+                    <ul class="navbar-nav navbar-nav-hover justify-content-center p-0">
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <a data-scroll href="#product" class="nav-link">@Resource.Product</a>
                             @*<h1>
@@ -197,9 +197,9 @@
                     <div class="col-12 col-md-6 order-2 order-lg-1">
                         <img src="~/Content/images/flayer.png" />
                     </div>
-                    <div class="col-12 col-md-5 order-1 order-lg-2 text-center">
+                    <div class="col-12 col-md-5 order-1 order-lg-2" style="@Resource.text_align">
                         <h1 class="display-2 mb-3">@Resource.Contactless_QR_digital_menu</h1>
-                        <p class="lead">@Resource.Create_a_digital_menu_for_your_Restaurant_or_Bar. @Resource.Engage_more_with_your_customers.<br /><strong>@Resource.Their_mobile_is_your_menu_now!</strong></p>
+                        <p class="lead">@Resource.Create_a_digital_menu_for_your_Restaurant_or_Bar. @Resource.Engage_more_with_your_customers.<br /><strong>@Resource.Their_mobile_is_your_menu_now !</strong></p>
                         <div class="mt-4">
                             <form action="@Url.Action("register", "Account")" class="d-flex flex-column mb-5 mb-lg-0">
                                 <input class="form-control" type="text" name="name" placeholder="@Resource.Restaurant_or_bar_name" required>
@@ -232,10 +232,10 @@
                             <div class="card-header p-0">
                                 <img src="~/Content/images/menubuilder.jpg" class="card-img-top rounded-top" alt="image">
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" style="@Resource.text_align;">
                                 <h3 class="card-title mt-3">@Resource.Create_a_Digital_Menu</h3>
                                 <p class="card-text">@Resource.Create_your_menu_directly_on_our_platform__Update_anytime__Easy_And_Simple.</p>
-                                <ul class="list-group d-flex justify-content-center mb-4">
+                                <ul class="list-group d-flex justify-content-center mb-4 p-0">
                                     <li class="list-group-item d-flex pl-0 pb-1">
                                         <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
                                         <div class="mr-2">@Resource.Real_time_changes</div>
@@ -258,10 +258,10 @@
                             <div class="card-header p-0">
                                 <img src="~/Content/images/qr_image_builder.jpg" class="card-img-top rounded-top" alt="image">
                             </div>
-                            <div class="card-body">
+                            <div class="card-body"  style="@Resource.text_align;">
                                 <h3 class="card-title mt-3">@Resource.Create_QR</h3>
                                 <p class="card-text">8 @Resource._8_different_designs__Unlimited_color_options__Choose_QR_and_Flayer_style.</p>
-                                <ul class="list-group d-flex justify-content-center mb-4">
+                                <ul class="list-group d-flex justify-content-center mb-4 p-0">
                                     <li class="list-group-item d-flex pl-0 pb-1">
                                         <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
                                         <div class="mr-2">@Resource.Beautiful_QR_Styles</div>
@@ -284,10 +284,10 @@
                             <div class="card-header p-0">
                                 <img src="~/Content/images/mobile_pwa.jpg" class="card-img-top rounded-top" alt="image">
                             </div>
-                            <div class="card-body">
+                            <div class="card-body"  style="@Resource.text_align;">
                                 <h3 class="card-title mt-3">@Resource.Go_Digital</h3>
                                 <p class="card-text">@Resource.Now_your_visitors_will_use_their_mobile_phone_camera_to_access_your_menu .</p>
-                                <ul class="list-group d-flex justify-content-center mb-4">
+                                <ul class="list-group d-flex justify-content-center mb-4 p-0">
                                     <li class="list-group-item d-flex pl-0 pb-1">
                                         <span class="mr-2"><i class="fas fa-check-circle text-success"></i></span>
                                         <div class="mr-2">@Resource.No_mobile_app_required</div>
@@ -321,7 +321,7 @@
                         <p class="lead">@Resource.Used_by_top_restaurants_worldwide</p>
                     </div>
                 </div>
-                <div class="row mb-lg-5">
+                <div class="row mb-lg-5" dir="ltr">
                     <div class="col-12 col-lg-6">
                         <div class="customer-testimonial d-flex mb-5">
                             <img src="https://randomuser.me/api/portraits/men/74.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
@@ -394,7 +394,7 @@
                 <div class="row">
                     <div class="col-12 text-center mb-5">
                         <h2 class="mb-4">@Resource.See_a_demo_online_menu</h2>
-                        <p class="lead mb-5">@Resource.Just_open_the_camera_on_your_phone_and_scan_the_QR_code_below_ <span class="font-weight-bolder">QR code</span> below!</p>
+                        <p class="lead mb-5">@Resource.Just_open_the_camera_on_your_phone_and_scan_the_QR_code_below_ </p>
                         <a href="#" class="icon icon-lg text-gray mr-3">
                             <img style="width:300px" src="~/Content/images/qrdemo.jpg" />
 
@@ -418,7 +418,7 @@
                 <div class="row">
                     <div class="col pb-4 mb-md-0">
                         <div class="d-flex text-center justify-content-center align-items-center">
-                            <p class="font-weight-normal mb-0">© Team I Group <span class="current-year"></span>. @Resource.All_rights_reserved .</p>
+                            <p class="font-weight-normal mb-0"> @Resource.All_rights_reserved <span class="current-year"></span> © Team I Group </p>
                         </div>
                     </div>
                 </div>
