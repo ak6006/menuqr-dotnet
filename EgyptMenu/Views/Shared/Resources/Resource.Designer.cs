@@ -215,7 +215,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create a digital menu for your Restaurant or coffee.
+        ///   Looks up a localized string similar to Create a digital menu for your Restaurant or cafe.
         /// </summary>
         public static string Create_a_digital_menu_for_your_Restaurant_or_Bar {
             get {
@@ -521,7 +521,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to If you run a small restaurant or coffee , or just need the basics, this plan is great..
+        ///   Looks up a localized string similar to If you run a small restaurant or cafe , or just need the basics, this plan is great..
         /// </summary>
         public static string If_you_run_a_small_restaurant_or_bar__or_just_need_the_basics__this_plan_is_great_ {
             get {
@@ -910,7 +910,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Phone.
+        ///   Looks up a localized string similar to Mobile number.
         /// </summary>
         public static string Phone {
             get {
@@ -991,7 +991,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Product.
+        ///   Looks up a localized string similar to Services.
         /// </summary>
         public static string Product {
             get {
@@ -1181,7 +1181,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restaurant or Coffe name.
+        ///   Looks up a localized string similar to Restaurant or Cafe name.
         /// </summary>
         public static string Restaurant_or_bar_name {
             get {
@@ -1199,7 +1199,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restaurants and Coffe that love our QRs.
+        ///   Looks up a localized string similar to Restaurants and Cafe that love our QRs.
         /// </summary>
         public static string Restaurants_and_Bars_that_love_our_QRs {
             get {
@@ -1379,7 +1379,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Testimonials.
+        ///   Looks up a localized string similar to Reviews.
         /// </summary>
         public static string Testimonials {
             get {
@@ -1397,7 +1397,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The most comprehensive platform for QR digital menu.
+        ///   Looks up a localized string similar to The comprehensive system of digital menu using the QR code through your phone&apos;s camera.
         /// </summary>
         public static string The_most_comprehensive_platform_for_QR_digital_menu {
             get {
@@ -1569,7 +1569,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your email.
+        ///   Looks up a localized string similar to e-mail.
         /// </summary>
         public static string Your_email {
             get {

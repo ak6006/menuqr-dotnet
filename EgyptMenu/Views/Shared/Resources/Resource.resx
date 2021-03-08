@@ -169,7 +169,7 @@
     <value>Create a Digital Menu</value>
   </data>
   <data name="Create a digital menu for your Restaurant or Bar" xml:space="preserve">
-    <value>Create a digital menu for your Restaurant or coffee</value>
+    <value>Create a digital menu for your Restaurant or cafe</value>
   </data>
   <data name="Create a menu for you, now!" xml:space="preserve">
     <value>Create a menu for you, now</value>
@@ -271,7 +271,7 @@
     <value>Go Mobile</value>
   </data>
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
-    <value>If you run a small restaurant or coffee , or just need the basics, this plan is great.</value>
+    <value>If you run a small restaurant or cafe , or just need the basics, this plan is great.</value>
   </data>
   <data name="Images" xml:space="preserve">
     <value>Images</value>
@@ -400,7 +400,7 @@
     <value>Performance</value>
   </data>
   <data name="Phone" xml:space="preserve">
-    <value>Phone</value>
+    <value>Mobile number</value>
   </data>
   <data name="Pick QR color" xml:space="preserve">
     <value>Pick QR color</value>
@@ -427,7 +427,7 @@
     <value>Pro yearly</value>
   </data>
   <data name="Product" xml:space="preserve">
-    <value>Product</value>
+    <value>Services</value>
   </data>
   <data name="QR builder" xml:space="preserve">
     <value>QR builder</value>
@@ -490,13 +490,13 @@
     <value>Restaurant Name here </value>
   </data>
   <data name="Restaurant or bar name" xml:space="preserve">
-    <value>Restaurant or Coffe name</value>
+    <value>Restaurant or Cafe name</value>
   </data>
   <data name="Restaurants" xml:space="preserve">
     <value>Restaurants</value>
   </data>
   <data name="Restaurants and Bars that love our QRs" xml:space="preserve">
-    <value>Restaurants and Coffe that love our QRs</value>
+    <value>Restaurants and Cafe that love our QRs</value>
   </data>
   <data name="Richard Thomas Burger 2Go" xml:space="preserve">
     <value>Richard Thomas Burger 2Go</value>
@@ -556,13 +556,14 @@
     <value>System status</value>
   </data>
   <data name="Testimonials" xml:space="preserve">
-    <value>Testimonials</value>
+    <value>Reviews</value>
   </data>
   <data name="text align" xml:space="preserve">
     <value>text-align:left</value>
   </data>
+  
   <data name="The most comprehensive platform for QR digital menu" xml:space="preserve">
-    <value>The most comprehensive platform for QR digital menu</value>
+    <value>The comprehensive system of digital menu using the QR code through your phone's camera</value>
   </data>
   <data name="Their mobile is your menu now" xml:space="preserve">
     <value>Their mobile is your menu now</value>
@@ -619,6 +620,6 @@
     <value>You dont have any plans</value>
   </data>
   <data name="Your email" xml:space="preserve">
-    <value>Your email</value>
+    <value>e-mail</value>
   </data>
 </root>
