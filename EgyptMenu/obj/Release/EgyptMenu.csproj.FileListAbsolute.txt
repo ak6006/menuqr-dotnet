@@ -1538,3 +1538,4 @@ G:\Team I\menuqr\EgyptMenu\obj\Release\ar\EgyptMenu.resources.dll
 G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.csproj.CopyComplete
 G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.dll
 G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.pdb
+C:\Users\Team-I Group\Desktop\menuqr\EgyptMenu\obj\Release\EgyptMenu.GeneratedMSBuildEditorConfig.editorconfig

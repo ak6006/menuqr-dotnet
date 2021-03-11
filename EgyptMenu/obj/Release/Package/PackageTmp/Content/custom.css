@@ -10,14 +10,8 @@
     }
 }*/
 
-@font-face {
-    font-family: 'fontawesome-webfont';
-    src: url('Fonts/fontawesome-webfont.ttf') format('truetype');
-}
 
-.header-h{
-    font-family:fontawesome-webfont;
-}
+
 
 .grayscale-05:before {
     position: absolute;
@@ -1141,3 +1135,10 @@ a:hover {
     padding: 0;
     margin-bottom: -5.8rem;
   }
+@font-face {
+    font-family: 'fontawesome-webfont';
+    src: url('Fonts/fontawesome-webfont.ttf') format('truetype');
+}
+.header-h {
+    font-family: 'Satisfy', sans-serif;
+}
