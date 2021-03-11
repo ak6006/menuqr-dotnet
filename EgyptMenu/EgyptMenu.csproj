@@ -729,6 +729,7 @@
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\7up.jpg" />
     <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="Content\images\background menu.png" />
     <Content Include="Content\images\background_pattern.png" />
     <Content Include="Content\images\background_pattern5.png" />
     <Content Include="Content\images\bottom_left.png" />

@@ -630,7 +630,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to عربي.
+        ///   Looks up a localized string similar to ع.
         /// </summary>
         public static string language {
             get {
@@ -657,7 +657,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Login.
+        ///   Looks up a localized string similar to LOGIN.
         /// </summary>
         public static string Login {
             get {
@@ -1055,7 +1055,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Register.
+        ///   Looks up a localized string similar to REGISTER.
         /// </summary>
         public static string Registration {
             get {

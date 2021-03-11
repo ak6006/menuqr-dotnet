@@ -307,7 +307,7 @@
     <value>ar</value>
   </data>
   <data name="language" xml:space="preserve">
-    <value>عربي</value>
+    <value>ع</value>
   </data>
   <data name="Location" xml:space="preserve">
     <value>Location</value>
@@ -316,7 +316,7 @@
     <value>Log out</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Login</value>
+    <value>LOGIN</value>
   </data>
   <data name="Logo" xml:space="preserve">
     <value>Logo</value>
@@ -448,7 +448,7 @@
     <value>Register your restaurant</value>
   </data>
   <data name="Registration" xml:space="preserve">
-    <value>Register</value>
+    <value>REGISTER</value>
   </data>
   <data name="Remember me" xml:space="preserve">
     <value>Remember me</value>
@@ -561,7 +561,6 @@
   <data name="text align" xml:space="preserve">
     <value>text-align:left</value>
   </data>
-  
   <data name="The most comprehensive platform for QR digital menu" xml:space="preserve">
     <value>The comprehensive system of digital menu using the QR code through your phone's camera</value>
   </data>
