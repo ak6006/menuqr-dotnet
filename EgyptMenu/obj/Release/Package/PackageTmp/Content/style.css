@@ -5,11 +5,12 @@
     Author URL: https://bootstrapmade.com
 */
 
-@font-face {
-    font-family: "Satisfy";
-    font-weight: 400;
-    src: url("../../Content/Fonts/fontawesome-webfont.woff");
+
+
+.header-h {
+    font-family: 'Satisfy', sans-serif;
 }
+
 
 
 body {
@@ -17,7 +18,7 @@ body {
     line-height: 1.52;
     color: #717f86;
     font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
     font-weight: 400;
     overflow-x: hidden;
 }
