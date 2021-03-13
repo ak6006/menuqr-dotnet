@@ -737,6 +737,8 @@
     <Content Include="Content\images\bottom_left.png" />
     <Content Include="Content\images\bottom_right.png" />
     <Content Include="Content\images\Head_2.png" />
+    <Content Include="Content\images\head_strip.png" />
+    <Content Include="Content\images\IMAGE_2.png" />
     <Content Include="Content\images\Mahmoud.jpg" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
