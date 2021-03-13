@@ -8,7 +8,7 @@
     }
     else
     {
-        if (HttpContext.Current.Session["lang"]!=null)
+        if (HttpContext.Current.Session["lang"] != null)
         {
             Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
             HttpContext.Current.Session.Add("lang", HttpContext.Current.Session["lang"].ToString());
@@ -16,7 +16,7 @@
         else
         {
             Culture = UICulture = "en";
-            HttpContext.Current.Session.Add("lang","en" );
+            HttpContext.Current.Session.Add("lang", "en");
         }
 
 
@@ -98,7 +98,7 @@
     <link href="~/Content/front.css" rel="stylesheet" />
     <link href="~/Content/new-style.css" rel="stylesheet" />
 </head>
-<body >
+<body>
 
     <header class="header-global">
         <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg headroom text-light" style="background-color: #19526e">
@@ -107,15 +107,15 @@
                     <img class="navbar-brand-dark LogoIMG" src="~/Content/images/logo_qrzebra.png" alt="Logo">
                     @*<img class="navbar-brand-light LogoIMG" src="~/Content/images/logo_qrzebra.png"  alt="Logo">*@
                 </a>
-                <div class="navbar-collapse collapse pl-5" id="navbar_global" style="@Resource.text_align">
+                <div class="navbar-collapse collapse px-5" id="navbar_global" style="background-color:#19526e ;@Resource.text_align">
                     <div class="navbar-collapse-header">
                         <div class="row">
-                            <div class="col-6 collapse-brand">
+                            <div class="col-6 collapse-brand p-0">
                                 <a href="/">
-                                    <img src="~/Content/images/logo_qrzebra.png" height="35" style="height:65px" alt="Logo">
+                                    <img src="~/Content/images/logo_qrzebra.png" style="height:65px" alt="Logo">
                                 </a>
                             </div>
-                            <div class="col-6 collapse-close">
+                            <div class="col-6 collapse-close ">
                                 <a href="#navbar_global" role="button" class="fas fa-times" data-toggle="collapse"
                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
                                    aria-label="Toggle navigation"></a>
@@ -158,7 +158,7 @@
                 </div>
                 <div class=" cta_button_classes">
                     @{Html.RenderPartial("_LoginPartial");}
-                    <a class="btn btn-outline-dark" href="@Url.Action("Index","Home" ,new { lang=Resource.lang})">@Resource.language</a>
+                    <a class="btn" style=" background-color:#ffa822; color:white;" href="@Url.Action("Index","Home" ,new { lang=Resource.lang})">@Resource.language</a>
                 </div>
                 <div class="d-flex d-lg-none align-items-center">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
@@ -181,7 +181,7 @@
         </div>
 
         <!-- Hero 1 -->
-        <section class="section-header pb-6 pb-lg-6" style="background-image:url('Content/images/background menu.png'); background-size:cover;background-repeat: no-repeat;background-attachment: fixed;" @*style=@Resource.text_align*@>
+        <section class="section-header pb-6 pb-lg-6 indexbg" @*style=@Resource.text_align*@>
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-12 col-md-5 order-2 order-lg-1" style="@Resource.text_align">
@@ -192,7 +192,7 @@
                                 <input class="form-control" style="border-radius:15px;" type="text" name="name" placeholder="@Resource.Restaurant_or_bar_name" required>
                                 <input class="form-control my-3" style="border-radius:15px;" type="email" name="email" placeholder="@Resource.Your_email" required>
                                 <input class="form-control my-1" style="border-radius:15px;" type="text" name="phone" placeholder="@Resource.Phone" required>
-                                <button class="btn  my-3 " style="width:30%; background-color:#ffa822;color:white;" type="submit">@Resource.Join_now !</button>
+                                <button class="btn  my-3 " style="width:50%; background-color:#ffa822;color:white;" type="submit">@Resource.Join_now !</button>
                             </form>
                         </div>
                     </div>
@@ -218,12 +218,12 @@
         </section>
 
 
-        <section class="section section-lg" style="background-image:url('Content/images/background menu.png'); background-size:cover;background-repeat: no-repeat;background-attachment: fixed;">
+        <section class="section section-lg indexbg">
             <div class="container">
-                
+
                 <div class="row text-center">
                     <div class="col-12 col-md-6 col-lg-4 mb-5" style=" padding:15px; border:1px solid #ffa822; border-radius:15px;">
-                        <div class="card shadow-soft" >
+                        <div class="card shadow-soft">
                             <div class="card-header p-0">
                                 <img src="~/Content/images/menubuilder.jpg" class="card-img-top rounded-top" alt="image">
                             </div>
@@ -306,72 +306,80 @@
         <!-- Pricing -->
         <!-- Testimonials -->
         <!-- Testimonials -->
-        <section id="testimonials" class="section section-lg">
+        <section id="testimonials" class="section section-lg" style="background-color:#19526e; color:#19526e;">
             <div class="container">
                 <div class="row justify-content-center mb-5 mb-lg-7">
                     <div class="col-12 col-md-8 text-center">
-                        <h1 class="h1 font-weight-bolder mb-4">@Resource.Restaurants_and_Bars_that_love_our_QRs</h1>
-                        <p class="lead">@Resource.Used_by_top_restaurants_worldwide</p>
+                        <h1 class="h1 font-weight-bolder mb-4" style="color:white">@Resource.Restaurants_and_Bars_that_love_our_QRs</h1>
+                        <p class="lead" style="color:#ffa822;">@Resource.Used_by_top_restaurants_worldwide</p>
                     </div>
                 </div>
                 <div class="row mb-lg-5" dir="ltr">
                     <div class="col-12 col-lg-6">
                         <div class="customer-testimonial d-flex mb-5">
-                            <img src="https://randomuser.me/api/portraits/men/74.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
-                            <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
-                                <div class="d-flex mb-4">
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                            <img src="~/Content/images/Ahmed.png" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light  position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">" @Resource.We_use_QR_Menu_Maker_to_protect_our_visitors__Dirty_old_menus_are_a_thing_from_the_past__So_far_clients_report_no_issues__And_they_love_our_new_online_menu."</p>
+                                    <span class="h6">- Ahmed Elgbaly <small class="ml-0 ml-md-2">Brooklyn Taco</small></span>
                                 </div>
-                                <p class="mt-2">" @Resource.We_use_QR_Menu_Maker_to_protect_our_visitors__Dirty_old_menus_are_a_thing_from_the_past__So_far_clients_report_no_issues__And_they_love_our_new_online_menu."</p>
-                                <span class="h6">- James Curran <small class="ml-0 ml-md-2">Brooklyn Taco</small></span>
                             </div>
                         </div>
                         <div class="customer-testimonial d-flex mb-5">
-                            <img src="https://randomuser.me/api/portraits/men/62.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
-                            <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
-                                <div class="d-flex mb-4">
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                            <img src="~/Content/images/Mahmoud.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light  position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">"@Resource.QR_Menu_Maker_was_the_perfect_tool_for_the_COVID_situation__We_should_go_earlier_to_this_type_of_menu"</p>
+                                    <span class="h6">- Mahmoud Gaber <small class="ml-0 ml-md-2">Burger 2Go</small></span>
                                 </div>
-                                <p class="mt-2">"@Resource.QR_Menu_Maker_was_the_perfect_tool_for_the_COVID_situation__We_should_go_earlier_to_this_type_of_menu"</p>
-                                <span class="h6">- Richard Thomas <small class="ml-0 ml-md-2">Burger 2Go</small></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-6 pt-lg-6">
                         <div class="customer-testimonial d-flex mb-5">
-                            <img src="https://randomuser.me/api/portraits/women/32.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
-                            <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
-                                <div class="d-flex mb-4">
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                            <img src="~/Content/images/Amoury.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">"@Resource.No_more_printing_and_reprinting_for_some_small_mistake_in_our_menu_or_price_change__We_love_what_QR_Menu_Maker_have_provided "</p>
+                                    <span class="h6">- Amr IT-Voda <small class="ml-0 ml-md-2">Awang Italian Restaurant</small></span>
                                 </div>
-                                <p class="mt-2">"@Resource.No_more_printing_and_reprinting_for_some_small_mistake_in_our_menu_or_price_change__We_love_what_QR_Menu_Maker_have_provided "</p>
-                                <span class="h6">- Jessica Evans <small class="ml-0 ml-md-2">Awang Italian Restaurant</small></span>
                             </div>
                         </div>
                         <div class="customer-testimonial d-flex mb-5">
                             <img src="https://randomuser.me/api/portraits/men/61.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
-                            <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
-                                <div class="d-flex mb-4">
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
-                                    <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light  position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">" @Resource.Clients_are_happy__They_can_see_that_we_are_a_responsible_bar_and_their_health_is_a_priority__No_more_old_dirty_menus__D__All_they_need_is_their_phone."</p>
+                                    <span class="h6">- Abdullah Rafat <small class="ml-0 ml-md-2">Malibu Diner</small></span>
                                 </div>
-                                <p class="mt-2">" @Resource.Clients_are_happy__They_can_see_that_we_are_a_responsible_bar_and_their_health_is_a_priority__No_more_old_dirty_menus__D__All_they_need_is_their_phone."</p>
-                                <span class="h6">- Jason Edwards <small class="ml-0 ml-md-2">Malibu Diner</small></span>
                             </div>
                         </div>
                     </div>
@@ -382,34 +390,29 @@
 
         <!-- DEMO -->
         <!-- DEMO -->
-        <section id="demo" class="section section-lg pb-5 bg-soft">
+        <section id="demo" class="section section-lg pb-5 indexbg">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center mb-5">
-                        <h2 class="mb-4">@Resource.See_a_demo_online_menu</h2>
-                        <p class="lead mb-5">@Resource.Just_open_the_camera_on_your_phone_and_scan_the_QR_code_below_ </p>
-                        <a href="#" class="icon icon-lg text-gray mr-3">
-                            <img style="width:300px" src="~/Content/images/qrdemo.jpg" />
-
+                        <h2 class="mb-4" style="color:#19526e; font-weight:900;">@Resource.See_a_demo_online_menu</h2>
+                        <p class="lead mb-5" style="color:#ffa822;">@Resource.Just_open_the_camera_on_your_phone_and_scan_the_QR_code_below_ </p>
+                        <a href="#" class="icon icon-lg text-gray mr-3" style="padding:5px; border:1px solid #ffa822; border-radius:0 0 20px 20px;">
+                            <img style="width:300px; border-radius:0 0 20px 20px;" src="~/Content/images/qrdemo.jpg"/>
                         </a>
-
                     </div>
                     <div class="col-12 text-center">
                         <!-- Button Modal -->
-                        <a href="@Url.Action("register", "Account")" class="btn btn-secondary animate-up-2"><span class="mr-2"><i class="fas fa-hand-pointer ml-2"></i></span>@Resource.Create_a_menu_for_you__now_ !</a>
+                        <a href="@Url.Action("register", "Account")" class="btn animate-up-2" style="background-color:#ffa822; color:white;">@Resource.Create_a_menu_for_you__now_ !</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="footer section  pb-3 pt-1 bg-primary text-white overflow-hidden">
-
+        <footer class="footer section  py-4  text-white overflow-hidden" style="background-color:#19526e;">
             <div class="container">
-
-                <hr class="my-4 my-lg-5">
                 <div class="row">
-                    <div class="col pb-4 mb-md-0">
+                    <div class="col  mb-md-0">
                         <div class="d-flex text-center justify-content-center align-items-center">
                             <p class="font-weight-normal mb-0"> @Resource.All_rights_reserved <span class="current-year"></span> © Team I Group </p>
                         </div>

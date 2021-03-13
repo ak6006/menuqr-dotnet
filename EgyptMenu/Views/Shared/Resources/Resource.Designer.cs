@@ -224,7 +224,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create a menu for you, now.
+        ///   Looks up a localized string similar to Create a menu for you  NOW.
         /// </summary>
         public static string Create_a_menu_for_you__now_ {
             get {

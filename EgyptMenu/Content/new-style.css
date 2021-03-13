@@ -1,4 +1,10 @@
-﻿
+﻿.indexbg {
+    background-image: url('images/backgroundmenu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 @font-face {
     font-family: AmericanTypewriter;
     src: url('/Content/Fonts/AmericanTypewriter.ttc');

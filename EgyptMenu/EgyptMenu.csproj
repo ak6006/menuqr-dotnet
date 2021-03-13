@@ -728,13 +728,16 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\7up.jpg" />
+    <Content Include="Content\images\Ahmed.png" />
+    <Content Include="Content\images\Amoury.jpg" />
     <Content Include="Content\images\apple-touch-icon.png" />
-    <Content Include="Content\images\background menu.png" />
+    <Content Include="Content\images\backgroundmenu.png" />
     <Content Include="Content\images\background_pattern.png" />
     <Content Include="Content\images\background_pattern5.png" />
     <Content Include="Content\images\bottom_left.png" />
     <Content Include="Content\images\bottom_right.png" />
     <Content Include="Content\images\Head_2.png" />
+    <Content Include="Content\images\Mahmoud.jpg" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
     <Content Include="Content\images\ChickenBarbicue.jpg" />
