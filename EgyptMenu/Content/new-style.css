@@ -37,9 +37,11 @@
 @media only screen and (max-width: 500px) {
     .navbar-brand {
         width: 100%;
+        margin-bottom: 15px !important;
         text-align:center;
     }
     .LogoIMG {
+        
         height: 15vw !important;
         margin: auto;
     }

@@ -18,16 +18,10 @@
             Culture = UICulture = "en";
             HttpContext.Current.Session.Add("lang", "en");
         }
-
-
     }
 }
-
-
 <html lang=@Resource.language dir=@Resource.direction>
-
 <head>
-    <!-- Primary Meta Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="~/Content/images/apple-icon.png">
@@ -36,15 +30,10 @@
     <meta property="og:image" content="~/Content/images/logo_qrzebra.png">
     <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
     <title>QR Menu Maker</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- Web Application Manifest-->
-    <!-- Chrome for Android theme color -->
     <meta name="theme-color" content="#000000">
-    <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="QR Menu Maker">
     <link rel="icon" sizes="256x256" href="android-chrome-256x256.png">
-    <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="QR Menu Maker">
@@ -59,63 +48,36 @@
     <link href="~/Content/images/icons/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="~/Content/images/icons/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="~/Content/images/icons/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-    <!-- Tile for Win8 -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
-
-    @*<script type="text/javascript">
-            // Initialize the service worker
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/serviceworker.js', {
-                    scope: '.'
-                }).then(function (registration) {
-                    // Registration was successful
-                    console.log('Laravel PWA: ServiceWorker registration successful with scope: ', registration.scope);
-                }, function (err) {
-                    // registration failed :(
-                    console.log('Laravel PWA: ServiceWorker registration failed: ', err);
-                });
-            }
-        </script>*@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    @*<link rel="manifest" href="/site.webmanifest">*@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
-
-    <!-- Fontawesome -->
-    <!-- Nucleo icons -->
     <link href="~/Content/nucleo.css" rel="stylesheet" />
-    <!-- Front CSS -->
     <link href="~/Content/front.min.css" rel="stylesheet" />
-    <!-- Custom CSS by mobidonia -->
-
     <link href="~/Content/custom_qr.css" rel="stylesheet" />
-    <!-- Custom CSS defined by admin -->
     <link href="~/Content/front.css" rel="stylesheet" />
     <link href="~/Content/new-style.css" rel="stylesheet" />
 </head>
 <body>
-
     <header class="header-global">
         <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg headroom text-light" style="background-color: #19526e">
             <div class="container">
                 <a class="navbar-brand logo_classes" href="/">
                     <img class="navbar-brand-dark LogoIMG" src="~/Content/images/logo_qrzebra.png" alt="Logo">
-                    @*<img class="navbar-brand-light LogoIMG" src="~/Content/images/logo_qrzebra.png"  alt="Logo">*@
                 </a>
                 <div class="navbar-collapse collapse px-5" id="navbar_global" style="background-color:#19526e ;@Resource.text_align">
                     <div class="navbar-collapse-header">
                         <div class="row">
-                            <div class="col-6 collapse-brand p-0">
+                            <div class="col-10 collapse-brand p-0">
                                 <a href="/">
-                                    <img src="~/Content/images/logo_qrzebra.png" style="height:65px" alt="Logo">
+                                    <img src="~/Content/images/logo_qrzebra.png" style="height:75px" alt="Logo">
                                 </a>
                             </div>
-                            <div class="col-6 collapse-close ">
+                            <div class="col-2 collapse-close ">
                                 <a href="#navbar_global" role="button" class="fas fa-times" data-toggle="collapse"
                                    data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
                                    aria-label="Toggle navigation"></a>
@@ -125,9 +87,6 @@
                     <ul class="navbar-nav navbar-nav-hover justify-content-center p-0">
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <a data-scroll href="#product" class="nav-link">@Resource.Product</a>
-                            @*<h1>
-                                    @HttpContext.Current.Session["lang"];
-                                </h1>*@
                         </li>
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                             <a data-scroll href="#pricing" class="nav-link">@Resource.Pricing</a>
@@ -139,28 +98,13 @@
                             <a data-scroll href="#demo" class="nav-link">@Resource.Demo</a>
                         </li>
                         <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show" style="margin-top:8px;">
-
                         </li>
-                        @*<li class="nav-item " data-toggle="collapse" data-target=".navbar-collapse.show">
-                                <form id="langswitch " name="langswitch">
-                                    <select onchange="this.form.submit()" class="  language_selector_qr nav-link" id="lang" style="color:gray" name="lang">
-                                        <option selected value="EN">English</option>
-                                        <option value="FR">French</option>
-                                        <option value="DE">German</option>
-                                        <option value="ES">Spanish</option>
-                                        <option value="RU">Russian</option>
-                                        <option value="PT">Portuguese</option>
-                                        <option value="TR">Turkish</option>
-                                    </select>
-                                </form>
-                            </li>*@
                     </ul>
                 </div>
                 <div class=" cta_button_classes">
                     @{Html.RenderPartial("_LoginPartial");}
-                    
                 </div>
-                <div class="d-flex d-lg-none align-items-center" >
+                <div class="d-flex d-lg-none align-items-center" style="margin:auto;">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
                             aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -169,9 +113,7 @@
             </div>
         </nav>
     </header>
-
     <main>
-
         <!-- Loader -->
         <div class="preloader bg-soft flex-column justify-content-center align-items-center">
             <div class="loader-element">
@@ -179,9 +121,8 @@
                 <img src="~/Content/images/logo_qrzebra.png" height="40" alt="logo">
             </div>
         </div>
-
         <!-- Hero 1 -->
-        <section class="section-header pb-6 pb-lg-6 indexbg" @*style=@Resource.text_align*@>
+        <section class="section-header pb-6 pb-lg-6 indexbg">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-12 col-md-5 order-2 order-lg-1" style="@Resource.text_align">
@@ -199,12 +140,9 @@
                     <div class="col-12 col-md-6 order-1 order-lg-2">
                         <img src="~/Content/images/flayer.png" />
                     </div>
-
                 </div>
             </div>
-            @*<div class="pattern bottom"></div>*@
         </section>
-
         <!-- Product -->
         <section id="product" class="section section-lg py-5" style="background-color:#19526e;">
             <div class="container">
@@ -216,11 +154,8 @@
                 </div>
             </div>
         </section>
-
-
         <section class="section section-lg indexbg">
             <div class="container">
-
                 <div class="row text-center">
                     <div class="col-12 col-md-6 col-lg-4 mb-5" style=" padding:15px; border:1px solid #ffa822; border-radius:15px;">
                         <div class="card shadow-soft">
@@ -303,8 +238,6 @@
                 </div>
             </div>
         </section>
-        <!-- Pricing -->
-        <!-- Testimonials -->
         <!-- Testimonials -->
         <section id="testimonials" class="section section-lg" style="background-color:#19526e; color:#19526e;">
             <div class="container">
@@ -384,11 +317,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
-        <!-- DEMO -->
         <!-- DEMO -->
         <section id="demo" class="section section-lg pb-5 indexbg">
             <div class="container">
@@ -397,7 +327,7 @@
                         <h2 class="mb-4" style="color:#19526e; font-weight:900;">@Resource.See_a_demo_online_menu</h2>
                         <p class="lead mb-5" style="color:#ffa822;">@Resource.Just_open_the_camera_on_your_phone_and_scan_the_QR_code_below_ </p>
                         <a href="#" class="icon icon-lg text-gray mr-3" style="padding:5px; border:1px solid #ffa822; border-radius:0 0 20px 20px;">
-                            <img style="width:300px; border-radius:0 0 20px 20px;" src="~/Content/images/qrdemo.jpg"/>
+                            <img style="width:300px; border-radius:0 0 20px 20px;" src="~/Content/images/qrdemo.jpg" />
                         </a>
                     </div>
                     <div class="col-12 text-center">
@@ -407,7 +337,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Footer -->
         <footer class="footer section  py-4  text-white overflow-hidden" style="background-color:#19526e;">
             <div class="container">
@@ -421,26 +350,20 @@
             </div>
         </footer>
     </main>
-
     <!-- Core -->
     <script src="~/Content/JS/jquery.min.js"></script>
     <script src="~/Content/JS/popper.min.js"></script>
     <script src="~/Content/JS/bootstrap.min.js"></script>
     <script src="~/Content/JS/headroom.min.js"></script>
     <!-- Vendor JS -->
-
     <script src="~/Content/JS/on-screen.umd.min.js"></script>
     <script src="~/Content/JS/smooth-scroll.polyfills.min.js"></script>
     <script src="~/Content/JS/jquery.waypoints.min.js"></script>
     <script src="~/Content/JS/jarallax.min.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-
     <!-- Impact JS -->
     <script src="~/Content/JS/front.js"></script>
     <!-- Custom JS defined by admin -->
-
-
 </body>
-
 </html>
