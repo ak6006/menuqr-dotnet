@@ -734,11 +734,13 @@
     <Content Include="Content\images\backgroundmenu.png" />
     <Content Include="Content\images\background_pattern.png" />
     <Content Include="Content\images\background_pattern5.png" />
+    <Content Include="Content\images\bottom.png" />
     <Content Include="Content\images\bottom_left.png" />
     <Content Include="Content\images\bottom_right.png" />
     <Content Include="Content\images\Head_2.png" />
     <Content Include="Content\images\head_strip.png" />
     <Content Include="Content\images\IMAGE_2.png" />
+    <Content Include="Content\images\left_top.png" />
     <Content Include="Content\images\Mahmoud.jpg" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
@@ -752,7 +754,9 @@
     <Content Include="Content\images\LiverBarbeque.jpg" />
     <Content Include="Content\images\MeatBarbicue.jpg" />
     <Content Include="Content\images\MeatPizza.jpg" />
+    <Content Include="Content\images\middle_top.png" />
     <Content Include="Content\images\profile-cover.jpg" />
+    <Content Include="Content\images\right_top.png" />
     <Content Include="Content\images\SausagePizza.png" />
     <Content Include="Content\images\SeezarSalad.jpg" />
     <Content Include="Content\images\TahiniSalad.jpg" />

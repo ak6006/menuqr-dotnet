@@ -360,126 +360,10 @@
                 </div>
             </div>
         }
-        else if (Model.themes_id == 2)
-        {
-            <section style="background-color:rgb(999,999,200)" id="menu-list" class="section-padding">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center marb-35">
-                            <h1 class="header-h" style="font-family: FontAwesome !important">Menu List</h1>
-                            <p class="header-p">
-                                @Model.description
-                            </p>
-                        </div>
+        //else if (Model.themes_id == 2)
+        //{
 
-                        <div class="col-md-12  text-center" id="menu-flters">
-                            <ul>
-                                <li><a class="filter active" data-filter=".menu-restaurant">Show All</a></li>
-                                @foreach (var item in Model.categories)
-                                {
-                                    <li><a class="filter" data-filter=".@item.name.Replace(" ","")">@item.name</a></li>
-                                }
-
-                            </ul>
-                        </div>
-
-                        <div id="menu-wrapper">
-                            @foreach (var item in Model.categories)
-                            {
-                                foreach (var item1 in item.items)
-                                {
-                                    <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" class="menu-restaurant @item.name.Replace(" ","") ">
-                                        <span class="clearfix">
-                                            <a class="menu-title" data-meal-img="assets/img/restaurant/rib.jpg">@item1.name</a>
-                                            <span style="left: 166px; right: 44px;" class="menu-line"></span>
-                                            <span class="menu-price">@item1.price EGP</span>
-                                        </span>
-                                        <span class="menu-subtitle">@item1.description</span>
-                                    </div>
-                                    <div class="modal fade" id="@item1.name.Replace(" ","")" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="modalDialogItem">
-
-                                            <div class="modal-content">
-
-                                                <div class="modal-header">
-                                                    <h5 id="modalTitle" class="modal-title">@item1.name</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">×</span>
-                                                    </button>
-                                                </div>
-
-
-                                                <div class="modal-body p-0">
-                                                    <div class="card bg-secondary shadow border-0">
-                                                        <div class="card-body px-lg-5 py-lg-5">
-                                                            <div class="row">
-                                                                <div class="col-sm col-md col-lg text-center" id="modalImgPart">
-                                                                    <img id="modalImg" src="~/Content/images/@item1.image" width="295px" height="200px">
-                                                                </div>
-                                                                <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
-                                                                    <input id="modalID" type="hidden">
-                                                                    <span id="modalPrice" class="new-price">@item1.price EGP</span>
-                                                                    <p id="modalDescription">@item1.description</p>
-
-                                                                    <div id="exrtas-area" style="">
-                                                                        <br>
-                                                                        <label class="form-control-label" for="quantity">Extras</label>
-
-                                                                        <div id="exrtas-area-inside">
-                                                                            <div class=" mb-3">
-                                                                                @foreach (var item2 in item1.extras)
-                                                                                {
-                                                                                    <label>@item2.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+@item2.price EGP</label><br />
-                                                                                }
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div id="exrtas-area" style="">
-                                                                        <br>
-                                                                        <label class="form-control-label" for="quantity">Options</label>
-
-                                                                        <div id="exrtas-area-inside">
-                                                                            <div class=" mb-3">
-                                                                                @foreach (var item2 in item1.options)
-                                                                                {
-                                                                                    <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
-                                                                                        <div id="variants-area-3">
-                                                                                            <br>
-                                                                                            <label class="form-control-label"><b>@item2.name<b></b></b></label>
-                                                                                            <div>
-                                                                                                <div id="variants-area-inside-3" class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                                                                    <b><b> </b></b>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        @foreach (var item3 in item2.options_details)
-                                                                                        {
-                                                                                            <label style="opacity: 1" class="btn btn-outline-primary ">@item3.option_name</label>
-                                                                                        }
-                                                                                    </div>
-                                                                                }
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            }
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        }
+        //}
         else if (Model.themes_id == 3)
         {
             @*<script>
@@ -1063,6 +947,164 @@
             </div>
 
         }
+        else if (Model.themes_id == 8)
+        {
+            <div style=" text-align: center; color: #677335; background-image: url('../../Content/images/background_pattern5.png'); background-attachment: fixed;">
+                <div style=" border-right:4rem solid #cc763d;">
+                    <h1 class="mt-5 display-1" style="color: #677335; font-family: Amplify; line-height: .6;">Restaurant</h1>
+                    <h1 class="display-3 font-weight-bold" style="color:#cc763d; line-height: .6;">MENU</h1>
+                </div>
+                @foreach (var item in Model.categories)
+                {
+                    <div class="mt-5"></div>
+                    <div class="row w-100 p-0" style="margin: 0 !important;">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12 order-2 order-lg-1 my-auto mx-auto text-left" style="color: #677335; border-left:4rem solid #cc763d;">
+                            <h1 class="display-3 pl-3" style="font-family:Amplify; color: #677335;">@item.name</h1>
+                            @foreach (var item1 in item.items)
+                            {
+                                <span class="p-2"></span>
+                                <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="padding: 3px 15px; margin: auto;text-align: left; ">
+                                    <span class="float-left font-weight-bold" style="font-size: x-large; font-family: AmericanTypewriter; color: #cc763d;">@item1.name</span>
+                                    <span class="float-right font-weight-bold" style="font-size: x-large; font-family: AmericanTypewriter; color: #cc763d;">@item1.price EGP</span>
+                                    <div style="clear: both;"></div>
+                                    <span>@item1.description</span>
+                                </div>
+                                <div class="modal fade" id="@item1.name.Replace(" ","")" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="modalDialogItem">
+
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h5 id="modalTitle" class="modal-title">@item1.name</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+
+
+                                            <div class="modal-body p-0">
+                                                <div class="card bg-secondary shadow border-0">
+                                                    <div class="card-body px-lg-5 py-lg-5">
+                                                        <div class="row">
+                                                            <div class="col-sm col-md col-lg text-center" id="modalImgPart">
+                                                                <img id="modalImg" src="~/Content/images/@item1.image" width="295px" height="200px">
+                                                            </div>
+                                                            <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
+                                                                <input id="modalID" type="hidden">
+                                                                <span id="modalPrice" class="new-price">@item1.price EGP</span>
+                                                                <p id="modalDescription">@item1.description</p>
+
+                                                                <div id="exrtas-area" style="">
+                                                                    <br>
+                                                                    <label class="form-control-label" for="quantity">Extras</label>
+
+                                                                    <div id="exrtas-area-inside">
+                                                                        <div class=" mb-3">
+                                                                            @foreach (var item2 in item1.extras)
+                                                                            {
+                                                                                <label>@item2.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+@item2.price EGP</label><br />
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="exrtas-area" style="">
+                                                                    <br>
+                                                                    <label class="form-control-label" for="quantity">Options</label>
+
+                                                                    <div id="exrtas-area-inside">
+                                                                        <div class=" mb-3">
+                                                                            @foreach (var item2 in item1.options)
+                                                                            {
+                                                                                <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
+                                                                                    <div id="variants-area-3">
+                                                                                        <br>
+                                                                                        <label class="form-control-label"><b>@item2.name<b></b></b></label>
+                                                                                        <div>
+                                                                                            <div id="variants-area-inside-3" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                                                <b><b> </b></b>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    @foreach (var item3 in item2.options_details)
+                                                                                    {
+                                                                                        <label style="opacity: 1" class="btn btn-outline-primary ">@item3.option_name</label>
+                                                                                    }
+                                                                                </div>
+                                                                            }
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12 order-1 order-lg-2 my-auto mx-auto pr-0">
+                            <div style=" border-right:3rem solid #677335;">
+                                @if (item.items.Count > 0)
+                                {
+                                    <img src="~/Content/images/@item.items.First().image" style="width: 50%;  height:auto; border-radius: 50%; border: 4px solid #7d8a6c;">
+
+                                }
+                                else
+                                {
+                                    <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 50%; height:auto;  border-radius: 50%; border: 4px solid #7d8a6c;">
+
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+        }
+        else if (Model.themes_id == 9)
+        {
+            <div style="text-align:center;">
+                <img src="~/Content/images/left_top.png" class="float-left" style="width: 25%;">
+                <img src="~/Content/images/right_top.png" class="float-right" style="width: 25%;">
+                <img src="~/Content/images/middle_top.png" class="float-center mt-5" style="width: 30%;">
+                <div style="clear: both;">
+                    <hr style="border: 2px solid #f7aa40; margin-bottom: 4px; border-radius: 5px; width: 25%; background-color: #f7aa40; float: right;">
+                    <div style="clear: both;"></div>
+                    <div style="height: 30px; border: 1px solid #f7aa40; width: 35%;border-top-left-radius: 25px ; border-right: none; border-bottom-left-radius:25px; float: right;"></div>
+                </div>
+                <div style="clear: both;"></div>
+                <div class="row w-100 m-0 my-5 p-0">
+                    @foreach (var item in Model.categories)
+                    {
+                        <div class="col-md-6 text-center my-5 ">
+                            <div class="row">
+
+                                <div class="col-12 col-lg-8 offset-lg-2 pb-4" style="border-bottom: 10px dotted #f7aa40;">
+                                    <div class=" font-weight-bolder" style="color: black; margin: auto; width: 100%; margin-top: -40px; background-color: #f7aa40;  font-family: helvetica-neue; padding: 5px; border-radius: 50px; font-size: xx-large;"><span style="margin-top: -50px;">@item.name</span></div>
+                                    @foreach (var item1 in item.items)
+                                    {
+                                        <span class="p-2"></span>
+                                        <div style="padding: 3px 15px; margin: auto;text-align: left; color: #262628; font-size: large;">
+                                            <span class="float-left display-3" style="font-size: x-large; font-family:ArtographieBlack ;">@item1.name</span>&nbsp;
+                                            <span class="float-right p-2 text-center" style="font-size: large; background-color: #f7aa40; line-height: .9; border-radius: 50%;">@item1.price<br> EGP</span>
+                                            <div style="clear: both;"></div>
+                                            <span>@item1.description</span>
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div style="clear: both;"></div>
+                <img src="~/Content/images/bottom.png" class="float-center" style="width: 100%;">
+                <div style="clear: both;"></div>
+            </div>
+        }
         else
         {
             <section class="section section-lg d-md-block d-lg-none d-lx-none" style="padding-bottom: 0px">
@@ -1614,10 +1656,6 @@
                 }
             }
         </script>
-
-        <script src="~/Content/JS/jquery.easing.min.js"></script>
-        <script src="~/Content/JS/custom.js"></script>
-        <script src="~/Content/JS/holder.js"></script>
 
 </body>
 
