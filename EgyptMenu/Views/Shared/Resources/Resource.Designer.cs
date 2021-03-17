@@ -79,6 +79,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Actions.
+        /// </summary>
+        public static string Actions {
+            get {
+                return ResourceManager.GetString("Actions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Activate.
         /// </summary>
         public static string Activate {
@@ -93,6 +102,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Active {
             get {
                 return ResourceManager.GetString("Active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
             }
         }
         
@@ -133,11 +151,47 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Variant.
+        /// </summary>
+        public static string Add_Variant {
+            get {
+                return ResourceManager.GetString("Add Variant", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All rights reserved.
         /// </summary>
         public static string All_rights_reserved {
             get {
                 return ResourceManager.GetString("All rights reserved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this extras?.
+        /// </summary>
+        public static string Are_you_sure_you_want_to_delete_this_extras_ {
+            get {
+                return ResourceManager.GetString("Are you sure you want to delete this extras?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete this item?.
+        /// </summary>
+        public static string Are_you_sure_you_want_to_delete_this_item_ {
+            get {
+                return ResourceManager.GetString("Are you sure you want to delete this item?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back to items.
+        /// </summary>
+        public static string Back_to_items {
+            get {
+                return ResourceManager.GetString("Back to items", resourceCulture);
             }
         }
         
@@ -296,6 +350,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Demo.
         /// </summary>
         public static string Demo {
@@ -359,6 +422,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Options.
+        /// </summary>
+        public static string Edit_Options {
+            get {
+                return ResourceManager.GetString("Edit Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Profile.
         /// </summary>
         public static string Edit_Profile {
@@ -377,11 +449,29 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to EGP.
+        /// </summary>
+        public static string EGP {
+            get {
+                return ResourceManager.GetString("EGP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email.
         /// </summary>
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable variants.
+        /// </summary>
+        public static string Enable_variants {
+            get {
+                return ResourceManager.GetString("Enable variants", resourceCulture);
             }
         }
         
@@ -431,6 +521,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Extras.
+        /// </summary>
+        public static string Extras {
+            get {
+                return ResourceManager.GetString("Extras", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Extras and items variants.
         /// </summary>
         public static string Extras_and_items_variants {
@@ -445,6 +544,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string fixed_dir {
             get {
                 return ResourceManager.GetString("fixed dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to float-right.
+        /// </summary>
+        public static string floating_item {
+            get {
+                return ResourceManager.GetString("floating item", resourceCulture);
             }
         }
         
@@ -540,7 +648,16 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Item_description.
+        ///   Looks up a localized string similar to Item available.
+        /// </summary>
+        public static string Item_available {
+            get {
+                return ResourceManager.GetString("Item available", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item description.
         /// </summary>
         public static string Item_description {
             get {
@@ -554,6 +671,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Item_Image {
             get {
                 return ResourceManager.GetString("Item Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item information.
+        /// </summary>
+        public static string Item_information {
+            get {
+                return ResourceManager.GetString("Item information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item Management.
+        /// </summary>
+        public static string Item_Management {
+            get {
+                return ResourceManager.GetString("Item Management", resourceCulture);
             }
         }
         
@@ -572,6 +707,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Item_Price {
             get {
                 return ResourceManager.GetString("Item Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Item VAT percentage.
+        /// </summary>
+        public static string Item_VAT_percentage {
+            get {
+                return ResourceManager.GetString("Item VAT percentage", resourceCulture);
             }
         }
         
@@ -775,6 +919,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Options.
+        /// </summary>
+        public static string Options {
+            get {
+                return ResourceManager.GetString("Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Orders ( 30 days ).
         /// </summary>
         public static string Orders___30_days__ {
@@ -942,6 +1095,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Plans {
             get {
                 return ResourceManager.GetString("Plans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Price.
+        /// </summary>
+        public static string Price {
+            get {
+                return ResourceManager.GetString("Price", resourceCulture);
             }
         }
         
@@ -1397,6 +1559,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to text-right.
+        /// </summary>
+        public static string text_dir_class {
+            get {
+                return ResourceManager.GetString("text-dir class", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The comprehensive system of digital menu using the QR code through your phone&apos;s camera.
         /// </summary>
         public static string The_most_comprehensive_platform_for_QR_digital_menu {
@@ -1492,6 +1663,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string User_Name {
             get {
                 return ResourceManager.GetString("User Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Variants.
+        /// </summary>
+        public static string Variants {
+            get {
+                return ResourceManager.GetString("Variants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VAT percentage( calculated into item price ).
+        /// </summary>
+        public static string VAT_percentage {
+            get {
+                return ResourceManager.GetString("VAT percentage", resourceCulture);
             }
         }
         

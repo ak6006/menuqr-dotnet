@@ -142,8 +142,12 @@ namespace EgyptMenu.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register()
+        public ActionResult Register(string name , string email , string phone)
         {
+            
+            ViewBag.Name = name;
+            ViewBag.Email = email;
+            ViewBag.Number = phone;
             return View();
         }
 

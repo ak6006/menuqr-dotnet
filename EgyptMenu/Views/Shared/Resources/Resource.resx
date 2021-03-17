@@ -123,11 +123,17 @@
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value>8 different designs. Unlimited color options. Choose QR and Flayer style</value>
   </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
   <data name="Activate" xml:space="preserve">
     <value>Activate</value>
   </data>
   <data name="Active" xml:space="preserve">
     <value>Active</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
   </data>
   <data name="Add new category" xml:space="preserve">
     <value>Add new category</value>
@@ -141,8 +147,20 @@
   <data name="Add Restaurant" xml:space="preserve">
     <value>Add Restaurant</value>
   </data>
+  <data name="Add Variant" xml:space="preserve">
+    <value>Add Variant</value>
+  </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>All rights reserved</value>
+  </data>
+  <data name="Are you sure you want to delete this extras?" xml:space="preserve">
+    <value>Are you sure you want to delete this extras?</value>
+  </data>
+  <data name="Are you sure you want to delete this item?" xml:space="preserve">
+    <value>Are you sure you want to delete this item?</value>
+  </data>
+  <data name="Back to items" xml:space="preserve">
+    <value>Back to items</value>
   </data>
   <data name="Beautiful QR Styles" xml:space="preserve">
     <value>Beautiful QR Styles</value>
@@ -195,6 +213,9 @@
   <data name="Dedicated Support" xml:space="preserve">
     <value>Dedicated Support</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="Demo" xml:space="preserve">
     <value>Demo</value>
   </data>
@@ -216,14 +237,23 @@
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="Edit Options" xml:space="preserve">
+    <value>Edit Options</value>
+  </data>
   <data name="Edit Profile" xml:space="preserve">
     <value>Edit Profile</value>
   </data>
   <data name="Edit Restaurant Menu" xml:space="preserve">
     <value>Edit Restaurant Menu</value>
   </data>
+  <data name="EGP" xml:space="preserve">
+    <value>EGP</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Enable variants" xml:space="preserve">
+    <value>Enable variants</value>
   </data>
   <data name="Engage more with your customers" xml:space="preserve">
     <value>Engage more with your customers</value>
@@ -240,11 +270,17 @@
   <data name="Experience it" xml:space="preserve">
     <value>Experience it</value>
   </data>
+  <data name="Extras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
   <data name="Extras and items variants" xml:space="preserve">
     <value>Extras and items variants</value>
   </data>
   <data name="fixed dir" xml:space="preserve">
     <value>fixed-left</value>
+  </data>
+  <data name="floating item" xml:space="preserve">
+    <value>float-right</value>
   </data>
   <data name="Food Delivery from best restaurants" xml:space="preserve">
     <value>Food Delivery from best restaurants</value>
@@ -276,17 +312,29 @@
   <data name="Images" xml:space="preserve">
     <value>Images</value>
   </data>
+  <data name="Item available" xml:space="preserve">
+    <value>Item available</value>
+  </data>
   <data name="Item description" xml:space="preserve">
-    <value>Item_description</value>
+    <value>Item description</value>
   </data>
   <data name="Item Image" xml:space="preserve">
     <value>Item Image</value>
+  </data>
+  <data name="Item information" xml:space="preserve">
+    <value>Item information</value>
+  </data>
+  <data name="Item Management" xml:space="preserve">
+    <value>Item Management</value>
   </data>
   <data name="Item name" xml:space="preserve">
     <value>Item name</value>
   </data>
   <data name="Item Price" xml:space="preserve">
     <value>Item Price</value>
+  </data>
+  <data name="Item VAT percentage" xml:space="preserve">
+    <value>Item VAT percentage</value>
   </data>
   <data name="James Curran Brooklyn Taco" xml:space="preserve">
     <value>James Curran Brooklyn Taco</value>
@@ -354,6 +402,9 @@
   <data name="Number of restaurants" xml:space="preserve">
     <value>Number of restaurants</value>
   </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
   <data name="Orders ( 30 days )" xml:space="preserve">
     <value>Orders ( 30 days )</value>
   </data>
@@ -410,6 +461,9 @@
   </data>
   <data name="Plans" xml:space="preserve">
     <value>Plans</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
   </data>
   <data name="Pricing" xml:space="preserve">
     <value>Pricing</value>
@@ -561,6 +615,9 @@
   <data name="text align" xml:space="preserve">
     <value>text-align:left</value>
   </data>
+  <data name="text-dir class" xml:space="preserve">
+    <value>text-right</value>
+  </data>
   <data name="The most comprehensive platform for QR digital menu" xml:space="preserve">
     <value>The comprehensive system of digital menu using the QR code through your phone's camera</value>
   </data>
@@ -593,6 +650,12 @@
   </data>
   <data name="User Name" xml:space="preserve">
     <value>User Name</value>
+  </data>
+  <data name="Variants" xml:space="preserve">
+    <value>Variants</value>
+  </data>
+  <data name="VAT percentage" xml:space="preserve">
+    <value>VAT percentage( calculated into item price )</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
