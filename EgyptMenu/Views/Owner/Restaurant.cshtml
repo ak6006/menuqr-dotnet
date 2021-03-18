@@ -143,7 +143,39 @@
                         <div class="title white" style="border-bottom: 1px solid #f2f2f2;">
                             <h1 class="display-3 text-white" data-toggle="modal" data-target="#modal-restaurant-info" style="cursor: pointer;">@Model.name</h1>
                             <p class="display-4" style="margin-top: 120px">@Model.description</p>
-                            <p><i class="far fa-clock"></i>   <span>5:00 AM</span> - <span>11:00 PM</span> |   <i class="fas fa-map-marker-alt"></i> <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=6+Yukon+Drive+Raeford%2C+NC+28376">@Model.address</a>  |  <i class="fas fa-mobile-alt"></i> <a href="tel:(530) 62 5-9694">@Model.phone </a></p>
+                            <p>
+                                <i class="far fa-clock">
+                                </i>
+                                <span>
+                                    @if (Model.starttime != null)
+                                    {
+                                        @Model.starttime.Value.ToString("hh:mm tt")
+                                    }
+                                    else
+                                    {
+                                        <Text>
+                                        06:10 AM
+                                        </Text>
+
+                                    }
+                                </span>
+                                -
+                                <span>
+                                    @if (Model.endtime != null)
+                                    {
+                                        @Model.endtime.Value.ToString("hh:mm tt")
+                                    }
+                                    else
+                                    {
+                                        <Text>
+                                        11:59 PM
+                                        </Text>
+                                    }
+                                </span> |
+                                <i class="fas fa-map-marker-alt">
+                                </i>
+                                <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=6+Yukon+Drive+Raeford%2C+NC+28376">@Model.address</a>  |  <i class="fas fa-mobile-alt"></i> <a href="tel:(530) 62 5-9694">@Model.phone </a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -381,12 +413,12 @@
                                     <span class="p-2"></span>
                                     @foreach (var item1 in item.items)
                                     {
-                                <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="padding: 3px 15px; margin: auto;text-align: left; color: white; cursor:pointer;">
-                                    <span class="float-left" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.name</span>
-                                    <span class="float-right" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.price EGP</span>
-                                    <div style="clear: both;"></div>
-                                    <span>@item1.description</span>
-                                </div>
+                                        <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="padding: 3px 15px; margin: auto;text-align: left; color: white; cursor:pointer;">
+                                            <span class="float-left" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.name</span>
+                                            <span class="float-right" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.price EGP</span>
+                                            <div style="clear: both;"></div>
+                                            <span>@item1.description</span>
+                                        </div>
                                         <div class="modal fade" id="@item1.name.Replace(" ","")" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
                                             <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="modalDialogItem">
 
@@ -1268,23 +1300,23 @@
                 </div>
             </footer>
             @*<footer class="footer" id="footer">
-                <div class="container">
-                    <div class="row align-items-center justify-content-md-between">
-                        <div class="col-md-6">
-                            <div class="copyright">
-                                &copy; @DateTime.Now.Year <a href="" target="_blank">QR Menu Maker</a>.
+                    <div class="container">
+                        <div class="row align-items-center justify-content-md-between">
+                            <div class="col-md-6">
+                                <div class="copyright">
+                                    &copy; @DateTime.Now.Year <a href="" target="_blank">QR Menu Maker</a>.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <ul id="footer-pages" class="nav nav-footer justify-content-end">
+                                    <li v-for="page in pages" class="nav-item" v-cloak>
+                                        <a :href="'/pages/' + page.id" class="nav-link">{{ page.title }}</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <ul id="footer-pages" class="nav nav-footer justify-content-end">
-                                <li v-for="page in pages" class="nav-item" v-cloak>
-                                    <a :href="'/pages/' + page.id" class="nav-link">{{ page.title }}</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
-                </div>
-            </footer>*@
+                </footer>*@
         </div>
         <script>
         function getId() {

@@ -332,6 +332,8 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
           <Property Name="is_featured" Type="smallint" Nullable="false" />
           <Property Name="city_id" Type="int" />
           <Property Name="themes_id" Type="int" />
+          <Property Name="starttime" Type="datetime" />
+          <Property Name="endtime" Type="datetime" />
         </EntityType>
         <EntityType Name="role_has_permissions">
           <Key>
@@ -1912,8 +1914,8 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
             <End Role="variant" EntitySet="variants" />
             <End Role="variant_has_option" EntitySet="variant_has_option" />
           </AssociationSet>
-          <EntitySet Name="restorants" EntityType="DB_A6A5AC_menuModel.restorant" />
           <EntitySet Name="themes" EntityType="DB_A6A5AC_menuModel.theme" />
+          <EntitySet Name="restorants" EntityType="DB_A6A5AC_menuModel.restorant" />
           <AssociationSet Name="categories_categories_restorant_id_foreign" Association="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign">
             <End Role="restorant" EntitySet="restorants" />
             <End Role="category" EntitySet="categories" />
@@ -1930,7 +1932,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
             <End Role="user" EntitySet="users" />
             <End Role="restorant" EntitySet="restorants" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="options_details">
           <Key>
             <PropertyRef Name="id" />
@@ -1987,6 +1989,14 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="theme">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="theme_name" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="theme_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="restorant">
           <Key>
             <PropertyRef Name="id" />
@@ -2012,18 +2022,12 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
           <Property Name="is_featured" Type="Int16" Nullable="false" />
           <Property Name="city_id" Type="Int32" />
           <Property Name="themes_id" Type="Int32" />
+          <Property Name="starttime" Type="DateTime" Precision="3" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
           <NavigationProperty Name="categories" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="restorant" ToRole="category" />
           <NavigationProperty Name="hours" Relationship="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" FromRole="restorant" ToRole="hour" />
           <NavigationProperty Name="orders" Relationship="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" FromRole="restorant" ToRole="order" />
           <NavigationProperty Name="user" Relationship="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" FromRole="restorant" ToRole="user" />
-        </EntityType>
-        <EntityType Name="theme">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="theme_name" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="theme_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="categories_categories_restorant_id_foreign">
           <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
@@ -2073,7 +2077,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -2544,9 +2548,19 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="themes">
+            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
+              <MappingFragment StoreEntitySet="themes">
+                <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="restorants">
             <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
               <MappingFragment StoreEntitySet="restorants">
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+                <ScalarProperty Name="starttime" ColumnName="starttime" />
                 <ScalarProperty Name="themes_id" ColumnName="themes_id" />
                 <ScalarProperty Name="city_id" ColumnName="city_id" />
                 <ScalarProperty Name="is_featured" ColumnName="is_featured" />
@@ -2567,14 +2581,6 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="themes">
-            <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
-              <MappingFragment StoreEntitySet="themes">
-                <ScalarProperty Name="theme_name" ColumnName="theme_name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

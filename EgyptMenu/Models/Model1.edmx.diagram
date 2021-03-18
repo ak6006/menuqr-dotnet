@@ -62,8 +62,8 @@
         <AssociationConnector Association="DB_A6A5AC_menuModel.FK_options_details_options_id" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.FK_variant_has_option_options_details_id" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.FK_variant_has_option_variants_id" />
-        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.restorant" Width="1.5" PointX="3" PointY="17.25" />
         <EntityTypeShape EntityType="DB_A6A5AC_menuModel.theme" Width="1.5" PointX="7.375" PointY="10.75" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.restorant" Width="1.5" PointX="3" PointY="17" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" />

@@ -43,6 +43,8 @@ namespace EgyptMenu.Models
         public short is_featured { get; set; }
         public Nullable<int> city_id { get; set; }
         public Nullable<int> themes_id { get; set; }
+        public Nullable<System.DateTime> starttime { get; set; }
+        public Nullable<System.DateTime> endtime { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<category> categories { get; set; }

@@ -83,6 +83,8 @@ namespace EgyptMenu.Controllers
             ResMgmtViewModel resMgmtViewModel = new ResMgmtViewModel()
             {
                 id = CurrentRestaurant.id,
+                starttime = CurrentRestaurant.starttime,
+                endtime=CurrentRestaurant.endtime,
                 OwnerEmail = UserEmail,
                 OwnerName = CurrentUser.name,
                 OwnerPhone = CurrentUser.phone,
@@ -152,6 +154,8 @@ namespace EgyptMenu.Controllers
 
             }
 
+            CurrentRestaurant.endtime = model.endtime;
+            CurrentRestaurant.starttime = model.starttime;
             CurrentRestaurant.themes_id = model.ThemeId;
             CurrentRestaurant.name = model.RestaurantName;
             CurrentRestaurant.description = model.RestaurantDescription;
