@@ -138,8 +138,14 @@
   <data name="Add new category" xml:space="preserve">
     <value>إضافة فئة جديدة</value>
   </data>
+  <data name="Add new extras" xml:space="preserve">
+    <value>Add new extras</value>
+  </data>
   <data name="Add new item" xml:space="preserve">
     <value>إضافة صنف جديد</value>
+  </data>
+  <data name="Add new option" xml:space="preserve">
+    <value>Add new option</value>
   </data>
   <data name="Add plan" xml:space="preserve">
     <value>اضف خطة</value>
@@ -159,6 +165,9 @@
   <data name="Are you sure you want to delete this item?" xml:space="preserve">
     <value>هل انت متاكد انك تريد حذف هذا العنصر ؟</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>رجوع</value>
+  </data>
   <data name="Back to items" xml:space="preserve">
     <value>رجوع الي العناصر</value>
   </data>
@@ -176,6 +185,9 @@
   </data>
   <data name="Clients are happy. They can see that we are a responsible bar and their health is a priority. No more old dirty menus :D. All they need is their phone" xml:space="preserve">
     <value>العملاء سعداء. يمكنهم أن يروا أننا مكان مسؤول وأن صحتهم هي أولوية. لا مزيد من القوائم المتسخة القديمة . كل ما يحتاجونه هو هواتفهم</value>
+  </data>
+  <data name="Comma separated list of option values" xml:space="preserve">
+    <value>Comma separated list of option values</value>
   </data>
   <data name="Community support" xml:space="preserve">
     <value>دعم المجتمع</value>
@@ -261,8 +273,17 @@
   <data name="English" xml:space="preserve">
     <value>عربي</value>
   </data>
+  <data name="Enter comma separated list of avaliable option values, ex: small,medium,large" xml:space="preserve">
+    <value>Enter comma separated list of avaliable option values, ex: small,medium,large</value>
+  </data>
   <data name="Enter location" xml:space="preserve">
     <value>ادخل عنوان</value>
+  </data>
+  <data name="Enter option name, ex size" xml:space="preserve">
+    <value>Enter option name, ex size</value>
+  </data>
+  <data name="Enter variant price" xml:space="preserve">
+    <value>Enter variant price</value>
   </data>
   <data name="eur" xml:space="preserve">
     <value>يورو</value>
@@ -311,6 +332,9 @@
   </data>
   <data name="Images" xml:space="preserve">
     <value>الصور</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>اضف</value>
   </data>
   <data name="Item available" xml:space="preserve">
     <value>اتاحة العنصر</value>
@@ -386,6 +410,12 @@
   </data>
   <data name="Name" xml:space="preserve">
     <value>الاسم</value>
+  </data>
+  <data name="New option for Prosciutto crust pizza" xml:space="preserve">
+    <value>New option for Prosciutto crust pizza</value>
+  </data>
+  <data name="New Variant" xml:space="preserve">
+    <value>New Variant</value>
   </data>
   <data name="No mobile app required" xml:space="preserve">
     <value>لا يوجد تطبيق جوال مطلوب</value>
@@ -463,7 +493,7 @@
     <value>الخطط</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>سعر</value>
+    <value>السعر</value>
   </data>
   <data name="Pricing" xml:space="preserve">
     <value>الاسعار</value>
@@ -570,6 +600,9 @@
   <data name="See a demo online menu" xml:space="preserve">
     <value>شاهد قائمة تجريبية على الإنترنت </value>
   </data>
+  <data name="Select" xml:space="preserve">
+    <value>اختار</value>
+  </data>
   <data name="Select image" xml:space="preserve">
     <value>اختار صوره</value>
   </data>
@@ -644,6 +677,9 @@
   </data>
   <data name="Unlimited views" xml:space="preserve">
     <value>مناظر غير محدودة</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
   </data>
   <data name="Used by top restaurants worldwide" xml:space="preserve">
     <value>تم استخدامه من قبل اكبر الكافيهات والمطاعم علي مستوي العالم</value>

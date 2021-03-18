@@ -192,7 +192,7 @@
                             </span>
                         </div>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">@Resource.Welcome</h6>
                         </div>
@@ -371,12 +371,12 @@
 
                                     <div class="form-group">
                                         <label class="form-control-label" for="RestaurantName">@Resource.Restaurant_Name</label>
-                                        <input step=".01" type="text" name="RestaurantName" value="@Model.RestaurantName" id="RestaurantName" class="form-control form-control-alternative" placeholder=@Resource.Restaurant_Name required autofocus>
+                                        <input step=".01" type="text" name="RestaurantName" value="@Model.RestaurantName" id="RestaurantName" class="form-control form-control-alternative" placeholder="@Resource.Restaurant_Name" required autofocus>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-control-label" for="RestaurantDescription">@Resource.Restaurant_Description</label>
-                                        <input step=".01" type="text" name="RestaurantDescription" value="@Model.RestaurantDescription" id="RestaurantDescription" class="form-control form-control-alternative" placeholder=@Resource.Restaurant_Description required autofocus>
+                                        <input step=".01" type="text" name="RestaurantDescription" value="@Model.RestaurantDescription" id="RestaurantDescription" class="form-control form-control-alternative" placeholder="@Resource.Restaurant_Description" required autofocus>
                                     </div>
                                     
                                     <div class="form-group">
@@ -461,15 +461,15 @@
                             <div class="pl-lg-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="name_owner">@Resource.Owner_Name</label>
-                                    <input type="text" name="OwnerName" id="name_owner" class="form-control form-control-alternative" placeholder=@Resource.Owner_Name value="@Model.OwnerName" readonly>
+                                    <input type="text" name="OwnerName" id="name_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Name" value="@Model.OwnerName" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label" for="email_owner">@Resource.Owner_Email</label>
-                                    <input type="text" name="OwnerEmail" id="email_owner" class="form-control form-control-alternative" placeholder=@Resource.Owner_Email value="@Model.OwnerEmail" readonly>
+                                    <input type="text" name="OwnerEmail" id="email_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Email" value="@Model.OwnerEmail" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label" for="phone_owner">@Resource.Owner_Phone</label>
-                                    <input type="text" name="OwnerPhone" id="phone_owner" class="form-control form-control-alternative" placeholder=@Resource.Owner_Phone value="@Model.OwnerPhone" readonly>
+                                    <input type="text" name="OwnerPhone" id="phone_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Phone" value="@Model.OwnerPhone" readonly>
                                 </div>
                             </div>
                         </div>
@@ -498,11 +498,11 @@
                                                 <div id="pac-container" class="form" style="width:100%">
                                                     @if (Model.RestaurantAddress != null)
                                                     {
-                                                        <input id="pac-input" class="form-control" style="width:100%" type="text" placeholder=@Resource.Enter_location value="@Model.RestaurantAddress" />
+                                                        <input id="pac-input" class="form-control" style="width:100%" type="text" placeholder="@Resource.Enter_location" value="@Model.RestaurantAddress" />
                                                     }
                                                     else
                                                     {
-                                                        <input id="pac-input" class="form-control" style="width:100%" type="text" placeholder=@Resource.Enter_location />
+                                                        <input id="pac-input" class="form-control" style="width:100%" type="text" placeholder="@Resource.Enter_location" />
                                                     }
                                                 </div>
 

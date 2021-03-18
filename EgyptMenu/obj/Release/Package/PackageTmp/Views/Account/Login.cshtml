@@ -85,16 +85,16 @@
     <link href="~/Content/back.css" rel="stylesheet" />
     <link href="~/Content/new-style.css" rel="stylesheet" />
 </head>
-<body class="bg">
+<body class="bg-primary">
 
     <div class="main-content">
-        <nav class="navbar navbar-top navbar-horizontal navbar-expand-md bg-white navbar-dark">
+        @*<nav class="navbar navbar-top navbar-horizontal navbar-expand-md bg-white navbar-dark">
             <div class="w-100 px-3"  >
                 <a class="navbar-brand" href="/" style="text-align:left; margin:0;">
                     <img height="40" src="~/Content/images/logo_qrzebra.png" />
                 </a>
             </div>
-        </nav>
+        </nav>*@
         <div class="header y py-5 py-lg-8">
             <div class="container">
                 <div class="header-body text-center mb-1">
@@ -125,10 +125,10 @@
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     <div class="input-group input-group-alternative">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
                                         </div>
                                         @*<input class="form-control" placeholder="Email" type="email" name="email" value="" value="admin@argon.com" required autofocus>*@
-                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder=@Resource.User_Name, required = "required", autofocus = "autofocus" })
+                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control px-2", placeholder=@Resource.User_Name, required = "required", autofocus = "autofocus" })
                                         @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
@@ -137,8 +137,11 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="fas fa-lock"></i></span>
                                         </div>
+                                        <div class="input-group-prepend" onclick="showandhidepass()" style="cursor:pointer;">
+                                            <span class="input-group-text"><i class="fas fa-eye" id="hide"></i> <i class="fas fa-eye-slash" id="show" style="display:none;"></i></span>
+                                        </div>
                                         @*<input class="form-control" name="password" placeholder="Password" type="password" value="secret" required>*@
-                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = @Resource.Password, type = "password", required = "required" })
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control px-2", placeholder = @Resource.Password,id="pass", type = "password", required = "required" })
                                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
@@ -155,13 +158,16 @@
                         </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-3"></div>
-                        <div class="col-6 text-light text-center">
+                        <div class="col-6 text-light text-left">
                             <a href="@Url.Action("ForgotPassword", "Account")" class="text-light">
                                 <small>@Resource.Forgot_password</small>
                             </a>
                         </div>
-                        <div class="col-3"></div>
+                        <div class="col-6 text-light text-right">
+                            <a href="@Url.Action("Register", "Account")" class="text-light">
+                                <small>don't have account ?</small>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,6 +180,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        function showandhidepass() {
+            if (document.getElementById("pass").getAttribute("type") == "password") {
+                document.getElementById("pass").setAttribute("type", "text");
+                document.getElementById("show").style.display = "inline";
+                document.getElementById("hide").style.display = "none";
+            }
+            else {
+                document.getElementById("pass").setAttribute("type", "password");
+                document.getElementById("hide").style.display = "inline";
+                document.getElementById("show").style.display = "none";
+            }
+
+        }
+    </script>
     <!-- Commented because navtabs includes same script -->
     <script src="~/Content/JS/jquery.min.js"></script>
     <script src="~/Content/JS/popper.min.js"></script>

@@ -124,11 +124,29 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add new extras.
+        /// </summary>
+        public static string Add_new_extras {
+            get {
+                return ResourceManager.GetString("Add new extras", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add new item.
         /// </summary>
         public static string Add_new_item {
             get {
                 return ResourceManager.GetString("Add new item", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add new option.
+        /// </summary>
+        public static string Add_new_option {
+            get {
+                return ResourceManager.GetString("Add new option", resourceCulture);
             }
         }
         
@@ -187,6 +205,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back to items.
         /// </summary>
         public static string Back_to_items {
@@ -238,6 +265,15 @@ namespace EgyptMenu.Views.Shared.Resources {
             get {
                 return ResourceManager.GetString("Clients are happy. They can see that we are a responsible bar and their health is" +
                         " a priority. No more old dirty menus :D. All they need is their phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comma separated list of option values.
+        /// </summary>
+        public static string Comma_separated_list_of_option_values {
+            get {
+                return ResourceManager.GetString("Comma separated list of option values", resourceCulture);
             }
         }
         
@@ -494,11 +530,38 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter comma separated list of avaliable option values, ex: small,medium,large.
+        /// </summary>
+        public static string Enter_comma_separated_list_of_avaliable_option_values__ex__small_medium_large {
+            get {
+                return ResourceManager.GetString("Enter comma separated list of avaliable option values, ex: small,medium,large", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter a location.
         /// </summary>
         public static string Enter_location {
             get {
                 return ResourceManager.GetString("Enter location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter option name, ex size.
+        /// </summary>
+        public static string Enter_option_name__ex_size {
+            get {
+                return ResourceManager.GetString("Enter option name, ex size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter variant price.
+        /// </summary>
+        public static string Enter_variant_price {
+            get {
+                return ResourceManager.GetString("Enter variant price", resourceCulture);
             }
         }
         
@@ -644,6 +707,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Images {
             get {
                 return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert.
+        /// </summary>
+        public static string Insert {
+            get {
+                return ResourceManager.GetString("Insert", resourceCulture);
             }
         }
         
@@ -869,6 +941,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New option for Prosciutto crust pizza.
+        /// </summary>
+        public static string New_option_for_Prosciutto_crust_pizza {
+            get {
+                return ResourceManager.GetString("New option for Prosciutto crust pizza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Variant.
+        /// </summary>
+        public static string New_Variant {
+            get {
+                return ResourceManager.GetString("New Variant", resourceCulture);
             }
         }
         
@@ -1424,6 +1514,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select.
+        /// </summary>
+        public static string Select {
+            get {
+                return ResourceManager.GetString("Select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select image.
         /// </summary>
         public static string Select_image {
@@ -1636,6 +1735,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Unlimited_views {
             get {
                 return ResourceManager.GetString("Unlimited views", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string Update {
+            get {
+                return ResourceManager.GetString("Update", resourceCulture);
             }
         }
         

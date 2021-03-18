@@ -109,7 +109,7 @@
                             </span>
                         </div>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right">
                         <div class=" dropdown-header noti-title">
                             <h6 class="text-overflow m-0">@Resource.Welcome</h6>
                         </div>
@@ -195,8 +195,6 @@
             <div class="container-fluid">
 
                 <!-- Brand -->
-                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"></a>
-
                 <!-- Form -->
                 <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 </form>
@@ -216,25 +214,24 @@
                                 </div>
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                        <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
                             <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome!</h6>
+                                <h6 class="text-overflow m-0">@Resource.Welcome</h6>
                             </div>
                             <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
 
-                                <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; profile</span>
+                                <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; @Resource.My_profile</span>
                             </a>
                             <div class="dropdown-divider"></div>
                             @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                            <i class="ni ni-user-run"></i>
-                                            <span>Logout</span>
-                                        </a>*@
+                        document.getElementById('logout-form').submit();">
+                                    <i class="ni ni-user-run"></i>
+                                    <span>Logout</span>
+                                </a>*@
                             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                             {
                                 @Html.AntiForgeryToken()
-
-                                <button type="submit" class="dropdown-item"><i class="fas fa-running"></i>Log off</button>
+                                <button type="submit" class="dropdown-item"><i class="fas fa-running" style="margin:0;"></i> &nbsp;&nbsp;&nbsp; @Resource.Log_out</button>
                             }
                         </div>
                     </li>
