@@ -197,107 +197,94 @@
                 <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"></a>
 
                 <!-- Form -->
-                <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-                </form>
+                @*<form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                </form>*@
 
                 <!-- User -->
-                <ul class="navbar-nav align-items-center d-none d-md-flex">
+            <ul class="navbar-nav align-items-center d-none d-md-flex pt-4" >
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="media align-items-center mt-3">
-                                <span class="avatar avatar-sm rounded-circle">
+                <li class="nav-item dropdown">
+                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center">
+                            <span class="avatar avatar-sm rounded-circle">
 
-                                    <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">
-                                </span>
-                                <div class="media-body ml-2 d-none d-lg-block">
-                                    <span class="mb-0 text-sm  font-weight-bold">@User.Identity.GetUserName()</span>
-                                </div>
+                                <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">
+                            </span>
+                            <div class="media-body ml-2 d-none d-lg-block">
+                                <span class="mb-0 text-sm  font-weight-bold">@User.Identity.GetUserName()</span>
                             </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                            <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome!</h6>
-                            </div>
-                            <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
-
-                                <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; profile</span>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                            <i class="ni ni-user-run"></i>
-                                            <span>Logout</span>
-                                        </a>*@
-                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                            {
-                                @Html.AntiForgeryToken()
-
-                                <button type="submit" class="dropdown-item"><i class="fas fa-running"></i>Log off</button>
-                            }
                         </div>
-                    </li>
-                </ul>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">@Resource.Welcome</h6>
+                        </div>
+                        <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
+
+                            <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; @Resource.My_profile</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                            <i class="ni ni-user-run"></i>
+                            <span>Logout</span>
+                        </a>*@
+                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="dropdown-item"><i class="fas fa-running" style="margin:0;"></i> &nbsp;&nbsp;&nbsp; @Resource.Log_out</button>
+                        }
+                    </div>
+                </li>
+            </ul>
 
             </div>
 
 
         </nav>
-        <div class="header bg-gradient-primary pt-5 pt-md-8 mt--4">
+        <div class="header bg-gradient-primary pt-5 pt-md-8 mt--4" style="padding:20px; @Resource.text_align">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-7">
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                            <li class="breadcrumb-item"><a href="@Url.Action("Dashboard","Owner")"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="@Url.Action("Menu","Owner")">Menu</a></li>
-                            <li class="breadcrumb-item"><a href="@Url.Action("Edit","Owner",new {id = ViewBag.ItemId })">@ViewBag.ItemName</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">New Variant</li>
+                            <li class="breadcrumb-item">&nbsp; &nbsp;<a href="@Url.Action("Dashboard","Owner")"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item">&nbsp; &nbsp;<a href="@Url.Action("Menu","Owner")">@Resource.Menu</a></li>
+                            <li class="breadcrumb-item">&nbsp; &nbsp;<a href="@Url.Action("Edit","Owner",new {id = ViewBag.ItemId })">@ViewBag.ItemName</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">&nbsp;&nbsp;@Resource.New_Variant</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
-
         <div class="header bg-gradient-primary pt-5 pt-md-8">
         </div>
-
-
-
-
-
-
-
-
-        <div class="container-fluid mt--7 mb-7">
-            <div class="row">
+        <div class="container-fluid mt-7 mt-md--7 mt-lg--7">
+            <div class="row" style="@Resource.text_align">
                 <div class="col">
                     <div class="card shadow">
-                        <div class="card-header border-0">
+                        <div class="card-header border-0" >
                             <div class="row align-items-center">
                                 <div class="col-8">
                                     <h3 class="mb-0">New variant for Prosciutto crust pizza</h3>
                                 </div>
-
-                                <div class="col-4 text-right">
-                                    <a href="@Url.Action("Edit","Owner",new { id=ViewBag.ItemId})" class="btn btn-sm btn-primary">Back</a>
+                                <div class="col-4 @Resource.text_dir_class">
+                                    <a href="@Url.Action("Edit","Owner",new { id=ViewBag.ItemId})" class="btn btn-sm btn-primary">@Resource.Back</a>
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-12">
                         </div>
-
                         <div class="card-body">
                             <form action="@Url.Action("AddVariant","Owner")" method="POST">
                                 <input type="hidden" required id="OpText" name="options" value="No options values selected">
                                 <input type="hidden" name="ItemId" value="@ViewBag.ItemId">
                                 <div id="form-group-price" class="form-group">
-                                    <label class="form-control-label" for="price">Price</label>
-                                    <input step=".01" type="number" name="price" id="price" class="form-control form-control   " placeholder="Enter variant price" value="" required="" autofocus="">
+                                    <label class="form-control-label" for="price">@Resource.Price</label>
+                                    <input step=".01" type="number" name="price" id="price" class="form-control form-control" placeholder="@Resource.Enter_variant_price" value="" required="" autofocus="">
                                 </div>
                                 <div class="form-group">
                                     <br>
-                                    <label class="form-control-label">Options</label>
+                                    <label class="form-control-label">@Resource.Options</label>
                                     <div class="row">
                                         @foreach (var item in Model)
                                         {
@@ -305,7 +292,7 @@
                                                 <br>
                                                 <label class="form-control-label">@item.name</label>
                                                 <select onchange="UpdateValue()" class="form-control col-sm select2init " name="option[3]" id="option[3]" data-select2-id="option[3]" tabindex="-1" aria-hidden="true">
-                                                    <option disabled="" selected="" value="" data-select2-id="2"> Select @item.name </option>
+                                                    <option disabled="" selected="" value="" data-select2-id="2"> @Resource.Select @item.name </option>
                                                     @{
                                                         List<string> Opts = item.options.Split(',').ToList();
                                                     }
@@ -317,15 +304,9 @@
                                                 </select>
                                             </div>
                                         }
-
-
-
-
                                     </div>
-
-
                                 </div>
-                                <button type="submit" class="btn btn-primary">Insert</button>
+                                <button type="submit" class="btn btn-primary">@Resource.Insert</button>
                             </form>
                         </div>
 

@@ -466,9 +466,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="themes">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
+        <MappingFragment StoreEntitySet="themes">
+          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="restorants">
       <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
         <MappingFragment StoreEntitySet="restorants">
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+          <ScalarProperty Name="starttime" ColumnName="starttime" />
           <ScalarProperty Name="themes_id" ColumnName="themes_id" />
           <ScalarProperty Name="city_id" ColumnName="city_id" />
           <ScalarProperty Name="is_featured" ColumnName="is_featured" />
@@ -489,14 +499,6 @@
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="updated_at" ColumnName="updated_at" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="id" ColumnName="id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="themes">
-      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
-        <MappingFragment StoreEntitySet="themes">
-          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

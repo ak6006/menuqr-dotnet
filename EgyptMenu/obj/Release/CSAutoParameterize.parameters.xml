@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=SQL5053.site4now.net;Initial Catalog=DB_A6A5AC_menu;User Id=DB_A6A5AC_menu_admin;Password=ak654321;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="G:\\Team\ I\\menuqr\\EgyptMenu\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tegoo\\Desktop\\Team\ I\\menuqr\\EgyptMenu\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
   <parameter name="Entities-Web.config Connection String" description="Entities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=SQL5053.site4now.net;initial catalog=DB_A6A5AC_menu;persist security info=True;user id=DB_A6A5AC_menu_admin;password=ak654321;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="G:\\Team\ I\\menuqr\\EgyptMenu\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tegoo\\Desktop\\Team\ I\\menuqr\\EgyptMenu\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
   </parameter>
   <parameter name="EgyptMenu.Models.ApplicationDbContext-Web.config Connection String" description="EgyptMenu.Models.ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="EgyptMenu.Models.ApplicationDbContext_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="G:\\Team\ I\\menuqr\\EgyptMenu\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EgyptMenu.Models.ApplicationDbContext']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tegoo\\Desktop\\Team\ I\\menuqr\\EgyptMenu\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EgyptMenu.Models.ApplicationDbContext']/@connectionString" />
   </parameter>
 </parameters>

@@ -327,6 +327,8 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <Property Name="is_featured" Type="smallint" Nullable="false" />
     <Property Name="city_id" Type="int" />
     <Property Name="themes_id" Type="int" />
+    <Property Name="starttime" Type="datetime" />
+    <Property Name="endtime" Type="datetime" />
   </EntityType>
   <EntityType Name="role_has_permissions">
     <Key>

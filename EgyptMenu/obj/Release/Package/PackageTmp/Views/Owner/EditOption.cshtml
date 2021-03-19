@@ -1,13 +1,21 @@
-﻿
+﻿@using EgyptMenu.Views.Shared.Resources
 @using Microsoft.AspNet.Identity
 @model EgyptMenu.Models.option
 @{
     Layout = null;
+    if (HttpContext.Current.Session["lang"] != null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+    }
 }
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang=@Resource.language dir=@Resource.direction>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -77,7 +85,7 @@
     <form id="logout-form" action="http://localhost/logout" method="POST" style="display: none;">
         <input type="hidden" name="_token" value="JGa1gI9ucVNVkT7BVkBXDEHRIFkP7fKaoJCV6JG2">
     </form>
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <nav class="navbar navbar-vertical  navbar-expand-md navbar-light bg-white @Resource.fixed_dir" id="sidenav-main">
         <div class="container-fluid">
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,6 +94,7 @@
             <!-- Brand -->
             <a class="navbar-brand pt-0" href="/">
                 <img src="~/Content/images/logo_qrzebra.png" class="navbar-brand-img" alt="...">
+
             </a>
             <!-- User -->
             <ul class="nav align-items-center d-md-none">
@@ -99,30 +108,32 @@
                             </span>
                         </div>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
                         <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome!</h6>
+                            <h6 class="text-overflow m-0">@Resource.Welcome</h6>
                         </div>
-                        <a href="http://localhost/profile" class="dropdown-item">
-                            <i class="ni ni-single-02"></i>
-                            <span>My profile</span>
+                        <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
+                            <i class="fas fa-user-alt"></i>
+                            <span>@Resource.My_profile</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                            <i class="ni ni-user-run"></i>
-                            <span>Logout</span>
-                        </a>
+
+                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <button type="submit" class="dropdown-item">@Resource.Log_out</button>
+                        }
                     </div>
                 </li>
             </ul>
             <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+            <div dir=@Resource.direction class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <!-- Collapse header -->
                 <div class="navbar-collapse-header d-md-none">
                     <div class="row">
                         <div class="col-6 collapse-brand">
-                            <a href="http://localhost/home">
+                            <a href="#">
                                 <img src="/uploads/settings/75fc3af3-2f85-4f6d-b745-63428c2bd4d8_logo.jpg">
                             </a>
                         </div>
@@ -139,30 +150,29 @@
 
                 <span></span>
 
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="padding:0;">
 
                     <li class="nav-item">
                         <a class="nav-link" href=@Url.Action("Dashboard")>
                             <i class="fas fa-store-alt text-primary "></i>
-
-                            Restaurant
+                            &nbsp;&nbsp;@Resource.Restaurant
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href=@Url.Action("Menu")>
-                            <i class="far fa-minus-square text-pink"></i> Menu
+                            <i class="far fa-minus-square text-pink"></i>&nbsp;&nbsp;@Resource.Menu
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href=@Url.Action("QRBuilder")>
-                            <i class="fas fa-mobile-alt text-red"></i> QR Builder
+                            <i class="fas fa-mobile-alt text-red"></i>&nbsp;&nbsp;@Resource.QR_builder
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href=@Url.Action("Plan")>
-                            <i class="fas fa-credit-card text-orange"></i> Plan
+                            <i class="fas fa-credit-card text-orange"></i>&nbsp;&nbsp;@Resource.Plan
                         </a>
                     </li>
                 </ul>
@@ -184,18 +194,16 @@
             <div class="container-fluid">
 
                 <!-- Brand -->
-                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"></a>
-
                 <!-- Form -->
                 <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
                 </form>
 
                 <!-- User -->
-                <ul class="navbar-nav align-items-center d-none d-md-flex">
+                <ul class="navbar-nav align-items-center d-none d-md-flex mt-4">
 
                     <li class="nav-item dropdown">
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="media align-items-center mt-4">
+                            <div class="media align-items-center">
                                 <span class="avatar avatar-sm rounded-circle">
 
                                     <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">
@@ -205,13 +213,13 @@
                                 </div>
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                        <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
                             <div class=" dropdown-header noti-title">
-                                <h6 class="text-overflow m-0">Welcome!</h6>
+                                <h6 class="text-overflow m-0">@Resource.Welcome</h6>
                             </div>
                             <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
 
-                                <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; profile</span>
+                                <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; @Resource.My_profile</span>
                             </a>
                             <div class="dropdown-divider"></div>
                             @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
@@ -222,8 +230,7 @@
                             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                             {
                                 @Html.AntiForgeryToken()
-
-                                <button type="submit" class="dropdown-item"><i class="fas fa-running"></i>Log off</button>
+                                <button type="submit" class="dropdown-item"><i class="fas fa-running" style="margin:0;"></i> &nbsp;&nbsp;&nbsp; @Resource.Log_out</button>
                             }
                         </div>
                     </li>
@@ -234,14 +241,14 @@
         </nav>
         <div class="header bg-gradient-primary pt-5 pt-md-8 mt--4">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-7">
+                <div class="col-lg-6 col-7 pr-5" style="@Resource.text_align">
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                            <li class="breadcrumb-item"><a href="@Url.Action("Dashboard","Owner")"><i class="fas fa-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="@Url.Action("Menu","Owner")">Menu</a></li>
-                            <li class="breadcrumb-item"><a href="@Url.Action("Edit","Owner",new {id = Model.item.id })">@Model.item.name</a></li>
-                            <li class="breadcrumb-item"><a href="@Url.Action("EditOptions","Owner",new {id = Model.item_id })">Options</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">@Model.name</li>
+                            <li class="breadcrumb-item">&nbsp;&nbsp;<a href="@Url.Action("Dashboard","Owner")"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item">&nbsp;&nbsp;<a href="@Url.Action("Menu","Owner")">Menu</a></li>
+                            <li class="breadcrumb-item">&nbsp;&nbsp;<a href="@Url.Action("Edit","Owner",new {id = Model.item.id })">@Model.item.name</a></li>
+                            <li class="breadcrumb-item">&nbsp;&nbsp;<a href="@Url.Action("EditOptions","Owner",new {id = Model.item_id })">Options</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">&nbsp;&nbsp;@Model.name</li>
                         </ol>
                     </nav>
                 </div>
@@ -249,18 +256,18 @@
         </div>
         <div class="header bg-gradient-primary pt-5 pt-md-8">
         </div>
-        <div class="container-fluid mt--7 mb-5">
+        <div class="container-fluid mt-7 mt-md--7 mt-lg--7" style="@Resource.text_align">
             <div class="row">
                 <div class="col">
                     <div class="card shadow">
                         <div class="card-header border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">New option for Prosciutto crust pizza</h3>
+                                    <h3 class="mb-0">@Resource.New_option_for_Prosciutto_crust_pizza</h3>
                                 </div>
 
-                                <div class="col-4 text-right">
-                                    <a href="@Url.Action("EditOptions","Owner",new {id = Model.item_id })" class="btn btn-sm btn-primary">Back</a>
+                                <div class="col-4 @Resource.text_dir_class">
+                                    <a href="@Url.Action("EditOptions","Owner",new {id = Model.item_id })" class="btn btn-sm btn-primary">@Resource.Back</a>
                                 </div>
                             </div>
                         </div>
@@ -274,17 +281,16 @@
                                 <input type="hidden" name="id" value="@Model.id">
 
                                 <div id="form-group-name" class="form-group">
-                                    <label class="form-control-label" for="name">Name</label>
-                                    <input step=".01" type="text" name="name" id="name" class="form-control form-control   " placeholder="Enter option name, ex size" value="@Model.name" required="" autofocus="">
+                                    <label class="form-control-label" for="name">@Resource.Name</label>
+                                    <input step=".01" type="text" name="name" id="name" class="form-control form-control" placeholder="@Resource.Enter_option_name__ex_size" value="@Model.name" required="" autofocus="">
                                 </div>
                                 <div id="form-group-options" class="form-group">
-                                    <label class="form-control-label" for="options">Comma separated list of option values</label>
-                                    <input step=".01" type="text" name="options" id="options" class="form-control form-control   " placeholder="Enter comma separated list of avaliable option values, ex: small,medium,large" value="@Model.options" required="" autofocus="">
+                                    <label class="form-control-label" for="options">@Resource.Comma_separated_list_of_option_values separated list of option values</label>
+                                    <input step=".01" type="text" name="options" id="options" class="form-control form-control   " placeholder="@Resource.Enter_comma_separated_list_of_avaliable_option_values__ex__small_medium_large" value="@Model.options" required="" autofocus="">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">@Resource.Update</button>
                             </form>
                         </div>
-
 
                     </div>
                 </div>
