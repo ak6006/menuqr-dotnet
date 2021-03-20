@@ -259,6 +259,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change password.
+        /// </summary>
+        public static string Change_password {
+            get {
+                return ResourceManager.GetString("Change password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clients are happy. They can see that we are a responsible place and their health is a priority. No more old dirty menus :D. All they need is their phone.
         /// </summary>
         public static string Clients_are_happy__They_can_see_that_we_are_a_responsible_bar_and_their_health_is_a_priority__No_more_old_dirty_menus__D__All_they_need_is_their_phone {
@@ -283,6 +292,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Community_support {
             get {
                 return ResourceManager.GetString("Community support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm New Password.
+        /// </summary>
+        public static string Confirm_New_Password {
+            get {
+                return ResourceManager.GetString("Confirm New Password", resourceCulture);
             }
         }
         
@@ -454,6 +472,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Edit {
             get {
                 return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit extras.
+        /// </summary>
+        public static string Edit_extras {
+            get {
+                return ResourceManager.GetString("Edit extras", resourceCulture);
             }
         }
         
@@ -950,6 +977,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string New_option_for_Prosciutto_crust_pizza {
             get {
                 return ResourceManager.GetString("New option for Prosciutto crust pizza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        public static string New_Password {
+            get {
+                return ResourceManager.GetString("New Password", resourceCulture);
             }
         }
         

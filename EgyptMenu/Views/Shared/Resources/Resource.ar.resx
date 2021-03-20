@@ -183,6 +183,9 @@
   <data name="Change" xml:space="preserve">
     <value>تغير</value>
   </data>
+  <data name="Change password" xml:space="preserve">
+    <value>تغيير الرقم السري</value>
+  </data>
   <data name="Clients are happy. They can see that we are a responsible bar and their health is a priority. No more old dirty menus :D. All they need is their phone" xml:space="preserve">
     <value>العملاء سعداء. يمكنهم أن يروا أننا مكان مسؤول وأن صحتهم هي أولوية. لا مزيد من القوائم المتسخة القديمة . كل ما يحتاجونه هو هواتفهم</value>
   </data>
@@ -191,6 +194,9 @@
   </data>
   <data name="Community support" xml:space="preserve">
     <value>دعم المجتمع</value>
+  </data>
+  <data name="Confirm New Password" xml:space="preserve">
+    <value>تأكيد الرقم السري الجديد</value>
   </data>
   <data name="Contactless QR digital menu" xml:space="preserve">
     <value>قلل التلامس المنيو الرقمي</value>
@@ -248,6 +254,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>تعديل</value>
+  </data>
+  <data name="Edit extras" xml:space="preserve">
+    <value>Edit extras</value>
   </data>
   <data name="Edit Options" xml:space="preserve">
     <value>Edit Options</value>
@@ -413,6 +422,9 @@
   </data>
   <data name="New option for Prosciutto crust pizza" xml:space="preserve">
     <value>New option for Prosciutto crust pizza</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>الرقم السري الجديد</value>
   </data>
   <data name="New Variant" xml:space="preserve">
     <value>New Variant</value>
@@ -679,7 +691,7 @@
     <value>مناظر غير محدودة</value>
   </data>
   <data name="Update" xml:space="preserve">
-    <value>Update</value>
+    <value>تعديل</value>
   </data>
   <data name="Used by top restaurants worldwide" xml:space="preserve">
     <value>تم استخدامه من قبل اكبر الكافيهات والمطاعم علي مستوي العالم</value>

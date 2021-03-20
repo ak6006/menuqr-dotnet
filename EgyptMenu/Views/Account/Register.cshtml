@@ -24,7 +24,6 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">*@
-@Html.PasswordFor(m => m.Password, new { @class = "form-control" })
 @*</div>
     </div>*@
 @*<div class="form-group">
@@ -211,7 +210,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="form-control-label" for="Email">@Resource.Owner_Email</label>
-                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Email_here, required = "required", autofocus = "autofocus", type = "email", value = "ViewBag.Email" })
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Email_here, required = "required", autofocus = "autofocus", type = "email", value = "ViewBag.Email" , pattern= "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" })
 
                                 </div>
                                 <div class="form-group">

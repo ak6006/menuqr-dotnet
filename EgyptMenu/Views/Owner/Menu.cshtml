@@ -372,31 +372,29 @@
                                 <div class="alert alert-default">
 
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col-lg-6 col-12">
                                             <span class="h1 font-weight-bold mb-0 text-white">@item.name</span>
                                         </div>
-                                        <div class="col-auto">
-                                            <div class="row">
-
-                                                @using (Html.BeginForm("SortCategory", "Owner", FormMethod.Post, new { @class = "navbar-right" }))
+                                        <div class="col-lg-6 col-12">
+                                            <div class="row @Resource.floating_item ">
+                                                @using (Html.BeginForm("SortCategory", "Owner", FormMethod.Post, new { @class = "navbar-right form" }))
                                                 {
                                                     <input type="hidden" name="id" value="@item.id">
-                                                    <button class="btn btn-icon btn-1 btn-sm btn-success"  type="button" onclick="confirm('Are you sure you want to sort this category?') ? this.parentElement.submit() : ''" data-toggle="tooltip" data-placement="top" title="Sort @item.name">
+                                                    <button class="btn btn-icon btn-1 btn-sm btn-success form-control"  type="button" onclick="confirm('Are you sure you want to sort this category?') ? this.parentElement.submit() : ''" data-toggle="tooltip" data-placement="top" title="Sort @item.name" style="width:50px; display:inline-block;margin-top:-3px">
                                                         <span class="btn-inner--icon">
                                                             <i class="fa fa-edit">
                                                             </i>
                                                         </span>
                                                     </button>
-                                                    <input value="@item.order" min="1" type="number" style="width:20%" name="order" />
+                                                    <input value="@item.order" min="1" type="number" class="form-control" name="order" style="width:60px; display:inline-block" />
                                                 }
-
-                                                <a class="btn btn-icon btn-1 btn-sm btn-primary modalLink" data-id="@item.id" data-toggle="modal" data-target="#modal-new-item" data-toggle="tooltip" data-placement="top" title="Add item in @item.name" onClick=(setSelectedCategoryId(4)) style="margin-left:.5rem;">
-                                                    <span class="btn-inner--icon"><i class="fa fa-plus"></i></span>
-                                                </a>
-                                                @using (Html.BeginForm("DeleteCategory", "Owner", FormMethod.Post, new { @class = "navbar-right" }))
+                                                <button class="btn btn-icon  btn-sm btn-primary modalLink form-control ml-2" data-id="@item.id" data-toggle="modal" data-target="#modal-new-item" data-toggle="tooltip" data-placement="top" title="Add item in @item.name" onClick=(setSelectedCategoryId(4)) style=" width:50px; display:inline-block">
+                                                    <span class="btn-inner--icon h-100 my-auto"><i class="fa fa-plus"></i></span>
+                                                </button>
+                                                @using (Html.BeginForm("DeleteCategory", "Owner", FormMethod.Post, new { @class = "navbar-right " }))
                                                 {
                                                     <input type="hidden" name="CatId" value="@item.id">
-                                                    <button class="btn btn-icon btn-1 btn-sm btn-danger" type="button" onclick="confirm('Are you sure you want to delete this category?') ? this.parentElement.submit() : ''" data-toggle="tooltip" data-placement="top" title="Delete @item.name">
+                                                    <button class="btn btn-icon btn-1 btn-sm btn-danger form-control" type="button" onclick="confirm('Are you sure you want to delete this category?') ? this.parentElement.submit() : ''" data-toggle="tooltip" data-placement="top" title="Delete @item.name" style="width:50px;">
                                                         <span class="btn-inner--icon"><i class="fa fa-trash"></i></span>
                                                     </button>
                                                 }
