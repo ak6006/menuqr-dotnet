@@ -28,6 +28,7 @@
     <Property Name="updated_at" Type="datetime" />
     <Property Name="order_index" Type="int" Nullable="false" />
     <Property Name="active" Type="int" Nullable="false" />
+    <Property Name="order" Type="int" />
   </EntityType>
   <EntityType Name="cities">
     <Key>
