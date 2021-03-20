@@ -26,7 +26,6 @@ namespace EgyptMenu.Models
         }
     
         public virtual DbSet<address> addresses { get; set; }
-        public virtual DbSet<category> categories { get; set; }
         public virtual DbSet<city> cities { get; set; }
         public virtual DbSet<extra> extras { get; set; }
         public virtual DbSet<hour> hours { get; set; }
@@ -58,5 +57,6 @@ namespace EgyptMenu.Models
         public virtual DbSet<variant_has_option> variant_has_option { get; set; }
         public virtual DbSet<theme> themes { get; set; }
         public virtual DbSet<restorant> restorants { get; set; }
+        public virtual DbSet<category> categories { get; set; }
     }
 }

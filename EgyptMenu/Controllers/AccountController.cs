@@ -248,7 +248,8 @@ namespace EgyptMenu.Controllers
                         restorant_id = restorant1.id,
                         name = "Desserts",
                         order_index = 1,
-                        active = 1
+                        active = 1,
+                        order = 3
                     };
                     var category1 = new category()
                     {
@@ -256,7 +257,8 @@ namespace EgyptMenu.Controllers
                         restorant_id = restorant1.id,
                         name = "Main Course",
                         order_index = 1,
-                        active = 1
+                        active = 1,
+                        order = 2
                     };
                     var category2 = new category()
                     {
@@ -264,7 +266,8 @@ namespace EgyptMenu.Controllers
                         restorant_id = restorant1.id,
                         name = "Starter",
                         order_index = 1,
-                        active = 1
+                        active = 1,
+                        order = 1
                     };
                     var category3 = new category()
                     {
@@ -272,7 +275,8 @@ namespace EgyptMenu.Controllers
                         restorant_id = restorant1.id,
                         name = "Beverages",
                         order_index = 1,
-                        active = 1
+                        active = 1,
+                        order = 4
                     };
                     try
                     {

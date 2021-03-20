@@ -27,9 +27,10 @@ namespace EgyptMenu.Models
         public Nullable<System.DateTime> updated_at { get; set; }
         public int order_index { get; set; }
         public int active { get; set; }
+        public Nullable<int> order { get; set; }
     
+        public virtual restorant restorant { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<item> items { get; set; }
-        public virtual restorant restorant { get; set; }
     }
 }

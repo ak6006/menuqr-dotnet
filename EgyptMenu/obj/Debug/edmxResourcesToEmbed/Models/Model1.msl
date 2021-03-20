@@ -19,19 +19,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="categories">
-      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.category">
-        <MappingFragment StoreEntitySet="categories">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-          <ScalarProperty Name="order_index" ColumnName="order_index" />
-          <ScalarProperty Name="active" ColumnName="active" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="cities">
       <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.city">
         <MappingFragment StoreEntitySet="cities">
@@ -499,6 +486,20 @@
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="updated_at" ColumnName="updated_at" />
           <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="order_index" ColumnName="order_index" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

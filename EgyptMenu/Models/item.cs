@@ -36,7 +36,6 @@ namespace EgyptMenu.Models
         public Nullable<decimal> vat { get; set; }
         public Nullable<System.DateTime> deleted_at { get; set; }
     
-        public virtual category category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<extra> extras { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -45,5 +44,6 @@ namespace EgyptMenu.Models
         public virtual ICollection<order_has_items> order_has_items { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<variant> variants { get; set; }
+        public virtual category category { get; set; }
     }
 }

@@ -177,14 +177,22 @@ namespace EgyptMenu.Controllers
         [HttpPost]
         public ActionResult AddCategory(string CatName)
         {
+            
             var CurrentRestaurant = GetRestorant();
+            List<category> RestaurantCategories = db.categories.Where(c => c.restorant_id == CurrentRestaurant.id).ToList();
+            List<int> CategoryOrders = new List<int>();
+            foreach (var item in RestaurantCategories)
+            {
+                CategoryOrders.Add(item.order.Value);
+            }
             var category = new category()
             {
                 restorant = CurrentRestaurant,
                 restorant_id = CurrentRestaurant.id,
                 name = CatName,
                 order_index = 1,
-                active = 1
+                active = 1,
+                order = CategoryOrders.Max()+1
             };
             try
             {
@@ -267,7 +275,26 @@ namespace EgyptMenu.Controllers
         {
             return View();
         }
-        public ActionResult Edit(int id)
+
+
+        public ActionResult SortCategory(int id, int order)
+        {
+            try
+            {
+                var Category = db.categories.Find(id);
+                Category.order = order;
+                db.SaveChanges();
+                return RedirectToAction("Menu");
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Menu", e.Message);
+            }
+            
+        }
+
+            ///Edit Item
+            public ActionResult Edit(int id)
         {
             var model = db.items.Find(id);
             return View(model);
