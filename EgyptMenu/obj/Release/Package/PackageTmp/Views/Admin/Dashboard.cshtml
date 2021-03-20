@@ -1,0 +1,506 @@
+﻿@using EgyptMenu.Views.Shared.Resources
+@{
+    Layout = null;
+    if (HttpContext.Current.Session["lang"] != null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="csrf-token" content="0ZZOWioTp38TPUIHWfvsJLIOS5ugAGFqihlCC4eO">
+
+
+
+    <title>MenueQR</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="~/Content/nucleo.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
+    <!-- Argon CSS -->
+    <link href="~/Content/argon.css" rel="stylesheet" />
+    <!-- Argon CSS -->
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="~/Content/jasny-bootstrap.min.css" rel="stylesheet" />
+    <!-- Flatpickr datepicker -->
+    <link href="~/Content/flatpickr.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+    <!-- Range datepicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#000000">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ZebraQR">
+    <link rel="icon" sizes="256x256" href="android-chrome-256x256.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ZebraQR">
+    <link rel="apple-touch-icon" href="android-chrome-256x256.png">
+
+
+    <link href="/images/icons/splash-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1242x2208.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1536x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+    <!-- Tile for Win8 -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
+
+
+    <!-- Custom CSS defined by admin -->
+    <link type="text/css" href="https://zebra-qr.com/byadmin/back.css" rel="stylesheet">
+
+
+
+
+</head>
+<body class="">
+    <form id="logout-form" action="https://zebra-qr.com/logout" method="POST" style="display: none;">
+        <input type="hidden" name="_token" value="0ZZOWioTp38TPUIHWfvsJLIOS5ugAGFqihlCC4eO">
+    </form>
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand pt-0" href="/">
+                <img src="~/Content/images/logo_qrzebra.png" class="navbar-brand-img" alt="..." />
+            </a>
+            <!-- User -->
+            <ul class="nav align-items-center d-md-none">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center">
+                            <span class="avatar avatar-sm rounded-circle">
+
+
+                                <img alt="..." src="https://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61">
+                            </span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">Welcome!</h6>
+                        </div>
+                        <a href="https://zebra-qr.com/profile" class="dropdown-item">
+                            <i class="fas fa-user"></i>
+                            <span>My profile</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="https://zebra-qr.com/logout" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="fas fa-running"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Collapse header -->
+                <div class="navbar-collapse-header d-md-none">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="https://zebra-qr.com/home">
+                                <img src="/default/logo_qrzebra.png">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Dashboard", "Admin")">
+                            <i class="fas fa-desktop text-primary "></i>@Resource.Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Restaurants", "Admin")">
+                            <i class="fas fa-store-alt text-primary "></i> @Resource.Restaurants
+                        </a>
+                    </li>
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Plans", "Admin")">
+                            <i class="fas fa-credit-card text-orange"></i>@Resource.Pricing_plans
+                        </a>
+                    </li>
+
+
+
+
+                  <!--  <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="@Url.Action("LangTranslations", "Admin")">
+                            <i class="fas fa-globe-americas text-orange"></i> @Resource.Translations
+                        </a>
+                    </li>  -->
+
+                    <!--  <li class="nav-item">
+          <a class="nav-link" target="_blank" href="@Url.Action("EnV", "Admin")">
+              <i class="fas fa-hand-point-up text-yellow"></i> ENV Editor
+          </a>
+      </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Settings", "Admin")">
+                            <i class="fas fa-tools text-black"></i> @Resource.Settings
+                        </a>
+                    </li>
+                </ul>
+
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+
+                <!-- Divider -->
+                <hr class="my-3">
+                <!-- Heading -->
+                <h6 class="navbar-heading text-muted">@Resource.Version 2.1.1   <span id="uptodate" class="badge badge-success" style="display:none;">latest</span></h6>
+                <h6>2021-02-10 10:44:40 </h6>
+
+                <hr class="my-3">
+                <div id="update_notification" style="display:none;" class="alert alert-info">
+                    <button type="button" style="margin-left: 20px" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="uptodate_notification" style="display:none;" class="alert alert-success">
+                    <button type="button" style="margin-left: 20px" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top navbar-expand-md  navbar-dark" id="navbar-main">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">
+                    @Resource.Dashboard
+                </a>
+
+                <!-- Form -->
+                <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                </form>
+
+                <!-- User -->
+                <ul class="navbar-nav align-items-center d-none d-md-flex">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="media align-items-center">
+                                <span class="avatar avatar-sm rounded-circle">
+
+                                    <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61">
+                                </span>
+                                <div class="media-body ml-2 d-none d-lg-block">
+                                    <span class="mb-0 text-sm  font-weight-bold">Admin Admin</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome!</h6>
+                            </div>
+                            <a href="https://zebra-qr.com/profile" class="dropdown-item">
+                                <i class="fas fa-user"></i>
+                                <span>My profile</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="https://zebra-qr.com/logout" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fas fa-running"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <!-- Card stats -->
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">@Resource.Orders___30_days__</h5>
+                                            <span class="h2 font-weight-bold mb-0">141</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                                <i class="fas fa-shopping-basket"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">@Resource.Sales_Volume___30_days__</h5>
+                                            <span class="h2 font-weight-bold mb-0"> $9,219.00</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                                <i class="fas fa-chart-line"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">@Resource.Number_of_restaurants</h5>
+                                            <span class="h2 font-weight-bold mb-0">16 restaurants</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                                <i class="fas fa-folder"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title text-uppercase text-muted mb-0">@Resource.Views</h5>
+                                            <span class="h2 font-weight-bold mb-0">2 @Resource.Views</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container-fluid mt--7">
+            <div class="row">
+                <div class="col-xl-8 mb-5 mb-xl-0">
+                    <div class="card bg-gradient-default shadow">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h6 class="text-uppercase text-light ls-1 mb-1">@Resource.Overview</h6>
+                                    <h2 class="text-white mb-0">@Resource.Sales_value</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                        <script>
+                            var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                            function monthNumToName(monthnum) { return months[monthnum - 1] || '' }
+
+                            var monthLabels = [8, 9, 10, 11, 12, 1, 2];
+                            var salesValue = [3071, 2719, 2758, 2585, 2832, 3221, 7560];
+                            var totalOrders = [44, 43, 41, 38, 43, 51, 113];
+
+                            for (var i = 0; i < monthLabels.length; i++) { monthLabels[i] = monthNumToName(monthLabels[i]) }
+                        </script>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div class="chart">
+                                <!-- Chart wrapper -->
+                                <canvas id="chart-sales" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="card shadow">
+                        <div class="card-header bg-transparent">
+                            <div class="row align-items-center">
+                                <div class="col">@Resource.Performance</h6>
+                                    <h2 class="mb-0">@Resource.Total_orders</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Chart -->
+                            <div class="chart">
+                                <canvas id="chart-orders" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer class="footer">
+                <div class="row align-items-center justify-content-xl-between">
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <!-- Commented because navtabs includes same script -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+    <script src="~/Content/JS/popper.min.js"></script>
+    <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
+
+    <script src="https://zebra-qr.com/argon/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="https://zebra-qr.com/argon/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <!-- Navtabs -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+
+    <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
+
+    <!-- Nouslider -->
+    <script src="~/Content/JS/nouislider.min.js"></script>
+
+    <!-- Argon JS -->
+    <script src="~/Content/JS/argon.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="~/Content/JS/jasny-bootstrap.min.js"></script>
+    <!-- Custom js -->
+    <script src="~/Content/JS/orders.js"></script>
+    <!-- Custom js -->
+    <script src="~/Content/JS/mresto.js"></script>
+    <!-- AJAX -->
+    <!-- SELECT2 -->
+    <script src="~/Content/JS/select2.js"></script>
+    <script src="~/Content/JS/select2.min.js"></script>
+
+    <!-- DATE RANGE PICKER -->
+    <script src="~/Content/JS/moment.min.js"></script>
+    <script src="~/Content/JS/datetimepicker.js"></script>
+
+    <!-- All in one -->
+    <script src="https://zebra-qr.com/custom/js/js.js?id=2.1.1"></script>
+
+
+
+
+    <!-- Import Vue -->
+    <script src="~/Content/JS/vue.js"></script>
+
+    <!-- Import AXIOS --->
+    <script src="~/Content/JS/axios.min.js"></script>
+
+    <!-- Flatpickr datepicker -->
+    <script src="~/Content/JS/flatpickr.js"></script>
+
+    <!-- Notify JS -->
+    <script src="~/Content/JS/notify.min.js"></script>
+
+
+    <script>
+        var ONESIGNAL_APP_ID = "";
+        var USER_ID = '1';
+        var PUSHER_APP_KEY = "2590a20b41d2f34151c9";
+        var PUSHER_APP_CLUSTER = "eu";
+    </script>
+
+    <!-- OneSignal -->
+
+
+
+
+
+    <script src="~/Content/JS/rmap.js"></script>
+
+    <!-- Pusher -->
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <script src="https://zebra-qr.com/custom/js/pusher.js"></script>
+
+
+
+    <!-- Custom JS defined by admin -->
+</body>
+</html>

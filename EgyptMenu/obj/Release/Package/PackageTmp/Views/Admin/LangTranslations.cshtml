@@ -1,0 +1,815 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="PQSjwAHiUMfgM0JUUMrA4iwVdXQoe7zBbjVtaWaa">
+    <title>QR Menu Maker</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="app">
+
+        <nav class="header">
+
+            <h1 class="text-lg px-6">QR Menu Maker</h1>
+
+            <ul class="flex-grow justify-end pr-2">
+                <li>
+                    <a href="http://localhost/admin/languages" class="">
+                        <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm2-2.25a8 8 0 0 0 4-2.46V9a2 2 0 0 1-2-2V3.07a7.95 7.95 0 0 0-3-1V3a2 2 0 0 1-2 2v1a2 2 0 0 1-2 2v2h3a2 2 0 0 1 2 2v5.75zm-4 0V15a2 2 0 0 1-2-2v-1h-.5A1.5 1.5 0 0 1 4 10.5V8H2.25A8.01 8.01 0 0 0 8 17.75z" /></svg>                Languages
+                    </a>
+                </li>
+                <li>
+                    <a href="http://localhost/admin/languages/en/translations" class="active">
+                        <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.41 9l2.24 2.24-.83 2L6 10.4l-3.3 3.3-1.4-1.42L4.58 9l-.88-.88c-.53-.53-1-1.3-1.3-2.12h2.2c.15.28.33.53.51.7l.89.9.88-.88C7.48 6.1 8 4.84 8 4H0V2h5V0h2v2h5v2h-2c0 1.37-.74 3.15-1.7 4.12L7.4 9zm3.84 8L10 20H8l5-12h2l5 12h-2l-1.25-3h-5.5zm.83-2h3.84L14 10.4 12.08 15z" /></svg>                Translation
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <form action="http://localhost/admin/languages/en/translations" method="get">
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    Translation
+
+                    <div class="flex flex-grow justify-end items-center">
+
+                        <div class="search">
+                            <input type="text" class="search-input" placeholder="Search all translations" name="filter" value="">
+                        </div>
+                        <div class="select-group">
+
+                            <select name="language" v-on:change="submit">
+                                <option value="de">de</option>
+                                <option value="en" selected="selected">en</option>
+                                <option value="es">es</option>
+                                <option value="fr">fr</option>
+                                <option value="it">it</option>
+                                <option value="pt">pt</option>
+                                <option value="ru">ru</option>
+                                <option value="tr">tr</option>
+                                <option value="zh-CN">zh-CN</option>
+                                <option value="zh-TW">zh-TW</option>
+                            </select>
+
+                            <div class="caret">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                            </div>
+
+                        </div>
+                        <div class="sm:hidden lg:flex items-center">
+
+                            <div class="select-group">
+
+                                <select name="group" v-on:change="submit">
+                                    <option value> ----- </option>
+                                    <option value="auth">auth</option>
+                                    <option value="installer_messages">installer_messages</option>
+                                    <option value="laraupdater">laraupdater</option>
+                                    <option value="pagination">pagination</option>
+                                    <option value="passwords">passwords</option>
+                                    <option value="qrlanding" selected="selected">qrlanding</option>
+                                    <option value="settings">settings</option>
+                                    <option value="validation">validation</option>
+                                    <option value="translation::errors">translation::errors</option>
+                                    <option value="translation::translation">translation::translation</option>
+                                    <option value="single">single</option>
+                                </select>
+
+                                <div class="caret">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+                                </div>
+
+                            </div>
+                            <a href="http://localhost/admin/languages/en/translations/create" class="button">
+                                + Add
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="panel-body">
+
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th class="w-1/5 uppercase font-thin">Group / Single</th>
+                                <th class="w-1/5 uppercase font-thin">Key</th>
+                                <th class="uppercase font-thin">en</th>
+                                <th class="uppercase font-thin">en</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>below</td>
+                                <td>below</td>
+                                <td>
+                                    <translation-input initial-translation="below"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="below"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>contactles_menu</td>
+                                <td>Contactless QR digital menu</td>
+                                <td>
+                                    <translation-input initial-translation="Contactless QR digital menu"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="contactles_menu"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>dashboard</td>
+                                <td>Dashboard</td>
+                                <td>
+                                    <translation-input initial-translation="Dashboard"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="dashboard"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>demo</td>
+                                <td>Demo</td>
+                                <td>
+                                    <translation-input initial-translation="Demo"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="demo"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>demo_button</td>
+                                <td>Create a menu for you, now!</td>
+                                <td>
+                                    <translation-input initial-translation="Create a menu for you, now!"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="demo_button"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>demo_subtitle</td>
+                                <td>Just open the camera on your phone and scan the</td>
+                                <td>
+                                    <translation-input initial-translation="Just open the camera on your phone and scan the"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="demo_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>demo_title</td>
+                                <td>See a demo online menu</td>
+                                <td>
+                                    <translation-input initial-translation="See a demo online menu"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="demo_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>hero_input_email</td>
+                                <td>Your email</td>
+                                <td>
+                                    <translation-input initial-translation="Your email"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="hero_input_email"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>hero_input_name</td>
+                                <td>Restaurant or bar name</td>
+                                <td>
+                                    <translation-input initial-translation="Restaurant or bar name"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="hero_input_name"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>hero_input_phone</td>
+                                <td>Phone</td>
+                                <td>
+                                    <translation-input initial-translation="Phone"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="hero_input_phone"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>hero_subtitle</td>
+                                <td>Their mobile is your menu now!</td>
+                                <td>
+                                    <translation-input initial-translation="Their mobile is your menu now!"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="hero_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>hero_title</td>
+                                <td>Create a digital menu for your Restaurant or Bar. Engage more with your customers.</td>
+                                <td>
+                                    <translation-input initial-translation="Create a digital menu for your Restaurant or Bar. Engage more with your customers."
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="hero_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>join_now</td>
+                                <td>Join now</td>
+                                <td>
+                                    <translation-input initial-translation="Join now"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="join_now"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>login</td>
+                                <td>Login</td>
+                                <td>
+                                    <translation-input initial-translation="Login"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="login"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>pricing</td>
+                                <td>Pricing</td>
+                                <td>
+                                    <translation-input initial-translation="Pricing"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="pricing"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>pricing_button</td>
+                                <td>Start with</td>
+                                <td>
+                                    <translation-input initial-translation="Start with"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="pricing_button"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>pricing_subtitle</td>
+                                <td>Start free and fell in love in our pro features</td>
+                                <td>
+                                    <translation-input initial-translation="Start free and fell in love in our pro features"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="pricing_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>pricing_title</td>
+                                <td>Simple Pricing</td>
+                                <td>
+                                    <translation-input initial-translation="Simple Pricing"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="pricing_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product</td>
+                                <td>Product</td>
+                                <td>
+                                    <translation-input initial-translation="Product"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product1_button</td>
+                                <td>Experience it</td>
+                                <td>
+                                    <translation-input initial-translation="Experience it"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product1_button"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product1_feature1</td>
+                                <td>Real-time changes</td>
+                                <td>
+                                    <translation-input initial-translation="Real-time changes"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product1_feature1"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product1_feature2</td>
+                                <td>Organize into categories</td>
+                                <td>
+                                    <translation-input initial-translation="Organize into categories"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product1_feature2"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product1_feature3</td>
+                                <td>Extras and items variants</td>
+                                <td>
+                                    <translation-input initial-translation="Extras and items variants"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product1_feature3"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product1_subtitle</td>
+                                <td>Create your menu directly on our platform. Update anytime. Easy And Simple</td>
+                                <td>
+                                    <translation-input initial-translation="Create your menu directly on our platform. Update anytime. Easy And Simple"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product1_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product1_title</td>
+                                <td>Create a Digital Menu</td>
+                                <td>
+                                    <translation-input initial-translation="Create a Digital Menu"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product1_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product2_button</td>
+                                <td>Design it</td>
+                                <td>
+                                    <translation-input initial-translation="Design it"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product2_button"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product2_feature1</td>
+                                <td>Beautiful QR Styles</td>
+                                <td>
+                                    <translation-input initial-translation="Beautiful QR Styles"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product2_feature1"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product2_feature2</td>
+                                <td>Pick QR color</td>
+                                <td>
+                                    <translation-input initial-translation="Pick QR color"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product2_feature2"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product2_feature3</td>
+                                <td>Print templates for download</td>
+                                <td>
+                                    <translation-input initial-translation="Print templates for download"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product2_feature3"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product2_subtitle</td>
+                                <td>8 different designs. Unlimited color options. Choose QR and Flayer style.</td>
+                                <td>
+                                    <translation-input initial-translation="8 different designs. Unlimited color options. Choose QR and Flayer style."
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product2_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product2_title</td>
+                                <td>Create QR</td>
+                                <td>
+                                    <translation-input initial-translation="Create QR"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product2_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product3_button</td>
+                                <td>Go Mobile</td>
+                                <td>
+                                    <translation-input initial-translation="Go Mobile"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product3_button"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product3_feature1</td>
+                                <td>No mobile app required</td>
+                                <td>
+                                    <translation-input initial-translation="No mobile app required"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product3_feature1"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product3_feature2</td>
+                                <td>Superfast online menu - PWA</td>
+                                <td>
+                                    <translation-input initial-translation="Superfast online menu - PWA"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product3_feature2"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product3_feature3</td>
+                                <td>View analytics</td>
+                                <td>
+                                    <translation-input initial-translation="View analytics"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product3_feature3"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product3_subtitle</td>
+                                <td>Now your visitors will use their mobile phone camera to access your menu.</td>
+                                <td>
+                                    <translation-input initial-translation="Now your visitors will use their mobile phone camera to access your menu."
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product3_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product3_title</td>
+                                <td>Go Digital</td>
+                                <td>
+                                    <translation-input initial-translation="Go Digital"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product3_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product_description</td>
+                                <td>There are platforms where you can make QR code, but no menu. There are platforms where you can create a menu but not design your QR</td>
+                                <td>
+                                    <translation-input initial-translation="There are platforms where you can make QR code, but no menu. There are platforms where you can create a menu but not design your QR"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product_description"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product_subtitle</td>
+                                <td>We do both</td>
+                                <td>
+                                    <translation-input initial-translation="We do both"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>product_title</td>
+                                <td>The most comprehensive platform for QR digital menu</td>
+                                <td>
+                                    <translation-input initial-translation="The most comprehensive platform for QR digital menu"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="product_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>qr_code</td>
+                                <td>QR code</td>
+                                <td>
+                                    <translation-input initial-translation="QR code"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="qr_code"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>register</td>
+                                <td>Register</td>
+                                <td>
+                                    <translation-input initial-translation="Register"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="register"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>testimonials</td>
+                                <td>Testimonials</td>
+                                <td>
+                                    <translation-input initial-translation="Testimonials"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="testimonials"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>testimonials_subtitle</td>
+                                <td>Used by top restaurants worldwide</td>
+                                <td>
+                                    <translation-input initial-translation="Used by top restaurants worldwide"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="testimonials_subtitle"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>qrlanding</td>
+                                <td>testimonials_title</td>
+                                <td>Restaurants and Bars that love our QRs</td>
+                                <td>
+                                    <translation-input initial-translation="Restaurants and Bars that love our QRs"
+                                                       language="en"
+                                                       group="qrlanding"
+                                                       translation-key="testimonials_title"
+                                                       route="admin/languages">
+                                    </translation-input>
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+            </div>
+
+        </form>
+
+
+    </div>
+    <script src="~/Content/JS/app.js"></script>
+</body>
+</html>

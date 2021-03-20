@@ -60,7 +60,7 @@ namespace EgyptMenu.Controllers
         //
         // GET: /Account/Login
         [AllowAnonymous]
-        public ActionResult Login(string returnUrl , string lang = "en")
+        public ActionResult Login(string returnUrl, string lang = "en")
         {
             ViewBag.ReturnUrl = returnUrl;
             return View();
@@ -142,9 +142,9 @@ namespace EgyptMenu.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register(string name , string email , string phone)
+        public ActionResult Register(string name, string email, string phone)
         {
-            
+
             ViewBag.Name = name;
             ViewBag.Email = email;
             ViewBag.Number = phone;
@@ -493,8 +493,9 @@ namespace EgyptMenu.Controllers
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     //return View("ForgotPasswordConfirmation");
-                    return View(model);
-
+                    ModelState.AddModelError("error", "Please enter a valid mail");
+                    ViewBag.Email = model.Email;
+                    return View();
                 }
                 // Replace sender@example.com with your "From" address. 
                 // This address must be verified with Amazon SES.
@@ -531,12 +532,14 @@ namespace EgyptMenu.Controllers
                 // The subject line of the email
                 try
                 {
-                     Pass = db.users.Where(u => u.email == model.Email).FirstOrDefault().password.ToString();
-                     Name = db.users.Where(u => u.email == model.Email).FirstOrDefault().name.ToString();
+                    Pass = db.users.Where(u => u.email == model.Email).FirstOrDefault().password.ToString();
+                    Name = db.users.Where(u => u.email == model.Email).FirstOrDefault().name.ToString();
                 }
                 catch (Exception)
                 {
-                    return View(model);
+                    //ModelState.AddModelError("error", "Please enter a valid mail");
+                    ViewBag.Email = model.Email;
+                    return View();
                 }
 
 
@@ -586,11 +589,14 @@ namespace EgyptMenu.Controllers
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                 await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                TempData["Msg"] = "Please check your mail";
                 return RedirectToAction("login", "Account");
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            //ModelState.AddModelError("error", "Please enter a valid mail");
+            ViewBag.Email = model.Email;
+            return View();
         }
 
         //
