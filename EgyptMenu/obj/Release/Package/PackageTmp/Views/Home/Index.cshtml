@@ -1,0 +1,365 @@
+﻿@using EgyptMenu.Views.Shared.Resources
+@{
+    Layout = null;
+    if (!Request.QueryString["lang"].IsEmpty())
+    {
+        Culture = UICulture = Request.QueryString["lang"];
+        HttpContext.Current.Session.Add("lang", Request.QueryString["lang"]);
+    }
+    else
+    {
+        if (HttpContext.Current.Session["lang"] != null)
+        {
+            Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+            HttpContext.Current.Session.Add("lang", HttpContext.Current.Session["lang"].ToString());
+        }
+        else
+        {
+            Culture = UICulture = "en";
+            HttpContext.Current.Session.Add("lang", "en");
+        }
+    }
+}
+<html lang=@Resource.language dir=@Resource.direction>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Content/images/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.png">
+    <meta name="csrf-token" content="PAS0AFs1bXdGZJleDqStDf2sYpGZhfhSRhJQTGzt">
+    <meta property="og:image" content="~/Content/images/logo_qrzebra.png">
+    <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
+    <title>QR Menu Maker</title>
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="QR Menu Maker">
+    <link rel="icon" sizes="256x256" href="android-chrome-256x256.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="QR Menu Maker">
+    <link rel="apple-touch-icon" href="android-chrome-256x256.png">
+    <link href="~/Content/images/icons/splash-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-1242x2208.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-1536x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="~/Content/images/icons/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="~/Content/nucleo.css" rel="stylesheet" />
+    <link href="~/Content/front.min.css" rel="stylesheet" />
+    <link href="~/Content/custom_qr.css" rel="stylesheet" />
+    <link href="~/Content/front.css" rel="stylesheet" />
+    <link href="~/Content/new-style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header-global">
+        <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg headroom text-light" style="background-color: #19526e">
+            <div class="container">
+                <a class="navbar-brand logo_classes" href="/">
+                    <img class="navbar-brand-dark LogoIMG" src="~/Content/images/logo_qrzebraH.png" alt="Logo">
+                </a>
+                <div class="navbar-collapse collapse px-5" id="navbar_global" style="background-color:#19526e ;@Resource.text_align">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-10 collapse-brand p-0">
+                                <a href="/">
+                                    <img src="~/Content/images/logo_qrzebraH.png" style="height:75px" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="col-2 collapse-close ">
+                                <a href="#navbar_global" role="button" class="fas fa-times" data-toggle="collapse"
+                                   data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false"
+                                   aria-label="Toggle navigation"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav navbar-nav-hover justify-content-center p-0">
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                            <a data-scroll href="#product" class="nav-link">@Resource.Product</a>
+                        </li>
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                            <a data-scroll href="#testimonials" class="nav-link">@Resource.Testimonials</a>
+                        </li>
+                        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                            <a data-scroll href="#demo" class="nav-link">@Resource.Demo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class=" cta_button_classes">
+                    @{Html.RenderPartial("_LoginPartial");}
+                </div>
+                <div class="d-flex d-lg-none align-items-center" style="margin:auto;">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                            aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Loader -->
+        <div class="preloader bg-soft flex-column justify-content-center align-items-center">
+            <div class="loader-element">
+                <span class="loader-animated-dot"></span>
+                <img src="~/Content/images/logo_qrzebra.png" height="40" alt="logo">
+            </div>
+        </div>
+        <!-- Hero 1 -->
+        <section class="section-header pb-6 pb-lg-6 indexbg">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-12 col-md-5 order-2 order-lg-1" style="@Resource.text_align">
+                        <h1 class="display-2 mb-3" style="color:#19526e;font-weight:900;">@Resource.Contactless_QR_digital_menu</h1>
+                        <p class="lead" style="color:black; line-height:1; font-weight:500;">@Resource.Create_a_digital_menu_for_your_Restaurant_or_Bar. @Resource.Engage_more_with_your_customers.<br /> <br /><strong style="font-size:x-large; color:#19526e">@Resource.Their_mobile_is_your_menu_now !</strong></p>
+                        <div class="mt-4">
+                            <form action="@Url.Action("register", "Account")" class="d-flex flex-column mb-5 mb-lg-0 text-center" style="align-items: flex-end;">
+                                <input class="form-control" style="border-radius:15px;" type="text" name="name" placeholder="@Resource.Restaurant_or_bar_name" required>
+                                <input class="form-control my-3" style="border-radius:15px;" type="email" name="email" placeholder="@Resource.Your_email" required>
+                                <input class="form-control my-1" style="border-radius:15px;" type="number" name="phone" placeholder="@Resource.Phone" required>
+                                <button class="btn  my-3 " style="width:50%; background-color:#ffa822;color:white;" type="submit">@Resource.Join_now !</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-1 order-lg-2">
+                        <img src="~/Content/images/flayer.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Product -->
+        <section id="product" class="section section-lg py-5" style="background-color:#19526e;">
+            <div class="container">
+                <div class="row justify-content-center ">
+                    <div class="col-12 col-md-8 text-center">
+                        <h2 class="h1 font-weight-bolder mb-4" style="color:#ffa822">@Resource.The_most_comprehensive_platform_for_QR_digital_menu</h2>
+                        <p class="lead" style="color:white">@Resource.There_are_platforms_where_you_can_make_QR_code , @Resource.but_no_menu. @Resource.There_are <br /><strong>@Resource.We_do_both.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg indexbg">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12 col-md-6 col-lg-4 mb-5" style=" padding:15px; border:1px solid #ffa822; border-radius:15px;">
+                        <div class="card shadow-soft">
+                            <div class="card-header p-0">
+                                <img src="~/Content/images/menubuilder.jpg" class="card-img-top rounded-top" alt="image">
+                            </div>
+                            <div class="card-body" style="@Resource.text_align;">
+                                <h3 class="card-title mt-3">@Resource.Create_a_Digital_Menu</h3>
+                                <p class="card-text">@Resource.Create_your_menu_directly_on_our_platform__Update_anytime__Easy_And_Simple.</p>
+                                <ul class="list-group d-flex justify-content-center mb-4 p-0">
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Real_time_changes</div>
+                                    </li>
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Organize_into_categories</div>
+                                    </li>
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Extras_and_items_variants</div>
+                                    </li>
+                                </ul>
+                                @*<a href="@Url.Action("register", "Account")" class="btn btn-primary">@Resource.Experience_it</a>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5" style=" padding:15px; border:5px solid #ffa822;border-right:none;border-left:none; ">
+                        <div class="card shadow-soft border-light">
+                            <div class="card-header p-0">
+                                <img src="~/Content/images/qr_image_builder.jpg" class="card-img-top rounded-top" alt="image">
+                            </div>
+                            <div class="card-body" style="@Resource.text_align;">
+                                <h3 class="card-title mt-3">@Resource.Create_QR</h3>
+                                <p class="card-text">8 @Resource._8_different_designs__Unlimited_color_options__Choose_QR_and_Flayer_style.</p>
+                                <br />
+                                <ul class="list-group d-flex justify-content-center mb-4 p-0">
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Beautiful_QR_Styles</div>
+                                    </li>
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Pick_QR_color</div>
+                                    </li>
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Print_templates_for_download</div>
+                                    </li>
+                                </ul>
+                                @*<a href="@Url.Action("register", "Account")" class="btn btn-primary">@Resource.Design_it</a>*@
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5" style=" padding:15px; border:1px solid #ffa822; border-radius:15px;">
+                        <div class="card shadow-soft border-light">
+                            <div class="card-header p-0">
+                                <img src="~/Content/images/mobile_pwa.jpg" class="card-img-top rounded-top" alt="image">
+                            </div>
+                            <div class="card-body" style="@Resource.text_align;">
+                                <h3 class="card-title mt-3">@Resource.Go_Digital</h3>
+                                <p class="card-text">@Resource.Now_your_visitors_will_use_their_mobile_phone_camera_to_access_your_menu .<br /> &nbsp;</p>
+                                <ul class="list-group d-flex justify-content-center mb-4 p-0">
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.No_mobile_app_required</div>
+                                    </li>
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.Superfast_online_menu___PWA</div>
+                                    </li>
+                                    <li class="list-group-item d-flex pl-0 pb-1">
+                                        <span class="mr-2"><i class="fas fa-check-square text-success"></i></span>
+                                        <div class="mr-2">@Resource.View_analytics</div>
+                                    </li>
+                                </ul>
+                                @*<a href="@Url.Action("register", "Account")" class="btn btn-primary">@Resource.Go_Mobile</a>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section id="testimonials" class="section section-lg" style="background-color:#19526e; color:#19526e;">
+            <div class="container">
+                <div class="row justify-content-center mb-5 mb-lg-7">
+                    <div class="col-12 col-md-8 text-center">
+                        <h1 class="h1 font-weight-bolder mb-4" style="color:white">@Resource.Restaurants_and_Bars_that_love_our_QRs</h1>
+                        <p class="lead" style="color:#ffa822;">@Resource.Used_by_top_restaurants_worldwide</p>
+                    </div>
+                </div>
+                <div class="row mb-lg-5" dir="ltr">
+                    <div class="col-12 col-lg-6">
+                        <div class="customer-testimonial d-flex mb-5">
+                            <img src="~/Content/images/Ahmed.png" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light  position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">" @Resource.We_use_QR_Menu_Maker_to_protect_our_visitors__Dirty_old_menus_are_a_thing_from_the_past__So_far_clients_report_no_issues__And_they_love_our_new_online_menu."</p>
+                                    <span class="h6">- Ahmed Elgbaly <small class="ml-0 ml-md-2">Brooklyn Taco</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-testimonial d-flex mb-5">
+                            <img src="~/Content/images/Mahmoud.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light  position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">"@Resource.QR_Menu_Maker_was_the_perfect_tool_for_the_COVID_situation__We_should_go_earlier_to_this_type_of_menu"</p>
+                                    <span class="h6">- Mahmoud Gaber <small class="ml-0 ml-md-2">Burger 2Go</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 pt-lg-6">
+                        <div class="customer-testimonial d-flex mb-5">
+                            <img src="~/Content/images/Amoury.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">"@Resource.No_more_printing_and_reprinting_for_some_small_mistake_in_our_menu_or_price_change__We_love_what_QR_Menu_Maker_have_provided "</p>
+                                    <span class="h6">- Amr IT-Voda <small class="ml-0 ml-md-2">Awang Italian Restaurant</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-testimonial d-flex mb-5">
+                            <img src="https://randomuser.me/api/portraits/men/61.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                            <div style="padding:5px; border:1px solid #ffa822; border-radius:0 20px 20px;">
+                                <div class=" bg-soft shadow-soft border border-light  position-relative p-4" style="border-radius:0px 20px 20px ;">
+                                    <div class="d-flex mb-4">
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                        <span class="text-warning mr-2"><i class="star fas fa-star"></i></span>
+                                    </div>
+                                    <p class="mt-2" style="font-weight:900;">" @Resource.Clients_are_happy__They_can_see_that_we_are_a_responsible_bar_and_their_health_is_a_priority__No_more_old_dirty_menus__D__All_they_need_is_their_phone."</p>
+                                    <span class="h6">- Abdullah Rafat <small class="ml-0 ml-md-2">Malibu Diner</small></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- DEMO -->
+        <section id="demo" class="section section-lg pb-5 indexbg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="mb-4" style="color:#19526e; font-weight:900;">@Resource.See_a_demo_online_menu</h2>
+                        <p class="lead mb-5" style="color:#ffa822;">@Resource.Just_open_the_camera_on_your_phone_and_scan_the_QR_code_below_ </p>
+                        <a href="#" class="icon icon-lg text-gray mr-3" style="padding:5px; border:1px solid #ffa822; border-radius:0 0 20px 20px;">
+                            <img style="width:300px; border-radius:0 0 20px 20px;" src="~/Content/images/qrdemo.jpg" />
+                        </a>
+                    </div>
+                    <div class="col-12 text-center">
+                        <!-- Button Modal -->
+                        <a href="@Url.Action("register", "Account")" class="btn animate-up-2" style="background-color:#ffa822; color:white;">@Resource.Create_a_menu_for_you__now_ !</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer section  py-4  text-white overflow-hidden" style="background-color:#19526e;">
+            <div class="container">
+                <div class="row">
+                    <div class="col  mb-md-0">
+                        <div class="d-flex text-center justify-content-center align-items-center">
+                            <p class="font-weight-normal mb-0"> @Resource.All_rights_reserved <span class="current-year"></span>  © Team I Group </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- Core -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+    <script src="~/Content/JS/popper.min.js"></script>
+    <script src="~/Content/JS/bootstrap.min.js"></script>
+    <script src="~/Content/JS/headroom.min.js"></script>
+    <!-- Vendor JS -->
+    <script src="~/Content/JS/on-screen.umd.min.js"></script>
+    <script src="~/Content/JS/smooth-scroll.polyfills.min.js"></script>
+    <script src="~/Content/JS/jquery.waypoints.min.js"></script>
+    <script src="~/Content/JS/jarallax.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Impact JS -->
+    <script src="~/Content/JS/front.js"></script>
+    <!-- Custom JS defined by admin -->
+</body>
+</html>

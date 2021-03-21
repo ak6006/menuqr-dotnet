@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -9,9 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EgyptMenu.Models;
-using System.Net.Mail;
-using System.Net;
-using Microsoft.AspNet.Identity.EntityFramework;
+using EgyptMenu.Services;
 
 namespace EgyptMenu.Controllers
 {
@@ -22,6 +18,7 @@ namespace EgyptMenu.Controllers
         private Entities db = new Entities();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+
 
         public AccountController()
         {
@@ -78,6 +75,17 @@ namespace EgyptMenu.Controllers
                 return View(model);
             }
 
+             var User = await UserManager.FindByNameAsync(model.UserName);
+
+            if (User!=null)
+            {
+                if (!await UserManager.IsEmailConfirmedAsync(User.Id.ToString()))
+                {
+                    ModelState.AddModelError("", "Plz check your Email to confirm your account.");
+                    return View(model);
+                }
+            }
+            
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
@@ -163,8 +171,7 @@ namespace EgyptMenu.Controllers
                 var user = new ApplicationUser
                 {
                     UserName = model.OwnerName,
-                    Email = model.Email,
-                    EmailConfirmed = true
+                    Email = model.Email
                 };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
@@ -179,9 +186,8 @@ namespace EgyptMenu.Controllers
                     {
                         return View(e.Message);
                     }
-                    user.EmailConfirmed = true;
-                    user.PhoneNumberConfirmed = true;
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    //user.PhoneNumberConfirmed = true;
+                    //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     user user1 = new user()
                     {
                         email = model.Email,
@@ -445,11 +451,15 @@ namespace EgyptMenu.Controllers
                     db.SaveChanges();
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    string Subject = "Account Confirmation";
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    string Body = "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>";
+                    Services1.SendMail(user.Email, Body, Subject);
 
-                    return RedirectToAction("Index", "Home");
+                    //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+
+                    return RedirectToAction("Login", "Account");
                 }
                 AddErrors(result);
             }
@@ -497,38 +507,9 @@ namespace EgyptMenu.Controllers
                     ViewBag.Email = model.Email;
                     return View();
                 }
-                // Replace sender@example.com with your "From" address. 
-                // This address must be verified with Amazon SES.
-                String FROM = "info@teamigroup.com";
-                String FROMNAME = "QR Menu Maker";
 
-                // Replace recipient@example.com with a "To" address. If your account 
-                // is still in the sandbox, this address must be verified.
-                String TO = model.Email;
-
-                // Replace smtp_username with your Amazon SES SMTP user name.
-                String SMTP_USERNAME = "info@teamigroup.com";
-
-                // Replace smtp_password with your Amazon SES SMTP user name.
-                String SMTP_PASSWORD = "ti10203040$";
-
-                // (Optional) the name of a configuration set to use for this message.
-                // If you comment out this line, you also need to remove or comment out
-                // the "X-SES-CONFIGURATION-SET" header below.
-                String CONFIGSET = "ConfigSet";
-
-                // If you're using Amazon SES in a region other than US West (Oregon), 
-                // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP  
-                // endpoint in the appropriate AWS Region.
-                String HOST = "mail.teamigroup.com";
-
-                // The port you will connect to on the Amazon SES SMTP endpoint. We
-                // are choosing port 587 because we will use STARTTLS to encrypt
-                // the connection.
-                int PORT = 587;
                 String Pass = "";
                 string Name = "";
-
                 // The subject line of the email
                 try
                 {
@@ -541,49 +522,10 @@ namespace EgyptMenu.Controllers
                     ViewBag.Email = model.Email;
                     return View();
                 }
+                string Subject = "Account recovery";
+                string Body = "Your User Name is : " + Name + " and Your password is : " + Pass + " Please don't forget it again";
 
-
-                // The body of the email
-                String BODY = "Your User Name is : " + Name + " and Your password is : " + Pass + " Please don't forget it again";
-                //"<h1>Amazon SES Test</h1>" +
-                //"<p>This email was sent through the " +
-                //"<a href='https://aws.amazon.com/ses'>Amazon SES</a> SMTP interface " +
-                //"using the .NET System.Net.Mail library.</p>";
-
-                // Create and build a new MailMessage object
-                MailMessage message = new MailMessage();
-                message.IsBodyHtml = true;
-                message.From = new MailAddress(FROM, FROMNAME);
-                message.To.Add(new MailAddress(TO));
-                message.Subject = "Account Recovery";
-                message.Body = BODY;
-                // Comment or delete the next line if you are not using a configuration set
-                //message.Headers.Add("X-SES-CONFIGURATION-SET", CONFIGSET);
-                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-                using (var client = new System.Net.Mail.SmtpClient(HOST, PORT))
-                {
-                    // Pass SMTP credentials
-                    client.Credentials =
-                        new NetworkCredential(SMTP_USERNAME, SMTP_PASSWORD);
-
-                    // Enable SSL encryption
-                    client.EnableSsl = true;
-
-                    // Try to send the message. Show status in console.
-                    try
-                    {
-                        Console.WriteLine("Attempting to send email...");
-                        client.Send(message);
-                        Console.WriteLine("Email sent!");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("The email was not sent.");
-                        Console.WriteLine("Error message: " + ex.Message);
-                    }
-                }
-
+                Services1.SendMail(user.Email, Body, Subject);
                 // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
