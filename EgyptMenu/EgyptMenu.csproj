@@ -741,6 +741,7 @@
     <Content Include="Content\images\head_strip.png" />
     <Content Include="Content\images\IMAGE_2.png" />
     <Content Include="Content\images\left_top.png" />
+    <Content Include="Content\images\logo_qrzebra.png" />
     <Content Include="Content\images\Mahmoud.jpg" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
@@ -806,7 +807,7 @@
     <Content Include="Content\images\icons\icon-512x512.png" />
     <Content Include="Content\images\icons\icon-72x72.png" />
     <Content Include="Content\images\icons\icon-96x96.png" />
-    <Content Include="Content\images\logo_qrzebra.png" />
+    <Content Include="Content\images\logo_qrzebraH.png" />
     <Content Include="Content\images\icons\splash-1125x2436.png" />
     <Content Include="Content\images\icons\splash-1242x2208.png" />
     <Content Include="Content\images\icons\splash-1242x2688.png" />
@@ -817,7 +818,6 @@
     <Content Include="Content\images\icons\splash-640x1136.png" />
     <Content Include="Content\images\icons\splash-750x1334.png" />
     <Content Include="Content\images\icons\splash-828x1792.png" />
-    <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\logo_qrzebra_white.png" />
     <Content Include="Content\images\menubuilder.jpg" />
     <Content Include="Content\images\menu_template_1.jpg" />
