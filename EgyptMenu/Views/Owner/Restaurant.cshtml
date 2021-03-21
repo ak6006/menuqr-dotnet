@@ -4,7 +4,6 @@
 }
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,49 +12,37 @@
     <meta name="csrf-token" content="YSV0woDIt60OSgN2ES1zL7m8AMaFQLylTDeDp8if">
     <meta property="og:image" content="/default/logo_qrzebra.png">
     <title>QR Menu Maker</title>
-
     <!--     Fonts and icons     -->
     <link href="~/Content/style1.css" rel="stylesheet" />
     <link href="~/Content/style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
-
     <!-- Font Awesome Icons -->
     <link href="~/Content/carousel.css" rel="stylesheet" />
     <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <link href="~/Content/nucleo-svg.css" rel="stylesheet" />
     <link href="~/Content/nucleo-icons.css" rel="stylesheet" />
-
     <!-- CSS Files -->
     <link href="~/Content/argon-design-system.min.css" rel="stylesheet" />
-
     <!-- Custom CSS -->
     <link href="~/Content/style2.css" rel="stylesheet" />
     <link href="~/Content/responsive2.css" rel="stylesheet" />
     <link href="~/Content/orange2.css" rel="stylesheet" />
     <link href="~/Content/custom.css" rel="stylesheet" />
-
     <!-- Select2 -->
     <link href="~/Content/select2.min.css" rel="stylesheet" />
-
-
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- Chrome for Android theme color -->
     <meta name="theme-color" content="#000000">
-
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="QR Menu Maker">
     <link rel="icon" sizes="256x256" href="android-chrome-256x256.png">
-
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="QR Menu Maker">
     <link rel="apple-touch-icon" href="android-chrome-256x256.png">
-
-
     <link href="/images/icons/splash-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="/images/icons/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="/images/icons/splash-1242x2208.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
@@ -66,126 +53,103 @@
     <link href="/images/icons/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="/images/icons/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
     <link href="/images/icons/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
     <!-- Tile for Win8 -->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
-
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
     <!-- Custom CSS defined by admin -->
     <link href="~/Content/front.css" rel="stylesheet" />
     <link href="~/Content/new-style.css" rel="stylesheet" />
-
 </head>
-
 <body class="">
-
-
-
-
     <!-- Navbar -->
-    <nav id="navbar-main" class="navbar navbar-light navbar-expand-lg fixed-top">
-
-
-        <div class="container-fluid">
-            <a class="navbar-brand mr-lg-5" href="/">
-                <img src="~/Content/images/logo_qrzebra.png">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbar_global">
-                <div class="navbar-collapse-header">
-                    <div class="row">
-                        <div class="col-6 collapse-brand">
-                            <a href="#">
-                                <img src="/default/logo_qrzebra.png">
-                            </a>
-                        </div>
-                        <div class="col-6 collapse-close">
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
-                                <span></span>
-                                <span></span>
-                            </button>
+    @*<nav id="navbar-main" class="navbar navbar-light navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand mr-lg-5" href="/">
+                    <img src="~/Content/images/logo_qrzebra.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="#">
+                                    <img src="/default/logo_qrzebra.png">
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-    </nav>
-
+        </nav>*@
     <!-- End Navbar -->
     <div class="wrapper">
-
-        <section class="section-profile-cover section-shaped grayscale-05 d-none d-md-none d-lg-block d-lx-block">
+        <section class="section-profile-cover section-shaped grayscale-05 d-block d-sm-block d-md-block d-lg-block d-lx-block">
             <!-- Circles background -->
-            <img class="bg-image" loading="lazy" src="~/Content/images/L_C_@Model.id@Model.cover" style="width: 100%;">
-            <!-- SVG separator -->
-            <div class="separator separator-bottom separator-skew">
-                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <polygon class="fill-white" style="background-color:black" points="2560 0 2560 100 0 100"></polygon>
-                </svg>
-            </div>
-        </section>
-
-        <section class="section pt-lg-0 mb--5 mt--9 d-none d-md-none d-lg-block d-lx-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="title white" style="border-bottom: 1px solid #f2f2f2;">
-                            <h1 class="display-3 text-white" data-toggle="modal" data-target="#modal-restaurant-info" style="cursor: pointer;">@Model.name</h1>
-                            <p class="display-4" style="margin-top: 120px">@Model.description</p>
-                            <p>
-                                <i class="far fa-clock">
-                                </i>
-                                <span>
-                                    @if (Model.starttime != null)
-                                    {
-                                        @Model.starttime.Value.ToString("hh:mm tt")
-                                    }
-                                    else
-                                    {
-                                        <Text>
-                                        06:10 AM
-                                        </Text>
-
-                                    }
-                                </span>
-                                -
-                                <span>
-                                    @if (Model.endtime != null)
-                                    {
-                                        @Model.endtime.Value.ToString("hh:mm tt")
-                                    }
-                                    else
-                                    {
-                                        <Text>
-                                        11:59 PM
-                                        </Text>
-                                    }
-                                </span> |
-                                <i class="fas fa-map-marker-alt">
-                                </i>
-                                <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=6+Yukon+Drive+Raeford%2C+NC+28376">@Model.address</a>  |  <i class="fas fa-mobile-alt"></i> <a href="tel:(530) 62 5-9694">@Model.phone </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img class="bg-image" loading="lazy" @*src="~/Content/images/L_C_@Model.id@Model.cover"*@ src="/Content/images/profile-cover.jpg" style="width: 100%;">
         </section>
         @if (Model.themes_id == 1)
         {
             <div id="background" style="background: url('/Content/images/menu.gif');">
-                <div class="page">
+                <section class="section pt-lg-0 mb--5 mt--9 d-block d-md-block d-lg-block d-lx-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="title white" style="border-bottom: 1px solid #f2f2f2;">
+                                    <h1 class="display-3 text-white" data-toggle="modal" data-target="#modal-restaurant-info" style="cursor: pointer;">@Model.name</h1>
+                                    <p class="display-4" style="margin-top: 120px">@Model.description</p>
+                                    <p>
+                                        <i class="far fa-clock">
+                                        </i>
+                                        <span>
+                                            @if (Model.starttime != null)
+                                            {
+                                                @Model.starttime.Value.ToString("hh:mm tt")
+                                            }
+                                            else
+                                            {
+                                                <Text>
+                                                06:10 AM
+                                                </Text>
 
+                                            }
+                                        </span>
+                                        -
+                                        <span>
+                                            @if (Model.endtime != null)
+                                            {
+                                                @Model.endtime.Value.ToString("hh:mm tt")
+                                            }
+                                            else
+                                            {
+                                                <Text>
+                                                11:59 PM
+                                                </Text>
+                                            }
+                                        </span> |
+                                        <i class="fas fa-map-marker-alt">
+                                        </i>
+                                        <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=6+Yukon+Drive+Raeford%2C+NC+28376">@Model.address</a>  |  <i class="fas fa-mobile-alt"></i> <a href="tel:(530) 62 5-9694">@Model.phone </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="page">
                     <div id="body">
                         <div class="content">
                             <div class="body">
@@ -194,7 +158,7 @@
                                     @{
                                         var counter = 0;
                                     }
-                                    @foreach (var item in Model.categories.OrderBy(c=>c.order))
+                                    @foreach (var item in Model.categories.OrderBy(c => c.order))
                                     {
                                         if (counter % 2 == 0)
                                         {
@@ -283,8 +247,6 @@
                                                             </div>
                                                         </div>
                                                     }
-
-
                                                 </ul>
                                             </li>
                                         }
@@ -296,7 +258,7 @@
                                                 <ul>
                                                     @foreach (var item1 in item.items)
                                                     {
-                                                        <li data-toggle="modal" data-target="#@item1.name.Replace(" ","")">
+                                                        <li data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="cursor:pointer;">
                                                             <h2><a>@item1.name</a></h2>
                                                             <span>@item1.price</span>
                                                             <p> @item1.description </p>
@@ -312,8 +274,6 @@
                                                                             <span aria-hidden="true">×</span>
                                                                         </button>
                                                                     </div>
-
-
                                                                     <div class="modal-body p-0">
                                                                         <div class="card bg-secondary shadow border-0">
                                                                             <div class="card-body px-lg-5 py-lg-5">
@@ -325,11 +285,9 @@
                                                                                         <input id="modalID" type="hidden">
                                                                                         <span id="modalPrice" class="new-price">@item1.price EGP</span>
                                                                                         <p id="modalDescription">@item1.description</p>
-
                                                                                         <div id="exrtas-area" style="">
                                                                                             <br>
                                                                                             <label class="form-control-label" for="quantity">Extras</label>
-
                                                                                             <div id="exrtas-area-inside">
                                                                                                 <div class=" mb-3">
                                                                                                     @foreach (var item2 in item1.extras)
@@ -342,7 +300,6 @@
                                                                                         <div id="exrtas-area" style="">
                                                                                             <br>
                                                                                             <label class="form-control-label" for="quantity">Options</label>
-
                                                                                             <div id="exrtas-area-inside">
                                                                                                 <div class=" mb-3">
                                                                                                     @foreach (var item2 in item1.options)
@@ -375,20 +332,14 @@
                                                             </div>
                                                         </div>
                                                     }
-
-
                                                 </ul>
                                             </li>
                                         }
-
                                     }
-
-
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         }
@@ -398,90 +349,131 @@
         //}
         else if (Model.themes_id == 3)
         {
-            @*<script>
-                    document.body.style.backgroundImage = "url('/Content/images/background_pattern.png')";
-                    document.getElementById("footer").style.backgroundcolor = "black !important";
-                </script>*@
-            <div style="width:70%; margin:auto; margin-top:100px;">
-                <div class="row mt-3" style=" background-image: url('/Content/images/background_pattern.png');">
-                    @foreach (var item in Model.categories.OrderBy(c => c.order))
-                    {
-                        <div class="col-lg-6">
-                            <div class="my-5" style="padding:7px;  border: 3px #fe9a1e solid;">
-                                <div style="border-radius: 10px; width: 100%; height: 100%; border: 3px dotted #fe9a1e; text-align: center;">
-                                    <div style="color: black; margin: auto; width: 70%; margin-top: -40px; font-size: xx-large; background-image: url('/Content/images/Head_2.png'); background-size: 100% 100%; font-family: AmericanTypewriter;">@item.name</div>
-                                    <span class="p-2"></span>
-                                    @foreach (var item1 in item.items)
+    <div style="width:100%; background-image: url('/Content/images/background_pattern.png');">
+        <section class="section pt-lg-0 mb--5 mt--9 d-block d-md-block d-lg-block d-lx-block text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title white" style="border-bottom: 1px solid #f2f2f2;">
+                            <h1 class="display-3 text-white" data-toggle="modal" data-target="#modal-restaurant-info" style="cursor: pointer;">@Model.name</h1>
+                            <p class="display-4" style="margin-top: 120px">@Model.description</p>
+                            <p>
+                                <i class="far fa-clock">
+                                </i>
+                                <span>
+                                    @if (Model.starttime != null)
                                     {
-                                        <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="padding: 3px 15px; margin: auto;text-align: left; color: white; cursor:pointer;">
-                                            <span class="float-left" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.name</span>
-                                            <span class="float-right" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.price EGP</span>
-                                            <div style="clear: both;"></div>
-                                            <span>@item1.description</span>
-                                        </div>
-                                        <div class="modal fade" id="@item1.name.Replace(" ","")" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="modalDialogItem">
+                                        @Model.starttime.Value.ToString("hh:mm tt")
+                                    }
+                                    else
+                                    {
+                                        <Text>
+                                        06:10 AM
+                                        </Text>
 
-                                                <div class="modal-content">
+                                    }
+                                </span>
+                                -
+                                <span>
+                                    @if (Model.endtime != null)
+                                    {
+                                        @Model.endtime.Value.ToString("hh:mm tt")
+                                    }
+                                    else
+                                    {
+                                        <Text>
+                                        11:59 PM
+                                        </Text>
+                                    }
+                                </span> |
+                                <i class="fas fa-map-marker-alt">
+                                </i>
+                                <a class="text-light" target="_blank" href="https://www.google.com/maps/search/?api=1&query=6+Yukon+Drive+Raeford%2C+NC+28376">@Model.address</a>  |  <i class="fas fa-mobile-alt"></i> <a class="text-light" href="tel:(530) 62 5-9694">@Model.phone </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div style="width:80%; margin:auto; margin-top:100px; ">
+            <div class="row mt-3">
+                @foreach (var item in Model.categories.OrderBy(c => c.order))
+                {
+                    <div class="col-lg-6">
+                        <div class="my-5" style="padding:7px;  border: 3px #fe9a1e solid;">
+                            <div style="border-radius: 10px; width: 100%; height: 100%; border: 3px dotted #fe9a1e; text-align: center;">
+                                <div style="color: black; margin: auto; width: 70%; margin-top: -40px; font-size: xx-large; background-image: url('/Content/images/Head_2.png'); background-size: 100% 100%; font-family: AmericanTypewriter;">@item.name</div>
+                                <span class="p-2"></span>
+                                @foreach (var item1 in item.items)
+                                {
+                                    <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="padding: 3px 15px; margin: auto;text-align: left; color: white; cursor:pointer;">
+                                        <span class="float-left" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.name</span>
+                                        <span class="float-right" style="font-size: x-large; font-family: AmericanTypewriter; color: #fe9a1e;">@item1.price EGP</span>
+                                        <div style="clear: both;"></div>
+                                        <span>@item1.description</span>
+                                    </div>
+                                    <div class="modal fade" id="@item1.name.Replace(" ","")" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="modalDialogItem">
 
-                                                    <div class="modal-header">
-                                                        <h5 id="modalTitle" class="modal-title">@item1.name</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">×</span>
-                                                        </button>
-                                                    </div>
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <h5 id="modalTitle" class="modal-title">@item1.name</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                </div>
 
 
-                                                    <div class="modal-body p-0">
-                                                        <div class="card bg-secondary shadow border-0">
-                                                            <div class="card-body px-lg-5 py-lg-5">
-                                                                <div class="row">
-                                                                    <div class="col-sm col-md col-lg text-center" id="modalImgPart">
-                                                                        <img id="modalImg" src="~/Content/images/@item1.image" width="295px" height="200px">
-                                                                    </div>
-                                                                    <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
-                                                                        <input id="modalID" type="hidden">
-                                                                        <span id="modalPrice" class="new-price">@item1.price EGP</span>
-                                                                        <p id="modalDescription">@item1.description</p>
+                                                <div class="modal-body p-0">
+                                                    <div class="card bg-secondary shadow border-0">
+                                                        <div class="card-body px-lg-5 py-lg-5">
+                                                            <div class="row">
+                                                                <div class="col-sm col-md col-lg text-center" id="modalImgPart">
+                                                                    <img id="modalImg" src="~/Content/images/@item1.image" width="295px" height="200px">
+                                                                </div>
+                                                                <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
+                                                                    <input id="modalID" type="hidden">
+                                                                    <span id="modalPrice" class="new-price">@item1.price EGP</span>
+                                                                    <p id="modalDescription">@item1.description</p>
 
-                                                                        <div id="exrtas-area" style="">
-                                                                            <br>
-                                                                            <label class="form-control-label" for="quantity">Extras</label>
+                                                                    <div id="exrtas-area" style="">
+                                                                        <br>
+                                                                        <label class="form-control-label" for="quantity">Extras</label>
 
-                                                                            <div id="exrtas-area-inside">
-                                                                                <div class=" mb-3">
-                                                                                    @foreach (var item2 in item1.extras)
-                                                                                    {
-                                                                                        <label>@item2.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+@item2.price EGP</label><br />
-                                                                                    }
-                                                                                </div>
+                                                                        <div id="exrtas-area-inside">
+                                                                            <div class=" mb-3">
+                                                                                @foreach (var item2 in item1.extras)
+                                                                                {
+                                                                                    <label>@item2.name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+@item2.price EGP</label><br />
+                                                                                }
                                                                             </div>
                                                                         </div>
-                                                                        <div id="exrtas-area" style="">
-                                                                            <br>
-                                                                            <label class="form-control-label" for="quantity">Options</label>
+                                                                    </div>
+                                                                    <div id="exrtas-area" style="">
+                                                                        <br>
+                                                                        <label class="form-control-label" for="quantity">Options</label>
 
-                                                                            <div id="exrtas-area-inside">
-                                                                                <div class=" mb-3">
-                                                                                    @foreach (var item2 in item1.options)
-                                                                                    {
-                                                                                        <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
-                                                                                            <div id="variants-area-3">
-                                                                                                <br>
-                                                                                                <label class="form-control-label"><b>@item2.name<b></b></b></label>
-                                                                                                <div>
-                                                                                                    <div id="variants-area-inside-3" class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                                                                        <b><b> </b></b>
-                                                                                                    </div>
+                                                                        <div id="exrtas-area-inside">
+                                                                            <div class=" mb-3">
+                                                                                @foreach (var item2 in item1.options)
+                                                                                {
+                                                                                    <div class="col-sm col-md col-lg col-lg" id="modalItemDetailsPart">
+                                                                                        <div id="variants-area-3">
+                                                                                            <br>
+                                                                                            <label class="form-control-label"><b>@item2.name<b></b></b></label>
+                                                                                            <div>
+                                                                                                <div id="variants-area-inside-3" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                                                    <b><b> </b></b>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            @foreach (var item3 in item2.options_details)
-                                                                                            {
-                                                                                                <label style="opacity: 1" class="btn btn-outline-primary ">@item3.option_name</label>
-                                                                                            }
                                                                                         </div>
-                                                                                    }
-                                                                                </div>
+                                                                                        @foreach (var item3 in item2.options_details)
+                                                                                        {
+                                                                                            <label style="opacity: 1" class="btn btn-outline-primary ">@item3.option_name</label>
+                                                                                        }
+                                                                                    </div>
+                                                                                }
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -492,16 +484,19 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    }
+                                    </div>
+                                }
 
-                                </div>
                             </div>
                         </div>
-                    }
+                    </div>
+                }
 
 
-                </div>
             </div>
+        </div>
+    </div>
+
 
         }
         else if (Model.themes_id == 4)
