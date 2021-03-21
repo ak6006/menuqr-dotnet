@@ -2703,3 +2703,4 @@ C:\Users\Tegoo\Desktop\Team I\menuqr\EgyptMenu\obj\Debug\ar\EgyptMenu.resources.
 C:\Users\Tegoo\Desktop\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.csproj.CopyComplete
 C:\Users\Tegoo\Desktop\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.dll
 C:\Users\Tegoo\Desktop\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.pdb
+G:\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.GeneratedMSBuildEditorConfig.editorconfig
