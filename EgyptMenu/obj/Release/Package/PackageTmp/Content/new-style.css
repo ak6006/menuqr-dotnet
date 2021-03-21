@@ -1,0 +1,53 @@
+﻿.indexbg {
+    background-image: url('images/backgroundmenu.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: AmericanTypewriter;
+    src: url('/Content/Fonts/AmericanTypewriter.ttc');
+} 
+
+@media only screen and (max-width: 600px) {
+    .spanHide1, .spanHide {
+        display: none;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+    .spanHide {
+        display: none;
+    }
+}
+.backgroundIMG {
+        background-image: url(~/Content/images/profile-cover.jpg);
+        background-size: cover;
+        background-position: center top;
+ }
+.LogoIMG {
+    height: 65px !important;
+}
+@media only screen and (max-width: 1000px) {
+    .LogoIMG {
+        height: 8vw !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar-brand {
+        width: 100%;
+        margin-bottom: 15px !important;
+        text-align:center;
+    }
+    .LogoIMG {
+        
+        height: 15vw !important;
+        margin: auto;
+    }
+    .LoginLogo{
+        margin: 50px 0 !important;
+
+    }
+}
+
