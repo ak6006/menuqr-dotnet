@@ -50,4 +50,20 @@
 
     }
 }
+.restuarantcover{
+    height:70vh !important;
+}
+.itemWidth{
+    width:75%
+}
+@media only screen and (max-width: 1024px) {
+    .restuarantcover {
+        height: 30vh !important;
+    }
+    .itemWidth{
+        width:95%;
+    }
+}
+
+
 

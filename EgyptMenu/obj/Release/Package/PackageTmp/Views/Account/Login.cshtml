@@ -85,22 +85,22 @@
     <link href="~/Content/back.css" rel="stylesheet" />
     <link href="~/Content/new-style.css" rel="stylesheet" />
 </head>
-<body class="bg-primary">
+<body style="background-image:url('/Content/images/background patterndark.png')">
 
     <div class="main-content">
         @*<nav class="navbar navbar-top navbar-horizontal navbar-expand-md bg-white navbar-dark">
-            <div class="w-100 px-3"  >
-                <a class="navbar-brand" href="/" style="text-align:left; margin:0;">
-                    <img height="40" src="~/Content/images/logo_qrzebra.png" />
-                </a>
-            </div>
-        </nav>*@
-        <div class="header y py-5 py-lg-8">
+                <div class="w-100 px-3"  >
+                    <a class="navbar-brand" href="/" style="text-align:left; margin:0;">
+                        <img height="40" src="~/Content/images/logo_qrzebra2.png" />
+                    </a>
+                </div>
+            </nav>*@
+        <div class="header y pb-5 pb-lg-8 pt-5">
             <div class="container">
                 <div class="header-body text-center mb-1">
                     <div class="row justify-content-center">
-                        <a class="navbar-brand" href="/" >
-                            <img src="~/Content/images/logo_qrzebra.png" style="width:200px ; height:auto;" class="thumbnail LoginLogo" alt="...">
+                        <a class="navbar-brand" href="/">
+                            <img src="~/Content/images/logo_qrzebraH.png" style="width:200px ; height:auto;" class="thumbnail LoginLogo" alt="...">
                         </a>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                     <div class="card bg-secondary shadow border-0">
                         <div class="card-body px-lg-5 py-lg-5">
 
-                            @if (TempData["Msg"]!=null)
+                            @if (TempData["Msg"] != null)
                             {
                                 <script>
                                     alert("Please check your mail");
@@ -130,47 +130,55 @@
                                 <div class="form-group mb-3">
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                                        <div class="input-group-prepend" >
+                                            <span class="input-group-text" style="background-color:#19526e; color:#ffa822"><i class="fas fa-user-tie"></i></span>
                                         </div>
                                         @*<input class="form-control" placeholder="Email" type="email" name="email" value="" value="admin@argon.com" required autofocus>*@
-                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control px-2", placeholder=@Resource.User_Name, required = "required", autofocus = "autofocus" })
+                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control px-2", placeholder = @Resource.User_Name, required = "required", autofocus = "autofocus" })
                                         @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <div class="input-group-prepend" >
+                                            <span class="input-group-text" style="background-color:#19526e; color:#ffa822"><i class="fas fa-lock"></i></span>
                                         </div>
                                         <div class="input-group-prepend" onclick="showandhidepass()" style="cursor:pointer;">
-                                            <span class="input-group-text"><i class="fas fa-eye" id="hide"></i> <i class="fas fa-eye-slash" id="show" style="display:none;"></i></span>
+                                            <span class="input-group-text" style="background-color:#19526e; color:#ffa822"><i class="fas fa-eye" id="hide"></i> <i class="fas fa-eye-slash" id="show" style="display:none;"></i></span>
                                         </div>
                                         @*<input class="form-control" name="password" placeholder="Password" type="password" value="secret" required>*@
-                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control px-2", placeholder = @Resource.Password,id="pass", type = "password", required = "required" })
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control px-2", placeholder = @Resource.Password, id = "pass", type = "password", required = "required" })
                                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-                                <div class="custom-control custom-checkbox" dir="rtl">
-                                    <input class="custom-control-input" name="RememberMe" id="customCheckLogin" type="checkbox">
-                                    <label class="custom-control-label" for="customCheckLogin">
-                                        <span class="text-muted">@Resource.Remember_me</span>
-                                    </label>
+                                <div class="custom-control custom-checkbox pl-0" dir="rtl">
+
+                                    @*<input class="custom-control-input" name="RememberMe" id="customCheckLogin" value="@Model.RememberMe" type="checkbox">
+                                    *@
+                                    @*<label class="" for="">
+                                            <span class="text-muted">@Resource.Remember_me</span>
+                                        </label>*@
+                                    <div class="form-check pl-0">
+                                        <label class="form-check-label col-form-label-lg" for="RememberMe" style="color:#19526e; ">
+                                            @Resource.Remember_me
+                                        </label>
+                                        @Html.EditorFor(m => m.RememberMe, new { @class = "custom-control-input", id = "customCheckLogin", @style = "width:20px ; height:20px;" })
+                                    </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-danger my-4">@Resource.Login</button>
+                                    <button type="submit" class="btn  my-4" style="background-color:#ffa822; color:#19526e">@Resource.Login</button>
                                 </div>
                             }
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-6 text-light text-left">
-                            <a href="@Url.Action("ForgotPassword", "Account")" class="text-light">
+                            <a href="@Url.Action("ForgotPassword", "Account")" style="color:#ffa822">
                                 <small>@Resource.Forgot_password</small>
                             </a>
                         </div>
                         <div class="col-6 text-light text-right">
-                            <a href="@Url.Action("Register", "Account")" class="text-light">
+                            <a href="@Url.Action("Register", "Account")" style=" color:#ffa822">
                                 <small>don't have account ?</small>
                             </a>
                         </div>
@@ -179,13 +187,6 @@
             </div>
         </div>
     </div>
-
-    <footer class="py-5">
-        <div class="container">
-            <div class="row align-items-center justify-content-xl-between">
-            </div>
-        </div>
-    </footer>
     <script>
         function showandhidepass() {
             if (document.getElementById("pass").getAttribute("type") == "password") {
