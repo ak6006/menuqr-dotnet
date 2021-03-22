@@ -4,11 +4,24 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+@font-face {
+    font-family: 'Endenesilia';
+    src: url('Fonts/Endenesilia.ttf') format('truetype');
+}
 @font-face {
     font-family: AmericanTypewriter;
     src: url('/Content/Fonts/AmericanTypewriter.ttc');
-} 
+}
+
+@font-face {
+    font-family: 'Amplify_PersonalUseOnly';
+    src: url('Fonts/Amplify_PersonalUseOnly.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArtographieBlack-PERSONAL_USE';
+    src: url('Fonts/ArtographieBlack-PERSONAL_USE.ttf') format('truetype');
+}
 
 @media only screen and (max-width: 600px) {
     .spanHide1, .spanHide {

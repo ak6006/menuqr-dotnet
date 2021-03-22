@@ -953,6 +953,9 @@
     <Content Include="Content\Fonts\fontawesome-webfont.woff" />
     <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\Fonts\AmericanTypewriter.ttc" />
+    <Content Include="Content\Fonts\ArtographieBlack-PERSONAL_USE.ttf" />
+    <Content Include="Content\Fonts\Amplify_PersonalUseOnly.ttf" />
+    <Content Include="Content\Fonts\Endenesilia.ttf" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
