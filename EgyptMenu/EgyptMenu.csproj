@@ -1107,7 +1107,6 @@
     <Content Include="Views\Owner\AddVariants.cshtml" />
     <Content Include="Views\Owner\EditVariants.cshtml" />
     <Content Include="Views\Shared\_ItemModal.cshtml" />
-    <Content Include="Views\Owner\ItemModal.cshtml" />
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\Admin\EditRestaurant.cshtml" />
   </ItemGroup>
