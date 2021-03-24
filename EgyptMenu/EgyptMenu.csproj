@@ -749,6 +749,7 @@
     <Content Include="Content\images\logo_qrzebra.png" />
     <Content Include="Content\images\logo_qrzebra2.png" />
     <Content Include="Content\images\Mahmoud.jpg" />
+    <Content Include="Content\images\Mdal.PNG" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\CheeseCake.jpg" />
     <Content Include="Content\images\ChickenBarbicue.jpg" />
@@ -761,6 +762,15 @@
     <Content Include="Content\images\LiverBarbeque.jpg" />
     <Content Include="Content\images\MeatBarbicue.jpg" />
     <Content Include="Content\images\MeatPizza.jpg" />
+    <Content Include="Content\images\menu1.jpg" />
+    <Content Include="Content\images\menu2.jpg" />
+    <Content Include="Content\images\menu3.jpg" />
+    <Content Include="Content\images\menu4.jpg" />
+    <Content Include="Content\images\menu5.jpg" />
+    <Content Include="Content\images\menu6.jpg" />
+    <Content Include="Content\images\menu7.jpg" />
+    <Content Include="Content\images\menu8.jpg" />
+    <Content Include="Content\images\menu9.jpg" />
     <Content Include="Content\images\middle_top.png" />
     <Content Include="Content\images\profile-cover.jpg" />
     <Content Include="Content\images\right_top.png" />
@@ -893,7 +903,7 @@
     <Content Include="Content\JS\waypoints.debug.js" />
     <Content Include="Content\JS\zepto.waypoints.min.js" />
     <Content Include="Content\main.css" />
-    <Content Include="Content\new-style.css" />
+    <Content Include="Content\new-style99.css" />
     <Content Include="Content\nucleo-icons.css" />
     <Content Include="Content\nucleo-svg.css" />
     <Content Include="Content\nucleo.css" />
@@ -957,7 +967,6 @@
     <Content Include="Content\Fonts\Amplify_PersonalUseOnly.ttf" />
     <Content Include="Content\Fonts\Endenesilia.ttf" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
@@ -1112,6 +1121,7 @@
     <Content Include="Views\Shared\_ItemModal.cshtml" />
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\Admin\EditRestaurant.cshtml" />
+    <Content Include="Views\Owner\MenuDemos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

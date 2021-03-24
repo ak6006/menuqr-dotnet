@@ -1,0 +1,399 @@
+﻿@using EgyptMenu.Views.Shared.Resources
+@using Microsoft.AspNet.Identity
+@model EgyptMenu.Models.ResMgmtViewModel
+@{
+    Layout = null;
+    if (HttpContext.Current.Session["lang"] != null)
+    {
+        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+    }
+    else
+    {
+        Culture = UICulture = "en";
+    }
+}
+<!DOCTYPE html>
+<html lang=@Resource.language dir=@Resource.direction>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="veRVSDylh3ujsrmhvS70l9SO2i6OXqcwVJrLkInH">
+    <title>QR Menu Maker</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
+    <link href="~/Content/nucleo.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <!-- Argon CSS -->
+    <link href="~/Content/argon.css" rel="stylesheet" />
+    <!-- Argon CSS -->
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link href="~/Content/select2.min.css" rel="stylesheet" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="~/Content/jasny-bootstrap.min.css" rel="stylesheet" />
+    <!-- Flatpickr datepicker -->
+    <link href="~/Content/flatpickr.min.css" rel="stylesheet" />
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#000000">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="QR Menu Maker">
+    <link rel="icon" sizes="256x256" href="android-chrome-256x256.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="QR Menu Maker">
+    <link rel="apple-touch-icon" href="android-chrome-256x256.png">
+    <link href="/images/icons/splash-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1242x2208.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1536x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1668x2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-1668x2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/icons/splash-2048x2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!-- Tile for Win8 -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
+    <!-- Custom CSS defined by admin -->
+    <link href="~/Content/back.css" rel="stylesheet" />
+</head>
+<body class="">
+
+    <nav class="navbar navbar-vertical  navbar-expand-md navbar-light bg-white @Resource.fixed_dir" id="sidenav-main">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand pt-0" href="/">
+                <img src="~/Content/images/logo_qrzebra2.png" class="navbar-brand-img" style="height:4rem;max-height:4rem;" alt="...">
+
+            </a>
+            <!-- User -->
+            <ul class="nav align-items-center d-md-none">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center display-3">
+                            <i class="fas fa-cog"></i>
+                            @*<span class="avatar avatar-sm rounded-circle">
+                                    <img alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">
+                                </span>*@
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
+                        <div class=" dropdown-header noti-title">
+                            <h6 class="text-overflow m-0">@Resource.Welcome</h6>
+                        </div>
+                        <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
+
+                            <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; @Resource.My_profile</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                                        <i class="ni ni-user-run"></i>
+                                        <span>Logout</span>
+                                    </a>*@
+                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="dropdown-item"><i class="fas fa-running" style="margin:0;"></i> &nbsp;&nbsp;&nbsp; @Resource.Log_out</button>
+                        }
+                    </div>
+                    @*<div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">@Resource.Welcome</h6>
+                            </div>
+                            <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
+                                <i class="fas fa-user-alt"></i>
+                                <span>@Resource.My_profile</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <button type="submit" class="dropdown-item">@Resource.Log_out</button>
+                            }
+                        </div>*@
+                </li>
+            </ul>
+            <!-- Collapse -->
+            <div dir=@Resource.direction class="collapse navbar-collapse" style=" font-weight:bolder;" id="sidenav-collapse-main">
+                <!-- Collapse header -->
+                <div class="navbar-collapse-header d-md-none">
+                    <div class="row">
+                        <div class="col-8 collapse-brand">
+                            <a href="#">
+                                <img src="~/Content/images/logo_qrzebra2.png" style="width:100%; height:75px!important;">
+                            </a>
+                        </div>
+                        <div class="col-4 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <span></span>
+
+                <span></span>
+
+                <ul class="navbar-nav py-5" style="padding:0;">
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #ffa822 !important;" href=@Url.Action("Dashboard")>
+                            <i class="fas fa-home"></i>
+                            &nbsp;&nbsp;@Resource.Restaurant
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #19526e !important;" href=@Url.Action("Menu")>
+                            <i class="fas fa-bars"></i>&nbsp;&nbsp;@Resource.Menu
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #19526e !important;" href=@Url.Action("QRBuilder")>
+                            <i class="fas fa-qrcode"></i>&nbsp;&nbsp;@Resource.QR_builder
+                        </a>
+                    </li>
+
+                    @*<li class="nav-item">
+                            <a class="nav-link" href=@Url.Action("Plan")>
+                                <i class="fas fa-credit-card text-orange"></i>&nbsp;&nbsp;@Resource.Plan
+                            </a>
+                        </li>*@
+                </ul>
+
+                <span></span>
+
+
+                <!-- Divider -->
+                @*<hr class="my-3">*@
+                <!-- Heading -->
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top navbar-expand-md  navbar-dark" id="navbar-main">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" style="border-bottom:3px solid #ffa822;">
+                    Themes Demo
+                </a>
+
+                <!-- Form -->
+                <form method="GET" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                </form>
+
+                <!-- User -->
+                <ul class="navbar-nav align-items-center d-none d-md-flex">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="media align-items-center display-3" style="color:#ffa822;">
+                                <i class="fas fa-cog"></i>
+                                <!--<span class="avatar avatar-sm rounded-circle">
+                                    @*<img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">*@
+                                <!--</span>-->
+                                <div class="media-body ml-2 d-none d-lg-block">
+                                    <span class="mb-0  font-weight-bolder">@User.Identity.GetUserName()</span>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">@Resource.Welcome</h6>
+                            </div>
+                            <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
+
+                                <span><i class="fas fa-user"></i> &nbsp;&nbsp;&nbsp; @Resource.My_profile</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                            <i class="ni ni-user-run"></i>
+                                            <span>Logout</span>
+                                        </a>*@
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="dropdown-item"><i class="fas fa-running" style="margin:0;"></i> &nbsp;&nbsp;&nbsp; @Resource.Log_out</button>
+                            }
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="header  pb-8 pt-5 pt-md-8" style="background-image: url('/Content/images/background patterndark.png')">
+        </div>
+        <div class="container-fluid mt--7" style="background-image: url('/Content/images/backgroundmenu.png'); @Resource.text_align ">
+            <div class="row mb-5">
+                <div class="col-10 offset-1 p-0 text-center" style="border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius: 50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Item modal</h1>
+                    <img src="~/Content/images/Mdal.png" style="width:100%;" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 col-sm-4 offset-1 offset-sm-1 mb-5 text-center p-0" style=" height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 1</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu1.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 offset-1 offset-sm-2 mb-5 text-center p-0" style="height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 2</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu2.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 col-sm-4 offset-1 offset-sm-1 mb-5 text-center p-0" style=" height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 3</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu3.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 offset-1 offset-sm-2 mb-5 text-center p-0" style="height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 4</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu4.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 col-sm-4 offset-1 offset-sm-1 mb-5 text-center p-0" style=" height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 5</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu5.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 offset-1 offset-sm-2 mb-5 text-center p-0" style="height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 6</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu6.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 col-sm-4 offset-1 offset-sm-1 mb-5 text-center p-0" style=" height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 7</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu7.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 offset-1 offset-sm-2 mb-5 text-center p-0" style="height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 8</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu8.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 col-sm-4 offset-1 offset-sm-1 mb-5 text-center p-0" style=" height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 9</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu9.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+                <div class="col-10 col-sm-4 offset-1 offset-sm-2 mb-5 text-center p-0" style="height: 700px; border-top: 50px solid gray; border-bottom: 50px solid gray; border-right: 10px solid gray; border-left: 10px solid gray; border-radius:50px;">
+                    <h1 style="margin-top:-45px;font-weight:bolder;font-family:cursive">Menu 10</h1>
+                    <div style="width:100%;height:100%; overflow:auto;">
+                        <img src="~/Content/images/menu2.jpg" style="width:100%; height:auto;" />
+                    </div>
+                </div>
+            </div>
+            @*<footer class="footer">
+                    <div class="row align-items-center justify-content-xl-between">
+                    </div>
+                </footer>*@
+        </div>
+    </div>
+
+
+    <!-- Commented because navtabs includes same script -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+    <script src="~/Content/JS/popper.min.js"></script>
+    <script src="~/Content/JS/bootstrap.bundle.min.js"></script>
+    <!-- Navtabs -->
+    <script src="~/Content/JS/jquery.min.js"></script>
+    <script src="~/Content/JS/bootstrap-datepicker.min.js"></script>
+    <!-- Nouslider -->
+    <script src="~/Content/JS/nouislider.min.js"></script>
+    <!-- Argon JS -->
+    <script src="~/Content/JS/argon.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="~/Content/JS/jasny-bootstrap.min.js"></script>
+    <!-- Custom js -->
+    <script src="~/Content/JS/orders.js"></script>
+    <!-- Custom js -->
+    <script src="~/Content/JS/mresto.js"></script>
+    <!-- AJAX -->
+    <!-- SELECT2 -->
+    <script src="~/Content/JS/select2.js"></script>
+    <script src="~/Content/JS/select2.min.js"></script>
+    <script src="~/Content/JS/rmap.js"></script>
+    <!-- Import Vue -->
+    <script src="~/Content/JS/vue.js"></script>
+    <!-- Import AXIOS --->
+    <script src="~/Content/JS/axios.min.js"></script>
+    <!-- Flatpickr datepicker -->
+    <script src="~/Content/JS/flatpickr.js"></script>
+    <!-- OneSignal -->
+    <script src="~/Content/JS/OneSignalSDK.js"></script>
+    <script src="~/Content/JS/onesignal.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
