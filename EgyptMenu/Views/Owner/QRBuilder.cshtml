@@ -270,12 +270,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body" id="section-to-print" style="height: 500px;">
+                        <div class="card-body" id="section-to-print" >
                             <div id="theQR">
                                 <img id='barcode' class="img-thumbnail" width="100%"
                                      src="https://api.qrserver.com/v1/create-qr-code/?data=@ViewBag.Url/@Model.name" />
                             </div><br>
-                            <a id="myA" onclick="DownloadFunc()" class="btn btn-success" download>@Resource.Download_JPG</a>
+                            <a id="myA" onclick="DownloadFunc()" class="btn btn-success" style="color:white" download>@Resource.Download_JPG</a>
 
                             @*<a href="https://api.qrserver.com/v1/create-qr-code/?data=https://localhost:44303/Owner/Restaurant/Ahmed Kamal Restaurant" class="btn btn-success" download="QR.jpg"> Download JPG</a>*@
                             @*<button type="button" class="btn btn-success">Download JPG</button>*@
@@ -317,7 +317,6 @@
                                     <span class="sr-only">Next</span>
                                 </a>
                             </div><br>
-                            <a href="/impactfront/img/templates.zip" target="_blank" type="button" class="btn btn-success">@Resource.Download_Print_Templates</a>
                         </div>
                     </div>
                 </div>

@@ -76,7 +76,47 @@
                     </div>
                 </div>
                 <div class=" cta_button_classes">
-                    @{Html.RenderPartial("_LoginPartial");}
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                        }
+                        if (User.IsInRole("Admin"))
+                        {
+                            <a data-scroll href="@Url.Action("Dashboard","Admin")" class="btn" style="border:1px solid #ffa822; margin-top:-20px; background-color:none; color:white;">
+                                @Resource.Dashboard
+                            </a>
+                        }
+                        else
+                        {
+                            <a data-scroll href="@Url.Action("Dashboard","Owner")" class="btn" style="margin-top: -20px; border: 1px solid #ffa822; background-color: none; color: white;">
+                                @Resource.Dashboard
+                            </a>
+                        }
+
+
+
+                        @*<li>
+                @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+            </li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
+
+                    }
+
+                    else
+                    {
+                        <a data-scroll href="@Url.Action("login", "Account")" class="btn" style=" background-color:#ffa822; color:white;">
+                            @Resource.Login
+                        </a>
+                        <a data-scroll href="@Url.Action("register", "Account")" target="_blank" class="btn" style="border:1px solid #ffa822; background-color:none; color:white;">
+                            @Resource.Registration
+                        </a>
+                        @*<ul class="nav navbar-nav navbar-right">
+                <li class="btn btn-md btn-docs btn-white animate-up-2 mr-3"><i class="fas fa-th-large mr-2"></i> @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                <li class="btn btn-md btn-secondary animate-up-2"><i class="fas fa-paper-plane mr-2"></i>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { style = "color:white", id = "registerLink" })</li>
+            </ul>*@
+                    }
                 </div>
                 <div class="d-flex d-lg-none align-items-center" style="margin:auto;">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
@@ -92,8 +132,8 @@
             <div class="container">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-12 col-md-5 order-2 order-lg-1" style="@Resource.text_align">
-                        <h1 class="display-2 mb-3" style="color:#19526e;font-weight:900;">A Few Words About Us</h1>
-                        <p class="lead" style="color:black; line-height:1.2; font-weight:500;">Team-I is an extension of the activity of Al-Ansi Office for Software development in the Federal Republic of Germany. He has been working in the Information technology area for more than 20 years, during which he worked and implemented many projects for the largest and most prestigious companies in the world.</p>
+                        <h1 class="display-2 mb-3" style="color:#19526e;font-weight:900;">@Resource.A_Few_Words_About_Us</h1>
+                        <p class="lead" style="color:black; line-height:1.2; font-weight:500;">@Resource.Team_I_is_an_extension_of_the_activity_of_Al_Ansi_Office_for_Software_development_in_the_Federal_Republic_of_Germany__He_has_been_working_in_the_Information_technology_area_for_more_than_20_years__during_which_he_worked_and_implemented_many_projects_for_the_largest_and_most_prestigious_companies_in_the_world_ .</p>
                         <div class="mt-4" style="line-height:1.2;">
                             <a class="btn my-1 " href="https://www.mercedes-benz.com/en/" style="width:48%; background-color:#ffa822;color:white;">mercedes-benz</a>
                             <a class="btn my-1 " href="https://www2.deloitte.com/global/en.html?icid=site_selector_global" style="width: 48%; background-color: #19526e; color: white;">deloitte</a>
@@ -117,11 +157,11 @@
             <div class="container my-5">
                 <div class="row justify-content-between align-items-center">
                     <div class="col-12 " style="@Resource.text_align">
-                        <p class="lead" style="color:black; line-height:1.2; font-weight:500;">Al-Ansi office aspires by opening a branch for programming and advertising services to transfer German and European technology to the Egyptian market, through the application of the highest programming and advertising systems, with professionalism and skill commensurate with the great experience gained from working on global projects for previous companies in each of the following countries .</p>
+                        <p class="lead" style="color:black; line-height:1.2; font-weight:500;">@Resource.Al_Ansi_office_aspires_by_opening_a_branch_for_programming_and_advertising_services_to_transfer_German_and_European_technology_to_the_Egyptian_market__through_the_application_of_the_highest_programming_and_advertising_systems__with_professionalism_and_skill_commensurate_with_the_great_experience_gained_from_working_on_global_projects_for_previous_companies_in_each_of_the_following_countries__ .</p>
                         <h3>
-                            Germany, France, Canada, USA, Caribbean islands, Denmark, Switzerland, Dubai
+                            @Resource.Germany__France__Canada__USA__Caribbean_islands__Denmark__Switzerland__Dubai
                         </h3><br /><br />
-                        <h2 class="text-center font-weight-bolder" style="color:#19526e;">Team i your way to the success</h2>
+                        <h2 class="text-center font-weight-bolder" style="color:#19526e;">@Resource.Team_i_your_way_to_the_success</h2>
                     </div>
                 </div>
             </div>
@@ -130,16 +170,16 @@
         <div class="row footer section  py-5  text-white overflow-hidden" style="background-color:#19526e;">
             <div class="col-12 col-lg-4 text-center">
                 <p style="text-align: center;">
-                    Gamal Abd Al Nassir Axis,<br>
-                    6th of October City,<br>
-                    Egypt
+                    @Resource.Gamal_Abd_Al_Nassir_Axis<br>
+                    @Resource._6th_of_October_City<br>
+                    @Resource.Egypt
                 </p>
-                <a href="https://www.google.com.eg/maps/place/Team+I+Group/29.9785425,30.9278417,17.54z/data=!4m5!3m4!1s0x0:0x501e33d8eafe8773!8m2!3d29.9790529!4d30.9281073?hl=en&authuser=0" target="_blank" class="btn btn-rounded btn-dark" style="background-color: #000000; color: #ffffff;"><b class="font-weight-normal">Go to Location <i class="fas fa-map-marker-alt"></i></b></a>
+                <a href="https://www.google.com.eg/maps/place/Team+I+Group/29.9785425,30.9278417,17.54z/data=!4m5!3m4!1s0x0:0x501e33d8eafe8773!8m2!3d29.9790529!4d30.9281073?hl=en&authuser=0" target="_blank" class="btn btn-rounded btn-dark" style="background-color: #000000; color: #ffffff;"><b class="font-weight-normal"> @Resource.Go_to_Location <i class="fas fa-map-marker-alt"></i></b></a>
             </div>
             <div class="col-12 col-lg-4">
                 <p style="text-align: center;">
-                    Saturday - Thursday<br>
-                    10:00 AM — 05:00 PM
+                    @Resource.Saturday : @Resource.Thursday<br>
+                    10:00  @Resource.AM : 05:00  @Resource.PM
                 </p>
                 <p style="font-size: 30px; text-align: center;">
                     <a href="https://www.facebook.com/teamigroup/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>

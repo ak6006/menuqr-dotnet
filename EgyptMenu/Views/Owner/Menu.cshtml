@@ -396,7 +396,7 @@
                                                 @using (Html.BeginForm("SortCategory", "Owner", FormMethod.Post, new { @class = "navbar-right form" }))
                                                 {
                                                     <input type="hidden" name="id" value="@item.id">
-                                                    <button class="btn btn-icon btn-1 btn-sm btn-success form-control"  type="button" onclick="confirm('Are you sure you want to sort this category?') ? this.parentElement.submit() : ''" data-toggle="tooltip" data-placement="top" title="Sort @item.name" style="width:50px; display:inline-block;margin-top:-3px">
+                                                    <button class="btn btn-icon btn-1 btn-sm btn-success form-control"  type="button" onclick="confirm('Are you sure you want to sort this category?') ? this.parentElement.submit() : ''" data-toggle="tooltip" data-placement="top" title="Sort Category" style="width:50px; display:inline-block;margin-top:-3px">
                                                         <span class="btn-inner--icon">
                                                             <i class="fa fa-edit">
                                                             </i>

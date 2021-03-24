@@ -70,11 +70,38 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 6th of October City.
+        /// </summary>
+        public static string _6th_of_October_City {
+            get {
+                return ResourceManager.GetString("6th of October City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 8 different designs. Unlimited color options. Choose QR and Flayer style.
         /// </summary>
         public static string _8_different_designs__Unlimited_color_options__Choose_QR_and_Flayer_style {
             get {
                 return ResourceManager.GetString("8 different designs. Unlimited color options. Choose QR and Flayer style", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A Few Words About Us.
+        /// </summary>
+        public static string A_Few_Words_About_Us {
+            get {
+                return ResourceManager.GetString("A Few Words About Us", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About us.
+        /// </summary>
+        public static string About_us {
+            get {
+                return ResourceManager.GetString("About us", resourceCulture);
             }
         }
         
@@ -178,11 +205,29 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Al-Ansi office aspires by opening a branch for programming and advertising services to transfer German and European technology to the Egyptian market, through the application of the highest programming and advertising systems, with professionalism and skill commensurate with the great experience gained from working on global projects for previous companies in each of the following countries ..
+        /// </summary>
+        public static string Al_Ansi_office_aspires_by_opening_a_branch_for_programming_and_advertising_services_to_transfer_German_and_European_technology_to_the_Egyptian_market__through_the_application_of_the_highest_programming_and_advertising_systems__with_professionalism_and_skill_commensurate_with_the_great_experience_gained_from_working_on_global_projects_for_previous_companies_in_each_of_the_following_countries__ {
+            get {
+                return ResourceManager.GetString(@"Al-Ansi office aspires by opening a branch for programming and advertising services to transfer German and European technology to the Egyptian market, through the application of the highest programming and advertising systems, with professionalism and skill commensurate with the great experience gained from working on global projects for previous companies in each of the following countries .", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All rights reserved.
         /// </summary>
         public static string All_rights_reserved {
             get {
                 return ResourceManager.GetString("All rights reserved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AM.
+        /// </summary>
+        public static string AM {
+            get {
+                return ResourceManager.GetString("AM", resourceCulture);
             }
         }
         
@@ -440,6 +485,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to don&apos;t have account ?.
+        /// </summary>
+        public static string don_t_have_account__ {
+            get {
+                return ResourceManager.GetString("don\'t have account ?", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Download JPG.
         /// </summary>
         public static string Download_JPG {
@@ -517,6 +571,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string EGP {
             get {
                 return ResourceManager.GetString("EGP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Egypt.
+        /// </summary>
+        public static string Egypt {
+            get {
+                return ResourceManager.GetString("Egypt", resourceCulture);
             }
         }
         
@@ -701,6 +764,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Gamal Abd Al Nassir Axis.
+        /// </summary>
+        public static string Gamal_Abd_Al_Nassir_Axis {
+            get {
+                return ResourceManager.GetString("Gamal Abd Al Nassir Axis", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Germany, France, Canada, USA, Caribbean islands, Denmark, Switzerland, Dubai.
+        /// </summary>
+        public static string Germany__France__Canada__USA__Caribbean_islands__Denmark__Switzerland__Dubai {
+            get {
+                return ResourceManager.GetString("Germany, France, Canada, USA, Caribbean islands, Denmark, Switzerland, Dubai", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Go Digital.
         /// </summary>
         public static string Go_Digital {
@@ -715,6 +796,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Go_Mobile {
             get {
                 return ResourceManager.GetString("Go Mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to Location.
+        /// </summary>
+        public static string Go_to_Location {
+            get {
+                return ResourceManager.GetString("Go to Location", resourceCulture);
             }
         }
         
@@ -941,6 +1031,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Menu_Print_template {
             get {
                 return ResourceManager.GetString("Menu Print template", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Menu Theme.
+        /// </summary>
+        public static string Menu_Theme {
+            get {
+                return ResourceManager.GetString("Menu Theme", resourceCulture);
             }
         }
         
@@ -1221,6 +1320,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Plans {
             get {
                 return ResourceManager.GetString("Plans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PM.
+        /// </summary>
+        public static string PM {
+            get {
+                return ResourceManager.GetString("PM", resourceCulture);
             }
         }
         
@@ -1532,6 +1640,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saturday.
+        /// </summary>
+        public static string Saturday {
+            get {
+                return ResourceManager.GetString("Saturday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         public static string Save {
@@ -1676,6 +1793,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Team-I is an extension of the activity of Al-Ansi Office for Software development in the Federal Republic of Germany. He has been working in the Information technology area for more than 20 years, during which he worked and implemented many projects for the largest and most prestigious companies in the world..
+        /// </summary>
+        public static string Team_I_is_an_extension_of_the_activity_of_Al_Ansi_Office_for_Software_development_in_the_Federal_Republic_of_Germany__He_has_been_working_in_the_Information_technology_area_for_more_than_20_years__during_which_he_worked_and_implemented_many_projects_for_the_largest_and_most_prestigious_companies_in_the_world_ {
+            get {
+                return ResourceManager.GetString(@"Team-I is an extension of the activity of Al-Ansi Office for Software development in the Federal Republic of Germany. He has been working in the Information technology area for more than 20 years, during which he worked and implemented many projects for the largest and most prestigious companies in the world.", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Team i your way to the success.
+        /// </summary>
+        public static string Team_i_your_way_to_the_success {
+            get {
+                return ResourceManager.GetString("Team i your way to the success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Reviews.
         /// </summary>
         public static string Testimonials {
@@ -1721,6 +1856,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Themes demo.
+        /// </summary>
+        public static string Themes_demo {
+            get {
+                return ResourceManager.GetString("Themes demo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There are platforms where you can create a menu but not design your QR.
         /// </summary>
         public static string There_are {
@@ -1735,6 +1879,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string There_are_platforms_where_you_can_make_QR_code {
             get {
                 return ResourceManager.GetString("There are platforms where you can make QR code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thursday.
+        /// </summary>
+        public static string Thursday {
+            get {
+                return ResourceManager.GetString("Thursday", resourceCulture);
             }
         }
         
@@ -1889,6 +2042,24 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Welcome {
             get {
                 return ResourceManager.GetString("Welcome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Works from.
+        /// </summary>
+        public static string Works_from {
+            get {
+                return ResourceManager.GetString("Works from", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Works to.
+        /// </summary>
+        public static string Works_to {
+            get {
+                return ResourceManager.GetString("Works to", resourceCulture);
             }
         }
         

@@ -120,8 +120,17 @@
   <data name="20 items in the menu" xml:space="preserve">
     <value>items in the menu</value>
   </data>
+  <data name="6th of October City" xml:space="preserve">
+    <value>6th of October City</value>
+  </data>
   <data name="8 different designs. Unlimited color options. Choose QR and Flayer style" xml:space="preserve">
     <value>8 different designs. Unlimited color options. Choose QR and Flayer style</value>
+  </data>
+  <data name="A Few Words About Us" xml:space="preserve">
+    <value>A Few Words About Us</value>
+  </data>
+  <data name="About us" xml:space="preserve">
+    <value>About us</value>
   </data>
   <data name="Actions" xml:space="preserve">
     <value>Actions</value>
@@ -156,8 +165,14 @@
   <data name="Add Variant" xml:space="preserve">
     <value>Add Variant</value>
   </data>
+  <data name="Al-Ansi office aspires by opening a branch for programming and advertising services to transfer German and European technology to the Egyptian market, through the application of the highest programming and advertising systems, with professionalism and skill commensurate with the great experience gained from working on global projects for previous companies in each of the following countries ." xml:space="preserve">
+    <value>Al-Ansi office aspires by opening a branch for programming and advertising services to transfer German and European technology to the Egyptian market, through the application of the highest programming and advertising systems, with professionalism and skill commensurate with the great experience gained from working on global projects for previous companies in each of the following countries .</value>
+  </data>
   <data name="All rights reserved" xml:space="preserve">
     <value>All rights reserved</value>
+  </data>
+  <data name="AM" xml:space="preserve">
+    <value>AM</value>
   </data>
   <data name="Are you sure you want to delete this extras?" xml:space="preserve">
     <value>Are you sure you want to delete this extras?</value>
@@ -243,6 +258,9 @@
   <data name="direction" xml:space="preserve">
     <value>ltr</value>
   </data>
+  <data name="don't have account ?" xml:space="preserve">
+    <value>don't have account ?</value>
+  </data>
   <data name="Download JPG" xml:space="preserve">
     <value>Download JPG</value>
   </data>
@@ -269,6 +287,9 @@
   </data>
   <data name="EGP" xml:space="preserve">
     <value>EGP</value>
+  </data>
+  <data name="Egypt" xml:space="preserve">
+    <value>Egypt</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -330,11 +351,20 @@
   <data name="Full access to the menu creation tool" xml:space="preserve">
     <value>Full access to the menu creation tool</value>
   </data>
+  <data name="Gamal Abd Al Nassir Axis" xml:space="preserve">
+    <value>Gamal Abd Al Nassir Axis</value>
+  </data>
+  <data name="Germany, France, Canada, USA, Caribbean islands, Denmark, Switzerland, Dubai" xml:space="preserve">
+    <value>Germany, France, Canada, USA, Caribbean islands, Denmark, Switzerland, Dubai</value>
+  </data>
   <data name="Go Digital" xml:space="preserve">
     <value>Go Digital</value>
   </data>
   <data name="Go Mobile" xml:space="preserve">
     <value>Go Mobile</value>
+  </data>
+  <data name="Go to Location" xml:space="preserve">
+    <value>Go to Location</value>
   </data>
   <data name="If you run a small restaurant or bar, or just need the basics, this plan is great." xml:space="preserve">
     <value>If you run a small restaurant or cafe , or just need the basics, this plan is great.</value>
@@ -410,6 +440,9 @@
   </data>
   <data name="Menu Print template" xml:space="preserve">
     <value>Menu Print template</value>
+  </data>
+  <data name="Menu Theme" xml:space="preserve">
+    <value>Menu Theme</value>
   </data>
   <data name="month" xml:space="preserve">
     <value>month</value>
@@ -503,6 +536,9 @@
   </data>
   <data name="Plans" xml:space="preserve">
     <value>Plans</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>PM</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Price</value>
@@ -606,6 +642,9 @@
   <data name="Same as PRO  with a 20% discount. Enjoy your QR menu full year" xml:space="preserve">
     <value>Same as PRO, with a 20% discount. Enjoy your QR menu full year</value>
   </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
@@ -654,6 +693,12 @@
   <data name="System status" xml:space="preserve">
     <value>System status</value>
   </data>
+  <data name="Team i your way to the success" xml:space="preserve">
+    <value>Team i your way to the success</value>
+  </data>
+  <data name="Team-I is an extension of the activity of Al-Ansi Office for Software development in the Federal Republic of Germany. He has been working in the Information technology area for more than 20 years, during which he worked and implemented many projects for the largest and most prestigious companies in the world." xml:space="preserve">
+    <value>Team-I is an extension of the activity of Al-Ansi Office for Software development in the Federal Republic of Germany. He has been working in the Information technology area for more than 20 years, during which he worked and implemented many projects for the largest and most prestigious companies in the world.</value>
+  </data>
   <data name="Testimonials" xml:space="preserve">
     <value>Reviews</value>
   </data>
@@ -669,11 +714,17 @@
   <data name="Their mobile is your menu now" xml:space="preserve">
     <value>Their mobile is your menu now</value>
   </data>
+  <data name="Themes demo" xml:space="preserve">
+    <value>Themes demo</value>
+  </data>
   <data name="There are" xml:space="preserve">
     <value>There are platforms where you can create a menu but not design your QR</value>
   </data>
   <data name="There are platforms where you can make QR code" xml:space="preserve">
     <value>There are platforms where you can make QR code</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Thursday</value>
   </data>
   <data name="Total orders" xml:space="preserve">
     <value>Total orders</value>
@@ -725,6 +776,12 @@
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome ! </value>
+  </data>
+  <data name="Works from" xml:space="preserve">
+    <value>Works from</value>
+  </data>
+  <data name="Works to" xml:space="preserve">
+    <value>Works to</value>
   </data>
   <data name="You dont have any plans" xml:space="preserve">
     <value>You dont have any plans</value>

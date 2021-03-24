@@ -397,122 +397,128 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label class="form-control-label" for="ThemeId">Menu Theme</label>
-                                        <a target="_blank" href="@Url.Action("MenuDemos","Owner")" class="btn btn-sm float-right" style="background-color:#19526e; color:white;">Themes demo</a>
-                                        @Html.DropDownListFor(m => m.ThemeId, ViewBag.Themes as IEnumerable<SelectListItem>, htmlAttributes: new { @class = "form-control" })
-                                    </div>
+                                        <div class="row align-items-center mb-1">
+                                            <div class="col-8">
+                                                <label class="form-control-label" for="ThemeId">@Resource.Menu_Theme</label>
+                                            </div>
+                                            <div class="col-4 @Resource.text_dir_class">
+                                                <a target="_blank" href="@Url.Action("MenuDemos","Owner")" class="btn btn-sm @Resource.text_dir_class" style="background-color:#19526e; color:white;">@Resource.Themes_demo</a>
+                                            </div>
+                                        </div>
+                                            @Html.DropDownListFor(m => m.ThemeId, ViewBag.Themes as IEnumerable<SelectListItem>, htmlAttributes: new { @class = "form-control" })
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="RestaurantDescription">Works from</label>
-                                        @if (Model.starttime != null)
-                                        {
-                                            <input type="time" name="starttime" value="@Model.starttime.Value.ToString("HH:mm")" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
-                                        }
-                                        else
-                                        {
-                                            <input type="time" name="starttime" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
-                                        }
-                                    </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="RestaurantDescription">@Resource.Works_from</label>
+                                                @if (Model.starttime != null)
+                                                {
+                                                    <input type="time" name="starttime" value="@Model.starttime.Value.ToString("HH:mm")" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
+                                                }
+                                                else
+                                                {
+                                                    <input type="time" name="starttime" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
+                                                }
+                                            </div>
 
-                                    <div class="form-group">
-                                        <label class="form-control-label" for="RestaurantDescription">Works to</label>
-                                        @if (Model.endtime != null)
-                                        {
-                                            <input type="time" name="endtime" value="@Model.endtime.Value.ToString("HH:mm")" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
-                                        }
-                                        else
-                                        {
-                                            <input type="time" name="endtime" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
-                                        }
-                                    </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="RestaurantDescription">@Resource.Works_to</label>
+                                                @if (Model.endtime != null)
+                                                {
+                                                    <input type="time" name="endtime" value="@Model.endtime.Value.ToString("HH:mm")" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
+                                                }
+                                                else
+                                                {
+                                                    <input type="time" name="endtime" id="RestaurantDescription" class="form-control form-control-alternative" required autofocus>
+                                                }
+                                            </div>
 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group text-center">
-                                                <label class="form-control-label" for="input-name">@Resource.Restaurant_Image</label>
-                                                <div class="text-center">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 295px; height: 200px;">
-                                                            @if (Model.RestaurantImage == "cover.jpg")
-                                                            {
-                                                                <img src="~/Content/images/@Model.RestaurantImage" alt="..." />
-                                                            }
-                                                            else
-                                                            {
-                                                                <img src="~/Content/images/M_@Model.id@Model.RestaurantImage" alt="..." />
-                                                            }
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group text-center">
+                                                        <label class="form-control-label" for="input-name">@Resource.Restaurant_Image</label>
+                                                        <div class="text-center">
+                                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 295px; height: 200px;">
+                                                                    @if (Model.RestaurantImage == "cover.jpg")
+                                                                    {
+                                                                        <img src="~/Content/images/@Model.RestaurantImage" alt="..." />
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <img src="~/Content/images/M_@Model.id@Model.RestaurantImage" alt="..." />
+                                                                    }
 
-                                                            @*<img src="~/Content/images/flayer.png" />*@
+                                                                    @*<img src="~/Content/images/flayer.png" />*@
+                                                                </div>
+
+                                                                <div>
+                                                                    <span class="btn btn-outline-secondary btn-file">
+                                                                        <span class="fileinput-new">@Resource.Select_image</span>
+                                                                        <span class="fileinput-exists">@Resource.Change</span>
+                                                                        <input type="file" name="ImgFile" accept="image/x-png,image/gif,image/jpeg">
+                                                                    </span>
+                                                                    <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">@Resource.Remove</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group text-center">
+                                                        <label class="form-control-label" for="input-name">@Resource.Restaurant_Cover_Image</label>
+                                                        <div class="text-center">
+                                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                                <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px; height: 100px;">
+                                                                    @if (Model.RestaurantCoverImage == "cover.jpg")
+                                                                    {
+                                                                        <img src="~/Content/images/@Model.RestaurantCoverImage" alt="..." />
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <img src="~/Content/images/L_C_@Model.id@Model.RestaurantCoverImage" alt="..." />
+                                                                    }
 
-                                                        <div>
-                                                            <span class="btn btn-outline-secondary btn-file">
-                                                                <span class="fileinput-new">@Resource.Select_image</span>
-                                                                <span class="fileinput-exists">@Resource.Change</span>
-                                                                <input type="file" name="ImgFile" accept="image/x-png,image/gif,image/jpeg">
-                                                            </span>
-                                                            <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">@Resource.Remove</a>
+                                                                </div>
+                                                                <div>
+                                                                    <span class="btn btn-outline-secondary btn-file">
+                                                                        <span class="fileinput-new">@Resource.Select_image</span>
+                                                                        <span class="fileinput-exists">@Resource.Change</span>
+                                                                        <input type="file" name="CoverFile" accept="image/x-png,image/gif,image/jpeg">
+                                                                    </span>
+                                                                    <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">@Resource.Remove</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group text-center">
-                                                <label class="form-control-label" for="input-name">@Resource.Restaurant_Cover_Image</label>
-                                                <div class="text-center">
-                                                    <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                        <div class="fileinput-preview img-thumbnail" data-trigger="fileinput" style="width: 200px; height: 100px;">
-                                                            @if (Model.RestaurantCoverImage == "cover.jpg")
-                                                            {
-                                                                <img src="~/Content/images/@Model.RestaurantCoverImage" alt="..." />
-                                                            }
-                                                            else
-                                                            {
-                                                                <img src="~/Content/images/L_C_@Model.id@Model.RestaurantCoverImage" alt="..." />
-                                                            }
+                                            <div class="text-center">
+                                                <button type="submit" class="btn mt-4" style="color:#19526e; background-color:#ffa822;">@Resource.Save</button>
+                                            </div>
 
-                                                        </div>
-                                                        <div>
-                                                            <span class="btn btn-outline-secondary btn-file">
-                                                                <span class="fileinput-new">@Resource.Select_image</span>
-                                                                <span class="fileinput-exists">@Resource.Change</span>
-                                                                <input type="file" name="CoverFile" accept="image/x-png,image/gif,image/jpeg">
-                                                            </span>
-                                                            <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">@Resource.Remove</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            }
+
+
+
+                                            @*</form>*@
+                                        </div>
+                                        <hr />
+                                        <h6 class="heading-small text-muted mb-4">@Resource.Owner_information</h6>
+                                        <div class="pl-lg-4">
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="name_owner">@Resource.Owner_Name</label>
+                                                <input type="text" name="OwnerName" id="name_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Name" value="@Model.OwnerName" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="email_owner">@Resource.Owner_Email</label>
+                                                <input type="text" name="OwnerEmail" id="email_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Email" value="@Model.OwnerEmail" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label" for="phone_owner">@Resource.Owner_Phone</label>
+                                                <input type="text" name="OwnerPhone" id="phone_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Phone" value="@Model.OwnerPhone" readonly>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="text-center">
-                                        <button type="submit" class="btn mt-4" style="color:#19526e; background-color:#ffa822;">@Resource.Save</button>
-                                    </div>
-
-                                }
-
-
-
-                                @*</form>*@
-                            </div>
-                            <hr />
-                            <h6 class="heading-small text-muted mb-4">@Resource.Owner_information</h6>
-                            <div class="pl-lg-4">
-                                <div class="form-group">
-                                    <label class="form-control-label" for="name_owner">@Resource.Owner_Name</label>
-                                    <input type="text" name="OwnerName" id="name_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Name" value="@Model.OwnerName" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-control-label" for="email_owner">@Resource.Owner_Email</label>
-                                    <input type="text" name="OwnerEmail" id="email_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Email" value="@Model.OwnerEmail" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-control-label" for="phone_owner">@Resource.Owner_Phone</label>
-                                    <input type="text" name="OwnerPhone" id="phone_owner" class="form-control form-control-alternative" placeholder="@Resource.Owner_Phone" value="@Model.OwnerPhone" readonly>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-xl-6 mb-5 mb-xl-0">
