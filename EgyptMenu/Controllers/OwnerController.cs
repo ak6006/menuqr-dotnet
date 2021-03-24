@@ -736,5 +736,9 @@ namespace EgyptMenu.Controllers
             //return View();
             return RedirectToAction("EditOptions", new { id =op.item_id  });
         }
+        public ActionResult MenuDemos()
+        {
+            return View();
+        }
     }
 }
