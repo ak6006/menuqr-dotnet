@@ -825,7 +825,9 @@
             marker = new google.maps.Marker({
                 position: markerData,
                 map: map_location,
+                animation: google.maps.Animation.DROP,
                 icon: start
+                
             });
         }
 
@@ -1001,24 +1003,13 @@
         // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
         function initMap() {
             var map;
-            @*if (@Model.lat!= null) {
-                 map = new google.maps.Map(document.getElementById("map"), {
-                    center: { lat: @Model.lat, lng: @Model.lng },
-                    zoom: 13,
-                });
 
-            }
-            else {
-                 map = new google.maps.Map(document.getElementById("map"), {
-                    center: { lat: 29.9751576, lng: 31.141099 },
-                    zoom: 13,
-                });
-
-            }*@
             map = new google.maps.Map(document.getElementById("map"), {
                     center: { lat: @Model.lat, lng: @Model.lng },
-                    zoom: 13,
-                });
+                zoom: 13,
+
+            });
+
             const card = document.getElementById("pac-card");
             const input = document.getElementById("pac-input");
             const biasInputElement = document.getElementById("use-location-bias");
@@ -1055,7 +1046,7 @@
             });
             autocomplete.addListener("place_changed", () => {
                 infowindow.close();
-                marker.setVisible(false);
+                marker.setVisible(true);
                 const place = autocomplete.getPlace();
 
                 if (!place.geometry) {

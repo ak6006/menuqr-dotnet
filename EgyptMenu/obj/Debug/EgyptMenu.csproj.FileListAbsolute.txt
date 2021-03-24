@@ -2693,7 +2693,6 @@ G:\Team I\menuqr\EgyptMenu\bin\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
 G:\Team I\menuqr\EgyptMenu\bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 G:\Team I\menuqr\EgyptMenu\bin\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 G:\Team I\menuqr\EgyptMenu\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-G:\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.csprojAssemblyReference.cache
 G:\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.Views.Shared.Resources.Resource.resources
 G:\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.Migrations.amr.resources
 G:\Team I\menuqr\EgyptMenu\obj\Debug\EgyptMenu.Views.Shared.Resources.Resource.ar.resources
