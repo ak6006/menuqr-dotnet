@@ -671,16 +671,26 @@ namespace EgyptMenu.Controllers
             db.SaveChanges();
 
             List<string> Opts = options.Split(',').ToList();
+            NewOption.options = "";
             foreach (var item in Opts)
             {
-                options_details options_Details = new options_details()
+                if (string.IsNullOrWhiteSpace(item))
                 {
-                    option_id = NewOption.id,
-                    option_name = item,
-                    option = NewOption,
-                };
-                db.options_details.Add(options_Details);
+
+                }
+                else
+                {
+                    NewOption.options += item + ",";
+                    options_details options_Details = new options_details()
+                    {
+                        option_id = NewOption.id,
+                        option_name = item,
+                        option = NewOption,
+                    };
+                    db.options_details.Add(options_Details);
+                }
             }
+            NewOption.options = NewOption.options.Remove(NewOption.options.Length - 1, 1);
             db.SaveChanges();
             //var Options = db.options.Where(o => o.item_id == ItemId).ToList();
             return RedirectToAction("EditOptions", new { id = ItemId });
@@ -695,19 +705,34 @@ namespace EgyptMenu.Controllers
         [HttpPost]
         public ActionResult EditOp(int id, int ItemId, string name, string options)
         {
+            var CleanOptions = "";
+            List<string> EnteredOptions = options.Split(',').ToList();
+            foreach (var item in EnteredOptions)
+            {
+                if (string.IsNullOrWhiteSpace(item))
+                {
+
+                }
+                else
+                {
+                    CleanOptions += item + ",";
+                }
+            }
+            CleanOptions = CleanOptions.Remove(CleanOptions.Length - 1, 1);
+
             ViewBag.ItemId = ItemId;
             ViewBag.ItemName = db.items.Find(ItemId).name;
             var OldOp = db.options.Find(id);
             OldOp.name = name;
-            OldOp.options = options;
+            OldOp.options = CleanOptions;
             db.SaveChanges();
             var OptDetails = db.options_details.Where(o => o.option_id == OldOp.id).ToList();
-            List<string> Opts = options.Split(',').ToList();
+            List<string> Opts = CleanOptions.Split(',').ToList();
             var i = 0;
             var varOptions = db.variant_has_option.ToList();
             foreach (var item in OptDetails)
             {
-                if (Opts.Count==i)
+                if (Opts.Count == i)
                 {
                     foreach (var item2 in varOptions)
                     {
@@ -727,7 +752,7 @@ namespace EgyptMenu.Controllers
                     item.option_name = Opts[i];
                     i++;
                 }
-                
+
             }
             db.SaveChanges();
             return RedirectToAction("EditOptions", new { id = ItemId });
@@ -751,13 +776,13 @@ namespace EgyptMenu.Controllers
             foreach (var item in OptDetails)
             {
                 var varOptions = db.variant_has_option.ToList();
-                if (varOptions.Count>0)
+                if (varOptions.Count > 0)
                 {
                     foreach (var item2 in varOptions)
                     {
                         if (item.id == item2.option_detail_id)
                         {
-                            TempData["OptionsMsg"] = "Please delete all variants with option "+op.name+" firstly";
+                            TempData["OptionsMsg"] = "Please delete all variants with option " + op.name + " firstly";
                             return RedirectToAction("Edit", new { id = op.item_id });
                         }
                         else
@@ -770,16 +795,16 @@ namespace EgyptMenu.Controllers
                 {
                     db.options_details.Remove(item);
                 }
-                
+
             }
             db.options.Remove(op);
             db.SaveChanges();
             //return View();
             return RedirectToAction("EditOptions", new { id = op.item_id });
         }
-            public ActionResult MenuDemos()
-            {
-                return View();
-            }
+        public ActionResult MenuDemos()
+        {
+            return View();
         }
     }
+}

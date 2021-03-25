@@ -302,7 +302,7 @@
                                 </div>
                                 <div id="form-group-options" class="form-group">
                                     <label class="form-control-label" for="options">@Resource.Comma_separated_list_of_option_values separated list of option values</label>
-                                    <input step=".01" type="text" name="options" id="options" class="form-control form-control   " placeholder="@Resource.Enter_comma_separated_list_of_avaliable_option_values__ex__small_medium_large" value="@Model.options" required="" autofocus="">
+                                    <input pattern="[A-Za-z]+.*" type="text" name="options" id="options" class="form-control form-control" placeholder="@Resource.Enter_comma_separated_list_of_avaliable_option_values__ex__small_medium_large" value="@Model.options" required="" autofocus="">
                                 </div>
                                 <button type="submit" class="btn" style="background-color:#19526e; color:white;">@Resource.Update</button>
                             </form>
