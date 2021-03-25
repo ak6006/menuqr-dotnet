@@ -296,6 +296,7 @@ namespace EgyptMenu.Controllers
         ///Edit Item
         public ActionResult Edit(int id)
         {
+            ViewBag.OptionsMsg = TempData["OptionsMsg"];
             var model = db.items.Find(id);
             return View(model);
         }
@@ -694,31 +695,53 @@ namespace EgyptMenu.Controllers
         [HttpPost]
         public ActionResult EditOp(int id, int ItemId, string name, string options)
         {
+            ViewBag.ItemId = ItemId;
+            ViewBag.ItemName = db.items.Find(ItemId).name;
             var OldOp = db.options.Find(id);
             OldOp.name = name;
             OldOp.options = options;
             db.SaveChanges();
             var OptDetails = db.options_details.Where(o => o.option_id == OldOp.id).ToList();
+            List<string> Opts = options.Split(',').ToList();
+            var i = 0;
+            var varOptions = db.variant_has_option.ToList();
             foreach (var item in OptDetails)
             {
-                db.options_details.Remove(item);
-            }
-
-            db.SaveChanges();
-
-            List<string> Opts = options.Split(',').ToList();
-            foreach (var item in Opts)
-            {
-                options_details options_Details = new options_details()
+                if (Opts.Count==i)
                 {
-                    option_id = OldOp.id,
-                    option_name = item,
-                    option = OldOp,
-                };
-                db.options_details.Add(options_Details);
+                    foreach (var item2 in varOptions)
+                    {
+                        if (item.id == item2.option_detail_id)
+                        {
+                            TempData["OptionsMsg"] = "Please delete all related variants firstly";
+                            return RedirectToAction("EditOptions", new { id = id });
+                        }
+                        else
+                        {
+                            db.options_details.Remove(item);
+                        }
+                    }
+                }
+                else
+                {
+                    item.option_name = Opts[i];
+                    i++;
+                }
+                
             }
             db.SaveChanges();
             return RedirectToAction("EditOptions", new { id = ItemId });
+            //foreach (var item in Opts)
+            //{
+            //    options_details options_Details = new options_details()
+            //    {
+            //        option_id = OldOp.id,
+            //        option_name = item,
+            //        option = OldOp,
+            //    };
+            //    db.options_details.Add(options_Details);
+            //}
+            //db.SaveChanges();
         }
         [HttpPost]
         public ActionResult DeleteOption(int id)
@@ -734,8 +757,8 @@ namespace EgyptMenu.Controllers
                     {
                         if (item.id == item2.option_detail_id)
                         {
-                            TempData["OptionsMsg"] = "Please delete all related variants firstly";
-                            return RedirectToAction("EditOptions", new { id = op.item_id });
+                            TempData["OptionsMsg"] = "Please delete all variants with option "+op.name+" firstly";
+                            return RedirectToAction("Edit", new { id = op.item_id });
                         }
                         else
                         {

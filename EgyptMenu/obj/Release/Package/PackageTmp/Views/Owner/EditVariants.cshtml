@@ -309,7 +309,7 @@
                                             <div class="col-md-4">
                                                 <br>
                                                 <label class="form-control-label">@item.name</label>
-                                                <select onchange="UpdateValue()" class="form-control col-sm select2init " name="option[3]" id="option[3]" data-select2-id="option[3]" tabindex="-1" aria-hidden="true">
+                                                <select required onchange="UpdateValue()" class="form-control col-sm select2init " name="option[3]" id="option[3]" data-select2-id="option[3]" tabindex="-1" aria-hidden="true">
                                                     <option disabled="" selected="" value="" data-select2-id="2"> Select @item.name </option>
                                                     @{
                                                         List<string> Opts = item.options.Split(',').ToList();

@@ -91,9 +91,12 @@
 
 </head>
 <body class="">
-    @*<form id="logout-form" action="http://localhost/logout" method="POST" style="display: none;">
-            <input type="hidden" name="_token" value="Z1c7o08OEeiLlaxpobwWSMBOFFjx8xp8lywTA8aR">
-        </form>*@
+    @if (ViewBag.OptionsMsg != null)
+    {
+        <script>
+            alert("@ViewBag.OptionsMsg");
+        </script>
+    }
     <nav class="navbar navbar-vertical  navbar-expand-md navbar-light bg-white @Resource.fixed_dir" id="sidenav-main">
         <div class="container-fluid">
             <!-- Toggler -->
@@ -112,8 +115,8 @@
                         <div class="media align-items-center display-3">
                             <i class="fas fa-cog"></i>
                             @*<span class="avatar avatar-sm rounded-circle">
-                                <img alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">
-                            </span>*@
+                                    <img alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">
+                                </span>*@
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
@@ -126,10 +129,10 @@
                         </a>
                         <div class="dropdown-divider"></div>
                         @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                                    <i class="ni ni-user-run"></i>
-                                    <span>Logout</span>
-                                </a>*@
+                            document.getElementById('logout-form').submit();">
+                                        <i class="ni ni-user-run"></i>
+                                        <span>Logout</span>
+                                    </a>*@
                         @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                         {
                             @Html.AntiForgeryToken()
@@ -137,22 +140,22 @@
                         }
                     </div>
                     @*<div class="dropdown-menu dropdown-menu-arrow @Resource.dropdown_menu_right" style="@Resource.text_align">
-                        <div class=" dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">@Resource.Welcome</h6>
-                        </div>
-                        <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
-                            <i class="fas fa-user-alt"></i>
-                            <span>@Resource.My_profile</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">@Resource.Welcome</h6>
+                            </div>
+                            <a href="@Url.Action("Profile", "Owner")" class="dropdown-item">
+                                <i class="fas fa-user-alt"></i>
+                                <span>@Resource.My_profile</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
 
-                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                        {
-                            @Html.AntiForgeryToken()
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                            {
+                                @Html.AntiForgeryToken()
 
-                            <button type="submit" class="dropdown-item">@Resource.Log_out</button>
-                        }
-                    </div>*@
+                                <button type="submit" class="dropdown-item">@Resource.Log_out</button>
+                            }
+                        </div>*@
                 </li>
             </ul>
             <!-- Collapse -->
@@ -199,10 +202,10 @@
                     </li>
 
                     @*<li class="nav-item">
-                        <a class="nav-link" href=@Url.Action("Plan")>
-                            <i class="fas fa-credit-card text-orange"></i>&nbsp;&nbsp;@Resource.Plan
-                        </a>
-                    </li>*@
+                            <a class="nav-link" href=@Url.Action("Plan")>
+                                <i class="fas fa-credit-card text-orange"></i>&nbsp;&nbsp;@Resource.Plan
+                            </a>
+                        </li>*@
                 </ul>
 
                 <span></span>
@@ -234,8 +237,8 @@
                             <div class="media align-items-center display-3" style="color:#ffa822;">
                                 <i class="fas fa-cog"></i>
                                 <!--<span class="avatar avatar-sm rounded-circle">
-                            @*<img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">*@
-                        <!--</span>-->
+                                    @*<img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">*@
+                                <!--</span>-->
                                 <div class="media-body ml-2 d-none d-lg-block">
                                     <span class="mb-0  font-weight-bolder">@User.Identity.GetUserName()</span>
                                 </div>
@@ -251,10 +254,10 @@
                             </a>
                             <div class="dropdown-divider"></div>
                             @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                                    <i class="ni ni-user-run"></i>
-                                    <span>Logout</span>
-                                </a>*@
+                                document.getElementById('logout-form').submit();">
+                                            <i class="ni ni-user-run"></i>
+                                            <span>Logout</span>
+                                        </a>*@
                             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                             {
                                 @Html.AntiForgeryToken()
@@ -415,7 +418,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label class="form-control-label" for="itemAvailable">@Resource.Item_available</label>
-                                                <label class="custom-toggle @Resource.floating_item" >
+                                                <label class="custom-toggle @Resource.floating_item">
                                                     @if (Model.available == 0)
                                                     {
                                                         <input type="checkbox" name="availableCheck" onchange="AvailFun()" id="itemAvailable">
@@ -432,7 +435,7 @@
                                             <div class="form-group">
 
                                                 <label class="form-control-label " for="has_variants">@Resource.Enable_variants</label>
-                                                <label class="custom-toggle @Resource.floating_item" >
+                                                <label class="custom-toggle @Resource.floating_item">
                                                     @if (Model.has_variants == 0)
                                                     {
                                                         <input type="checkbox" name="hasvariants" onchange="VarFun()" id="has_variants">
@@ -602,6 +605,8 @@
             </footer>
         </div>
     </div>
+
+
 
 
     <!-- Commented because navtabs includes same script -->
