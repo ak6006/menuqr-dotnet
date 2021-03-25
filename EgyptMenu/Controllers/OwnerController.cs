@@ -67,7 +67,7 @@ namespace EgyptMenu.Controllers
             return CurrentRestaurant;
         }
 
-    
+
 
         // GET: Owner
         public ActionResult Dashboard()
@@ -84,7 +84,7 @@ namespace EgyptMenu.Controllers
             {
                 id = CurrentRestaurant.id,
                 starttime = CurrentRestaurant.starttime,
-                endtime=CurrentRestaurant.endtime,
+                endtime = CurrentRestaurant.endtime,
                 OwnerEmail = UserEmail,
                 OwnerName = CurrentUser.name,
                 OwnerPhone = CurrentUser.phone,
@@ -116,18 +116,18 @@ namespace EgyptMenu.Controllers
                 img.FileName = "L_" + CurrentRestaurant.id + ImgFile.FileName;
 
                 img.Resize(590, 590);
-                string physicalPath = Path.Combine("~/Content/images/" +  img.FileName);
+                string physicalPath = Path.Combine("~/Content/images/" + img.FileName);
                 img.Save(physicalPath);
                 WebImage img1 = img;
                 img1.FileName = "M_" + CurrentRestaurant.id + ImgFile.FileName;
 
                 img1.Resize(300, 300);
-                string physicalPath1 = Path.Combine("~/Content/images/" +  img1.FileName);
+                string physicalPath1 = Path.Combine("~/Content/images/" + img1.FileName);
                 img1.Save(physicalPath1);
                 WebImage img2 = img;
                 img2.FileName = "S_" + CurrentRestaurant.id + ImgFile.FileName;
                 img2.Resize(200, 200, false);
-                string physicalPath2 = Path.Combine("~/Content/images/" +  img2.FileName);
+                string physicalPath2 = Path.Combine("~/Content/images/" + img2.FileName);
                 img2.Save(physicalPath2);
                 CurrentRestaurant.logo = ImgFile.FileName;
                 model.RestaurantImage = ImgFile.FileName;
@@ -135,19 +135,19 @@ namespace EgyptMenu.Controllers
             if (CoverFile != null)
             {
                 WebImage img = new WebImage(CoverFile.InputStream);
-                img.Resize(590,590);
+                img.Resize(590, 590);
                 img.FileName = "L_C_" + CurrentRestaurant.id + CoverFile.FileName;
-                string physicalPath = Path.Combine("~/Content/images/"+ img.FileName);
+                string physicalPath = Path.Combine("~/Content/images/" + img.FileName);
                 img.Save(physicalPath);
                 WebImage img1 = img;
                 img1.Resize(300, 300);
                 img1.FileName = "M_C_" + CurrentRestaurant.id + CoverFile.FileName;
-                string physicalPath1 = Path.Combine("~/Content/images/"+ img1.FileName);
+                string physicalPath1 = Path.Combine("~/Content/images/" + img1.FileName);
                 img1.Save(physicalPath1);
                 WebImage img2 = img;
-                img2.Resize(200, 200,false);
+                img2.Resize(200, 200, false);
                 img2.FileName = "S_C_" + CurrentRestaurant.id + CoverFile.FileName;
-                string physicalPath2 = Path.Combine("~/Content/images/"+ img2.FileName);
+                string physicalPath2 = Path.Combine("~/Content/images/" + img2.FileName);
                 img2.Save(physicalPath2);
                 CurrentRestaurant.cover = CoverFile.FileName;
                 model.RestaurantCoverImage = CoverFile.FileName;
@@ -177,7 +177,7 @@ namespace EgyptMenu.Controllers
         [HttpPost]
         public ActionResult AddCategory(string CatName)
         {
-            
+
             var CurrentRestaurant = GetRestorant();
             List<category> RestaurantCategories = db.categories.Where(c => c.restorant_id == CurrentRestaurant.id).ToList();
             List<int> CategoryOrders = new List<int>();
@@ -192,7 +192,7 @@ namespace EgyptMenu.Controllers
                 name = CatName,
                 order_index = 1,
                 active = 1,
-                order = CategoryOrders.Max()+1
+                order = CategoryOrders.Max() + 1
             };
             try
             {
@@ -261,7 +261,7 @@ namespace EgyptMenu.Controllers
             }
             catch (Exception e)
             {
-                return View (e.Message);
+                return View(e.Message);
             }
         }
         public ActionResult QRBuilder()
@@ -290,11 +290,11 @@ namespace EgyptMenu.Controllers
             {
                 return RedirectToAction("Menu", e.Message);
             }
-            
+
         }
 
-            ///Edit Item
-            public ActionResult Edit(int id)
+        ///Edit Item
+        public ActionResult Edit(int id)
         {
             var model = db.items.Find(id);
             return View(model);
@@ -341,7 +341,7 @@ namespace EgyptMenu.Controllers
             {
                 return View(e.Message);
             }
-            return RedirectToAction("Edit", new {id = model.id });
+            return RedirectToAction("Edit", new { id = model.id });
         }
 
         [HttpPost]
@@ -433,7 +433,7 @@ namespace EgyptMenu.Controllers
             ViewBag.ItemId = ItemId;
             ViewBag.ItemName = db.items.Find(ItemId).name;
             var Options = db.options.Where(o => o.item_id == ItemId).ToList();
-            
+
             return View(Options);
         }
 
@@ -448,9 +448,9 @@ namespace EgyptMenu.Controllers
                     item_id = ItemId,
                     options = options,
                     price = price,
-                    qty=1,
-                    image="",
-                    order= 1
+                    qty = 1,
+                    image = "",
+                    order = 1
                 };
                 db.variants.Add(Variant);
                 db.SaveChanges();
@@ -477,7 +477,7 @@ namespace EgyptMenu.Controllers
             }
         }
 
-        public ActionResult EditVariants(int ItemId , int id)
+        public ActionResult EditVariants(int ItemId, int id)
         {
             ViewBag.ItemId = ItemId;
             ViewBag.ItemName = db.items.Find(ItemId).name;
@@ -565,9 +565,9 @@ namespace EgyptMenu.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdatePassword(int id,string oldPassword, string password, string confirmation)
+        public ActionResult UpdatePassword(int id, string oldPassword, string password, string confirmation)
         {
-            if (password!=confirmation)
+            if (password != confirmation)
             {
                 TempData["Msg"] = "New password and confirmation not match";
                 return RedirectToAction("Profile", "Owner");
@@ -575,7 +575,7 @@ namespace EgyptMenu.Controllers
 
             //////Update User
             user OldUser1 = db.users.Find(id);
-            if (OldUser1.password!=oldPassword)
+            if (OldUser1.password != oldPassword)
             {
                 TempData["Msg"] = "Your password is not correct";
                 return RedirectToAction("Profile", "Owner");
@@ -599,7 +599,7 @@ namespace EgyptMenu.Controllers
 
 
         [HttpPost]
-        public ActionResult UpdateProfile(int id , string name , string email , string phone)
+        public ActionResult UpdateProfile(int id, string name, string email, string phone)
         {
 
             //// Update Restaurant 
@@ -623,7 +623,7 @@ namespace EgyptMenu.Controllers
             OldUser.PhoneNumber = phone;
             UserManager.Update(OldUser);
 
-    
+
             db.SaveChanges();
             return RedirectToAction("Profile", "Owner");
         }
@@ -635,7 +635,7 @@ namespace EgyptMenu.Controllers
         }
 
         [AllowAnonymous]
-        public ActionResult ItemModal(int? id  )
+        public ActionResult ItemModal(int? id)
         {
             var item = db.items.Find(id);
             return View(item);
@@ -657,9 +657,9 @@ namespace EgyptMenu.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddOptions(int ItemId,string name , string options)
+        public ActionResult AddOptions(int ItemId, string name, string options)
         {
-            
+
             option NewOption = new option()
             {
                 item_id = ItemId,
@@ -675,7 +675,7 @@ namespace EgyptMenu.Controllers
                 options_details options_Details = new options_details()
                 {
                     option_id = NewOption.id,
-                    option_name= item,
+                    option_name = item,
                     option = NewOption,
                 };
                 db.options_details.Add(options_Details);
@@ -692,7 +692,7 @@ namespace EgyptMenu.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditOp(int id , int ItemId,string name , string options)
+        public ActionResult EditOp(int id, int ItemId, string name, string options)
         {
             var OldOp = db.options.Find(id);
             OldOp.name = name;
@@ -717,28 +717,46 @@ namespace EgyptMenu.Controllers
                 };
                 db.options_details.Add(options_Details);
             }
-
             db.SaveChanges();
-
-            return RedirectToAction("EditOptions",new {id = ItemId });
+            return RedirectToAction("EditOptions", new { id = ItemId });
         }
         [HttpPost]
         public ActionResult DeleteOption(int id)
         {
+            var op = db.options.Find(id);
             var OptDetails = db.options_details.Where(o => o.option_id == id).ToList();
             foreach (var item in OptDetails)
             {
-                db.options_details.Remove(item);
+                var varOptions = db.variant_has_option.ToList();
+                if (varOptions.Count>0)
+                {
+                    foreach (var item2 in varOptions)
+                    {
+                        if (item.id == item2.option_detail_id)
+                        {
+                            TempData["OptionsMsg"] = "Please delete all related variants firstly";
+                            return RedirectToAction("EditOptions", new { id = op.item_id });
+                        }
+                        else
+                        {
+                            db.options_details.Remove(item);
+                        }
+                    }
+                }
+                else
+                {
+                    db.options_details.Remove(item);
+                }
+                
             }
-            var op = db.options.Find(id);
             db.options.Remove(op);
             db.SaveChanges();
             //return View();
-            return RedirectToAction("EditOptions", new { id =op.item_id  });
+            return RedirectToAction("EditOptions", new { id = op.item_id });
         }
-        public ActionResult MenuDemos()
-        {
-            return View();
+            public ActionResult MenuDemos()
+            {
+                return View();
+            }
         }
     }
-}

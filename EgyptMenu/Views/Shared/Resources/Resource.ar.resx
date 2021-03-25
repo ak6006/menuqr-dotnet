@@ -133,7 +133,7 @@
     <value>من نحن</value>
   </data>
   <data name="Actions" xml:space="preserve">
-    <value>Actions</value>
+    <value>إجراءات</value>
   </data>
   <data name="Activate" xml:space="preserve">
     <value>تفعيل</value>
@@ -148,13 +148,13 @@
     <value>إضافة فئة جديدة</value>
   </data>
   <data name="Add new extras" xml:space="preserve">
-    <value>Add new extras</value>
+    <value>أضف إضافات جديدة</value>
   </data>
   <data name="Add new item" xml:space="preserve">
     <value>إضافة صنف جديد</value>
   </data>
   <data name="Add new option" xml:space="preserve">
-    <value>Add new option</value>
+    <value>إضافة خيار جديد</value>
   </data>
   <data name="Add plan" xml:space="preserve">
     <value>اضف خطة</value>
@@ -163,7 +163,7 @@
     <value>اضف المطعم</value>
   </data>
   <data name="Add Variant" xml:space="preserve">
-    <value>Add Variant</value>
+    <value>إضافة المتغير</value>
   </data>
   <data name="Al-Ansi office aspires by opening a branch for programming and advertising services to transfer German and European technology to the Egyptian market, through the application of the highest programming and advertising systems, with professionalism and skill commensurate with the great experience gained from working on global projects for previous companies in each of the following countries ." xml:space="preserve">
     <value>ويطمح مكتب العنسي من خلال فتح فرع للبرمجة وخدمات الدعاية الي نقل التقنية االلمانية و االوربية الي السوق المصرية وذلك من خالل تطبيق اعلي نظم البرمجة و الدعاية واالعالن وباحترافية ومهارة تتناسب مع الخبرة الكبيرة التي تم اكتسبها من العمل في مشروعات عالمية للشركات السابقة في كل من</value>
@@ -205,7 +205,7 @@
     <value>العملاء سعداء. يمكنهم أن يروا أننا مكان مسؤول وأن صحتهم هي أولوية. لا مزيد من القوائم المتسخة القديمة . كل ما يحتاجونه هو هواتفهم</value>
   </data>
   <data name="Comma separated list of option values" xml:space="preserve">
-    <value>Comma separated list of option values</value>
+    <value>قائمة قيم الخيار مفصولة بفواصل</value>
   </data>
   <data name="Community support" xml:space="preserve">
     <value>دعم المجتمع</value>
@@ -274,10 +274,10 @@
     <value>تعديل</value>
   </data>
   <data name="Edit extras" xml:space="preserve">
-    <value>Edit extras</value>
+    <value>تعديل الاضافات</value>
   </data>
   <data name="Edit Options" xml:space="preserve">
-    <value>Edit Options</value>
+    <value>تعديل الخيارات</value>
   </data>
   <data name="Edit Profile" xml:space="preserve">
     <value>تعديل الملف الشخصي</value>
@@ -295,7 +295,7 @@
     <value>البريد الاكتروني</value>
   </data>
   <data name="Enable variants" xml:space="preserve">
-    <value>Enable variants</value>
+    <value>إتاحة المتغيرات</value>
   </data>
   <data name="Engage more with your customers" xml:space="preserve">
     <value>تفاعل أكثر مع عملائك</value>
@@ -304,16 +304,16 @@
     <value>عربي</value>
   </data>
   <data name="Enter comma separated list of avaliable option values, ex: small,medium,large" xml:space="preserve">
-    <value>Enter comma separated list of avaliable option values, ex: small,medium,large</value>
+    <value>أدخل قائمة مفصولة بفواصل لقيم الخيارات المتاحة ، على سبيل المثال: صغير ، متوسط ، كبير</value>
   </data>
   <data name="Enter location" xml:space="preserve">
     <value>ادخل عنوان</value>
   </data>
   <data name="Enter option name, ex size" xml:space="preserve">
-    <value>Enter option name, ex size</value>
+    <value>أدخل اسم الخيار ، على سبيل المثال الحجم</value>
   </data>
   <data name="Enter variant price" xml:space="preserve">
-    <value>Enter variant price</value>
+    <value>أدخل سعرًا للمتغيرًا</value>
   </data>
   <data name="eur" xml:space="preserve">
     <value>يورو</value>
@@ -397,7 +397,7 @@
     <value>سعر الصنف</value>
   </data>
   <data name="Item VAT percentage" xml:space="preserve">
-    <value>Item VAT percentage</value>
+    <value>نسبة ضريبة القيمة المضافة على الصنف</value>
   </data>
   <data name="James Curran Brooklyn Taco" xml:space="preserve">
     <value>جيمس كوران بروكلين تاكو</value>
@@ -460,7 +460,7 @@
     <value>الرقم السري الجديد</value>
   </data>
   <data name="New Variant" xml:space="preserve">
-    <value>New Variant</value>
+    <value>متغير جديد</value>
   </data>
   <data name="No mobile app required" xml:space="preserve">
     <value>لا يوجد تطبيق جوال مطلوب</value>
@@ -478,7 +478,7 @@
     <value>عدد المطاعم</value>
   </data>
   <data name="Options" xml:space="preserve">
-    <value>Options</value>
+    <value>خيارات</value>
   </data>
   <data name="Orders ( 30 days )" xml:space="preserve">
     <value>الطلبات (30 يوم)</value>
@@ -718,7 +718,7 @@
     <value>هاتفهم المحمول هو قائمتك الآن</value>
   </data>
   <data name="Themes demo" xml:space="preserve">
-    <value>Themes demo</value>
+    <value>شاهد القوالب</value>
   </data>
   <data name="There are" xml:space="preserve">
     <value>هناك منصات حيث يمكنك إنشاء قائمة ولكن لا يمكنك تصميم رمز الكيو ار الخاص بك</value>
@@ -754,10 +754,10 @@
     <value>اسم المستخدم</value>
   </data>
   <data name="Variants" xml:space="preserve">
-    <value>Variants</value>
+    <value>المتغيرات</value>
   </data>
   <data name="VAT percentage" xml:space="preserve">
-    <value>VAT percentage( calculated into item price )</value>
+    <value>نسبة ضريبة القيمة المضافة (محسوبة في سعر الصنف)</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>الاصدار</value>
