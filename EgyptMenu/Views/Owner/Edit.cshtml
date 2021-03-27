@@ -288,7 +288,7 @@
                                 {
                                     <input type="hidden" name="ItemId" value="@Model.id" id="ItemId">
 
-                                    <input type="hidden" name="ExtraId" id="ExId">
+                                    <input type="hidden" name="ExtraId" value="" id="ExId">
                                     <div class="form-group">
                                         <label class="form-control-label" for="extras_name">@Resource.Name</label>
                                         <input step=".01" type="text" name="name" id="ExName" class="form-control form-control-alternative" placeholder="@Resource.Name" value="" required autofocus>
@@ -571,7 +571,7 @@
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
-                                                    <button type="button" class="dropdown-item" data-toggle="modal" data-target="#modal-Edit-extras" onClick=(setExtrasId(@item.id,"@item.name",@item.price))>
+                                                    <button  onClick="(setExtrasId(@item.id,'@item.name',@item.price))" class="dropdown-item" data-toggle="modal" data-target="#modal-Edit-extras">
                                                         @Resource.Edit
                                                     </button>
                                                     @using (Html.BeginForm("DeleteExtra", "Owner", new { @ItemId = Model.id, @id = item.id, ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data" }))
