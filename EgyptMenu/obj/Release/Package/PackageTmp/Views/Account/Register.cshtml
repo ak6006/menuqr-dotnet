@@ -221,6 +221,11 @@
                                     @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Password_here, required = "required", autofocus = "autofocus", type = "password" })
                                 </div>
                                 <div class="form-group">
+                                    <label class="form-control-label" for="ConfirmPassword">@Resource.ConfirmPassword</label>
+                                    @*<input type="text" name="phone_owner" id="phone_owner" class="form-control form-control-alternative" placeholder="Owner Phone here ..." value="" required autofocus>*@
+                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_ConfirmPassword_here, required = "required", autofocus = "autofocus", type = "password" })
+                                </div>
+                                <div class="form-group">
                                     <label class="form-control-label" for="OwnerPhone">@Resource.Owner_Phone</label>
                                     @*<input type="text" name="phone_owner" id="phone_owner" class="form-control form-control-alternative" placeholder="Owner Phone here ..." value="" required autofocus>*@
                                     @Html.TextBoxFor(m => m.OwnerPhone, new { @Value = @ViewBag.Number, @class = "form-control form-control-alternative ", placeholder = @Resource.Owner_Phone_here, required = "required", autofocus = "autofocus", type = "number" })
@@ -229,9 +234,9 @@
                                     <button type="submit" class="btn btn-success mt-4">@Resource.Save</button>
                                 </div>
                                 @*<div class="text-right">
-                                        already have an account !
-                                        <a href="@Url.Action("Login", "Account")" class=" mt-4">@Resource.Login</a>
-                                    </div>*@
+            already have an account !
+            <a href="@Url.Action("Login", "Account")" class=" mt-4">@Resource.Login</a>
+        </div>*@
                             </div>
                         }
                     </div>

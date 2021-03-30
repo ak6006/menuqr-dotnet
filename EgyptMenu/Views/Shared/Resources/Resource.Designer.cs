@@ -350,6 +350,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        public static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contactless QR digital menu.
         /// </summary>
         public static string Contactless_QR_digital_menu {
@@ -1185,6 +1194,15 @@ namespace EgyptMenu.Views.Shared.Resources {
         public static string Owner {
             get {
                 return ResourceManager.GetString("Owner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password confirmation here.
+        /// </summary>
+        public static string Owner_ConfirmPassword_here {
+            get {
+                return ResourceManager.GetString("Owner_ConfirmPassword_here", resourceCulture);
             }
         }
         

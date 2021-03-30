@@ -213,6 +213,9 @@
   <data name="Confirm New Password" xml:space="preserve">
     <value>Confirm New Password</value>
   </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
   <data name="Contactless QR digital menu" xml:space="preserve">
     <value>Contactless QR digital menu</value>
   </data>
@@ -518,6 +521,9 @@
   </data>
   <data name="Owner Phone here" xml:space="preserve">
     <value>Owner Phone here</value>
+  </data>
+  <data name="Owner_ConfirmPassword_here" xml:space="preserve">
+    <value>Password confirmation here</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
