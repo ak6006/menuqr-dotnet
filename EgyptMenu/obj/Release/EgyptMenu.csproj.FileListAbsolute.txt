@@ -1830,3 +1830,4 @@ G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.csproj.CopyComplete
 G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.dll
 G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.pdb
 G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.GeneratedMSBuildEditorConfig.editorconfig
+G:\Team I\menuqr\EgyptMenu\obj\Release\EgyptMenu.csprojAssemblyReference.cache
