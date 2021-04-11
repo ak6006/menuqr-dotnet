@@ -70,7 +70,7 @@ namespace EgyptMenu.Controllers
 
 
         // GET: Owner
-        public ActionResult Dashboard()
+        public ActionResult Dashboard(string lang)
         {
             var Themes = db.themes.ToList();
             ViewBag.Themes = new SelectList(Themes, "id", "theme_name");

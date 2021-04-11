@@ -1,0 +1,9 @@
+.lagbtn {
+    display: none !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .lagbtn {
+        display:block !important;
+    }
+}

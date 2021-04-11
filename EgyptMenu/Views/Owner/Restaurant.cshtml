@@ -374,7 +374,6 @@
         }
         //else if (Model.themes_id == 2)
         //{
-
         //}
         else if (Model.themes_id == 3)
         {
@@ -816,7 +815,7 @@
                                     @foreach (var item1 in item.items)
                                     {
                                         <div data-toggle="modal" data-target="#@item1.name.Replace(" ","")" style="padding: 3px 15px; margin: auto;text-align: left; color: #262628; font-size: large; cursor:pointer;">
-                                            <span class="float-left" style="font-size: large; font-family:ArtographieBlack-PERSONAL_USE ;">@item1.name </span>&nbsp;1
+                                            <span class="float-left" style="font-size: large; font-family:ArtographieBlack-PERSONAL_USE ;">@item1.name </span>&nbsp;
                                             <span class="float-right" style="font-size: large;"><span style="color: #f48484; font-weight: 900; ">@item1.price</span> EGP</span>
                                             <div style="clear: both;"></div>
                                             <span>@item1.description</span>
@@ -1013,9 +1012,9 @@
                                 }
 
                             </div>
-                            <div class="row">
-                                <div class="col-3"></div>
-                                <div class="col-8 pb-5" style="border-left: 5px dotted #ffffff; border-top: 5px dotted #ffffff;">
+                            <div class="row pl-4">
+                                <div class="col-0 col-lg-3 col-sm-3"></div>
+                                <div class="col-12 col-lg-8 col-sm-8 pb-5 ml-lg-1 " style="border-left: 5px dotted #ffffff; border-top: 5px dotted #ffffff;">
                                     <h1 style="color: #ffffff; font-family: Amplify_PersonalUseOnly; display: inline-block; font-size: 70px; "> @item.name &nbsp;</h1><div style="border-top: 2px solid #ff1b00;  display: inline-block; color: #ff1b00;  font-weight: 900;">_____________</div>
                                     <span class="p-2"></span>
                                     @foreach (var item1 in item.items)
@@ -1200,12 +1199,12 @@
                                 @*<img style="width: 60%; margin-right: -4%; height: 100%; border-radius: 50%; border: 4px solid #7d8a6c;" src="Themes/menu6/hussin.jpg">*@
                                 @if (item.items.Count > 0)
                                 {
-                                    <img src="~/Content/images/@item.items.First().image" style="width: 300px; height:300px; margin-right: -4%;  border-radius: 50%; border: 4px solid #7d8a6c;">
+                                    <img src="~/Content/images/@item.items.First().image" style="width: 300px; height:300px; margin-right: -4%;object-fit: cover;  border-radius: 50%; border: 4px solid #7d8a6c;">
 
                                 }
                                 else
                                 {
-                                    <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 300px; height: 300px; margin-right: -4%; border-radius: 50%; border: 4px solid #7d8a6c;">
+                                    <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 300px; object-fit: cover; height: 300px; margin-right: -4%; border-radius: 50%; border: 4px solid #7d8a6c;">
 
                                 }
                             </div>
@@ -1218,7 +1217,7 @@
                                     <span class="float-left" style="font-size: x-large; font-family: AmericanTypewriter;">@item1.name</span>
                                     <span class="float-right" style="font-size: x-large; font-family: AmericanTypewriter;">@item1.price EGP</span>
                                     <div style="clear: both;"></div>
-                                    <span>details of the food</span>
+                                    <span>@item1.description</span>
                                 </div>
                                 <div class="modal fade text-dark" id="@item1.name.Replace(" ","")" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
                                     <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document" id="modalDialogItem">
