@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="~/Content/images/icons/apple-icon.png">
-    <link rel="icon" type="image/png" href="~/Content/images/icons/favicon.png">
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.png">
     <meta name="csrf-token" content="YSV0woDIt60OSgN2ES1zL7m8AMaFQLylTDeDp8if">
     <meta property="og:image" content="/default/logo_qrzebra2.png">
     <title>QR Menu Maker</title>
@@ -1708,7 +1708,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="title white" style="border-bottom: 1px solid #f2f2f2;">
+                                <div class="title white " style="border-bottom: 1px solid #f2f2f2;">
                                     <h1 class="display-3 text-white" data-toggle="modal" data-target="#modal-restaurant-info" style="cursor: pointer;">@Model.name</h1>
                                     <p class="display-4" style="color:#19526e;margin-top: 120px">@Model.description</p>
                                     <p style="color:#19526e;">
@@ -1739,17 +1739,27 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
                                         <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
-                                        @Model.address</a> 
+                                            @Model.address
+                                        </a>
                                         |  <i class="fas fa-mobile-alt">
-                                              </i>
+                                        </i>
                                         <a style="color:#19526e;" href="tel:@Model.phone">
-                                        @Model.phone 
+                                            @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center">
+                                    <span class="float-lg-right text-center p-2" style="font-size:large;font-weight:600; width:120px; height:120px; background-color:red; color:white; border-radius:50%;">
+                                        Min<br>Cahrge<br />15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>

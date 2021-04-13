@@ -95,18 +95,16 @@
     <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
 
     <!-- Custom CSS defined by admin -->
-    <link href="~/Content/back.css" rel="stylesheet" />
+    <link href="~/Content/back99.css" rel="stylesheet" />
 
     <style type="text/css">
         /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
-
         #map {
             height: 80%;
             top: 600;
             width: 80%;
         }
-
         /* Optional: Makes the sample page fill the window. */
         html,
         body {
@@ -115,26 +113,21 @@
          padding: 400;
          top: 300; */
         }
-
         #description {
             font-family: Roboto;
             font-size: 15px;
             font-weight: 300;
         }
-
         #infowindow-content .title {
             font-weight: bold;
         }
-
         #infowindow-content {
             display: none;
         }
-
         #map #infowindow-content {
             display: inline;
             /* height: 800px; */
         }
-
         .pac-card {
             margin: 10px 10px 0 0;
             border-radius: 2px 0 0 2px;
@@ -145,23 +138,19 @@
             background-color: #fff;
             font-family: Roboto;
         }
-
         #pac-container {
             padding-bottom: 12px;
             margin-right: 12px;
         }
-
         .pac-controls {
             display: inline-block;
             padding: 5px 11px;
         }
-
-            .pac-controls label {
-                font-family: Roboto;
-                font-size: 13px;
-                font-weight: 300;
-            }
-
+        .pac-controls label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
         #pac-input {
             background-color: #fff;
             font-family: Roboto;
@@ -171,11 +160,9 @@
             text-overflow: ellipsis;
             width: 400px;
         }
-
-            #pac-input:focus {
-                border-color: #4d90fe;
-            }
-
+        #pac-input:focus {
+            border-color: #4d90fe;
+        }
         #title {
             color: #fff;
             background-color: #4d90fe;
@@ -183,7 +170,6 @@
             font-weight: 500;
             padding: 6px 12px;
         }
-        
     </style>
 
 </head>
@@ -326,7 +312,7 @@
                 <!-- User -->
                 <ul class="navbar-nav align-items-center d-none d-md-flex">
                     <li>
-                        <a class="btn" style="border-radius:50%; background-color:#ffa822; color:white; margin-left:15px;" href="@Url.Action("Dashboard","Owner" ,new { lang=Resource.lang})">@Resource.language</a>
+                        <a class="btn" style="border: 1px solid #ffa822; color: white; margin-left: 15px;" href="@Url.Action("Dashboard","Owner" ,new { lang=Resource.lang})">@Resource.language</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -788,7 +788,7 @@
     <Content Include="Content\argon-design-system.css" />
     <Content Include="Content\argon-design-system.min.css" />
     <Content Include="Content\argon.css" />
-    <Content Include="Content\back.css" />
+    <Content Include="Content\back99.css" />
     <Content Include="Content\custom.css" />
     <Content Include="Content\custom_qr.css" />
     <Content Include="Content\flatpickr.min.css" />

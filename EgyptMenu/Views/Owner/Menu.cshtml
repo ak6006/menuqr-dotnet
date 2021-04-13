@@ -3,14 +3,23 @@
 @model EgyptMenu.Models.restorant
 @{
     Layout = null;
-    if (HttpContext.Current.Session["lang"] != null)
+    if (!Request.QueryString["lang"].IsEmpty())
     {
-        Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+        Culture = UICulture = Request.QueryString["lang"];
+        HttpContext.Current.Session.Add("lang", Request.QueryString["lang"]);
     }
     else
     {
-        Culture = UICulture = "en";
-
+        if (HttpContext.Current.Session["lang"] != null)
+        {
+            Culture = UICulture = HttpContext.Current.Session["lang"].ToString();
+            HttpContext.Current.Session.Add("lang", HttpContext.Current.Session["lang"].ToString());
+        }
+        else
+        {
+            Culture = UICulture = "en";
+            HttpContext.Current.Session.Add("lang", "en");
+        }
     }
 }
 <!DOCTYPE html>
@@ -76,7 +85,7 @@
     <meta name="msapplication-TileImage" content="android-chrome-256x256.png">
 
     <!-- Custom CSS defined by admin -->
-    <link href="~/Content/back.css" rel="stylesheet" />
+    <link href="~/Content/back99.css" rel="stylesheet" />
 
 </head>
 <body class="">
@@ -184,12 +193,14 @@
                             <i class="fas fa-qrcode"></i>&nbsp;&nbsp;@Resource.QR_builder
                         </a>
                     </li>
-
+                    <li class="nav-item text-center lagbtn">
+                        <a class="btn" style=" background-color:#ffa822; color:white; margin-left:15px;" href="@Url.Action("Menu","Owner" ,new { lang=Resource.lang})">@Resource.language</a>
+                    </li>
                     @*<li class="nav-item">
-                        <a class="nav-link" href=@Url.Action("Plan")>
-                            <i class="fas fa-credit-card text-orange"></i>&nbsp;&nbsp;@Resource.Plan
-                        </a>
-                    </li>*@
+            <a class="nav-link" href=@Url.Action("Plan")>
+                <i class="fas fa-credit-card text-orange"></i>&nbsp;&nbsp;@Resource.Plan
+            </a>
+        </li>*@
                 </ul>
 
                 <span></span>
@@ -219,14 +230,16 @@
 
                 <!-- User -->
                 <ul class="navbar-nav align-items-center d-none d-md-flex">
-
+                    <li>
+                        <a class="btn" style="border:1px solid #ffa822; color:white; margin-left:15px;" href="@Url.Action("Menu","Owner" ,new { lang=Resource.lang})">@Resource.language</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center display-3" style="color:#ffa822;">
                                 <i class="fas fa-cog"></i>
                                 <!--<span class="avatar avatar-sm rounded-circle">
-                            @*<img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">*@
-                        <!--</span>-->
+                    @*<img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/4cb1f144288e5d61695b0d3f9c63835c">*@
+                <!--</span>-->
                                 <div class="media-body ml-2 d-none d-lg-block">
                                     <span class="mb-0  font-weight-bolder">@User.Identity.GetUserName()</span>
                                 </div>
@@ -242,10 +255,10 @@
                             </a>
                             <div class="dropdown-divider"></div>
                             @*<a href="http://localhost/logout" class="dropdown-item" onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                                    <i class="ni ni-user-run"></i>
-                                    <span>Logout</span>
-                                </a>*@
+                document.getElementById('logout-form').submit();">
+                            <i class="ni ni-user-run"></i>
+                            <span>Logout</span>
+                        </a>*@
                             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                             {
                                 @Html.AntiForgeryToken()
@@ -377,7 +390,19 @@
                             </div>
                         </div>
                         <br />
-                        <div class="col-12">
+                        <div class="col-11 mx-auto " dir="ltr">
+                            <div class="alert " style="background-color:#19526e;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Min-Charge (Optional)" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-success" type="button">@Resource.Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 

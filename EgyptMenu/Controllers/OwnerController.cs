@@ -168,7 +168,7 @@ namespace EgyptMenu.Controllers
 
             return RedirectToAction("Dashboard");
         }
-        public ActionResult Menu()
+        public ActionResult Menu(string lang)
         {
             restorant CurrentRestaurant = GetRestorant();
             return View(CurrentRestaurant);
@@ -264,7 +264,7 @@ namespace EgyptMenu.Controllers
                 return View(e.Message);
             }
         }
-        public ActionResult QRBuilder()
+        public ActionResult QRBuilder(string lang)
         {
             var Restaurant = GetRestorant();
             ViewBag.Url = Request.Url.Scheme + "://" + Request.Url.Authority +

@@ -505,7 +505,7 @@
     <value>معلومات المالك</value>
   </data>
   <data name="Owner Name" xml:space="preserve">
-    <value>اسم المالك </value>
+    <value>اسم المستخدم</value>
   </data>
   <data name="Owner Name here" xml:space="preserve">
     <value>ادخل الاسم المالك هنا</value>
@@ -604,7 +604,7 @@
     <value>وصف المطعم</value>
   </data>
   <data name="Restaurant Image" xml:space="preserve">
-    <value>صورة المطعم</value>
+    <value>لوجو المطعم</value>
   </data>
   <data name="Restaurant information" xml:space="preserve">
     <value>معلومات المطعم</value>

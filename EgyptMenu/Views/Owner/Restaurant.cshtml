@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="~/Content/images/icons/apple-icon.png">
-    <link rel="icon" type="image/png" href="~/Content/images/icons/favicon.png">
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.png">
     <meta name="csrf-token" content="YSV0woDIt60OSgN2ES1zL7m8AMaFQLylTDeDp8if">
     <meta property="og:image" content="/default/logo_qrzebra2.png">
     <title>QR Menu Maker</title>
@@ -113,7 +113,7 @@
         @if (Model.themes_id == 1)
         {
             <div id="background" style="background: url('/Content/images/menu.gif');">
-                <section class="section pt-lg-0 mb--5 mt--9 d-block d-md-block d-lg-block d-lx-block">
+                <section class="section pt-lg-0 mb--5 mt--9 d-block d-md-block d-lg-block d-lx-block pb-3">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -148,6 +148,9 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span>  &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
@@ -161,16 +164,22 @@
                                         </a>
                                     </p>
                                 </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid black;  color: black;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div class="page">
-                    <div id="body">
-                        <div class="content">
-                            <div class="body">
+                <div class="page" style="overflow:auto;">
+                    <div id="body" style="overflow:auto;">
+                        <div class="content" style="overflow:auto;">
+                            <div class="body" style="overflow:auto;">
                                 <h3>MENU</h3>
-                                <ul class="section">
+                                <ul class="section" style="overflow:auto;">
                                     @{
                                         var counter = 0;
                                     }
@@ -378,7 +387,7 @@
         else if (Model.themes_id == 3)
         {
             <div style="width:100%; background-image: url('/Content/images/background_pattern.png');">
-                <section class="section pt-lg-0 mb--5 mt--9 d-block d-md-block d-lg-block d-lx-block text-light">
+                <section class="section pt-lg-0 mb--5 mt--9 d-block d-md-block d-lg-block d-lx-block text-light pb-0">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -413,25 +422,34 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span>  &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
-                                        <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
+                                        <a style="color:#ced4da ;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
                                             @Model.address
                                         </a>
                                         |  <i class="fas fa-mobile-alt">
                                         </i>
-                                        <a style="color:#19526e;" href="tel:@Model.phone">
+                                        <a style="color:#ced4da ;" href="tel:@Model.phone">
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid #fe9a1e;  color: #fe9a1e;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <div style="width:85%; margin:auto; margin-top:100px; ">
-                    <div class="row mt-3">
+                    <div class="row mt-2">
                         @foreach (var item in Model.categories.OrderBy(c => c.order))
                         {
                             <div class="col-lg-6">
@@ -590,6 +608,9 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
@@ -602,6 +623,12 @@
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid #262628;  color: #262628;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
@@ -616,12 +643,12 @@
                                 <div>
                                     @if (item.items.Count > 0)
                                     {
-                                        <img src="~/Content/images/@item.items.First().image" style="width: 250px; height:250px; border-radius: 50%;">
+                                        <img src="~/Content/images/@item.items.First().image" style="width: 250px; height:250px; border-radius: 50%;object-fit: cover;">
 
                                     }
                                     else
                                     {
-                                        <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 250px; height:250px; border-radius: 50%; margin-left: -65%; border: 3px dashed white; padding: 2%;">
+                                        <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 250px;object-fit: cover; height:250px; border-radius: 50%; margin-left: -65%; border: 3px dashed white; padding: 2%;">
                                     }
                                 </div>
                                 <div style=" margin: auto; margin-top: 0px; padding: 7px;  width: 100%; border: 3px #262628 solid;border-radius: 50px; border-top: none; display: inline-block; text-align: center;">
@@ -779,6 +806,9 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
@@ -791,6 +821,12 @@
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid #611C1C;  color: #f48585;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
@@ -971,18 +1007,27 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
-                                        <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
+                                        <a class="text-light" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
                                             @Model.address
                                         </a>
                                         |  <i class="fas fa-mobile-alt">
                                         </i>
-                                        <a style="color:#19526e;" href="tel:@Model.phone">
+                                        <a class="text-light" href="tel:@Model.phone">
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid red;  color: white;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1002,12 +1047,12 @@
                             <div>
                                 @if (item.items.Count > 0)
                                 {
-                                    <img src="~/Content/images/@item.items.First().image" style="width: 250px; height:250px; border-radius: 50%; margin-left: -65%; border: 3px dashed white; padding: 2%;">
+                                    <img src="~/Content/images/@item.items.First().image" style="width: 250px; height:250px; border-radius: 50%; margin-left: -65%; border: 3px dashed white; padding: 2%;object-fit: cover;">
 
                                 }
                                 else
                                 {
-                                    <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 250px; height:250px; border-radius: 50%; margin-left: -65%; border: 3px dashed white; padding: 2%;">
+                                    <img src="~/Content/images/092516f0-b312-4fc6-a41c-93e9f37d3dfa_thumbnail.jpg" style="width: 250px; height:250px; border-radius: 50%; margin-left: -65%; border: 3px dashed white; padding: 2%;object-fit: cover;">
 
                                 }
 
@@ -1171,18 +1216,27 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span>  &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
-                                        <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
+                                        <a class="text-light" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
                                             @Model.address
                                         </a>
                                         |  <i class="fas fa-mobile-alt">
                                         </i>
-                                        <a style="color:#19526e;" href="tel:@Model.phone">
+                                        <a class="text-light" href="tel:@Model.phone">
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid #611C1C;  color: white;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1362,6 +1416,9 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
@@ -1374,6 +1431,12 @@
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid #677335;  color: #cc763d;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1552,6 +1615,9 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
@@ -1564,6 +1630,12 @@
                                             @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid black;  color:#f7aa40;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1708,7 +1780,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <div class="title white" style="border-bottom: 1px solid #f2f2f2;">
+                                <div class="title white " style="border-bottom: 1px solid #f2f2f2;">
                                     <h1 class="display-3 text-white" data-toggle="modal" data-target="#modal-restaurant-info" style="cursor: pointer;">@Model.name</h1>
                                     <p class="display-4" style="color:#19526e;margin-top: 120px">@Model.description</p>
                                     <p style="color:#19526e;">
@@ -1739,17 +1811,27 @@
                                                 11:59 PM
                                                 </Text>
                                             }
+                                        </span> &
+                                        <span>
+                                            Last Order 12:00 AM
                                         </span> |
                                         <i class="fas fa-map-marker-alt">
                                         </i>
                                         <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
-                                        @Model.address</a> 
+                                            @Model.address
+                                        </a>
                                         |  <i class="fas fa-mobile-alt">
-                                              </i>
+                                        </i>
                                         <a style="color:#19526e;" href="tel:@Model.phone">
-                                        @Model.phone 
+                                            @Model.phone
                                         </a>
                                     </p>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <span class="float-lg-right text-center p-2" style="border-radius:5px; font-size:large;font-weight:600; border:1px solid black;  color:#5E72E4;">
+                                        Min-Cahrge 15.00 EGP
+                                    </span>
+                                    <div style="clear:both;"></div>
                                 </div>
                             </div>
                         </div>

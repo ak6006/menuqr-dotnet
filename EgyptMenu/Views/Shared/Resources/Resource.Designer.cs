@@ -1234,7 +1234,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Owner Name.
+        ///   Looks up a localized string similar to User Name.
         /// </summary>
         public static string Owner_Name {
             get {
@@ -1523,7 +1523,7 @@ namespace EgyptMenu.Views.Shared.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restaurant Image.
+        ///   Looks up a localized string similar to Restaurant Logo.
         /// </summary>
         public static string Restaurant_Image {
             get {

@@ -505,7 +505,7 @@
     <value>Owner information</value>
   </data>
   <data name="Owner Name" xml:space="preserve">
-    <value>Owner Name</value>
+    <value>User Name</value>
   </data>
   <data name="Owner Name here" xml:space="preserve">
     <value>Owner Name here</value>
@@ -604,7 +604,7 @@
     <value>Restaurant Description</value>
   </data>
   <data name="Restaurant Image" xml:space="preserve">
-    <value>Restaurant Image</value>
+    <value>Restaurant Logo</value>
   </data>
   <data name="Restaurant information" xml:space="preserve">
     <value>Restaurant information</value>
