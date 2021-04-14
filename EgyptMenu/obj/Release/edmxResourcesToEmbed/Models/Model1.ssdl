@@ -330,6 +330,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <Property Name="themes_id" Type="int" />
     <Property Name="starttime" Type="datetime" />
     <Property Name="endtime" Type="datetime" />
+    <Property Name="ordertimeEnd" Type="datetime" />
   </EntityType>
   <EntityType Name="role_has_permissions">
     <Key>
@@ -405,6 +406,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="theme_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="resturantID" Type="numeric" Precision="20" Scale="0" />
   </EntityType>
   <EntityType Name="translations">
     <Key>
@@ -903,7 +905,8 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
     <EntitySet Name="themes" EntityType="Self.themes" store:Type="Tables" store:Schema="foodtiger">
       <DefiningQuery>SELECT 
     [themes].[id] AS [id], 
-    [themes].[theme_name] AS [theme_name]
+    [themes].[theme_name] AS [theme_name], 
+    [themes].[resturantID] AS [resturantID]
     FROM [foodtiger].[themes] AS [themes]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="address$address_user_id_foreign" Association="Self.address$address_user_id_foreign">

@@ -844,8 +844,17 @@
       <End Role="variant" EntitySet="variants" />
       <End Role="variant_has_option" EntitySet="variant_has_option" />
     </AssociationSet>
-    <EntitySet Name="themes" EntityType="DB_A6A5AC_menuModel.theme" />
+    <EntitySet Name="categories" EntityType="DB_A6A5AC_menuModel.category" />
+    <AssociationSet Name="items_items_category_id_foreign" Association="DB_A6A5AC_menuModel.items_items_category_id_foreign">
+      <End Role="category" EntitySet="categories" />
+      <End Role="item" EntitySet="items" />
+    </AssociationSet>
     <EntitySet Name="restorants" EntityType="DB_A6A5AC_menuModel.restorant" />
+    <EntitySet Name="themes" EntityType="DB_A6A5AC_menuModel.theme" />
+    <AssociationSet Name="categories_categories_restorant_id_foreign" Association="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign">
+      <End Role="restorant" EntitySet="restorants" />
+      <End Role="category" EntitySet="categories" />
+    </AssociationSet>
     <AssociationSet Name="hours_hours_restorant_id_foreign" Association="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign">
       <End Role="restorant" EntitySet="restorants" />
       <End Role="hour" EntitySet="hours" />
@@ -857,15 +866,6 @@
     <AssociationSet Name="restorants_restorants_user_id_foreign" Association="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign">
       <End Role="user" EntitySet="users" />
       <End Role="restorant" EntitySet="restorants" />
-    </AssociationSet>
-    <EntitySet Name="categories" EntityType="DB_A6A5AC_menuModel.category" />
-    <AssociationSet Name="categories_categories_restorant_id_foreign" Association="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign">
-      <End Role="restorant" EntitySet="restorants" />
-      <End Role="category" EntitySet="categories" />
-    </AssociationSet>
-    <AssociationSet Name="items_items_category_id_foreign" Association="DB_A6A5AC_menuModel.items_items_category_id_foreign">
-      <End Role="category" EntitySet="categories" />
-      <End Role="item" EntitySet="items" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="options_details">
@@ -924,14 +924,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="theme">
+  <EntityType Name="category">
     <Key>
       <PropertyRef Name="id" />
-      <PropertyRef Name="theme_name" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="theme_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
+    <Property Name="restorant_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="updated_at" Type="DateTime" Precision="3" />
+    <Property Name="order_index" Type="Int32" Nullable="false" />
+    <Property Name="active" Type="Int32" Nullable="false" />
+    <Property Name="order" Type="Int32" />
+    <NavigationProperty Name="items" Relationship="DB_A6A5AC_menuModel.items_items_category_id_foreign" FromRole="category" ToRole="item" />
+    <NavigationProperty Name="restorant" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="category" ToRole="restorant" />
   </EntityType>
+  <Association Name="items_items_category_id_foreign">
+    <End Type="DB_A6A5AC_menuModel.category" Role="category" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.item" Role="item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="item">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityType Name="restorant">
     <Key>
       <PropertyRef Name="id" />
@@ -959,11 +978,33 @@
     <Property Name="themes_id" Type="Int32" />
     <Property Name="starttime" Type="DateTime" Precision="3" />
     <Property Name="endtime" Type="DateTime" Precision="3" />
+    <Property Name="ordertimeEnd" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="categories" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="restorant" ToRole="category" />
     <NavigationProperty Name="hours" Relationship="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" FromRole="restorant" ToRole="hour" />
     <NavigationProperty Name="orders" Relationship="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" FromRole="restorant" ToRole="order" />
     <NavigationProperty Name="user" Relationship="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" FromRole="restorant" ToRole="user" />
-    <NavigationProperty Name="categories" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="restorant" ToRole="category" />
   </EntityType>
+  <EntityType Name="theme">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="theme_name" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="theme_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="resturantID" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <Association Name="categories_categories_restorant_id_foreign">
+    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.category" Role="category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restorant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="category">
+        <PropertyRef Name="restorant_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="hours_hours_restorant_id_foreign">
     <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
     <End Type="DB_A6A5AC_menuModel.hour" Role="hour" Multiplicity="*" />
@@ -997,45 +1038,6 @@
       </Principal>
       <Dependent Role="restorant">
         <PropertyRef Name="user_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityType Name="category">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Decimal" Nullable="false" Precision="20" Scale="0" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" Nullable="false" MaxLength="191" FixedLength="false" Unicode="true" />
-    <Property Name="restorant_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
-    <Property Name="created_at" Type="DateTime" Precision="3" />
-    <Property Name="updated_at" Type="DateTime" Precision="3" />
-    <Property Name="order_index" Type="Int32" Nullable="false" />
-    <Property Name="active" Type="Int32" Nullable="false" />
-    <Property Name="order" Type="Int32" />
-    <NavigationProperty Name="restorant" Relationship="DB_A6A5AC_menuModel.categories_categories_restorant_id_foreign" FromRole="category" ToRole="restorant" />
-    <NavigationProperty Name="items" Relationship="DB_A6A5AC_menuModel.items_items_category_id_foreign" FromRole="category" ToRole="item" />
-  </EntityType>
-  <Association Name="categories_categories_restorant_id_foreign">
-    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
-    <End Type="DB_A6A5AC_menuModel.category" Role="category" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="restorant">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="category">
-        <PropertyRef Name="restorant_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="items_items_category_id_foreign">
-    <End Type="DB_A6A5AC_menuModel.category" Role="category" Multiplicity="1" />
-    <End Type="DB_A6A5AC_menuModel.item" Role="item" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="category">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="item">
-        <PropertyRef Name="category_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

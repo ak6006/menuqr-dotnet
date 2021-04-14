@@ -20,6 +20,7 @@ namespace EgyptMenu.Models
         public string lat { get; set; }
         public string lng { get; set; }
         public int? ThemeId { get; set; }
+        public DateTime? ordertimeEnd { get; set; }
         public DateTime? starttime { get; set; }
         public DateTime? endtime { get; set; }
     }

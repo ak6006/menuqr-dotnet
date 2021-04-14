@@ -55,8 +55,8 @@ namespace EgyptMenu.Models
         public virtual DbSet<password_resets> password_resets { get; set; }
         public virtual DbSet<options_details> options_details { get; set; }
         public virtual DbSet<variant_has_option> variant_has_option { get; set; }
-        public virtual DbSet<theme> themes { get; set; }
-        public virtual DbSet<restorant> restorants { get; set; }
         public virtual DbSet<category> categories { get; set; }
+        public virtual DbSet<restorant> restorants { get; set; }
+        public virtual DbSet<theme> themes { get; set; }
     }
 }

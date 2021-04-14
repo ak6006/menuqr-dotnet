@@ -17,9 +17,9 @@ namespace EgyptMenu.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public restorant()
         {
+            this.categories = new HashSet<category>();
             this.hours = new HashSet<hour>();
             this.orders = new HashSet<order>();
-            this.categories = new HashSet<category>();
         }
     
         public decimal id { get; set; }
@@ -45,13 +45,14 @@ namespace EgyptMenu.Models
         public Nullable<int> themes_id { get; set; }
         public Nullable<System.DateTime> starttime { get; set; }
         public Nullable<System.DateTime> endtime { get; set; }
+        public Nullable<System.DateTime> ordertimeEnd { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<category> categories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<hour> hours { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
         public virtual user user { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<category> categories { get; set; }
     }
 }

@@ -72,14 +72,16 @@ namespace EgyptMenu.Controllers
         // GET: Owner
         public ActionResult Dashboard(string lang)
         {
-            var Themes = db.themes.ToList();
-            ViewBag.Themes = new SelectList(Themes, "id", "theme_name");
+            
 
             var UserId = User.Identity.GetUserId();
             var UserEmail = AuthDB.Users.Where(u => u.Id == UserId).FirstOrDefault().Email;
             var CurrentUser = db.users.Where(r => r.email == UserEmail).FirstOrDefault();
             var CurrentUserId = CurrentUser.id;
             var CurrentRestaurant = db.restorants.Where(r => r.user_id == CurrentUserId).FirstOrDefault();
+            var Themes = db.themes.Where(th => th.resturantID == 0 || th.resturantID == CurrentRestaurant.id).ToList();
+            ViewBag.Themes = new SelectList(Themes, "id", "theme_name");
+
             ResMgmtViewModel resMgmtViewModel = new ResMgmtViewModel()
             {
                 id = CurrentRestaurant.id,
@@ -95,7 +97,8 @@ namespace EgyptMenu.Controllers
                 RestaurantCoverImage = CurrentRestaurant.cover,
                 lat = CurrentRestaurant.lat,
                 lng = CurrentRestaurant.lng,
-                ThemeId = CurrentRestaurant.themes_id
+                ThemeId = CurrentRestaurant.themes_id,
+                ordertimeEnd = CurrentRestaurant.ordertimeEnd
             };
             return View(resMgmtViewModel);
         }
@@ -162,6 +165,7 @@ namespace EgyptMenu.Controllers
             CurrentRestaurant.address = model.RestaurantAddress;
             CurrentRestaurant.lat = model.lat;
             CurrentRestaurant.lng = model.lng;
+            CurrentRestaurant.ordertimeEnd = model.ordertimeEnd;
             model.RestaurantCoverImage = CurrentRestaurant.cover;
             model.RestaurantImage = CurrentRestaurant.logo;
             db.SaveChanges();

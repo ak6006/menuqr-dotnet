@@ -150,8 +150,20 @@
                                             }
                                         </span>  &
                                         <span>
-                                            Last Order 12:00 AM
-                                        </span> |
+                                            Last order at
+                                            @if (Model.ordertimeEnd != null)
+                                            {
+
+                                                @Model.ordertimeEnd.Value.ToString("hh:mm tt")
+                                            }
+                                            else
+                                            {
+
+                                                <Text>
+                                                11:59 PM
+                                                </Text>
+                                            }
+                                        </span>|
                                         <i class="fas fa-map-marker-alt">
                                         </i>
                                         <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">

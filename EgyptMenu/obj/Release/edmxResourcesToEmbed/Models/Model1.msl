@@ -453,10 +453,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="themes">
-      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
-        <MappingFragment StoreEntitySet="themes">
-          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="order_index" ColumnName="order_index" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -464,6 +470,7 @@
     <EntitySetMapping Name="restorants">
       <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.restorant">
         <MappingFragment StoreEntitySet="restorants">
+          <ScalarProperty Name="ordertimeEnd" ColumnName="ordertimeEnd" />
           <ScalarProperty Name="endtime" ColumnName="endtime" />
           <ScalarProperty Name="starttime" ColumnName="starttime" />
           <ScalarProperty Name="themes_id" ColumnName="themes_id" />
@@ -490,16 +497,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="categories">
-      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.category">
-        <MappingFragment StoreEntitySet="categories">
-          <ScalarProperty Name="order" ColumnName="order" />
-          <ScalarProperty Name="active" ColumnName="active" />
-          <ScalarProperty Name="order_index" ColumnName="order_index" />
-          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-          <ScalarProperty Name="created_at" ColumnName="created_at" />
-          <ScalarProperty Name="restorant_id" ColumnName="restorant_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
+    <EntitySetMapping Name="themes">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.theme">
+        <MappingFragment StoreEntitySet="themes">
+          <ScalarProperty Name="resturantID" ColumnName="resturantID" />
+          <ScalarProperty Name="theme_name" ColumnName="theme_name" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

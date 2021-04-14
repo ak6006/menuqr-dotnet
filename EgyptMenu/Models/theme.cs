@@ -16,5 +16,6 @@ namespace EgyptMenu.Models
     {
         public int id { get; set; }
         public string theme_name { get; set; }
+        public Nullable<decimal> resturantID { get; set; }
     }
 }
