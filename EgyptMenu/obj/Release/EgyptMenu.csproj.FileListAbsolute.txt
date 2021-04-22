@@ -2112,7 +2112,6 @@ C:\Users\User\Desktop\menuqr\EgyptMenu\bin\ru\Microsoft.CodeAnalysis.CSharp.reso
 C:\Users\User\Desktop\menuqr\EgyptMenu\bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\User\Desktop\menuqr\EgyptMenu\bin\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\User\Desktop\menuqr\EgyptMenu\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\User\Desktop\menuqr\EgyptMenu\obj\Release\EgyptMenu.csprojAssemblyReference.cache
 C:\Users\User\Desktop\menuqr\EgyptMenu\obj\Release\EgyptMenu.Views.Shared.Resources.Resource.resources
 C:\Users\User\Desktop\menuqr\EgyptMenu\obj\Release\EgyptMenu.Migrations.amr.resources
 C:\Users\User\Desktop\menuqr\EgyptMenu\obj\Release\EgyptMenu.Views.Shared.Resources.Resource.ar.resources

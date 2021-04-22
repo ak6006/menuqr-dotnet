@@ -506,5 +506,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="phone_book">
+      <EntityTypeMapping TypeName="DB_A6A5AC_menuModel.phone_book">
+        <MappingFragment StoreEntitySet="phone-book">
+          <ScalarProperty Name="resturant_id" ColumnName="resturant-id" />
+          <ScalarProperty Name="phone_number" ColumnName="phone-number" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

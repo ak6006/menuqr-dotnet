@@ -582,6 +582,9 @@
     <Compile Include="Models\options_details.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\phone_book.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ResMgmtViewModel.cs" />
     <Compile Include="Models\RestaurantDto.cs" />
     <Compile Include="Models\theme.cs">

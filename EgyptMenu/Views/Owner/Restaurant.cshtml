@@ -169,11 +169,29 @@
                                         <a style="color:#19526e;" target="_blank" href="https://www.google.com/maps/search/?api=1&query=@Model.address">
                                             @Model.address
                                         </a>
-                                        |  <i class="fas fa-mobile-alt">
-                                        </i>
-                                        <a style="color:#19526e;" href="tel:@Model.phone">
-                                            @Model.phone
-                                        </a>
+                                        |
+                                        @if (@Model.phone_book != null && @Model.phone_book.Count > 0)
+                                        {
+                                            foreach (var item in @Model.phone_book)
+                                            {
+                                                <i class="fas fa-mobile-alt">
+                                                </i>
+                                                <a style="color:#19526e;" href="tel:@item.phone_number">
+                                                    @item.phone_number
+                                                </a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <i class="fas fa-mobile-alt">
+                                            </i>
+                                            <a style="color:#19526e;" href="tel:@Model.phone">
+                                                @Model.phone
+                                            </a>
+                                        }
+
+
+
                                     </p>
                                 </div>
                                 <div class="text-center mt-2">

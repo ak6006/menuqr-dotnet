@@ -58,5 +58,6 @@ namespace EgyptMenu.Models
         public virtual DbSet<category> categories { get; set; }
         public virtual DbSet<restorant> restorants { get; set; }
         public virtual DbSet<theme> themes { get; set; }
+        public virtual DbSet<phone_book> phone_book { get; set; }
     }
 }

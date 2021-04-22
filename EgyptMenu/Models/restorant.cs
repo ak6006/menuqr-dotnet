@@ -20,6 +20,7 @@ namespace EgyptMenu.Models
             this.categories = new HashSet<category>();
             this.hours = new HashSet<hour>();
             this.orders = new HashSet<order>();
+            this.phone_book = new HashSet<phone_book>();
         }
     
         public decimal id { get; set; }
@@ -54,5 +55,7 @@ namespace EgyptMenu.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
         public virtual user user { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<phone_book> phone_book { get; set; }
     }
 }

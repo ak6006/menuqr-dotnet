@@ -867,6 +867,11 @@
       <End Role="user" EntitySet="users" />
       <End Role="restorant" EntitySet="restorants" />
     </AssociationSet>
+    <EntitySet Name="phone_book" EntityType="DB_A6A5AC_menuModel.phone_book" />
+    <AssociationSet Name="FK_phone_book_restorants_id" Association="DB_A6A5AC_menuModel.FK_phone_book_restorants_id">
+      <End Role="restorant" EntitySet="restorants" />
+      <End Role="phone_book" EntitySet="phone_book" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="options_details">
     <Key>
@@ -983,6 +988,7 @@
     <NavigationProperty Name="hours" Relationship="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" FromRole="restorant" ToRole="hour" />
     <NavigationProperty Name="orders" Relationship="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" FromRole="restorant" ToRole="order" />
     <NavigationProperty Name="user" Relationship="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" FromRole="restorant" ToRole="user" />
+    <NavigationProperty Name="phone_book" Relationship="DB_A6A5AC_menuModel.FK_phone_book_restorants_id" FromRole="restorant" ToRole="phone_book" />
   </EntityType>
   <EntityType Name="theme">
     <Key>
@@ -1038,6 +1044,27 @@
       </Principal>
       <Dependent Role="restorant">
         <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="phone_book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="resturant_id" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <NavigationProperty Name="restorant" Relationship="DB_A6A5AC_menuModel.FK_phone_book_restorants_id" FromRole="phone_book" ToRole="restorant" />
+  </EntityType>
+  <Association Name="FK_phone_book_restorants_id">
+    <End Type="DB_A6A5AC_menuModel.restorant" Role="restorant" Multiplicity="1" />
+    <End Type="DB_A6A5AC_menuModel.phone_book" Role="phone_book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restorant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="phone_book">
+        <PropertyRef Name="resturant_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

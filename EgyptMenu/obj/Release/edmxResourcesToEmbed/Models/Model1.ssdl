@@ -271,6 +271,14 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.password_resets' does not
     <Property Name="created_at" Type="datetime" />
     <Property Name="updated_at" Type="datetime" />
   </EntityType>
+  <EntityType Name="phone-book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="phone-number" Type="varchar" MaxLength="50" />
+    <Property Name="resturant-id" Type="numeric" Precision="20" Scale="0" Nullable="false" />
+  </EntityType>
   <EntityType Name="plan">
     <Key>
       <PropertyRef Name="id" />
@@ -527,6 +535,18 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
       </Principal>
       <Dependent Role="options_details">
         <PropertyRef Name="option_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_phone-book_restorants_id">
+    <End Role="restorants" Type="Self.restorants" Multiplicity="1" />
+    <End Role="phone-book" Type="Self.phone-book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restorants">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="phone-book">
+        <PropertyRef Name="resturant-id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -882,6 +902,7 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
     <EntitySet Name="pages" EntityType="Self.pages" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="payments" EntityType="Self.payments" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="permissions" EntityType="Self.permissions" Schema="foodtiger" store:Type="Tables" />
+    <EntitySet Name="phone-book" EntityType="Self.phone-book" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="plan" EntityType="Self.plan" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="ratings" EntityType="Self.ratings" Schema="foodtiger" store:Type="Tables" />
     <EntitySet Name="restorants" EntityType="Self.restorants" Schema="foodtiger" store:Type="Tables" />
@@ -924,6 +945,10 @@ warning 6002: The table/view 'DB_A6A5AC_menu.foodtiger.themes' does not have a p
     <AssociationSet Name="FK_options_details_options_id" Association="Self.FK_options_details_options_id">
       <End Role="options" EntitySet="options" />
       <End Role="options_details" EntitySet="options_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_phone-book_restorants_id" Association="Self.FK_phone-book_restorants_id">
+      <End Role="restorants" EntitySet="restorants" />
+      <End Role="phone-book" EntitySet="phone-book" />
     </AssociationSet>
     <AssociationSet Name="FK_variant_has_option_options_details_id" Association="Self.FK_variant_has_option_options_details_id">
       <End Role="options_details" EntitySet="options_details" />

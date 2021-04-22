@@ -68,6 +68,8 @@
         <AssociationConnector Association="DB_A6A5AC_menuModel.hours_hours_restorant_id_foreign" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.orders_orders_restorant_id_foreign" />
         <AssociationConnector Association="DB_A6A5AC_menuModel.restorants_restorants_user_id_foreign" />
+        <EntityTypeShape EntityType="DB_A6A5AC_menuModel.phone_book" Width="1.5" PointX="5.25" PointY="23.25" />
+        <AssociationConnector Association="DB_A6A5AC_menuModel.FK_phone_book_restorants_id" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

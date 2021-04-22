@@ -23,5 +23,8 @@ namespace EgyptMenu.Models
         public DateTime? ordertimeEnd { get; set; }
         public DateTime? starttime { get; set; }
         public DateTime? endtime { get; set; }
+        public string mobile1 { get; set; }
+        public string mobile2 { get; set; }
+        public string mobile3 { get; set; }
     }
 }

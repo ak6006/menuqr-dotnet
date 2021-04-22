@@ -72,7 +72,7 @@ namespace EgyptMenu.Controllers
         // GET: Owner
         public ActionResult Dashboard(string lang)
         {
-            
+
 
             var UserId = User.Identity.GetUserId();
             var UserEmail = AuthDB.Users.Where(u => u.Id == UserId).FirstOrDefault().Email;
@@ -81,6 +81,7 @@ namespace EgyptMenu.Controllers
             var CurrentRestaurant = db.restorants.Where(r => r.user_id == CurrentUserId).FirstOrDefault();
             var Themes = db.themes.Where(th => th.resturantID == 0 || th.resturantID == CurrentRestaurant.id).ToList();
             ViewBag.Themes = new SelectList(Themes, "id", "theme_name");
+            var RestaurantNumbers = db.phone_book.Where(p => p.resturant_id == CurrentRestaurant.id).Select(n => n.phone_number).ToList();
 
             ResMgmtViewModel resMgmtViewModel = new ResMgmtViewModel()
             {
@@ -100,8 +101,71 @@ namespace EgyptMenu.Controllers
                 ThemeId = CurrentRestaurant.themes_id,
                 ordertimeEnd = CurrentRestaurant.ordertimeEnd
             };
+            if (RestaurantNumbers != null && RestaurantNumbers.Count > 0)
+            {
+                resMgmtViewModel.mobile1 = RestaurantNumbers[0];
+            }
+            if (RestaurantNumbers != null && RestaurantNumbers.Count > 1)
+            {
+                resMgmtViewModel.mobile2 = RestaurantNumbers[1];
+            }
+            if (RestaurantNumbers != null && RestaurantNumbers.Count > 2)
+            {
+                resMgmtViewModel.mobile3 = RestaurantNumbers[2];
+            }
             return View(resMgmtViewModel);
         }
+
+        [HttpPost]
+        public ActionResult EditResPhoneNumbers(string mobile1, string mobile2, string mobile3)
+        {
+            var CurrentRestaurant = GetRestorant();
+            db.phone_book.RemoveRange(db.phone_book.Where(p => p.resturant_id == CurrentRestaurant.id));
+            phone_book phone_Book = new phone_book()
+            {
+                resturant_id = CurrentRestaurant.id,
+                restorant = CurrentRestaurant,
+                phone_number = mobile1
+            };
+            db.phone_book.Add(phone_Book);
+            if (mobile2 != null && mobile2.Length > 0)
+            {
+                phone_book phone_Book2 = new phone_book()
+                {
+                    resturant_id = CurrentRestaurant.id,
+                    restorant = CurrentRestaurant,
+                    phone_number = mobile2
+                };
+                db.phone_book.Add(phone_Book2);
+            }
+            if (mobile3 != null && mobile3.Length > 0)
+            {
+                phone_book phone_Book2 = new phone_book()
+                {
+                    resturant_id = CurrentRestaurant.id,
+                    restorant = CurrentRestaurant,
+                    phone_number = mobile3
+                };
+                db.phone_book.Add(phone_Book2);
+            }
+            db.SaveChanges();
+
+            var CurrentRestaurantNumbers = db.phone_book.Where(p => p.resturant_id == CurrentRestaurant.id).Count();
+            if (CurrentRestaurantNumbers > 3)
+            {
+                do
+                {
+                    db.phone_book.Remove(db.phone_book.Where(p => p.resturant_id == CurrentRestaurant.id).FirstOrDefault());
+                    db.SaveChanges();
+                    CurrentRestaurantNumbers--;
+                }
+                while (CurrentRestaurantNumbers > 3);
+            }
+            db.SaveChanges();
+
+            return RedirectToAction("Dashboard");
+        }
+
 
         [HttpPost]
         public ActionResult EditRestaurant(HttpPostedFileBase ImgFile
